@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="895.0" prefWidth="1315.0" style="-fx-background-color: #CD853F;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gui.HelloController">
+   <children>
+      <Label fx:id="welcomeText" layoutX="30.0" layoutY="14.0" prefHeight="53.0" prefWidth="308.0" text="Select parameters:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="371.0" prefHeight="36.0" prefWidth="216.0" text="Initial conditions:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="79.0" prefHeight="21.0" prefWidth="187.0" text="Step size:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="formula" layoutX="96.0" layoutY="295.0" prefHeight="45.0" prefWidth="124.0" />
+      <Label layoutX="33.0" layoutY="167.0" prefHeight="21.0" prefWidth="187.0" text="Integration time:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="size" layoutX="33.0" layoutY="114.0" prefHeight="45.0" prefWidth="187.0" />
+      <Label layoutX="34.0" layoutY="474.0" prefHeight="21.0" prefWidth="187.0" text="Solver:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+
+
+      <RadioButton fx:id="Euler" layoutX="38.0" layoutY="518.0" mnemonicParsing="false" text="Euler's">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="Runge" layoutX="39.0" layoutY="560.0" mnemonicParsing="false" text="Runge-Kutta">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </RadioButton>
+      <Label fx:id="welcomeText1" layoutX="33.0" layoutY="255.0" text="Formula:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="conditions" layoutX="33.0" layoutY="407.0" prefHeight="45.0" prefWidth="187.0" />
+      <Button fx:id="drawButton" layoutX="30.0" layoutY="611.0" mnemonicParsing="false" onAction="#draw" prefHeight="16.0" prefWidth="60.0" text="Draw">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="welcomeText2" layoutX="522.0" layoutY="10.0" prefHeight="53.0" prefWidth="271.0" text="Added formulas:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="welcomeText21" layoutX="936.0" layoutY="10.0" prefHeight="53.0" prefWidth="283.0" text="Initial conditions:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="time" layoutX="33.0" layoutY="202.0" prefHeight="45.0" prefWidth="187.0" />
+      <Button fx:id="apllyButton" layoutX="166.0" layoutY="611.0" mnemonicParsing="false" onAction="#apply" prefHeight="16.0" prefWidth="60.0" text="Apply">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="addFormul" layoutX="170.0" layoutY="348.0" mnemonicParsing="false" onAction="#addFormula" prefHeight="31.0" prefWidth="52.0" text="Add" />
+      <TextField fx:id="formula1" layoutX="33.0" layoutY="295.0" prefHeight="45.0" prefWidth="60.0" />
+      <Button fx:id="addConditions1" layoutX="170.0" layoutY="459.0" mnemonicParsing="false" onAction="#addConditions" prefHeight="31.0" prefWidth="52.0" text="Add" />
+      <VBox fx:id="vbox2" alignment="CENTER" layoutX="589.0" layoutY="65.0" prefHeight="253.0" prefWidth="196.0" />
+      <VBox fx:id="vbox3" layoutX="936.0" layoutY="69.0" prefHeight="246.0" prefWidth="52.0" />
+      <VBox fx:id="vbox1" alignment="CENTER" layoutX="506.0" layoutY="65.0" prefHeight="253.0" prefWidth="67.0" />
+      <VBox fx:id="vbox4" alignment="CENTER" layoutX="988.0" layoutY="69.0" prefHeight="246.0" prefWidth="196.0" />
+      <LineChart fx:id="chart2" layoutX="755.0" layoutY="331.0" prefHeight="410.0" prefWidth="570.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <HBox fx:id="ubeite" layoutX="16.0" layoutY="649.0" prefHeight="74.0" prefWidth="244.0" />
+      <LineChart fx:id="chart" layoutX="215.0" layoutY="331.0" prefHeight="410.0" prefWidth="570.0">
+        <xAxis>
+          <CategoryAxis prefHeight="0.0" prefWidth="439.0" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+   </children>
+</AnchorPane>
