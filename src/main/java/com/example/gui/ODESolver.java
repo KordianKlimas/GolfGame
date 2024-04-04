@@ -6,8 +6,18 @@ import java.util.Scanner;
 import java.util.function.Function;
 
 public class ODESolver  {
-
     // Function to solve the system of ODEs using Euler's method
+    /**
+     * Solves a system of ordinary differential equations (ODEs) using Euler's method.
+     *
+     * @param equation     The system of ODEs as an array of strings
+     * @param stepSize     The step size used for the numerical integration
+     * @param in_Time      The total integration time
+     * @param in_Conditions The initial conditions for the system
+     * @param variables    The list of independent variables in the equations
+     * @return The solution of the system of ODEs as a 2D array of doubles
+     * @author Filippo
+     */
     public static Double[][] euler(String[] equation, double stepSize, int in_Time, double[] in_Conditions, List<String> variables){
         FormulaCalculator calc = new FormulaCalculator();
 
@@ -50,6 +60,17 @@ public class ODESolver  {
         }
         return results;
     }
+    /**
+     * Solves a system of ordinary differential equations (ODEs) using the Runge-Kutta method.
+     *
+     * @param equation     The system of ODEs as an array of strings
+     * @param stepSize     The step size used for the numerical integration
+     * @param in_Time      The total integration time
+     * @param in_Conditions The initial conditions for the system
+     * @param variables    The list of independent variables in the equations
+     * @return The solution of the system of ODEs as a 2D array of doubles
+     * @author Filippo
+     */
     public static Double[][] rungeKutta(String[] equation, double stepSize, int in_Time, double[] in_Conditions, List<String> variables) {
         List<Double> tempResults = new ArrayList<Double>();
         FormulaCalculator calc = new FormulaCalculator();

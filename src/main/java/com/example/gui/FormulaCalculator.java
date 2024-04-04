@@ -4,34 +4,54 @@ import java.util.Stack;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.HashMap;
+import com.example.gui.Utilities;
 
-// Kordian's code
+import static com.example.gui.Utilities.*;
 
+/**
+ * This class is for calculating formulas given as a string.
+ * <p>
+ * <strong>RULES FOR INPUT:</strong>
+ * <ul>
+ *     <li>Between every element, there must be a space: <em>good</em> -> [1 + 3 ( 2 ^ -4 ) * 3], <em>bad</em> -> [1+ 3( 2^-4 ) *3]</li>
+ *     <li>No support for more than one sign [+ - 2....] or [- - 2 ...]. <em>good</em> -> [ - ( 4 - 7 ) ], <em>bad</em> -> [- ( - ( 3 + 3 ) +3  ....)]</li>
+ *     <li>If a number is negative, there must be no space: <em>good</em> -> [ -1 ], <em>bad</em> -> [ - 1 ]</li>
+ *     <li>You can use '.' and ',' for decimals, e.g., [ 2,3 + 3 - 1.1 * 2,4]</li>
+ *     <li>Square root supported: sqrt( 4 )</li>
+ * </ul>
+ * </p>
+ * <p>
+ * <strong>How to use:</strong>
+ * <ol>
+ *     <li>Create a {@code List<String>} that will store the parsed formula.</li>
+ *     <li>Parse the input string and save it to the {@code List<String>}: {@code parseString(String)}.</li>
+ *     <li>Add initial conditions/solutions: {@code setIndependentValue("X", 1)}.</li>
+ *     <li>Calculate, returns double: {@code calculateRPN(List<String>)}.</li>
+ * </ol>
+ * </p>
+ *
+ * @author Kordian
+ */
 public class FormulaCalculator{
     //contains the independent values / initial value
     HashMap<String, Double> independentValues = new HashMap<String, Double>();
 
-    // checks if the string is a number
-    public  boolean isNumeric(String str) {
-        try {
-            Double.parseDouble(str);
-            return true;
-        } catch (NumberFormatException e) {
-            return false;
-        }
-    }
-    // safe convertion from string to double
-    public  double strToDouble(String str) {
-        try {
-            return  Double.parseDouble(str);
-        } catch (NumberFormatException e) {
-            System.out.println("error strToDouble failed to convert: " + str);
-            return  0.0;
-        }
-    }
+
     // Converted String to Stack for forumlas
     //  reverse Polish Notation Using Stacks
     //  https://www.youtube.com/watch?v=QxHRM0EQHiQ ex.3 mistake [63*45 - - 2+] not [63*45 - 2+]
+
+    /**
+     * Parses a mathematical expression into a list of tokens.
+     *
+     * This method takes a mathematical expression string and converts it into a list
+     * of tokens using the Shunting Yard algorithm. The tokens represent the expression
+     * in Reverse Polish Notation (RPN), making it easier to evaluate.
+     *
+     * @param equation_string The input mathematical expression to be parsed
+     * @return A list of tokens representing the parsed expression in RPN
+     * @throws IllegalArgumentException if the input string is null or empty
+     */
     public List<String> parseString(String equation_string){
 
         String[] equation_elements = equation_string.replaceAll(",", ".").split(" ");    // split elements inside of formula (by space) ex. of proper formula: "X ( 4 + Y ) + 12 / 3" - X independed var , Y  independed var from diffrent equation
@@ -39,10 +59,10 @@ public class FormulaCalculator{
         List<String> list = new ArrayList<>();
         for (int i = 0; i < equation_elements.length; i++) {
 
-            String element= equation_elements[i]; // number or element named sybmo
+            String element= equation_elements[i]; // number or element named sybmol
 
             //
-            // if the elementis a number or dynamic variable (independent variable from diffrent formula)
+            // if the elements a number or dynamic variable (independent variable from diffrent formula)
             // or just independent variable
             //
             if(isNumeric(element)){
@@ -142,19 +162,44 @@ public class FormulaCalculator{
         while (!stack.isEmpty()) {
             list.add(stack.pop());
         }
-
-
-
         return list;
     }
 
     // variables setter
+    /**
+     * Sets the value of an independent (dynamic) variable.
+     *
+     * @param name  The name of the independent variable
+     * @param value The value to be assigned to the variable
+     */
     public void setIndependendValue(String name,double value){
         independentValues.put(name, value);
     }
 
     // calculate RPN using stacks
     // https://www.youtube.com/watch?v=QxeSjGFxjyk 12 min
+    /**
+     * Calculates the result of a mathematical expression in Reverse Polish Notation (RPN) using stacks.
+     * <p>
+     * This method evaluates the given mathematical expression, which is provided in RPN format, using a stack-based algorithm.
+     * It supports basic arithmetic operations (+, -, *, /), exponentiation (^), and square root (sqrt).
+     * The method also handles dynamic variables by looking them up in the provided dictionary of independent values.
+     * </p>
+     * <p>
+     * <strong>Supported Operations:</strong>
+     * <ul>
+     *     <li>Addition (+)</li>
+     *     <li>Subtraction (-)</li>
+     *     <li>Multiplication (*)</li>
+     *     <li>Division (/)</li>
+     *     <li>Exponentiation (^)</li>
+     *     <li>Square Root (sqrt)</li>
+     * </ul>
+     * </p>
+     *
+     * @param list The list of tokens representing the mathematical expression in RPN
+     * @return The result of the evaluation
+     */
     public double cacluateRPN(List<String> list){
         Stack<Double> stack = new Stack<Double>();
         String peekedElem = "";
@@ -234,10 +279,7 @@ public class FormulaCalculator{
         }
     }
 }
-class exampleHowToUse{
-    public static void main(String[] args){
-
-
+/*
         // RULES FOR INPUT
         // between every element there must be a space: good-> [1 + 3 ( 2 ^ -4 ) * 3]  bad-> [1+ 3( 2^-4 ) *3]
         // no support for more than one sign [+ -  2....] or [- - 2 ...].  good->[ - ( 4 - 7 ) ],  bad->[- ( - ( 3 + 3 ) +3  ....)]
@@ -249,7 +291,6 @@ class exampleHowToUse{
         //2. parse the input String, save it to List<String>: parseString(String)
         //3 add Initial condidtions/solutions:  setIndependendValue("X",1)
         //4 calculate , returns double:  cacluateRPN(List<String>)
-        //5. enjoy life
 
         //  suggested  testing formulas
         FormulaCalculator calc = new FormulaCalculator();
@@ -278,8 +319,4 @@ class exampleHowToUse{
         formulaRPN1 = calc.parseString(formula1);
         System.out.println(formulaRPN1);
         System.out.println(calc.cacluateRPN(formulaRPN1));
-
-        // test minus
-
-    }
-}
+*/

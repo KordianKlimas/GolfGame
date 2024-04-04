@@ -73,6 +73,13 @@ public class HelloController implements Initializable {
     public Double[][]result1;
 
     ArrayList<String> boxes = new ArrayList<>();
+    /**
+     * Adds a formula to the list of equations and variables.
+     * Called when the user clicks the "Add Formula" button.
+     *
+     * @param event The action event
+     * @author Lera
+     */
     public void addFormula(ActionEvent event){
         if(variables.isEmpty()){
             variables.add("t");
@@ -102,6 +109,13 @@ public class HelloController implements Initializable {
         formula1.clear();
         //System.out.print(equations);
     }
+    /**
+     * Adds initial conditions to the list of conditions.
+     * Called when the user clicks the "Add Conditions" button.
+     *
+     * @param event The action event
+     * @author Lera
+     */
     public void addConditions(ActionEvent event){
         vbox4.setStyle("-fx-font-size: 27px;");
 
@@ -113,6 +127,13 @@ public class HelloController implements Initializable {
         conditions.clear();
 
     }
+    /**
+     * Applies the selected method (Euler or Runge-Kutta) to solve the ODEs.
+     * Called when the user clicks the "Apply" button.
+     *
+     * @param event The action event
+     * @author Lera
+     */
     public void apply(ActionEvent event) {
 
         double step_size;
@@ -168,12 +189,15 @@ public class HelloController implements Initializable {
         }
 
     }
-
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-    }
-
+    public void initialize(URL url, ResourceBundle resourceBundle) {}
+    /**
+     * Draws the selected method's solution on the chart.
+     * Called when the user clicks the "Draw" button.
+     *
+     * @param event The action event
+     * @author Lera
+     */
     @FXML
     public void draw(ActionEvent event){
 
