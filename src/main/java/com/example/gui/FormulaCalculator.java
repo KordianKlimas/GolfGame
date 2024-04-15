@@ -66,8 +66,8 @@ public class FormulaCalculator{
      *     <li>Natural Logarithm (ln(...))</li>
      *     <li>Sine (sin(...))</li>
      *     <li>Cosine (cos(...))</li>
-     *     <li>Tangent (tan(...))</li>
-     *     <li>Cotangent (cot(...))</li>
+     *     <li>Tangent (tg(...))</li>
+     *     <li>Cotangent (ctg(...))</li>
      * </ul>
      * </p>
      *
