@@ -4,6 +4,8 @@ import java.util.Stack;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.HashMap;
+import java.util.Set;
+import java.util.HashSet;
 import com.example.gui.Utilities;
 
 import static com.example.gui.Utilities.*;
@@ -36,6 +38,11 @@ public class FormulaCalculator{
     //contains the independent values / initial value
     HashMap<String, Double> independentValues = new HashMap<String, Double>();
 
+    // set of all operations using  parenthesis
+    Set<String> opererationsSet = new HashSet<>(List.of(
+            "sqrt(", "sin(", "cos(", "tg(", "ctg(", "ln("
+    ));
+
 
     // Converted String to Stack for forumlas
     //  reverse Polish Notation Using Stacks
@@ -47,6 +54,22 @@ public class FormulaCalculator{
      * This method takes a mathematical expression string and converts it into a list
      * of tokens using the Shunting Yard algorithm. The tokens represent the expression
      * in Reverse Polish Notation (RPN), making it easier to evaluate.
+     *
+     * <strong>Supported Operations:</strong>
+     * <ul>
+     *     <li>Addition (+)</li>
+     *     <li>Subtraction (-)</li>
+     *     <li>Multiplication (*)</li>
+     *     <li>Division (/)</li>
+     *     <li>Exponentiation (^)</li>
+     *     <li>Square Root (sqrt(...))</li>
+     *     <li>Natural Logarithm (ln(...))</li>
+     *     <li>Sine (sin(...))</li>
+     *     <li>Cosine (cos(...))</li>
+     *     <li>Tangent (tan(...))</li>
+     *     <li>Cotangent (cot(...))</li>
+     * </ul>
+     * </p>
      *
      * @param equation_string The input mathematical expression to be parsed
      * @return A list of tokens representing the parsed expression in RPN
@@ -67,9 +90,11 @@ public class FormulaCalculator{
             //
             if(isNumeric(element)){
                 list.add(element);
+            } else if(opererationsSet.contains(element)){ // sin cos tg ctg sqrt ln...
+                stack.push(element);
             }
-            else if(!(element.equals("") ||element.equals("+") || element.equals("-") || element.equals("*") || element.equals("/") || element.equals("(") || element.equals(")") || element.equals("^") || element.equals("sqrt("))){
-                list.add(element); // sometimes when space is first in string the split method treats it as a seperator and add null value
+            else if(!(element.equals("") ||element.equals("+") || element.equals("-") || element.equals("*") || element.equals("/") || element.equals("(") || element.equals(")") || element.equals("^"))){
+                list.add(element);
             }
 
             else{
@@ -86,10 +111,10 @@ public class FormulaCalculator{
                         //                                         [+ - / * ^]
                         //
 
-                        if(stack.isEmpty() || stack.peek().equals("(") || stack.peek().equals("sqrt(")){
+                        if(stack.isEmpty() || stack.peek().equals("(") || opererationsSet.contains(stack.peek())){
                             stack.push(element);
                         }else{
-                            while (!(stack.isEmpty()) && !(stack.peek().equals("(") && !(stack.peek().equals("sqrt(")))) {
+                            while (!(stack.isEmpty()) && !(stack.peek().equals("(") && !(opererationsSet.contains(stack.peek())))) {
                                 list.add(stack.pop());
                             }
                             stack.push(element);
@@ -105,10 +130,10 @@ public class FormulaCalculator{
                         //                                          [/  *  ^]
                         // else (if no higher or equal precedence elements in stack) just add to stack
 
-                        if(stack.isEmpty() || stack.peek().equals("(") || stack.peek().equals("sqrt(")){
+                        if(stack.isEmpty() || stack.peek().equals("(") || opererationsSet.contains(stack.peek())){
                             stack.push(element);
                         }else if (stack.peek().equals("/") || stack.peek().equals("*") || stack.peek().equals("^")) {
-                            while (!(stack.isEmpty()) && !(stack.peek().equals("(") || stack.peek().equals("sqrt(")||stack.peek().equals("-")||stack.peek().equals("+"))) {
+                            while (!(stack.isEmpty()) && !(stack.peek().equals("(") || opererationsSet.contains(stack.peek()) ||stack.peek().equals("-")||stack.peek().equals("+"))) {
                                 list.add(stack.pop());
                             }
                             stack.push(element);
@@ -134,21 +159,19 @@ public class FormulaCalculator{
                             stack.push(element);
                         }
                         break;
-                    case "sqrt(":
-                        stack.push(element);
-                        break;
                     case "(":    // just add it :D
                         stack.push(element);
                         break;
                     case ")":
                         //
-                        //  Transfer to list every element until ')' or sqrt (  then pop the ')' and put all elments between the  ( ) to list and pop ( or add sqrt(
+                        //  Transfer to list every element until ')' or sqrt (  then pop the ')' and put all elments between the  ( ) to list and pop ( or add element from opererationsSet(
                         //
                         //
-                        while ( !stack.isEmpty() && !(stack.peek().equals("(")) && !(stack.peek().equals("sqrt("))) {
+                        while ( !stack.isEmpty() && !(stack.peek().equals("(")) && !(opererationsSet.contains(stack.peek()))) {
                             list.add(stack.pop());
                         }
-                        if(stack.peek().equals("sqrt(")){    // in case it's sqrt we have to add it to parsed list
+
+                        if(opererationsSet.contains(stack.peek())){    // in case element is in operationSet we have to add it to parsed list
                             list.add(stack.pop());
                         }else{
                             stack.pop();
@@ -185,22 +208,11 @@ public class FormulaCalculator{
      * It supports basic arithmetic operations (+, -, *, /), exponentiation (^), and square root (sqrt).
      * The method also handles dynamic variables by looking them up in the provided dictionary of independent values.
      * </p>
-     * <p>
-     * <strong>Supported Operations:</strong>
-     * <ul>
-     *     <li>Addition (+)</li>
-     *     <li>Subtraction (-)</li>
-     *     <li>Multiplication (*)</li>
-     *     <li>Division (/)</li>
-     *     <li>Exponentiation (^)</li>
-     *     <li>Square Root (sqrt)</li>
-     * </ul>
-     * </p>
      *
      * @param list The list of tokens representing the mathematical expression in RPN
      * @return The result of the evaluation
      */
-    public double cacluateRPN(List<String> list){
+    public double calculateRPN(List<String> list){
         Stack<Double> stack = new Stack<Double>();
         String peekedElem = "";
         for(int i = 0; i<list.size(); i++){
@@ -208,12 +220,12 @@ public class FormulaCalculator{
             if(isNumeric(peekedElem)){ // check for numbers -> push
                 stack.push(strToDouble(peekedElem));
             }
-            else if(!(peekedElem.equals("+")||peekedElem.equals("-")||peekedElem.equals("*")||peekedElem.equals("/")||peekedElem.equals("^")||peekedElem.equals("sqrt("))){ // check for dynamic variables
+            else if(!(peekedElem.equals("+")||peekedElem.equals("-")||peekedElem.equals("*")||peekedElem.equals("/")||peekedElem.equals("^")||opererationsSet.contains(peekedElem))){ // check for dynamic variables
                 //it's variable
                 if (independentValues.containsKey(peekedElem)){
                     stack.push(independentValues.get(peekedElem));
                 }else{
-                    System.out.println("there is no:  " + peekedElem +"  in independentValues dictionary method: cacluateRPN");
+                    System.out.println("there is no:  " + peekedElem +"  in independentValues dictionary method: calculateRPN");
                 }
 
             }
@@ -221,7 +233,6 @@ public class FormulaCalculator{
                 double elem1;
                 double elem2;
                 switch (peekedElem) {
-
                     case "+":
                         stack.push(stack.pop() +  stack.pop());
                         break;
@@ -264,7 +275,26 @@ public class FormulaCalculator{
                         else{
                             System.out.println("cannot calcualte square root of: " + stack.peek());
                         }
-
+                        break;
+                    case "sin(":
+                        stack.push(Math.sin(stack.pop()));
+                        break;
+                    case "cos(":
+                        stack.push(Math.cos(stack.pop()));
+                        break;
+                    case "tg(":
+                        stack.push(Math.tan(stack.pop()));
+                        break;
+                    case "ctg(":
+                        stack.push(1.0 / Math.tan(stack.pop()));
+                        break;
+                    case "ln(":
+                        if (stack.peek() <= 0) {
+                            System.err.println("Error: Natural logarithm is only defined for positive numbers. - FormulaCalculator");
+                            stack.push(stack.pop());
+                        }else {
+                            stack.push(Math.log(stack.pop()));
+                        }
                         break;
                     default:
                         break;
@@ -290,7 +320,7 @@ public class FormulaCalculator{
         //1. create  List<String> that will store parsed formula
         //2. parse the input String, save it to List<String>: parseString(String)
         //3 add Initial condidtions/solutions:  setIndependendValue("X",1)
-        //4 calculate , returns double:  cacluateRPN(List<String>)
+        //4 calculate , returns double:  calculateRPN(List<String>)
 
         //  suggested  testing formulas
         FormulaCalculator calc = new FormulaCalculator();
@@ -312,11 +342,11 @@ public class FormulaCalculator{
         //test for 3 formulas
         // System.out.println(formula1 + "\n" + formula2 + "\n" +formula3);
         // System.out.println(formulaRPN1+ "\n" +formulaRPN2 + "\n" +formulaRPN3);
-        // System.out.println(calc.cacluateRPN(formulaRPN1)+ "\n" +calc.cacluateRPN(formulaRPN2) + "\n" +calc.cacluateRPN(formulaRPN3));
+        // System.out.println(calc.calculateRPN(formulaRPN1)+ "\n" +calc.calculateRPN(formulaRPN2) + "\n" +calc.calculateRPN(formulaRPN3));
         String formula1 = "1 - sqrt( 4 ) ";
         System.out.println(formula1);
 
         formulaRPN1 = calc.parseString(formula1);
         System.out.println(formulaRPN1);
-        System.out.println(calc.cacluateRPN(formulaRPN1));
+        System.out.println(calc.calculateRPN(formulaRPN1));
 */
