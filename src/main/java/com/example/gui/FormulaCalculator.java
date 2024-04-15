@@ -66,8 +66,8 @@ public class FormulaCalculator{
      *     <li>Natural Logarithm (ln(...))</li>
      *     <li>Sine (sin(...))</li>
      *     <li>Cosine (cos(...))</li>
-     *     <li>Tangent (tg(...))</li>
-     *     <li>Cotangent (ctg(...))</li>
+     *     <li>Tangent (tan(...))</li>
+     *     <li>Cotangent (cot(...))</li>
      * </ul>
      * </p>
      *
@@ -194,6 +194,7 @@ public class FormulaCalculator{
      *
      * @param name  The name of the independent variable
      * @param value The value to be assigned to the variable
+     * @return List<String>  the parsed formula
      */
     public void setIndependendValue(String name,double value){
         independentValues.put(name, value);
