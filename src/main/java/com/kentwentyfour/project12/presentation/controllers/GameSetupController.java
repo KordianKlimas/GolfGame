@@ -82,7 +82,7 @@ public class GameSetupController extends BaseController {
         double kineticFrictionGrass = strToDouble(kineticfrictiongrass.getText().isEmpty() ? "0.05" : kineticfrictiongrass.getText());
         String formula = formulaField.getText().isEmpty() ? "sin( ( x - y ) / 7 ) + 0.5" : formulaField.getText();
 
-       //formula = "0.4 * ( 0.9 -  2.718 ^ ( ( -1 * x ^ 2 + y ^ 2 ) / -8 ) )";
+        formula = "0.4 * ( 0.9 -  2.718 ^ ( (  x ^ 2 + y ^ 2 ) / -8 ) )";
        //formula="1";
         ReferenceStore referenceStore = ReferenceStore.getInstance();
         referenceStore.setCourseProfileFormula(formula);

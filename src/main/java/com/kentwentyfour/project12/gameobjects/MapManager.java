@@ -50,7 +50,7 @@ public class MapManager {
                 double[] arr = matrixToCoordinates(row,col);
                 double x = arr[0];
                 double y = arr[1];
-                System.out.println("x: "+x+"y: "+y);
+                //System.out.println("x: "+x+"y: "+y);
                 double height = this.computeHeight(x, y);
                 try {
                     if (height < 0.0) {
@@ -64,9 +64,12 @@ public class MapManager {
                     System.err.println("Error computing height at row " + row + ", col " + col + ": " + var7.getMessage());
                     terrainData[row][col] = new Grass(height);
                 }
+                MatrixMapArea area =terrainData[row][col];
+                //System.err.println("x: "+x+"y: "+y+" H: "+height);
+               // System.err.println("AreaType: "+"Grass: "+(area instanceof Grass)+"Water: "+(area instanceof Water)+"Sand: "+(area instanceof Sand));
             }
         }
-        System.err.println(terrainData[0][0] instanceof Water);
+        //System.err.println(terrainData[0][0] instanceof Water);
 
         this.terrainData = terrainData;
     }

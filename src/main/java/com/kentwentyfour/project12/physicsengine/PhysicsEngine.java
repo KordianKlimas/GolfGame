@@ -2,9 +2,12 @@ package com.kentwentyfour.project12.physicsengine;
 
 
 import com.kentwentyfour.project12.gameobjects.*;
+import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areaobstacles.Water;
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.AreaType;
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.MatrixMapArea;
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areaobstacles.ObstacleType;
+import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.Grass;
+import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.Sand;
 import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
 import com.kentwentyfour.project12.gameobjects.movableobjects.Hole;
 import com.kentwentyfour.project12.mathpackage.FormulaCalculator;
@@ -89,6 +92,8 @@ public class PhysicsEngine {
             current_kf = ((AreaType) area).getKineticFriction();
         }else{
             System.err.println("The starting position of ball is not playable area");
+            System.err.println("X: "+x_coordinate+"Y: "+y_coordinate);
+            System.err.println("AreaType: "+"Grass: "+(area instanceof Grass)+"Water: "+(area instanceof Water)+"Sand: "+(area instanceof Sand));
         }
 
         // setting up formulas and ODE solver
@@ -179,8 +184,8 @@ public class PhysicsEngine {
             finalPath[0][i] = path_coordinates_X.get(i);
             finalPath[1][i] = path_coordinates_Y.get(i);
         }
-        System.err.println(Arrays.toString(finalPath[0]));
-        System.err.println(Arrays.toString(finalPath[1]));
+        //System.err.println(Arrays.toString(finalPath[0]));
+        //System.err.println(Arrays.toString(finalPath[1]));
         // stepSize is timeInterval as it is used as  chang of time in ODE solver
         return new CoordinatesPath(finalPath,stepSize,stoppingCondition);
     }
