@@ -1,10 +1,15 @@
-package com.kentwentyfour.project12.PhysicsEnginePackage;
+package com.kentwentyfour.project12.physicsengine;
 
 
-import com.kentwentyfour.project12.GameObjects.*;
-import com.kentwentyfour.project12.MathPackage.FormulaCalculator;
-import com.kentwentyfour.project12.MathPackage.ODESolver;
-import com.kentwentyfour.project12.MathPackage.PartialDerivative;
+import com.kentwentyfour.project12.gameobjects.*;
+import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.AreaType;
+import com.kentwentyfour.project12.gameobjects.matrixmapobjects.MatrixMapArea;
+import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areaobstacles.ObstacleType;
+import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
+import com.kentwentyfour.project12.gameobjects.movableobjects.Hole;
+import com.kentwentyfour.project12.mathpackage.FormulaCalculator;
+import com.kentwentyfour.project12.mathpackage.ODESolver;
+import com.kentwentyfour.project12.mathpackage.PartialDerivative;
 import com.kentwentyfour.project12.ReferenceStore;
 
 import java.util.ArrayList;
@@ -78,7 +83,7 @@ public class PhysicsEngine {
         //System.out.println("Starting ball coords: "+ x_coordinate+" " + y_coordinate);
 
         // getting frictions for current position of ball
-        MappableObject area =  mapManager.accessObject(x_coordinate,y_coordinate);
+        MatrixMapArea area =  mapManager.accessObject(x_coordinate,y_coordinate);
         double current_kf =0.1;
         if(area instanceof AreaType){
             current_kf = ((AreaType) area).getKineticFriction();
@@ -127,7 +132,7 @@ public class PhysicsEngine {
                 // checking for stopping condition
                 double pd_value_dx = height_PartialDerivative.calculatePD_notation("dh/dx",x_coordinate,y_coordinate);
                 double pd_value_dy = height_PartialDerivative.calculatePD_notation("dh/dy",x_coordinate,y_coordinate);
-                MappableObject obj = mapManager.accessObject(x_coordinate,y_coordinate);
+                MatrixMapArea obj = mapManager.accessObject(x_coordinate,y_coordinate);
                 stoppingCondition = checkStoppingConditions(obj,golfBall,pd_value_dx,pd_value_dy,x_velocity_change,y_velocity_change,x_velocity,y_velocity, x_coordinate, y_coordinate);
 
 
@@ -174,6 +179,8 @@ public class PhysicsEngine {
             finalPath[0][i] = path_coordinates_X.get(i);
             finalPath[1][i] = path_coordinates_Y.get(i);
         }
+        System.err.println(Arrays.toString(finalPath[0]));
+        System.err.println(Arrays.toString(finalPath[1]));
         // stepSize is timeInterval as it is used as  chang of time in ODE solver
         return new CoordinatesPath(finalPath,stepSize,stoppingCondition);
     }
@@ -185,7 +192,7 @@ public class PhysicsEngine {
      * - hits an obstacle
      * - stops moving due to friction
      */
-    public String checkStoppingConditions(MappableObject obj,GolfBall golfBall,double dh_dx, double dh_dy,double x_velocity_change,double y_velocity_change,double x_velocity_last,double y_velocity_last, double x_coordinate, double y_coordinate){
+    public String checkStoppingConditions(MatrixMapArea obj, GolfBall golfBall, double dh_dx, double dh_dy, double x_velocity_change, double y_velocity_change, double x_velocity_last, double y_velocity_last, double x_coordinate, double y_coordinate){
 
         if(ballInHole( x_velocity_last, y_velocity_last,  x_coordinate,  y_coordinate)){
             return "ball_in_the_hole";
@@ -205,7 +212,7 @@ public class PhysicsEngine {
                   //  System.err.println(areaType.getStaticFriction() +" > "+ formula_value);
                     return "static_friction_overcomes_the_force";
                 }
-                else if(formula_value ==1 && x_velocity_change<0.0006 && y_velocity_change<0.0006){
+                else if(x_velocity_change<0.0006 && y_velocity_change<0.0006){
                     return "static_friction_overcomes_the_force";
                 }
             }

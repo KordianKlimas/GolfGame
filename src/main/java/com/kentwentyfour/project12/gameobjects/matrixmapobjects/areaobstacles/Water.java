@@ -1,6 +1,5 @@
-package com.kentwentyfour.project12.GameObjects.Obstacles;
+package com.kentwentyfour.project12.gameobjects.matrixmapobjects.areaobstacles;
 
-import com.kentwentyfour.project12.GameObjects.ObstacleType;
 import javafx.scene.paint.Color;
 public class Water implements ObstacleType {
     @Override

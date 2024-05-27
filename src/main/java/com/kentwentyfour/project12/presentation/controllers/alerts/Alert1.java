@@ -1,4 +1,4 @@
-package com.kentwentyfour.project12.presentation.controllers;
+package com.kentwentyfour.project12.presentation.controllers.alerts;
 
 import javafx.scene.control.Alert;
 

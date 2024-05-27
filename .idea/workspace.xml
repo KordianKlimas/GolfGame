@@ -4,7 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e80e0ac-204d-49c9-baf6-18865c982760" name="Changes" comment="" />
+    <list default="true" id="9e80e0ac-204d-49c9-baf6-18865c982760" name="Changes" comment="adding lera's stuff">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/Bot/BasicBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/Bot/BasicBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/Bot/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/Bot/Bot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/AreaType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/matrixmapobjects/areatypes/AreaType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/AreaTypes/Grass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/matrixmapobjects/areatypes/Grass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/AreaTypes/Sand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/matrixmapobjects/areatypes/Sand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/GolfBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/movableobjects/GolfBall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/Hole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/movableobjects/Hole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/MapManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/MapManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/MappableObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/matrixmapobjects/MatrixMapArea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/MovableObjects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/movableobjects/MovableObjects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/ObstacleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/matrixmapobjects/areaobstacles/ObstacleType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/Obstacles/Water.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/matrixmapobjects/areaobstacles/Water.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/SuperClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MathPackage/FormulaCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/mathpackage/FormulaCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MathPackage/ODESolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/mathpackage/ODESolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MathPackage/PartialDerivative.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/mathpackage/PartialDerivative.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/physicsengine/.gitkeep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/CoordinatesPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/physicsengine/CoordinatesPath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/physicsengine/PhysicsEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/ReferenceStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/ReferenceStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/Alert1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/alerts/Alert1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/GameSetupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/GameSetupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/SettingsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,29 +74,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.FormulaCalculator.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MainApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ODESolver.executor&quot;: &quot;Run&quot;,
-    &quot;Application.PhysicsEngine.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SuperClass.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;game&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/kordi/Desktop/Uni/Project12&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.FormulaCalculator.executor": "Run",
+    "Application.MainApplication.executor": "Run",
+    "Application.ODESolver.executor": "Run",
+    "Application.PhysicsEngine.executor": "Run",
+    "Application.SuperClass.executor": "Debug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "game",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/kordi/Desktop/Uni/Project12",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.kentwentyfour.project12.presentation.controllers" />
@@ -78,11 +104,11 @@
   </component>
   <component name="RunManager" selected="Application.MainApplication">
     <configuration name="FormulaCalculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.kentwentyfour.project12.MathPackage.FormulaCalculator" />
+      <option name="MAIN_CLASS_NAME" value="com.kentwentyfour.project12.mathpackage.FormulaCalculator" />
       <module name="Project12" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.kentwentyfour.project12.MathPackage.*" />
+          <option name="PATTERN" value="com.kentwentyfour.project12.mathpackage.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -104,11 +130,11 @@
       </method>
     </configuration>
     <configuration name="ODESolver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.kentwentyfour.project12.MathPackage.ODESolver" />
+      <option name="MAIN_CLASS_NAME" value="com.kentwentyfour.project12.mathpackage.ODESolver" />
       <module name="Project12" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.kentwentyfour.project12.MathPackage.*" />
+          <option name="PATTERN" value="com.kentwentyfour.project12.mathpackage.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,11 +143,11 @@
       </method>
     </configuration>
     <configuration name="PhysicsEngine" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.kentwentyfour.project12.PhysicsEnginePackage.PhysicsEngine" />
+      <option name="MAIN_CLASS_NAME" value="com.kentwentyfour.project12.physicsengine.PhysicsEngine" />
       <module name="Project12" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.kentwentyfour.project12.PhysicsEnginePackage.*" />
+          <option name="PATTERN" value="com.kentwentyfour.project12.physicsengine.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -134,7 +160,7 @@
       <module name="Project12" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.kentwentyfour.project12.GameObjects.*" />
+          <option name="PATTERN" value="com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -186,7 +212,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716826566207</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="adding lera's stuff">
+      <option name="closed" value="true" />
+      <created>1716835083793</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716835083793</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,85 +240,56 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changing timeStep and initial time in PhysicEngine to improve calculation and animation. Adding  Stopping conditions support in game." />
     <MESSAGE value="Adding Lera's basicBot" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding Lera's basicBot" />
+    <MESSAGE value="adding lera's stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding lera's stuff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MathPackage/FormulaCalculator.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/mathpackage/FormulaCalculator.java</url>
           <line>269</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MathPackage/FormulaCalculator.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/mathpackage/FormulaCalculator.java</url>
           <line>273</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MathPackage/ODESolver.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/mathpackage/ODESolver.java</url>
           <line>263</line>
           <option name="timeStamp" value="63" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
-          <line>144</line>
-          <option name="timeStamp" value="78" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/physicsengine/PhysicsEngine.java</url>
+          <line>208</line>
+          <option name="timeStamp" value="105" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
-          <line>143</line>
-          <option name="timeStamp" value="79" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/physicsengine/PhysicsEngine.java</url>
+          <line>200</line>
+          <option name="timeStamp" value="108" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
-          <line>145</line>
-          <option name="timeStamp" value="80" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/physicsengine/PhysicsEngine.java</url>
+          <line>197</line>
+          <option name="timeStamp" value="109" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
-          <line>146</line>
-          <option name="timeStamp" value="82" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/physicsengine/PhysicsEngine.java</url>
+          <line>203</line>
+          <option name="timeStamp" value="110" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
-          <line>106</line>
-          <option name="timeStamp" value="83" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/physicsengine/PhysicsEngine.java</url>
+          <line>206</line>
+          <option name="timeStamp" value="111" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
-          <line>112</line>
-          <option name="timeStamp" value="84" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
-          <line>209</line>
-          <option name="timeStamp" value="85" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
-          <line>201</line>
-          <option name="timeStamp" value="86" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
-          <line>205</line>
-          <option name="timeStamp" value="87" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
-          <line>207</line>
-          <option name="timeStamp" value="88" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
-          <line>210</line>
-          <option name="timeStamp" value="89" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
-          <line>140</line>
-          <option name="timeStamp" value="90" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/physicsengine/PhysicsEngine.java</url>
+          <line>204</line>
+          <option name="timeStamp" value="112" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.util.EmptyStackException" package="java.util" />

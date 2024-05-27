@@ -1,27 +1,23 @@
-package com.kentwentyfour.project12.GameObjects;
+package com.kentwentyfour.project12.gameobjects.movableobjects;
 
-import javafx.scene.effect.DropShadow;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.LinearGradient;
-import javafx.scene.paint.Stop;
 import javafx.scene.shape.Circle;
 
-public class GolfBall implements MovableObjects {
+public class Hole implements MovableObjects {
     private double coordinate_X;
     private double coordinate_Y;
-    private double mass;
     private double radius;
     private Circle visualRepresentation;
     /**
-     * Creates ball object
+     * Creates Hole object
+     *
      * @param coordinate_X
      * @param coordinate_Y
-     * @param mass
+     * @param radius
      */
-    public GolfBall(double coordinate_X, double coordinate_Y, double mass,double radius){
+    public Hole(double coordinate_X, double coordinate_Y, double radius){
         this.coordinate_X = coordinate_X;
         this.coordinate_Y = coordinate_Y;
-        this.mass = mass;
         this.radius = radius;
         this.visualRepresentation = createVisualRepresentation();
     }
@@ -36,9 +32,9 @@ public class GolfBall implements MovableObjects {
      * @return Circle representing the ball
      */
     private Circle createVisualRepresentation() {
-       Circle circle = new Circle(coordinate_X, coordinate_Y, radius);
-       circle.setFill(Color.WHITE); // Set color of the ball
-       return circle;
+        Circle circle = new Circle(coordinate_X, coordinate_Y, radius);
+        circle.setFill(Color.BLACK); // Set color of the ball
+        return circle;
     }
     /**
      * Get the graphical representation of the ball
@@ -71,13 +67,7 @@ public class GolfBall implements MovableObjects {
     public void setPositionY(double coordinate_Y){
         this.coordinate_Y = coordinate_Y;
     }
-    /**
-     * Sets mass
-     * @param mass
-     */
-    public void setMass(double mass){
-        this.mass = mass;
-    }
+
     //getters
     /**
      *  Returns Coordinate X
@@ -100,11 +90,5 @@ public class GolfBall implements MovableObjects {
     public double getRadius() {
         return this.radius;
     }
-    /**
-     *  Returns mass of ball
-     * @return double
-     */
-    public double getMass() {
-        return mass;
-    }
 }
+

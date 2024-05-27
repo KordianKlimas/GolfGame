@@ -1,14 +1,12 @@
 package com.kentwentyfour.project12;
-import com.kentwentyfour.project12.GameObjects.AreaType;
-import com.kentwentyfour.project12.GameObjects.AreaTypes.Grass;
-import com.kentwentyfour.project12.GameObjects.AreaTypes.Sand;
-import com.kentwentyfour.project12.GameObjects.GolfBall;
-import com.kentwentyfour.project12.GameObjects.Hole;
-import com.kentwentyfour.project12.GameObjects.MapManager;
-import com.kentwentyfour.project12.PhysicsEnginePackage.PhysicsEngine;
+import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.Grass;
+import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.Sand;
+import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
+import com.kentwentyfour.project12.gameobjects.movableobjects.Hole;
+import com.kentwentyfour.project12.gameobjects.MapManager;
+import com.kentwentyfour.project12.physicsengine.PhysicsEngine;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 

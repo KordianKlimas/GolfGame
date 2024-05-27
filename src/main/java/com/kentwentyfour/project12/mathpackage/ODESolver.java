@@ -1,4 +1,4 @@
-package com.kentwentyfour.project12.MathPackage;
+package com.kentwentyfour.project12.mathpackage;
 
 import java.util.ArrayList;
 import java.util.Arrays;

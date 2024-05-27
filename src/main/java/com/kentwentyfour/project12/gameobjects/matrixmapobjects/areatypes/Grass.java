@@ -1,6 +1,5 @@
-package com.kentwentyfour.project12.GameObjects.AreaTypes;
+package com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes;
 
-import com.kentwentyfour.project12.GameObjects.AreaType;
 import javafx.scene.paint.Color;
 
 
@@ -41,8 +40,10 @@ public class Grass implements AreaType {
             this.color = Color.rgb(11, 86, 13); // Darker green
         } else if (height < 1.7) {
             this.color = Color.rgb(8, 67, 10); // Darker green
-        }   else  {
-            this.color = Color.rgb(19,109,21);
+        }   else if(height < 1.9) {
+            this.color = Color.rgb(9, 39, 10); // Darker green
+        }else {
+            this.color = Color.rgb(9, 30, 10); // Darker green
         }
     }
     @Override

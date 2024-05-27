@@ -1,23 +1,24 @@
-package com.kentwentyfour.project12.GameObjects;
+package com.kentwentyfour.project12.gameobjects.movableobjects;
 
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
-public class Hole implements MovableObjects{
+public class GolfBall implements MovableObjects {
     private double coordinate_X;
     private double coordinate_Y;
+    private double mass;
     private double radius;
     private Circle visualRepresentation;
     /**
-     * Creates Hole object
-     *
+     * Creates ball object
      * @param coordinate_X
      * @param coordinate_Y
-     * @param radius
+     * @param mass
      */
-    public Hole(double coordinate_X, double coordinate_Y, double radius){
+    public GolfBall(double coordinate_X, double coordinate_Y, double mass,double radius){
         this.coordinate_X = coordinate_X;
         this.coordinate_Y = coordinate_Y;
+        this.mass = mass;
         this.radius = radius;
         this.visualRepresentation = createVisualRepresentation();
     }
@@ -32,9 +33,9 @@ public class Hole implements MovableObjects{
      * @return Circle representing the ball
      */
     private Circle createVisualRepresentation() {
-        Circle circle = new Circle(coordinate_X, coordinate_Y, radius);
-        circle.setFill(Color.BLACK); // Set color of the ball
-        return circle;
+       Circle circle = new Circle(coordinate_X, coordinate_Y, radius);
+       circle.setFill(Color.WHITE); // Set color of the ball
+       return circle;
     }
     /**
      * Get the graphical representation of the ball
@@ -67,7 +68,13 @@ public class Hole implements MovableObjects{
     public void setPositionY(double coordinate_Y){
         this.coordinate_Y = coordinate_Y;
     }
-
+    /**
+     * Sets mass
+     * @param mass
+     */
+    public void setMass(double mass){
+        this.mass = mass;
+    }
     //getters
     /**
      *  Returns Coordinate X
@@ -90,5 +97,11 @@ public class Hole implements MovableObjects{
     public double getRadius() {
         return this.radius;
     }
+    /**
+     *  Returns mass of ball
+     * @return double
+     */
+    public double getMass() {
+        return mass;
+    }
 }
-

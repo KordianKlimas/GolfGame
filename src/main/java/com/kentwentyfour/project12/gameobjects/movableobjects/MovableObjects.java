@@ -1,4 +1,4 @@
-package com.kentwentyfour.project12.GameObjects;
+package com.kentwentyfour.project12.gameobjects.movableobjects;
 
 import javafx.scene.Node;
 

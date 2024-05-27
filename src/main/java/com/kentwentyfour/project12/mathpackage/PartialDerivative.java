@@ -1,6 +1,4 @@
-package com.kentwentyfour.project12.MathPackage;
-
-import com.kentwentyfour.project12.MathPackage.FormulaCalculator;
+package com.kentwentyfour.project12.mathpackage;
 
 import java.util.*;
 

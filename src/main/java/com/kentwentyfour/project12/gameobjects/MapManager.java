@@ -1,27 +1,22 @@
-package com.kentwentyfour.project12.GameObjects;
+package com.kentwentyfour.project12.gameobjects;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.EmptyStackException;
-import com.kentwentyfour.project12.GameObjects.AreaTypes.Grass;
-import com.kentwentyfour.project12.GameObjects.AreaTypes.Sand;
-import com.kentwentyfour.project12.GameObjects.Obstacles.Water;
-import com.kentwentyfour.project12.MathPackage.FormulaCalculator;
-import com.kentwentyfour.project12.PhysicsEnginePackage.CoordinatesPath;
+
+import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.AreaType;
+import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.Grass;
+import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.Sand;
+import com.kentwentyfour.project12.gameobjects.matrixmapobjects.MatrixMapArea;
+import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areaobstacles.Water;
+import com.kentwentyfour.project12.gameobjects.movableobjects.MovableObjects;
+import com.kentwentyfour.project12.mathpackage.FormulaCalculator;
+import com.kentwentyfour.project12.physicsengine.CoordinatesPath;
 import com.kentwentyfour.project12.ReferenceStore;
 import javafx.animation.KeyFrame;
-import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
-import javafx.animation.TranslateTransition;
-import javafx.application.Application;
-import javafx.application.Platform;
-import javafx.scene.Group;
 import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
-import javafx.stage.Stage;
 import javafx.util.Duration;
 public class MapManager {
     public final int WIDTH = 600;
@@ -29,7 +24,7 @@ public class MapManager {
     private final int matrixSize = 101;//101
     private double mapWidth = 10; // in meters ex. 10 means coordinates from -5 to 5
     double scaleFactor = WIDTH / mapWidth; // scalar  to  match [m]  with the pixel size
-    private MappableObject[][] terrainData;
+    private MatrixMapArea[][] terrainData;
     private boolean isTerrainDataInitialized = false;
     FormulaCalculator calcCPF = new FormulaCalculator();
     ArrayList<String> CPF_parsed;
@@ -45,7 +40,7 @@ public class MapManager {
 
     public void generateTerrainData() {
         isTerrainDataInitialized = true;
-        MappableObject[][] terrainData = new MappableObject[matrixSize][matrixSize];
+        MatrixMapArea[][] terrainData = new MatrixMapArea[matrixSize][matrixSize];
         for (int row = 0; row < matrixSize; ++row) {
             for (int col = 0; col < matrixSize; ++col) {
                 //double height = this.computeHeight(row/(matrixSize/mapWidth),col/(matrixSize/mapWidth));
@@ -55,7 +50,7 @@ public class MapManager {
                 double[] arr = matrixToCoordinates(row,col);
                 double x = arr[0];
                 double y = arr[1];
-                //System.out.println("x: "+x+"y: "+y);
+                System.out.println("x: "+x+"y: "+y);
                 double height = this.computeHeight(x, y);
                 try {
                     if (height < 0.0) {
@@ -71,7 +66,7 @@ public class MapManager {
                 }
             }
         }
-
+        System.err.println(terrainData[0][0] instanceof Water);
 
         this.terrainData = terrainData;
     }
@@ -83,7 +78,7 @@ public class MapManager {
      * @param y
      * @return MappableObject
      */
-    public MappableObject accessObject(double x, double y) {
+    public MatrixMapArea accessObject(double x, double y) {
         int[] arr = coordinatesToMatrix(x, y);
         // prevents out of boundary  indexes
 
@@ -123,7 +118,7 @@ public class MapManager {
         double changeLimit = (this.matrixSize - 1) / this.mapWidth; // calculates how much coordinate (x or y) must change to change the cell in matrix
         // calculates  indexes
         arr[0] = midPoint + (int) Math.round(x * changeLimit);
-        arr[1] = midPoint + (int) Math.round(y * changeLimit);
+        arr[1] = midPoint - (int) Math.round(y * changeLimit);
         //System.out.println( changeLimit);
         //System.out.println( midPoint);
         //System.out.println( "X: "+ arr[0] + " Y: "+ arr[1]);
@@ -144,7 +139,7 @@ public class MapManager {
 
         // Calculate coordinates
         arr[0] = (x - midPoint) / changeLimit;
-        arr[1] = (y - midPoint) / changeLimit;
+        arr[1] = (y - midPoint) / -changeLimit;
 
         // Return the coordinates
         return arr;
@@ -163,7 +158,7 @@ public class MapManager {
         int midPixelY = (int) (this.HEIGHT / 2.0 );//middle pixel of the map y
        // System.out.println( "midPixelX"+ midPixelX+"midPixelY"+ midPixelY);
 
-        arr[0] = midPixelX - (int) Math.round(x * scaleFactor);
+        arr[0] = midPixelX + (int) Math.round(x * scaleFactor);
         arr[1] = midPixelY - (int) Math.round(y * scaleFactor);
 
       //  System.out.println("base pixel coordinates"+ arr[0]+" "+ arr[1]);
@@ -187,7 +182,7 @@ public class MapManager {
 
         for (int row = 0; row < newNumRows; ++row) {
             for (int col = 0; col < newNumCols; ++col) {
-                MappableObject objectOnMap = terrainData[row * matrixSize / newNumRows][col * matrixSize / newNumCols];
+                MatrixMapArea objectOnMap = terrainData[row * matrixSize / newNumRows][col * matrixSize / newNumCols];
                 double x = (double) col * cellWidth;
                 double y = (double) row * cellHeight;
                 Rectangle cell = new Rectangle(x, y, cellWidth, cellHeight);

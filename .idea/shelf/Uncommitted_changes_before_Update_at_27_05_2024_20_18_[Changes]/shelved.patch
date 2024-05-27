@@ -1,0 +1,125 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"9e80e0ac-204d-49c9-baf6-18865c982760\" name=\"Changes\" comment=\"Adding Lera's basicBot\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/GameSetupController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/GameSetupController.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitLabMergeRequestFiltersHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPENED&quot;,\r\n    &quot;assignee&quot;: {\r\n      &quot;type&quot;: &quot;org.jetbrains.plugins.gitlab.mergerequest.ui.filters.GitLabMergeRequestsFiltersValue.MergeRequestsMemberFilterValue.MergeRequestsAssigneeFilterValue&quot;,\r\n      &quot;username&quot;: &quot;I6366669&quot;,\r\n      &quot;fullname&quot;: &quot;Klimas, Kordian (Stud. DACS)&quot;\r\n    }\r\n  }\r\n}</component>\r\n  <component name=\"GitLabMergeRequestsSettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;first&quot;: &quot;https://gitlab.maastrichtuniversity.nl/ken_group24_20231/ken_project24_2023.git&quot;,\r\n    &quot;second&quot;: &quot;3bc631ba-5a82-40c4-b7e4-ce3df066dcb6&quot;\r\n  }\r\n}</component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 4\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2gyFSRRM9LqsCuHPAkPUun3MqfF\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Application.FormulaCalculator.executor\": \"Run\",\r\n    \"Application.MainApplication.executor\": \"Run\",\r\n    \"Application.ODESolver.executor\": \"Run\",\r\n    \"Application.PhysicsEngine.executor\": \"Run\",\r\n    \"Application.SuperClass.executor\": \"Debug\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"git-widget-placeholder\": \"game\",\r\n    \"kotlin-language-version-configured\": \"true\",\r\n    \"last_opened_file_path\": \"C:/Users/kordi/Desktop/Uni/Project12\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"com.kentwentyfour.project12.presentation.controllers\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.MainApplication\">\r\n    <configuration name=\"FormulaCalculator\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.kentwentyfour.project12.MathPackage.FormulaCalculator\" />\r\n      <module name=\"Project12\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.kentwentyfour.project12.MathPackage.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"MainApplication\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.kentwentyfour.project12.MainApplication\" />\r\n      <module name=\"Project12\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.kentwentyfour.project12.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ODESolver\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.kentwentyfour.project12.MathPackage.ODESolver\" />\r\n      <module name=\"Project12\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.kentwentyfour.project12.MathPackage.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"PhysicsEngine\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.kentwentyfour.project12.PhysicsEnginePackage.PhysicsEngine\" />\r\n      <module name=\"Project12\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.kentwentyfour.project12.PhysicsEnginePackage.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"SuperClass\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.kentwentyfour.project12.GameObjects.SuperClass\" />\r\n      <module name=\"Project12\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.kentwentyfour.project12.GameObjects.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.MainApplication\" />\r\n        <item itemvalue=\"Application.ODESolver\" />\r\n        <item itemvalue=\"Application.PhysicsEngine\" />\r\n        <item itemvalue=\"Application.FormulaCalculator\" />\r\n        <item itemvalue=\"Application.SuperClass\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"jdk-22-openjdk-22-4caba194b151-f504ca98\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"9e80e0ac-204d-49c9-baf6-18865c982760\" name=\"Changes\" comment=\"\" />\r\n      <created>1716661909278</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1716661909278</updated>\r\n      <workItem from=\"1716661910295\" duration=\"17819000\" />\r\n      <workItem from=\"1716712645065\" duration=\"58357000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Changing timeStep and initial time in PhysicEngine to improve calculation and animation. Adding  Stopping conditions support in game.\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716826330237</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716826330237</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Adding Lera's basicBot\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716826566207</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716826566207</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"3\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Changing timeStep and initial time in PhysicEngine to improve calculation and animation. Adding  Stopping conditions support in game.\" />\r\n    <MESSAGE value=\"Adding Lera's basicBot\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Adding Lera's basicBot\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MathPackage/FormulaCalculator.java</url>\r\n          <line>269</line>\r\n          <option name=\"timeStamp\" value=\"6\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MathPackage/FormulaCalculator.java</url>\r\n          <line>273</line>\r\n          <option name=\"timeStamp\" value=\"7\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MathPackage/ODESolver.java</url>\r\n          <line>263</line>\r\n          <option name=\"timeStamp\" value=\"63\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>\r\n          <line>143</line>\r\n          <option name=\"timeStamp\" value=\"78\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>\r\n          <line>142</line>\r\n          <option name=\"timeStamp\" value=\"79\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>\r\n          <line>144</line>\r\n          <option name=\"timeStamp\" value=\"80\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>\r\n          <line>145</line>\r\n          <option name=\"timeStamp\" value=\"82\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>\r\n          <line>105</line>\r\n          <option name=\"timeStamp\" value=\"83\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>\r\n          <line>111</line>\r\n          <option name=\"timeStamp\" value=\"84\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>\r\n          <line>208</line>\r\n          <option name=\"timeStamp\" value=\"85\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>\r\n          <line>200</line>\r\n          <option name=\"timeStamp\" value=\"86\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>\r\n          <line>204</line>\r\n          <option name=\"timeStamp\" value=\"87\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>\r\n          <line>206</line>\r\n          <option name=\"timeStamp\" value=\"88\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>\r\n          <line>209</line>\r\n          <option name=\"timeStamp\" value=\"89\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>\r\n          <line>139</line>\r\n          <option name=\"timeStamp\" value=\"90\" />\r\n        </line-breakpoint>\r\n        <breakpoint enabled=\"true\" type=\"java-exception\">\r\n          <properties class=\"java.util.EmptyStackException\" package=\"java.util\" />\r\n          <option name=\"timeStamp\" value=\"14\" />\r\n        </breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n    <pin-to-top-manager>\r\n      <pinned-members>\r\n        <PinnedItemInfo parentTag=\"com.kentwentyfour.project12.MathPackage.PartialDerivative\" memberName=\"variables\" />\r\n      </pinned-members>\r\n    </pin-to-top-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 640284973d8993aa1e31e2ff514e077fc24558aa)
++++ b/.idea/workspace.xml	(date 1716830070736)
+@@ -4,11 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="9e80e0ac-204d-49c9-baf6-18865c982760" name="Changes" comment="Adding Lera's basicBot">
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/GameSetupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/GameSetupController.java" afterDir="false" />
+-    </list>
++    <list default="true" id="9e80e0ac-204d-49c9-baf6-18865c982760" name="Changes" comment="Implementing change of kinetic friction during movement calculation support" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -169,7 +165,7 @@
+       <option name="presentableId" value="Default" />
+       <updated>1716661909278</updated>
+       <workItem from="1716661910295" duration="17819000" />
+-      <workItem from="1716712645065" duration="58357000" />
++      <workItem from="1716712645065" duration="58532000" />
+     </task>
+     <task id="LOCAL-00001" summary="Changing timeStep and initial time in PhysicEngine to improve calculation and animation. Adding  Stopping conditions support in game.">
+       <option name="closed" value="true" />
+@@ -187,7 +183,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1716826566207</updated>
+     </task>
+-    <option name="localTasksCounter" value="3" />
++    <task id="LOCAL-00003" summary="Implementing change of kinetic friction during movement calculation support">
++      <option name="closed" value="true" />
++      <created>1716830065234</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1716830065234</updated>
++    </task>
++    <option name="localTasksCounter" value="4" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -207,7 +211,8 @@
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="Changing timeStep and initial time in PhysicEngine to improve calculation and animation. Adding  Stopping conditions support in game." />
+     <MESSAGE value="Adding Lera's basicBot" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Adding Lera's basicBot" />
++    <MESSAGE value="Implementing change of kinetic friction during movement calculation support" />
++    <option name="LAST_COMMIT_MESSAGE" value="Implementing change of kinetic friction during movement calculation support" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
+@@ -229,26 +234,6 @@
+         </line-breakpoint>
+         <line-breakpoint enabled="true" type="java-line">
+           <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
+-          <line>143</line>
+-          <option name="timeStamp" value="78" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
+-          <line>142</line>
+-          <option name="timeStamp" value="79" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
+-          <line>144</line>
+-          <option name="timeStamp" value="80" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
+-          <line>145</line>
+-          <option name="timeStamp" value="82" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
+           <line>105</line>
+           <option name="timeStamp" value="83" />
+         </line-breakpoint>
+@@ -259,33 +244,28 @@
+         </line-breakpoint>
+         <line-breakpoint enabled="true" type="java-line">
+           <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
+-          <line>208</line>
++          <line>206</line>
+           <option name="timeStamp" value="85" />
+         </line-breakpoint>
+         <line-breakpoint enabled="true" type="java-line">
+           <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
+-          <line>200</line>
++          <line>198</line>
+           <option name="timeStamp" value="86" />
+         </line-breakpoint>
+         <line-breakpoint enabled="true" type="java-line">
+           <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
+-          <line>204</line>
++          <line>202</line>
+           <option name="timeStamp" value="87" />
+         </line-breakpoint>
+         <line-breakpoint enabled="true" type="java-line">
+           <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
+-          <line>206</line>
++          <line>204</line>
+           <option name="timeStamp" value="88" />
+         </line-breakpoint>
+         <line-breakpoint enabled="true" type="java-line">
+           <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
+-          <line>209</line>
++          <line>207</line>
+           <option name="timeStamp" value="89" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
+-          <line>139</line>
+-          <option name="timeStamp" value="90" />
+         </line-breakpoint>
+         <breakpoint enabled="true" type="java-exception">
+           <properties class="java.util.EmptyStackException" package="java.util" />

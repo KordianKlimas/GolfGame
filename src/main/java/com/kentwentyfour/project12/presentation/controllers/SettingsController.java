@@ -1,13 +1,13 @@
 package com.kentwentyfour.project12.presentation.controllers;
 
-import com.kentwentyfour.project12.Bot.BasicBot;
 import com.kentwentyfour.project12.Bot.Bot;
-import com.kentwentyfour.project12.GameObjects.GolfBall;
-import com.kentwentyfour.project12.GameObjects.MapManager;
-import com.kentwentyfour.project12.GameObjects.MovableObjects;
-import com.kentwentyfour.project12.PhysicsEnginePackage.CoordinatesPath;
-import com.kentwentyfour.project12.PhysicsEnginePackage.PhysicsEngine;
+import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
+import com.kentwentyfour.project12.gameobjects.MapManager;
+import com.kentwentyfour.project12.gameobjects.movableobjects.MovableObjects;
+import com.kentwentyfour.project12.physicsengine.CoordinatesPath;
+import com.kentwentyfour.project12.physicsengine.PhysicsEngine;
 import com.kentwentyfour.project12.ReferenceStore;
+import com.kentwentyfour.project12.presentation.controllers.alerts.Alert1;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -18,13 +18,10 @@ import javafx.scene.control.Alert;
 
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Optional;
 import java.util.ResourceBundle;import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
-import javafx.application.Platform;
 import javafx.util.Duration;
-import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 
 public class SettingsController implements Initializable {
@@ -129,7 +126,11 @@ public class SettingsController implements Initializable {
                             }
                         } else if (result.get() == BUTTON_CONTINUE) {
                             GolfBall ball = balls.get(0);
-                            ball.setPosition(path[0][path[0].length - 2], path[1][path[1].length - 2]);
+                            if(path[0].length>2){
+                                ball.setPosition(path[0][path[0].length - 2], path[1][path[1].length - 2]);
+                            }else{
+                                ball.setPosition(ball.getX(),ball.getY());
+                            }
                             mapManager.updateCoordinates(ball);
                         }
                     }

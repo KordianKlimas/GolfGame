@@ -1,6 +1,5 @@
-package com.kentwentyfour.project12.GameObjects.AreaTypes;
+package com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes;
 
-import com.kentwentyfour.project12.GameObjects.AreaType;
 import javafx.scene.paint.Color;
 
 public class Sand implements AreaType {

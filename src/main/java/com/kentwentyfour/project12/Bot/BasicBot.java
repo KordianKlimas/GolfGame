@@ -1,11 +1,9 @@
 package com.kentwentyfour.project12.Bot;
 
 
-import com.kentwentyfour.project12.GameObjects.GolfBall;
-import com.kentwentyfour.project12.GameObjects.MapManager;
-import com.kentwentyfour.project12.GameObjects.MappableObject;
-import com.kentwentyfour.project12.PhysicsEnginePackage.CoordinatesPath;
-import com.kentwentyfour.project12.PhysicsEnginePackage.PhysicsEngine;
+import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
+import com.kentwentyfour.project12.physicsengine.CoordinatesPath;
+import com.kentwentyfour.project12.physicsengine.PhysicsEngine;
 import com.kentwentyfour.project12.ReferenceStore;
 
 import java.util.ArrayList;

@@ -1,25 +1,20 @@
 package com.kentwentyfour.project12.presentation.controllers;
 
 import com.kentwentyfour.project12.Constants;
-import com.kentwentyfour.project12.GameObjects.GolfBall;
-import com.kentwentyfour.project12.GameObjects.Hole;
-import com.kentwentyfour.project12.GameObjects.MapManager;
-import com.kentwentyfour.project12.PhysicsEnginePackage.CoordinatesPath;
-import com.kentwentyfour.project12.PhysicsEnginePackage.PhysicsEngine;
+import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
+import com.kentwentyfour.project12.gameobjects.movableobjects.Hole;
+import com.kentwentyfour.project12.gameobjects.MapManager;
+import com.kentwentyfour.project12.physicsengine.PhysicsEngine;
 import com.kentwentyfour.project12.ReferenceStore;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import java.io.IOException;
