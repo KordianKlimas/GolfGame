@@ -35,6 +35,7 @@ public class PhysicsEngine {
         this.CPF_parsed =new ArrayList<>(calcCPF.parseString(CourseProfileFormula));
         height_PartialDerivative.setEquation(CourseProfileFormula);
         height_PartialDerivative.addVariables("x","y");
+        ODESolver.addPartialDerivative(height_PartialDerivative);
     }
 
     /**
@@ -92,7 +93,6 @@ public class PhysicsEngine {
                 "vy"
         };
         List<String> variables = Arrays.asList( "t","vx","vy","x", "y","k_f");
-        ODESolver.addPartialDerivative(height_PartialDerivative);
         double stepSize = 0.1;
         int in_Time = 10;
         double[] in_Conditions = {0,velocityX, velocityY,x_coordinate,y_coordinate,current_kf};
@@ -104,6 +104,7 @@ public class PhysicsEngine {
         String stoppingCondition="";
         while (stoppingCondition.isEmpty()){
             Double[][] results = ODESolver.rungeKutta(equations, stepSize, in_Time, in_Conditions, variables);
+            System.out.println(Arrays.toString(results[1]));
             //System.out.println(Arrays.toString(results[4]));
             double  x_velocity =  results[1][0];
             double  y_velocity =  results[2][0];
@@ -188,19 +189,18 @@ public class PhysicsEngine {
                 return "obstacle_hit";
             }
             case AreaType areaType -> {
-                double formula_value = Math.sqrt(dh_dx * dh_dx + dh_dy * dh_dy)/*+1*/;
+                double formula_value = Math.sqrt(dh_dx * dh_dx + dh_dy * dh_dy)+1;
                 //System.err.println(areaType.getStaticFriction() +" > "+ formula_value);
                 //System.err.println((formula_value ==1) +" " +(x_velocity_change) +" " + (y_velocity_change));
                 if (areaType.getStaticFriction() > formula_value)  {
                   //  System.err.println(areaType.getStaticFriction() +" > "+ formula_value);
                     return "static_friction_overcomes_the_force";
                 }
-                else if(formula_value ==0 /*==1*/ && x_velocity_change<0.06 && y_velocity_change<0.06){
+                else if(formula_value ==1 && x_velocity_change<0.06 && y_velocity_change<0.06){
                     return "static_friction_overcomes_the_force";
                 }
             }
             default -> {
-
                 return "";
             }
         }
@@ -221,12 +221,9 @@ public class PhysicsEngine {
         double x_hole = hole.getX();
         double y_hole = hole.getY();
         double distance = Math.sqrt(Math.pow(x_coordinate - x_hole, 2) + Math.pow(y_coordinate - y_hole, 2));
-        System.out.println(distance +" "+x_velocity_last+ " "+y_velocity_last);
-        if (distance < radiusOfHole && x_velocity_last<4 && y_velocity_last<4) {
-            // Ball in the hole
-            return true;
-        }
-        return false;
+        //System.out.println(distance +" "+x_velocity_last+ " "+y_velocity_last);
+        // Ball in the hole
+        return distance < radiusOfHole && x_velocity_last < 4 && y_velocity_last < 4;
     }
     public static void main(String[] args){
         //setting up golf ball/s

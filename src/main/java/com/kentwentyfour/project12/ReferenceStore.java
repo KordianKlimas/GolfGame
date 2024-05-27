@@ -18,7 +18,7 @@ import java.util.List;
  * Stores all often used references
  * - PhysicEngine
  * - MapManager
- * - Hole/s    (as List)
+ * - Hole
  * - GolfBalls (as List)
  * - AreaTypeFactory ( to be implemented )
  */

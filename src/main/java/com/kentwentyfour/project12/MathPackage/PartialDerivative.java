@@ -172,6 +172,9 @@ public class PartialDerivative {
     public List<String> getParsedEquation(){
         return parsedEquation;
     }
+    public void setParsedEquation(List<String> parsedEquation){
+        this.parsedEquation = parsedEquation;
+    }
 
 
     public static void main(String[] args){

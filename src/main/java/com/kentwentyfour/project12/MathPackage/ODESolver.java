@@ -201,21 +201,19 @@ public class ODESolver  {
      */
 
     public static void addPartialDerivative(PartialDerivative pd){
-
-        for(PartialDerivative storedPd:partialDerivatives){
-
-            if(storedPd.getName().equals(pd.getName())){
-                if(!(storedPd.getParsedEquation().equals(pd.getParsedEquation()))){
-                    // same name -> replacing pd formula
-                    storedPd = pd;
-
+        boolean found = false;
+        for (PartialDerivative storedPd : partialDerivatives) {
+            if (storedPd.getName().equals(pd.getName())) {
+                if (!storedPd.getParsedEquation().equals(pd.getParsedEquation())) {
+                    // Update storedPd's parsed equation
+                    storedPd.setParsedEquation(pd.getParsedEquation());
                 }
-                // duplicated pd -> not adding
-            }else{
-                partialDerivatives.add(pd);
+                found = true;
+                break;
             }
         }
-        if(partialDerivatives.isEmpty()){
+        if (!found) {
+            // If not found, add the new PartialDerivative
             partialDerivatives.add(pd);
         }
    }
@@ -240,11 +238,11 @@ public class ODESolver  {
         //PartialDerivative pd = new PartialDerivative("h","0,4  * ( 0.9 - 2.71828 ^ ( ( x ^ 2 + y ^ 2 ) / -8 ) )","x","y");
         //PartialDerivative pd = new PartialDerivative("h","sin( ( x - y ) / 7 ) + 0.5","x","y");
         PartialDerivative pd = new PartialDerivative("h","1","x","y");
-        PartialDerivative pd2 = new PartialDerivative("h","2","x","y");
+        PartialDerivative pd2 = new PartialDerivative("h","x ^ 2","x","y");
        // PartialDerivative pd = new PartialDerivative("h","0","x","y");
         ODESolver.addPartialDerivative(pd);
         ODESolver.addPartialDerivative(pd); //test
-        ODESolver.addPartialDerivative(pd2); //test
+
 
 //        String expressionVx = ((-gdx)/(1+Math.pow(dx, 2)+Math.pow(dy, 2)))+"-"+((mu_kg)/(Math.sqrt(1+Math.pow(dx, 2)+Math.pow(dy, 2))))+"(vx/sqrt(vx^2 + vy^2 + ("+dx+"vx"+"+"+dy+"vy)^2))";
 //        String expressionVy = ((-gdy)/(1+Math.pow(dx, 2)+Math.pow(dy, 2))+"-"+(mu_kg)/(Math.sqrt(1+Math.pow(dx, 2)+Math.pow(dy, 2))))+"(vy/sqrt(vx^2 + vy^2 + ("+dx+"vx"+"+"+dy+"vy)^2))";
@@ -255,15 +253,29 @@ public class ODESolver  {
         in_Conditions[2]=3;
         results = rungeKutta(equations, stepSize, in_Time, in_Conditions, variables);
 
-        System.out.println(Arrays.toString(results[0]));
-        System.out.println("_______");
-        System.out.println(Arrays.toString(results[1]));
-        System.out.println("_______");
-        System.out.println(Arrays.toString(results[2]));
-        System.out.println("_____X__");
-        System.out.println(Arrays.toString(results[3]));
-        System.out.println("_____Y__");
+       //System.out.println(Arrays.toString(results[0]));
+       //System.out.println("_______");
+       //System.out.println(Arrays.toString(results[1]));
+       //System.out.println("_______");
+       //System.out.println(Arrays.toString(results[2]));
+       //System.out.println("_____X__");
+       //System.out.println(Arrays.toString(results[3]));
+       //System.out.println("_____Y__");
         System.out.println(Arrays.toString(results[4]));
+
+        ODESolver.addPartialDerivative(pd2); //test
+        results = rungeKutta(equations, stepSize, in_Time, in_Conditions, variables);
+
+       // System.out.println(Arrays.toString(results[0]));
+       // System.out.println("_______");
+       // System.out.println(Arrays.toString(results[1]));
+       // System.out.println("_______");
+       // System.out.println(Arrays.toString(results[2]));
+       // System.out.println("_____X__");
+       // System.out.println(Arrays.toString(results[3]));
+       // System.out.println("_____Y__");
+        System.out.println(Arrays.toString(results[4]));
+
     }
 }
 
