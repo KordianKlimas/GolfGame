@@ -29,9 +29,10 @@ public class PhysicsEngine {
     public PartialDerivative height_PartialDerivative = new PartialDerivative("h");
 
 
-    public PhysicsEngine(String CourseProfileFormula, ArrayList<GolfBall> golf_balls,MapManager mapManager){
+    public PhysicsEngine(){
         //  preparation of  CourseProfileFormula for calculations
-        this.mapManager = mapManager;
+        this.mapManager = referenceStore.getMapManager();
+        String CourseProfileFormula = referenceStore.getCourseProfileFormula();
         this.CPF_parsed =new ArrayList<>(calcCPF.parseString(CourseProfileFormula));
         height_PartialDerivative.setEquation(CourseProfileFormula);
         height_PartialDerivative.addVariables("x","y");
@@ -239,9 +240,9 @@ public class PhysicsEngine {
         ArrayList<GolfBall> golf_balls =  new ArrayList<GolfBall>();
         golf_balls.add(golfBallPlayer1);
         golfBallPlayer1.setPosition(2,2);
-        MapManager mapManager = new MapManager("sin( ( x - y ) / 7 ) + 0.5");
+        MapManager mapManager = new MapManager();
         mapManager.generateTerrainData();
-        PhysicsEngine engine =  new PhysicsEngine("sin( ( x - y ) / 7 ) + 0.5",golf_balls,mapManager);
+        PhysicsEngine engine =  new PhysicsEngine();
 
         CoordinatesPath results = engine.calculateCoordinatePath(golf_balls.get(0),2,2);
         double[][] path = results.getPath();

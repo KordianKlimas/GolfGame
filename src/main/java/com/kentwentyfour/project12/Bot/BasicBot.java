@@ -6,15 +6,18 @@ import com.kentwentyfour.project12.GameObjects.MapManager;
 import com.kentwentyfour.project12.GameObjects.MappableObject;
 import com.kentwentyfour.project12.PhysicsEnginePackage.CoordinatesPath;
 import com.kentwentyfour.project12.PhysicsEnginePackage.PhysicsEngine;
+import com.kentwentyfour.project12.ReferenceStore;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class BasicBot{
     private PhysicsEngine engine;
+    private  String courseProfileFormula;
+    private ReferenceStore referenceStore = ReferenceStore.getInstance();
 
-    public BasicBot(String CourseProfileFormula, ArrayList<GolfBall> golf_balls){
-        
+    public BasicBot(ArrayList<GolfBall> golf_balls){
+        this.courseProfileFormula = referenceStore.getCourseProfileFormula();
     }
     public Double[][] newCoordinates(GolfBall golfBall, double velocity, double targetX, double targetY){
         double velocityX = velocity * Math.cos(Math.toRadians(findAngle(golfBall.getX(), golfBall.getY(), targetX, targetY)));
@@ -40,7 +43,7 @@ public class BasicBot{
         GolfBall boll = new GolfBall(0.0,0.0,0.0459,0.15);
         ArrayList<GolfBall> golf = new ArrayList<>();
         golf.add(boll);
-        BasicBot bot = new BasicBot("sin( ( x - y ) / 7 ) + 0.5", golf);
+        BasicBot bot = new BasicBot(golf);
         double targetX = 5;
         double targetY = 7;
         double velocity = 5;

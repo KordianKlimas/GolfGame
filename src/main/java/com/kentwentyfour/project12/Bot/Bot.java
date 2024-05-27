@@ -6,6 +6,7 @@ import com.kentwentyfour.project12.GameObjects.AreaTypes.Sand;
 import com.kentwentyfour.project12.GameObjects.Obstacles.Water;
 import com.kentwentyfour.project12.PhysicsEnginePackage.CoordinatesPath;
 import com.kentwentyfour.project12.PhysicsEnginePackage.PhysicsEngine;
+import com.kentwentyfour.project12.ReferenceStore;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,10 +14,11 @@ import java.util.Arrays;
 public class Bot {
     private MapManager mapGenerator;
     private PhysicsEngine physicsEngine;
+    private ReferenceStore referenceStore = ReferenceStore.getInstance();
 
-    public Bot(GolfBall golf_ball, PhysicsEngine physicsEngine, MapManager mapGenerator) {
-        this.physicsEngine = physicsEngine;
-        this.mapGenerator = mapGenerator;
+    public Bot(GolfBall golf_ball) {
+        this.physicsEngine = referenceStore.getPhysicsEngine();
+        this.mapGenerator = referenceStore.getMapManager();
     }
 
     public Double[][] newCoordinates(GolfBall golfBall, double targetX, double targetY) {
@@ -111,10 +113,8 @@ public class Bot {
         GolfBall ball = new GolfBall(0.0, 0.0, 0.0459, 0.15);
         ArrayList<GolfBall> golfBalls = new ArrayList<>();
         golfBalls.add(ball);
-        MapManager mapGenerator = new MapManager("sin( ( x - y ) / 7 ) + 0.5");
-       PhysicsEngine pe = new PhysicsEngine("sin( ( x - y ) / 7 ) + 0.5", golfBalls,mapGenerator);
 
-        Bot bot = new Bot(ball, pe, mapGenerator);
+        Bot bot = new Bot(ball);
 
         double targetX = 5;
         double targetY = 7;

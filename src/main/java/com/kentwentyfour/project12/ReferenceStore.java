@@ -4,6 +4,8 @@ import com.kentwentyfour.project12.GameObjects.AreaTypes.Grass;
 import com.kentwentyfour.project12.GameObjects.AreaTypes.Sand;
 import com.kentwentyfour.project12.GameObjects.GolfBall;
 import com.kentwentyfour.project12.GameObjects.Hole;
+import com.kentwentyfour.project12.GameObjects.MapManager;
+import com.kentwentyfour.project12.PhysicsEnginePackage.PhysicsEngine;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -30,7 +32,9 @@ public  class ReferenceStore {
     //  Game Objects variables
     private ArrayList<GolfBall> listOfGolfBalls = new ArrayList<>();
     private Hole hole;
-
+    private MapManager mapManager;
+    private PhysicsEngine physicsEngine;
+    private String courseProfileFormula;
 
     // Private constructor to prevent instantiation
     private ReferenceStore() {
@@ -104,6 +108,48 @@ public  class ReferenceStore {
     public  List<GolfBall> getGolfballList(){
         return this.listOfGolfBalls;
     }
+    /**
+     * Sets reference for MapManager
+     * @param mapManager
+     */
+    public void setMapManagerReference(MapManager mapManager) {
+        this.mapManager = mapManager;
+    }
+    /**
+     * Returns reference for MapManager
+     * @return Mapmanager
+     */
+    public MapManager getMapManager(){
+        return this.mapManager;
+    }
+    /**
+     * Sets reference for physicsEngine
+     * @param physicsEngine
+     */
+    public void setPhysicsEngine(PhysicsEngine physicsEngine){
+        this.physicsEngine = physicsEngine;
+    }
+    /**
+     * Returns reference for PhysicsEngine
+     * @return PhysicsEngine
+     */
+    public PhysicsEngine getPhysicsEngine() {return this.physicsEngine;}
+    /**
+     * Sets reference for courseProfileFormula
+     * @param courseProfileFormula
+     */
+    public void setCourseProfileFormula(String courseProfileFormula) {
+        this.courseProfileFormula = courseProfileFormula;
+    }
+    /**
+     * Returns reference for formula
+     * @return courseProfileFormula
+     */
+    public String getCourseProfileFormula() {
+        return this.courseProfileFormula;
+    }
+
+
 
 
 }

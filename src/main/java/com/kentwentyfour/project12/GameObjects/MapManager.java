@@ -7,6 +7,7 @@ import com.kentwentyfour.project12.GameObjects.AreaTypes.Sand;
 import com.kentwentyfour.project12.GameObjects.Obstacles.Water;
 import com.kentwentyfour.project12.MathPackage.FormulaCalculator;
 import com.kentwentyfour.project12.PhysicsEnginePackage.CoordinatesPath;
+import com.kentwentyfour.project12.ReferenceStore;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
@@ -33,9 +34,11 @@ public class MapManager {
     FormulaCalculator calcCPF = new FormulaCalculator();
     ArrayList<String> CPF_parsed;
     private Pane root; // the map
+    private ReferenceStore referenceStore = ReferenceStore.getInstance();
 
 
-    public MapManager(String CourseProfileFormula) {
+    public MapManager() {
+        String CourseProfileFormula = referenceStore.getCourseProfileFormula();
         this.CPF_parsed = new ArrayList<>(calcCPF.parseString(CourseProfileFormula));
         generateTerrainData();
     }

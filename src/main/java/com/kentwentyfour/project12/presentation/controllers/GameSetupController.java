@@ -89,10 +89,16 @@ public class GameSetupController extends BaseController {
 
        //formula = "0.4 * ( 0.9 -  2.718 ^ ( ( -1 * x ^ 2 + y ^ 2 ) / -8 ) )";
        //formula="1";
-       mapManager = new MapManager(formula);
-       ArrayList<GolfBall> balls =  new ArrayList<GolfBall>();
+        ReferenceStore referenceStore = ReferenceStore.getInstance();
+        referenceStore.setCourseProfileFormula(formula);
+        mapManager = new MapManager();
+
+        referenceStore.setMapManagerReference(mapManager);
+
+        ArrayList<GolfBall> balls =  new ArrayList<GolfBall>();
        balls.add(new GolfBall(startX,startY,.1,ballRadius));
-       physicsEngine = new PhysicsEngine(formula, balls, mapManager);
+       physicsEngine = new PhysicsEngine();
+        referenceStore.setPhysicsEngine(physicsEngine);
 
 
         Stage settingsStage = new Stage();
@@ -103,7 +109,7 @@ public class GameSetupController extends BaseController {
             FXMLLoader settingsLoader = new FXMLLoader(getClass().getResource("/com/kentwentyfour/project12/views/Settings.fxml"));
             settingsRoot = settingsLoader.load();
             // Get reference store
-            ReferenceStore referenceStore = ReferenceStore.getInstance();
+
 
             //Set frictions
             referenceStore.setFrictionsAreaType("Grass",kineticFrictionGrass,staticFrictionGrass );
@@ -111,7 +117,7 @@ public class GameSetupController extends BaseController {
 
 
             // Initialize mapManager and map
-            mapManager = new MapManager(formula);
+            mapManager = new MapManager();
             mapManager.generateTerrainData();
             Pane pane = mapManager.getMap();
 
