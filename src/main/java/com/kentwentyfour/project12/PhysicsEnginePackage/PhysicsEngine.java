@@ -188,14 +188,14 @@ public class PhysicsEngine {
                 return "obstacle_hit";
             }
             case AreaType areaType -> {
-                double formula_value = Math.sqrt(dh_dx * dh_dx + dh_dy * dh_dy) + 1;
+                double formula_value = Math.sqrt(dh_dx * dh_dx + dh_dy * dh_dy)/*+1*/;
                 //System.err.println(areaType.getStaticFriction() +" > "+ formula_value);
                 //System.err.println((formula_value ==1) +" " +(x_velocity_change) +" " + (y_velocity_change));
                 if (areaType.getStaticFriction() > formula_value)  {
                   //  System.err.println(areaType.getStaticFriction() +" > "+ formula_value);
                     return "static_friction_overcomes_the_force";
                 }
-                else if(formula_value ==1 && x_velocity_change<0.06 && y_velocity_change<0.06){
+                else if(formula_value ==0 /*==1*/ && x_velocity_change<0.06 && y_velocity_change<0.06){
                     return "static_friction_overcomes_the_force";
                 }
             }
@@ -207,6 +207,14 @@ public class PhysicsEngine {
         return "";
     }
 
+    /**
+     * Checks midpoint of ball is in hole area
+     * @param x_velocity_last
+     * @param y_velocity_last
+     * @param x_coordinate
+     * @param y_coordinate
+     * @return
+     */
     public boolean ballInHole(double x_velocity_last,double y_velocity_last, double x_coordinate, double y_coordinate){
         Hole hole = referenceStore.getHole();
         double radiusOfHole = hole.getRadius();

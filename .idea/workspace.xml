@@ -7,8 +7,8 @@
     <list default="true" id="9e80e0ac-204d-49c9-baf6-18865c982760" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MathPackage/ODESolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MathPackage/ODESolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MathPackage/PartialDerivative.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MathPackage/PartialDerivative.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/GameSetupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/GameSetupController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,9 +142,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainApplication" />
+        <item itemvalue="Application.PhysicsEngine" />
         <item itemvalue="Application.ODESolver" />
         <item itemvalue="Application.FormulaCalculator" />
-        <item itemvalue="Application.PhysicsEngine" />
         <item itemvalue="Application.SuperClass" />
       </list>
     </recent_temporary>
@@ -165,7 +165,7 @@
       <option name="presentableId" value="Default" />
       <updated>1716661909278</updated>
       <workItem from="1716661910295" duration="17819000" />
-      <workItem from="1716712645065" duration="39824000" />
+      <workItem from="1716712645065" duration="42181000" />
     </task>
     <servers />
   </component>

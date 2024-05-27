@@ -195,13 +195,23 @@ public class ODESolver  {
 
     /**
      * Adds partial derivative formula to all odesolvers. Makes sure there are only unique formulas.
-     * @param pd - PartialDerivative
+     * If pd with same name and formula as one in list is added, the stored pd will be replaced.
+     * No pd's with same name allowed
+     * * @param pd - PartialDerivative
      */
 
     public static void addPartialDerivative(PartialDerivative pd){
 
         for(PartialDerivative storedPd:partialDerivatives){
-            if(!storedPd.equals(pd)){
+
+            if(storedPd.getName().equals(pd.getName())){
+                if(!(storedPd.getParsedEquation().equals(pd.getParsedEquation()))){
+                    // same name -> replacing pd formula
+                    storedPd = pd;
+
+                }
+                // duplicated pd -> not adding
+            }else{
                 partialDerivatives.add(pd);
             }
         }
@@ -230,9 +240,11 @@ public class ODESolver  {
         //PartialDerivative pd = new PartialDerivative("h","0,4  * ( 0.9 - 2.71828 ^ ( ( x ^ 2 + y ^ 2 ) / -8 ) )","x","y");
         //PartialDerivative pd = new PartialDerivative("h","sin( ( x - y ) / 7 ) + 0.5","x","y");
         PartialDerivative pd = new PartialDerivative("h","1","x","y");
+        PartialDerivative pd2 = new PartialDerivative("h","2","x","y");
        // PartialDerivative pd = new PartialDerivative("h","0","x","y");
         ODESolver.addPartialDerivative(pd);
         ODESolver.addPartialDerivative(pd); //test
+        ODESolver.addPartialDerivative(pd2); //test
 
 //        String expressionVx = ((-gdx)/(1+Math.pow(dx, 2)+Math.pow(dy, 2)))+"-"+((mu_kg)/(Math.sqrt(1+Math.pow(dx, 2)+Math.pow(dy, 2))))+"(vx/sqrt(vx^2 + vy^2 + ("+dx+"vx"+"+"+dy+"vy)^2))";
 //        String expressionVy = ((-gdy)/(1+Math.pow(dx, 2)+Math.pow(dy, 2))+"-"+(mu_kg)/(Math.sqrt(1+Math.pow(dx, 2)+Math.pow(dy, 2))))+"(vy/sqrt(vx^2 + vy^2 + ("+dx+"vx"+"+"+dy+"vy)^2))";

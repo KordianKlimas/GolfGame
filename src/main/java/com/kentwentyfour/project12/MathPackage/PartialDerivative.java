@@ -157,16 +157,20 @@ public class PartialDerivative {
     public double getVariableValue(String key){
         return variables_values.get(key);
     }
+    /**
+     *Gives name  od pd
+     * @return String
+     */
+    public String getName(){
+        return this.name;
+    }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null || getClass() != obj.getClass())
-            return false;
-        PartialDerivative other = (PartialDerivative) obj;
-        // Compare the fields that define equality for your PartialDerivative class
-        return Objects.equals(name, other.name) && Objects.equals(parsedEquation, other.parsedEquation);
+    /**
+     *Gives parsed equation
+     * @return String
+     */
+    public List<String> getParsedEquation(){
+        return parsedEquation;
     }
 
 
