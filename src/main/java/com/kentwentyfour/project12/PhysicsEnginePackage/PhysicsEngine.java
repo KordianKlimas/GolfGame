@@ -112,6 +112,8 @@ public class PhysicsEngine {
             for(int i=0;i<results[0].length;i++ ){
 
                 //updating velocities and coordinates
+                x_coordinate = results[3][i];
+                y_coordinate = results[4][i];
                 double x_velocity_change=1;
                 double y_velocity_change=1;
                 if(i>1){
@@ -120,29 +122,36 @@ public class PhysicsEngine {
                     x_velocity = results[1][i];
                     y_velocity= results[2][i];
                 }
-                x_coordinate = results[3][i];
-                y_coordinate = results[4][i];
-              //  System.out.println("X: "+ x_coordinate+"Y "+y_coordinate);
-
-                // updating frictions for new position
-                area =  mapManager.accessObject(x_coordinate,y_coordinate);
-                if(area instanceof AreaType){
-                    current_kf = ((AreaType) area).getKineticFriction();
-                }
 
                 // checking for stopping condition
                 double pd_value_dx = height_PartialDerivative.calculatePD_notation("dh/dx",x_coordinate,y_coordinate);
                 double pd_value_dy = height_PartialDerivative.calculatePD_notation("dh/dy",x_coordinate,y_coordinate);
-                //System.out.println(x_coordinate+" "+y_coordinate);
                 MappableObject obj = mapManager.accessObject(x_coordinate,y_coordinate);
-
                 stoppingCondition = checkStoppingConditions(obj,golfBall,pd_value_dx,pd_value_dy,x_velocity_change,y_velocity_change,x_velocity,y_velocity, x_coordinate, y_coordinate);
 
 
+                // updating frictions for new position if the ball is on AreaType area
+                area =  mapManager.accessObject(x_coordinate,y_coordinate);
+                if(area instanceof AreaType && stoppingCondition.isEmpty() ){
+                    double new_kf = ((AreaType) area).getKineticFriction();
+                    if(current_kf!=new_kf){
+                        // repeat calculations for new friction
+                        current_kf = new_kf;
+                        in_Conditions[1] = x_velocity;
+                        in_Conditions[2] = y_velocity;
+                        in_Conditions[3] = x_coordinate;
+                        in_Conditions[4] = y_coordinate;
+                        in_Conditions[5] = current_kf;
+                        path_coordinates_X.add(x_coordinate);
+                        path_coordinates_Y.add(y_coordinate);
+                        break;
+                    }
+                }
+                // saves coordinates to final path ( includes coordinates where ball hit the obstacle )
                 path_coordinates_X.add(x_coordinate);
                 path_coordinates_Y.add(y_coordinate);
 
-                // end calculations if stopping condition present
+                // ends calculations if stopping condition present
                 if(!stoppingCondition.isEmpty()){
                     break;
                 }
@@ -158,7 +167,6 @@ public class PhysicsEngine {
                 break;
             }
         }
-        //System.out.println(path_coordinates_X);
         // Returning the list of coordinates
         double[][] finalPath = new double[2][path_coordinates_X.size()];
         for (int i = 0; i < path_coordinates_X.size(); i++) {

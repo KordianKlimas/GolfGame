@@ -107,7 +107,7 @@ public class GameSetupController extends BaseController {
 
             //Set frictions
             referenceStore.setFrictionsAreaType("Grass",kineticFrictionGrass,staticFrictionGrass );
-            referenceStore.setFrictionsAreaType("Sand",kineticFrictionGrass,staticFrictionGrass );
+            referenceStore.setFrictionsAreaType("Sand",kineticFrictionSand,staticFrictionSand );
 
 
             // Initialize mapManager and map

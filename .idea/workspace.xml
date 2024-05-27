@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e80e0ac-204d-49c9-baf6-18865c982760" name="Changes" comment="Changing timeStep and initial time in PhysicEngine to improve calculation and animation. Adding  Stopping conditions support in game." />
+    <list default="true" id="9e80e0ac-204d-49c9-baf6-18865c982760" name="Changes" comment="Adding Lera's basicBot">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/GameSetupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/GameSetupController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -165,7 +169,7 @@
       <option name="presentableId" value="Default" />
       <updated>1716661909278</updated>
       <workItem from="1716661910295" duration="17819000" />
-      <workItem from="1716712645065" duration="55460000" />
+      <workItem from="1716712645065" duration="58357000" />
     </task>
     <task id="LOCAL-00001" summary="Changing timeStep and initial time in PhysicEngine to improve calculation and animation. Adding  Stopping conditions support in game.">
       <option name="closed" value="true" />
@@ -175,7 +179,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716826330237</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Adding Lera's basicBot">
+      <option name="closed" value="true" />
+      <created>1716826566207</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1716826566207</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,7 +206,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changing timeStep and initial time in PhysicEngine to improve calculation and animation. Adding  Stopping conditions support in game." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changing timeStep and initial time in PhysicEngine to improve calculation and animation. Adding  Stopping conditions support in game." />
+    <MESSAGE value="Adding Lera's basicBot" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding Lera's basicBot" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -210,24 +223,69 @@
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
-          <line>198</line>
-          <option name="timeStamp" value="51" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
-          <line>194</line>
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MathPackage/ODESolver.java</url>
           <line>263</line>
           <option name="timeStamp" value="63" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
+          <line>143</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
+          <line>142</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
+          <line>144</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
+          <line>145</line>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
           <line>111</line>
-          <option name="timeStamp" value="74" />
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
+          <line>208</line>
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
+          <line>200</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
+          <line>204</line>
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
+          <line>206</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
+          <line>209</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
+          <line>139</line>
+          <option name="timeStamp" value="90" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.util.EmptyStackException" package="java.util" />
