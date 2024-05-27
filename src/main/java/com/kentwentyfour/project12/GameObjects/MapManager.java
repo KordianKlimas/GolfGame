@@ -23,8 +23,8 @@ import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 public class MapManager {
-    private final int WIDTH = 600;
-    private final int HEIGHT = 600;
+    public final int WIDTH = 600;
+    public final int HEIGHT = 600;
     private final int matrixSize = 101;//101
     private double mapWidth = 10; // in meters ex. 10 means coordinates from -5 to 5
     double scaleFactor = WIDTH / mapWidth; // scalar  to  match [m]  with the pixel size
@@ -168,18 +168,6 @@ public class MapManager {
     }
 
     /**
-     * Creates or returns existing map
-     * @return Pane - map
-     */
-    public Pane getMap(){
-        if(this.root!= null){
-            return this.root;
-        }
-        createMap();
-        return this.root;
-    }
-
-    /**
      * Generates basic map for the game
      * @return Pane - the map with  MappableObjects
      */
@@ -211,15 +199,20 @@ public class MapManager {
                 root.getChildren().add(cell);
             }
         }
-       // Node circle = new Circle(0, 0, 3);
-       // root.getChildren().add(circle);
-       // circle.setLayoutX(0);
-       // circle.setLayoutY(0);
-       // circle.setScaleY(this.scaleFactor);
-       // circle.setScaleX(this.scaleFactor);
-
         this.root = root;
     }
+    /**
+     * Creates or returns existing map
+     * @return Pane - map
+     */
+    public Pane getMap(){
+        if(this.root!= null){
+            return this.root;
+        }
+        createMap();
+        return this.root;
+    }
+
 
     /**
      * Adds MovableObject object to map. Scales it from physic unit [meters] to relative pixel size.
@@ -263,37 +256,6 @@ public class MapManager {
      * @param obj The movable object to animate.
      * @param coordinatesPath The path of coordinates defining the animation.
      */
-   // public void animateMovableObject(MovableObjects obj, CoordinatesPath coordinatesPath) {
-   //     double[][] path = coordinatesPath.getPath();
-   //     double timeInterval = 2.0/path[0].length;
-   //     Node objVisualRepresentation = obj.getVisualRepresentation();
-//
-   //     // Creating a timeline for the animation
-   //     Timeline timeline = new Timeline();
-//
-   //     for (int i = 0; i < path[0].length; i++) {
-//
-   //         double newX = path[0][i];
-   //         double newY = path[1][i];
-//
-   //         // Updating encapsulated obj coordinates
-   //         obj.setPositionX(newX);
-   //         obj.setPositionY(newY);
-//
-   //         //Translating object so  the origin point matches right pixel
-   //         int[] pixelCoords = coordinatesToPixel(newX,newY);
-   //         double newX_pixel = pixelCoords[0]-obj.getDistanceFromOrigin()*this.scaleFactor;
-   //         double newY_pixel = pixelCoords[1]-obj.getDistanceFromOrigin()*this.scaleFactor;
-   //         Duration duration = Duration.seconds(timeInterval);
-//
-   //         timeline.getKeyFrames().add(
-   //                 new KeyFrame(duration, new KeyValue(objVisualRepresentation.translateXProperty(), newX_pixel), new KeyValue(objVisualRepresentation.translateYProperty(), newY_pixel))
-   //         );
-   //     }
-   //     timeline.play();
-   // }
-
-    //}
 
     public void animateMovableObject(MovableObjects obj, CoordinatesPath coordinatesPath) {
         double[][] path = coordinatesPath.getPath();
@@ -306,20 +268,47 @@ public class MapManager {
         for (int i = 0; i < path[0].length; i++) {
             final double x = path[0][i];
             final double y = path[1][i];
-            KeyFrame keyFrame = new KeyFrame(
-                    Duration.seconds(i * timeInterval),
-                    event -> {
-                        obj.setPositionX(x);
-                        obj.setPositionY(y);
-                        updateCoordinates(obj);
-                    }
-            );
-            timeline.getKeyFrames().add(keyFrame);
+            double mapBorder = mapWidth/2;  //mapWidth = 10 then the map is from -5 to 5 in coordinates
+            if(!(x<-mapBorder ||  y<-mapBorder || x>mapBorder || y>mapBorder)) { // checks if coordinates are within map
+                KeyFrame keyFrame = new KeyFrame(
+                        Duration.seconds(i * timeInterval),
+                        event -> {
+                            obj.setPositionX(x);
+                            obj.setPositionY(y);
+                            updateCoordinates(obj);
+                        }
+                );
+                timeline.getKeyFrames().add(keyFrame);
+            }
         }
-//
         // Start the animation
         timeline.setCycleCount(1);
         timeline.play();
     }
+    // public void animateMovableObject(MovableObjects obj, CoordinatesPath coordinatesPath) {
+    //     double[][] path = coordinatesPath.getPath();
+    //     double timeInterval = 2.0/path[0].length;
+    //     Node objVisualRepresentation = obj.getVisualRepresentation();
+    //     // Creating a timeline for the animation
+    //     Timeline timeline = new Timeline();
+    //     for (int i = 0; i < path[0].length; i++) {
+    //         double newX = path[0][i];
+    //         double newY = path[1][i];
+    //         // Updating encapsulated obj coordinates
+    //         obj.setPositionX(newX);
+    //         obj.setPositionY(newY);
+    //         //Translating object so  the origin point matches right pixel
+    //         int[] pixelCoords = coordinatesToPixel(newX,newY);
+    //         double newX_pixel = pixelCoords[0]-obj.getDistanceFromOrigin()*this.scaleFactor;
+    //         double newY_pixel = pixelCoords[1]-obj.getDistanceFromOrigin()*this.scaleFactor;
+    //         Duration duration = Duration.seconds(timeInterval);
+    //         timeline.getKeyFrames().add(
+    //                 new KeyFrame(duration, new KeyValue(objVisualRepresentation.translateXProperty(), newX_pixel), new KeyValue(objVisualRepresentation.translateYProperty(), newY_pixel))
+    //         );
+    //     }
+    //     timeline.play();
+    // }
+
+    //}
 
 }

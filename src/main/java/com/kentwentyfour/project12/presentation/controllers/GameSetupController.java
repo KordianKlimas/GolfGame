@@ -119,10 +119,7 @@ public class GameSetupController extends BaseController {
             Hole hole = new Hole(targetX,targetY,targetRadius);
             referenceStore.setHoleReference(hole);
             mapManager.addMovableObjectToMap(hole);
-
             mapManager.addMovableObjectToMap(balls.getFirst());
-
-
 
             // Create the layout
             HBox root = new HBox();

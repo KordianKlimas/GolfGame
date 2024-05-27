@@ -6,10 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="9e80e0ac-204d-49c9-baf6-18865c982760" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/MapManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/MapManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MathPackage/ODESolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MathPackage/ODESolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MathPackage/PartialDerivative.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MathPackage/PartialDerivative.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/ReferenceStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/ReferenceStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/GameSetupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/GameSetupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/SettingsController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +75,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kentwentyfour.project12.presentation.controllers" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.MainApplication">
     <configuration name="FormulaCalculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.kentwentyfour.project12.MathPackage.FormulaCalculator" />
@@ -166,7 +172,7 @@
       <option name="presentableId" value="Default" />
       <updated>1716661909278</updated>
       <workItem from="1716661910295" duration="17819000" />
-      <workItem from="1716712645065" duration="47315000" />
+      <workItem from="1716712645065" duration="55115000" />
     </task>
     <servers />
   </component>
@@ -208,29 +214,14 @@
           <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
-          <line>105</line>
-          <option name="timeStamp" value="54" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MathPackage/ODESolver.java</url>
-          <line>91</line>
-          <option name="timeStamp" value="60" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MathPackage/ODESolver.java</url>
-          <line>92</line>
-          <option name="timeStamp" value="61" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MathPackage/ODESolver.java</url>
-          <line>90</line>
-          <option name="timeStamp" value="62" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MathPackage/ODESolver.java</url>
-          <line>265</line>
+          <line>263</line>
           <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java</url>
+          <line>111</line>
+          <option name="timeStamp" value="74" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.util.EmptyStackException" package="java.util" />

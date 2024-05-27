@@ -252,7 +252,6 @@ public class ODESolver  {
         //ODESolver.addPartialDerivatives(pd);
         in_Conditions[2]=3;
         results = rungeKutta(equations, stepSize, in_Time, in_Conditions, variables);
-
        //System.out.println(Arrays.toString(results[0]));
        //System.out.println("_______");
        //System.out.println(Arrays.toString(results[1]));
@@ -262,7 +261,6 @@ public class ODESolver  {
        //System.out.println(Arrays.toString(results[3]));
        //System.out.println("_____Y__");
         System.out.println(Arrays.toString(results[4]));
-
         ODESolver.addPartialDerivative(pd2); //test
         results = rungeKutta(equations, stepSize, in_Time, in_Conditions, variables);
 

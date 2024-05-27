@@ -93,8 +93,8 @@ public class PhysicsEngine {
                 "vy"
         };
         List<String> variables = Arrays.asList( "t","vx","vy","x", "y","k_f");
-        double stepSize = 0.1;
-        int in_Time = 10;
+        double stepSize = 0.01;
+        int in_Time = 5;
         double[] in_Conditions = {0,velocityX, velocityY,x_coordinate,y_coordinate,current_kf};
 
         // calculating new coordinates until any stopping condition is met
@@ -104,7 +104,7 @@ public class PhysicsEngine {
         String stoppingCondition="";
         while (stoppingCondition.isEmpty()){
             Double[][] results = ODESolver.rungeKutta(equations, stepSize, in_Time, in_Conditions, variables);
-            System.out.println(Arrays.toString(results[1]));
+            //System.out.println(Arrays.toString(results[4]));
             //System.out.println(Arrays.toString(results[4]));
             double  x_velocity =  results[1][0];
             double  y_velocity =  results[2][0];
@@ -158,7 +158,7 @@ public class PhysicsEngine {
                 break;
             }
         }
-
+        //System.out.println(path_coordinates_X);
         // Returning the list of coordinates
         double[][] finalPath = new double[2][path_coordinates_X.size()];
         for (int i = 0; i < path_coordinates_X.size(); i++) {
@@ -179,7 +179,7 @@ public class PhysicsEngine {
     public String checkStoppingConditions(MappableObject obj,GolfBall golfBall,double dh_dx, double dh_dy,double x_velocity_change,double y_velocity_change,double x_velocity_last,double y_velocity_last, double x_coordinate, double y_coordinate){
 
         if(ballInHole( x_velocity_last, y_velocity_last,  x_coordinate,  y_coordinate)){
-            return "ball_in_hole";
+            return "ball_in_the_hole";
         }
         switch (obj) {
             case null -> {
@@ -196,7 +196,7 @@ public class PhysicsEngine {
                   //  System.err.println(areaType.getStaticFriction() +" > "+ formula_value);
                     return "static_friction_overcomes_the_force";
                 }
-                else if(formula_value ==1 && x_velocity_change<0.06 && y_velocity_change<0.06){
+                else if(formula_value ==1 && x_velocity_change<0.0006 && y_velocity_change<0.0006){
                     return "static_friction_overcomes_the_force";
                 }
             }
@@ -237,11 +237,11 @@ public class PhysicsEngine {
 
         CoordinatesPath results = engine.calculateCoordinatePath(golf_balls.get(0),2,2);
         double[][] path = results.getPath();
-        System.out.println("_____X__");
-        System.out.println(Arrays.toString(path[0]));
-        System.out.println("_____Y__");
-        System.out.println(Arrays.toString(path[1]));
-        System.out.println("___Stopping_Condition___");
+       //// System.out.println("_____X__");
+       //// System.out.println(Arrays.toString(path[0]));
+       //// System.out.println("_____Y__");
+       //// System.out.println(Arrays.toString(path[1]));
+       //// System.out.println("___Stopping_Condition___");
         System.out.println(results.getStoppingCondition());
     }
 }
