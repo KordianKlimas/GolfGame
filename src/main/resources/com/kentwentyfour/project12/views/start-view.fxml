@@ -5,7 +5,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
-<VBox alignment="CENTER" VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kentwentyfour.project12.presentation.controllers.MenuController">
+<VBox alignment="CENTER" VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kentwentyfour.project12.presentation.controllers.StartController">
     <StackPane>
         <GridPane>
             <columnConstraints>
@@ -35,22 +35,12 @@
                 <ImageView fitHeight="120.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowSpan="4" GridPane.valignment="CENTER">
                     <Image url="@../images/logo.png" />
                 </ImageView>
-                <Button mnemonicParsing="false" onAction="#onSinglePlayerClick" prefWidth="200.0" styleClass="button-common" text="Single Player" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                <Button mnemonicParsing="false" onAction="#onStartGameClick" prefWidth="200.0" styleClass="button-common" text="Start Game" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                     <effect>
                         <DropShadow height="91.18" radius="43.92" spread="0.48" width="86.5" />
                     </effect>
                 </Button>
-                <Button mnemonicParsing="false" onAction="#onMultiplayerClick" prefWidth="200.0" styleClass="button-common" text="Multiplayer" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
-                    <effect>
-                        <DropShadow height="91.18" radius="43.92" spread="0.48" width="86.5" />
-                    </effect>
-                </Button>
-                <Button mnemonicParsing="false" onAction="#onBotPlayerClick" prefWidth="200.0" styleClass="button-common" text="Bot Simulation" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
-                    <effect>
-                        <DropShadow height="43.22" radius="20.235" spread="0.49" width="39.72" />
-                    </effect>
-                </Button>
-                <Button mnemonicParsing="false" onAction="#onExitButtonClick" prefHeight="26.0" prefWidth="200.0" styleClass="button-red" text="Exit" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+                <Button mnemonicParsing="false" onAction="#onExitButtonClick" prefHeight="26.0" prefWidth="200.0" styleClass="button-red" text="Exit" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
                     <effect>
                         <DropShadow height="45.56" radius="21.9875" spread="0.48" width="44.39" />
                     </effect>

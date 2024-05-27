@@ -28,7 +28,7 @@ The project is divided into four main modules following a Domain-Driven Design (
 
 The motion of the golf ball is governed by Newton's second law and is influenced by gravity, normal force, and friction. The program approximates the physics of real-life putting, considering factors such as slope and surface friction.
 
-### Terrain
+### TerrainA
 
 The terrain is described by a height function, and additional obstacles like water bodies, sand pits, and trees can be optionally included. The terrain's characteristics, including friction coefficients, affect the motion of the ball.
 

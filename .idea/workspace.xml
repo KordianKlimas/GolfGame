@@ -4,22 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ad15493-48c9-497d-a9fd-f4f647e82acc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MainApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/MenuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/kentwentyfour/project12/views/hello-view.fxml" afterDir="false" />
+    <list default="true" id="9e80e0ac-204d-49c9-baf6-18865c982760" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/AreaType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/AreaTypes/Grass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/AreaTypes/Sand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/GolfBall.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/Hole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/MapManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/MappableObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/MovableObjects.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/ObstacleType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/Obstacles/Water.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/ReferenceStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/GameSetupController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/kentwentyfour/project12/views/game-setup-menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/application/FormulaCalculator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/BaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/StartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/kentwentyfour/project12/views/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/kentwentyfour/project12/views/menu-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/kentwentyfour/project12/views/start-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +40,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
-        <option value="CSS File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -38,36 +48,45 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitLabMergeRequestFiltersHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPENED&quot;,
+    &quot;assignee&quot;: {
+      &quot;type&quot;: &quot;org.jetbrains.plugins.gitlab.mergerequest.ui.filters.GitLabMergeRequestsFiltersValue.MergeRequestsMemberFilterValue.MergeRequestsAssigneeFilterValue&quot;,
+      &quot;username&quot;: &quot;I6366669&quot;,
+      &quot;fullname&quot;: &quot;Klimas, Kordian (Stud. DACS)&quot;
+    }
+  }
+}</component>
+  <component name="GitLabMergeRequestsSettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;first&quot;: &quot;https://gitlab.maastrichtuniversity.nl/ken_group24_20231/ken_project24_2023.git&quot;,
+    &quot;second&quot;: &quot;3bc631ba-5a82-40c4-b7e4-ce3df066dcb6&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
-  <component name="ProjectId" id="2f97YDqwwN6oUsNk5Z7UPIUObJi" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2gyFSRRM9LqsCuHPAkPUun3MqfF" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.HelloApplication.executor": "Run",
-    "Application.Project12.executor": "Run",
+    "Application.FormulaCalculator.executor": "Run",
+    "Application.MainApplication.executor": "Run",
+    "Application.ODESolver.executor": "Run",
+    "Application.PhysicsEngine.executor": "Run",
+    "Application.SuperClass.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "feature/gui",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Valeria/IdeaProjects/Project12/src/main/java/com/kentwentyfour/project12/application",
-    "list.type.of.created.stylesheet": "CSS",
+    "last_opened_file_path": "C:/Users/kordi/Desktop/Uni/Project12",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -76,23 +95,81 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Valeria\IdeaProjects\Project12\src\main\java\com\kentwentyfour\project12\application" />
-      <recent name="C:\Users\Valeria\IdeaProjects\Project12\src\main\resources\com\kentwentyfour\project12\images" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Valeria\IdeaProjects\Project12\src\main\resources\com\kentwentyfour\project12\views" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="Project12" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="com.kentwentyfour.project12.MainApplication" />
+  <component name="RunManager" selected="Application.MainApplication">
+    <configuration name="FormulaCalculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kentwentyfour.project12.MathPackage.FormulaCalculator" />
       <module name="Project12" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kentwentyfour.project12.MathPackage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MainApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kentwentyfour.project12.MainApplication" />
+      <module name="Project12" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kentwentyfour.project12.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ODESolver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kentwentyfour.project12.MathPackage.ODESolver" />
+      <module name="Project12" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kentwentyfour.project12.MathPackage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PhysicsEngine" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kentwentyfour.project12.PhysicsEnginePackage.PhysicsEngine" />
+      <module name="Project12" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kentwentyfour.project12.PhysicsEnginePackage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SuperClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kentwentyfour.project12.GameObjects.SuperClass" />
+      <module name="Project12" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kentwentyfour.project12.GameObjects.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainApplication" />
+        <item itemvalue="Application.FormulaCalculator" />
+        <item itemvalue="Application.ODESolver" />
+        <item itemvalue="Application.PhysicsEngine" />
+        <item itemvalue="Application.SuperClass" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -104,16 +181,37 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0ad15493-48c9-497d-a9fd-f4f647e82acc" name="Changes" comment="" />
-      <created>1713201487951</created>
+      <changelist id="9e80e0ac-204d-49c9-baf6-18865c982760" name="Changes" comment="" />
+      <created>1716661909278</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1713201487951</updated>
-      <workItem from="1713201489036" duration="4570000" />
+      <updated>1716661909278</updated>
+      <workItem from="1716661910295" duration="17819000" />
+      <workItem from="1716712645065" duration="35776000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MathPackage/FormulaCalculator.java</url>
+          <line>269</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MathPackage/FormulaCalculator.java</url>
+          <line>273</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.EmptyStackException" package="java.util" />
+          <option name="timeStamp" value="14" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

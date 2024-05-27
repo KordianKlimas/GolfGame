@@ -2,9 +2,12 @@ package com.kentwentyfour.project12;
 
 import com.kentwentyfour.project12.presentation.controllers.BaseController;
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -33,14 +36,14 @@ public class MainApplication extends Application {
         // Set the stage properties
         stage.setFullScreen(true);
         // Show the menu
-        showMenu();
+        showStart();
     }
 
     /**
      * Show a view in the stage
      *
-     * @param fxml FXML View File
-     * @param css  CSS File
+     * @param fxml FXML View File Path
+     * @param css  CSS File Path
      */
     private void showView(String fxml, String css) {
         try {
@@ -62,6 +65,7 @@ public class MainApplication extends Application {
                 scene.setRoot(root);
             }
 
+            // Get the controller instance from the FXMLLoader
             BaseController sceneController = fxmlLoader.getController();
             sceneController.setStage(stage);
             sceneController.setMain(this);
@@ -70,24 +74,29 @@ public class MainApplication extends Application {
             stage.show();
 
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
+
 
     /**
      * Show the Menu View in the stage
      */
-    public void showMenu() {
-        showView("views/menu-view.fxml", "css/menu.css");
+    public void showStart() {
+        showView("views/start-view.fxml", "css/menu.css");
     }
 
-    public void showHello() {
-        showView("views/hello-view.fxml", null);
+    public void showGameSetupMenu() {
+        showView("views/game-setup-menu.fxml", "css/setup-menu.css");
     }
-    /**
+
+    /*
      * Exit the program
      */
     public void exit() {
         stage.close();
     }
+
+
+
 }
