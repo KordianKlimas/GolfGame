@@ -1,5 +1,7 @@
 package com.kentwentyfour.project12.presentation.controllers;
 
+import com.kentwentyfour.project12.Bot.BasicBot;
+import com.kentwentyfour.project12.Bot.Bot;
 import com.kentwentyfour.project12.GameObjects.GolfBall;
 import com.kentwentyfour.project12.GameObjects.MapManager;
 import com.kentwentyfour.project12.GameObjects.MovableObjects;
@@ -36,6 +38,7 @@ public class SettingsController implements Initializable {
     private Slider vx;
     @FXML
     private Button hit;
+
     @FXML
     // all variables
     private String selectedGame;
@@ -51,6 +54,8 @@ public class SettingsController implements Initializable {
     private MapManager mapManager;
     private PhysicsEngine physicsEngine;
     private ArrayList<GolfBall> balls;
+    private Bot bot;
+
     private static final ButtonType BUTTON_RESTART = new ButtonType("Start from the beginning", ButtonBar.ButtonData.OK_DONE);
     private static final ButtonType BUTTON_CONTINUE = new ButtonType("Continue", ButtonBar.ButtonData.CANCEL_CLOSE);
 
@@ -72,15 +77,18 @@ public class SettingsController implements Initializable {
                 xVelocity.setText(String.format("X Velocity: %.2f", x));
             }
         });
+        // bot = new Bot(balls.getFirst(), physicsEngine, mapManager);
 
     }
     @FXML
     public void hit () {
         double xVelocityValue = vx.getValue();
         double yVelocityValue = vy.getValue();
+
+        //Double[][] botCoordinates = bot.newCoordinates(balls.getFirst(), targetX, targetY);
         //balls.getFirst().setPosition(xVelocityValue,yVelocityValue);
         //mapManager.updateCoordinates(balls.getFirst());
-        CoordinatesPath coordinatesPath=  physicsEngine.calculateCoordinatePath(balls.getFirst(),xVelocityValue,yVelocityValue);
+        CoordinatesPath coordinatesPath=  physicsEngine.calculateCoordinatePath(balls.getFirst(),xVelocityValue, yVelocityValue);
         mapManager.animateMovableObject(balls.getFirst(),coordinatesPath);
         String stopping = coordinatesPath.getStoppingCondition();
         handleStop(stopping,coordinatesPath.getPath());
@@ -167,12 +175,14 @@ public class SettingsController implements Initializable {
 
         // Set the list of golf balls
         this.balls = balls;
-     }
+        this.bot = new Bot(balls.getFirst());
+    }
+    @FXML
+    public void BotMove() {
+        Double[][] botCoordinates = bot.newCoordinates(balls.get(0), targetX, targetY);
+        CoordinatesPath coordinatesPath = physicsEngine.calculateCoordinatePath(balls.get(0), botCoordinates[0][0], botCoordinates[0][1]);
+        mapManager.animateMovableObject(balls.get(0), coordinatesPath);
+        String stopping = coordinatesPath.getStoppingCondition();
+        handleStop(stopping, coordinatesPath.getPath());
+    }
 }
-
-
-
-
-
-
-

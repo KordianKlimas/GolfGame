@@ -22,9 +22,10 @@
          </font>
       </Label>
       <Slider fx:id="vy" blockIncrement="0.1" majorTickUnit="1.0" max="5.0" min="-5.0" prefHeight="58.0" prefWidth="324.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
-      <Pane fx:id="pane" prefHeight="115.0" prefWidth="324.0">
+      <Pane fx:id="pane" prefHeight="122.0" prefWidth="324.0">
          <children>
-            <Button fx:id="hit" alignment="CENTER" layoutX="125.0" layoutY="69.0" minHeight="30" minWidth="50" onAction="#hit" prefHeight="32.0" prefWidth="75.0" text="Hit" />
+            <Button fx:id="hit" alignment="CENTER" layoutX="34.0" layoutY="57.0" minHeight="30" minWidth="50" onAction="#hit" prefHeight="32.0" prefWidth="75.0" text="Hit" />
+            <Button layoutX="200.0" layoutY="58.0" mnemonicParsing="false" onAction="#BotMove" prefHeight="32.0" prefWidth="90.0" text="Bot move" />
          </children>
       </Pane>
    </VBox>
