@@ -5,6 +5,7 @@ import com.kentwentyfour.project12.GameObjects.*;
 import com.kentwentyfour.project12.MathPackage.FormulaCalculator;
 import com.kentwentyfour.project12.MathPackage.ODESolver;
 import com.kentwentyfour.project12.MathPackage.PartialDerivative;
+import com.kentwentyfour.project12.ReferenceStore;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -15,7 +16,7 @@ import static java.lang.Math.abs;
 
 public class PhysicsEngine {
 
-
+    private ReferenceStore referenceStore = ReferenceStore.getInstance();
     private double grav_constant = 9.81;
     private double pi = Math.PI;
     public MapManager mapManager;
@@ -131,10 +132,10 @@ public class PhysicsEngine {
                 // checking for stopping condition
                 double pd_value_dx = height_PartialDerivative.calculatePD_notation("dh/dx",x_coordinate,y_coordinate);
                 double pd_value_dy = height_PartialDerivative.calculatePD_notation("dh/dy",x_coordinate,y_coordinate);
-                System.out.println(x_coordinate+" "+y_coordinate);
+                //System.out.println(x_coordinate+" "+y_coordinate);
                 MappableObject obj = mapManager.accessObject(x_coordinate,y_coordinate);
 
-                stoppingCondition = checkStoppingConditions(obj,golfBall,pd_value_dx,pd_value_dy,x_velocity_change,y_velocity_change);
+                stoppingCondition = checkStoppingConditions(obj,golfBall,pd_value_dx,pd_value_dy,x_velocity_change,y_velocity_change,x_velocity,y_velocity, x_coordinate, y_coordinate);
 
 
                 path_coordinates_X.add(x_coordinate);
@@ -174,7 +175,11 @@ public class PhysicsEngine {
      * - hits an obstacle
      * - stops moving due to friction
      */
-    public String checkStoppingConditions(MappableObject obj,GolfBall golfBall,double dh_dx, double dh_dy,double x_velocity_change,double y_velocity_change){
+    public String checkStoppingConditions(MappableObject obj,GolfBall golfBall,double dh_dx, double dh_dy,double x_velocity_change,double y_velocity_change,double x_velocity_last,double y_velocity_last, double x_coordinate, double y_coordinate){
+
+        if(ballInHole( x_velocity_last, y_velocity_last,  x_coordinate,  y_coordinate)){
+            return "ball_in_hole";
+        }
         switch (obj) {
             case null -> {
                 return "outside_of_playable_area";
@@ -195,10 +200,25 @@ public class PhysicsEngine {
                 }
             }
             default -> {
+
                 return "";
             }
         }
         return "";
+    }
+
+    public boolean ballInHole(double x_velocity_last,double y_velocity_last, double x_coordinate, double y_coordinate){
+        Hole hole = referenceStore.getHole();
+        double radiusOfHole = hole.getRadius();
+        double x_hole = hole.getX();
+        double y_hole = hole.getY();
+        double distance = Math.sqrt(Math.pow(x_coordinate - x_hole, 2) + Math.pow(y_coordinate - y_hole, 2));
+        System.out.println(distance +" "+x_velocity_last+ " "+y_velocity_last);
+        if (distance < radiusOfHole && x_velocity_last<4 && y_velocity_last<4) {
+            // Ball in the hole
+            return true;
+        }
+        return false;
     }
     public static void main(String[] args){
         //setting up golf ball/s

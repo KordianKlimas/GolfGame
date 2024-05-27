@@ -117,6 +117,7 @@ public class GameSetupController extends BaseController {
 
             // Add movable objects to the map
             Hole hole = new Hole(targetX,targetY,targetRadius);
+            referenceStore.setHoleReference(hole);
             mapManager.addMovableObjectToMap(hole);
 
             mapManager.addMovableObjectToMap(balls.getFirst());

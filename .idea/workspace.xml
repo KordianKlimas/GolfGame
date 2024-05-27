@@ -5,32 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e80e0ac-204d-49c9-baf6-18865c982760" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/AreaType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/AreaTypes/Grass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/AreaTypes/Sand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/GolfBall.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/Hole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/MapManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/MappableObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/MovableObjects.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/ObstacleType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/GameObjects/Obstacles/Water.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/ReferenceStore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/GameSetupController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/kentwentyfour/project12/views/game-setup-menu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MainApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/application/FormulaCalculator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/BaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/StartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/kentwentyfour/project12/views/hello-view.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/kentwentyfour/project12/views/menu-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/kentwentyfour/project12/views/start-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MathPackage/ODESolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MathPackage/ODESolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/PhysicsEnginePackage/PhysicsEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/GameSetupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/GameSetupController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +62,7 @@
     "Application.SuperClass.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/gui",
+    "git-widget-placeholder": "game",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/kordi/Desktop/Uni/Project12",
     "node.js.detected.package.eslint": "true",
@@ -164,8 +142,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainApplication" />
-        <item itemvalue="Application.FormulaCalculator" />
         <item itemvalue="Application.ODESolver" />
+        <item itemvalue="Application.FormulaCalculator" />
         <item itemvalue="Application.PhysicsEngine" />
         <item itemvalue="Application.SuperClass" />
       </list>
@@ -187,12 +165,23 @@
       <option name="presentableId" value="Default" />
       <updated>1716661909278</updated>
       <workItem from="1716661910295" duration="17819000" />
-      <workItem from="1716712645065" duration="35776000" />
+      <workItem from="1716712645065" duration="39824000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
