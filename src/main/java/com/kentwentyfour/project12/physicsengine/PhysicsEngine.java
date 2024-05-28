@@ -109,7 +109,7 @@ public class PhysicsEngine {
         };
         List<String> variables = Arrays.asList( "t","vx","vy","x", "y","k_f");
         double stepSize = 0.01;
-        int in_Time = 2;
+        int in_Time =2;
         if (customTimeAndStepSize){
             System.out.println("Changed");
              stepSize = customStepSize;
@@ -124,12 +124,8 @@ public class PhysicsEngine {
         String stoppingCondition="";
         while (stoppingCondition.isEmpty()){
             Double[][] results = ODESolver.rungeKutta(equations, stepSize, in_Time, in_Conditions, variables);
-            //System.out.println(Arrays.toString(results[4]));
-            //System.out.println(Arrays.toString(results[4]));
             double  x_velocity =  results[1][0];
             double  y_velocity =  results[2][0];
-            //System.out.println(Arrays.toString(results[3]));
-            //System.out.println(Arrays.toString(results[4]));
             for(int i=0;i<results[0].length;i++ ){
 
                 double y_coordinate_change=1; // values must be over 0.01
@@ -199,8 +195,6 @@ public class PhysicsEngine {
             finalPath[0][i] = path_coordinates_X.get(i);
             finalPath[1][i] = path_coordinates_Y.get(i);
         }
-        //System.err.println(Arrays.toString(finalPath[0]));
-        //System.err.println(Arrays.toString(finalPath[1]));
         // stepSize is timeInterval as it is used as  chang of time in ODE solver
         return new CoordinatesPath(finalPath,stepSize,stoppingCondition);
     }
@@ -226,10 +220,7 @@ public class PhysicsEngine {
             }
             case AreaType areaType -> {
                 double formula_value = Math.sqrt(dh_dx * dh_dx + dh_dy * dh_dy)+1;
-                //System.err.println(areaType.getStaticFriction() +" > "+ formula_value);
-                //System.err.println((formula_value ==1) +" " +(x_velocity_change) +" " + (y_velocity_change));
                 if (areaType.getStaticFriction() > formula_value)  {
-                  //  System.err.println(areaType.getStaticFriction() +" > "+ formula_value);
                     return "static_friction_overcomes_the_force";
                 }else if(formula_value !=1&& x_coordinate_change<0.0001 && y_coordinate_change<0.0001){ // not flat surface
                     return "static_friction_overcomes_the_force";
@@ -263,24 +254,24 @@ public class PhysicsEngine {
         // Ball in the hole
         return distance < radiusOfHole && x_velocity_last < 4 && y_velocity_last < 4;
     }
-    public static void main(String[] args){
-        //setting up golf ball/s
-        GolfBall golfBallPlayer1= new GolfBall(0.0,0.0,0.0459,0.15);
-        ArrayList<GolfBall> golf_balls =  new ArrayList<GolfBall>();
-        golf_balls.add(golfBallPlayer1);
-        golfBallPlayer1.setPosition(2,2);
-        MapManager mapManager = new MapManager();
-        mapManager.generateTerrainData();
-        PhysicsEngine engine =  new PhysicsEngine();
-
-        CoordinatesPath results = engine.calculateCoordinatePath(golf_balls.get(0),2,2);
-        double[][] path = results.getPath();
-       //// System.out.println("_____X__");
-       //// System.out.println(Arrays.toString(path[0]));
-       //// System.out.println("_____Y__");
-       //// System.out.println(Arrays.toString(path[1]));
-       //// System.out.println("___Stopping_Condition___");
-        System.out.println(results.getStoppingCondition());
-    }
+//    public static void main(String[] args){
+//        //setting up golf ball/s
+//        GolfBall golfBallPlayer1= new GolfBall(0.0,0.0,0.0459,0.15);
+//        ArrayList<GolfBall> golf_balls =  new ArrayList<GolfBall>();
+//        golf_balls.add(golfBallPlayer1);
+//        golfBallPlayer1.setPosition(2,2);
+//        MapManager mapManager = new MapManager();
+//        mapManager.generateTerrainData();
+//        PhysicsEngine engine =  new PhysicsEngine();
+//
+//        CoordinatesPath results = engine.calculateCoordinatePath(golf_balls.get(0),2,2);
+//        double[][] path = results.getPath();
+//       //// System.out.println("_____X__");
+//       //// System.out.println(Arrays.toString(path[0]));
+//       //// System.out.println("_____Y__");
+//       //// System.out.println(Arrays.toString(path[1]));
+//       //// System.out.println("___Stopping_Condition___");
+//        System.out.println(results.getStoppingCondition());
+//    }
 }
 

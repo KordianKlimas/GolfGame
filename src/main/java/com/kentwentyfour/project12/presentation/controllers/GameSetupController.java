@@ -76,7 +76,7 @@ public class GameSetupController extends BaseController {
         double kineticFrictionGrass = strToDouble(kineticfrictiongrass.getText().isEmpty() ? "0.05" : kineticfrictiongrass.getText());
         String formula = formulaField.getText().isEmpty() ? "sin( ( x - y ) / 7 ) + 0.5" : formulaField.getText();
 
-        //formula = "0.4 * ( 0.9 -  2.718 ^ ( (  x ^ 2 + y ^ 2 ) / -8 ) )";
+       //formula = "0.4 * ( 0.9 -  2.718 ^ ( (  x ^ 2 + y ^ 2 ) / -8 ) )";
        //formula="1";
 
         // Get reference store
@@ -135,10 +135,6 @@ public class GameSetupController extends BaseController {
             settingsStage.show();
 
 
-            // Set initial position of the ball and update coordinates
-            //balls.getFirst().setPosition(-4.8, -4.8);
-            //mapManager.updateCoordinates(balls.getFirst());
-
             // Call setInitialValues for SettingsController
             SettingsController settingsController = settingsLoader.getController();
             settingsController.setInitialValues(selectedGame, startX, startY, targetX, targetY, targetRadius, mapManager, physicsEngine, balls,hole);
@@ -148,25 +144,6 @@ public class GameSetupController extends BaseController {
             e.printStackTrace();
             return;
         }
-
-
-        //CoordinatesPath coordinatesPath=  physicsEngine.calculateCoordinatePath(balls.getFirst(),2,2);
-        //mapManager.animateMovableObject(balls.getFirst(),coordinatesPath);
-
-
-//        VBox root1 = new VBox();
-//        root1.getChildren().addAll(settingsRoot, pane);
-//
-//       // SettingsController controller = loader.getController();
-//        //controller.setInitialValues(selectedGame, startX, startY, targetX, targetY, ballRadius, targetRadius, staticFrictionSand, kineticFrictionSand, staticFrictionGrass, kineticFrictionGrass, formula);
-//
-//        settingsStage.setTitle("Settings");
-////        settingsStage.setWidth(800);
-////        settingsStage.setHeight(800);
-//        settingsStage.setScene(new Scene(root1));
-//        settingsStage.show();
-
-
     }
 
 

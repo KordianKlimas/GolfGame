@@ -164,7 +164,6 @@ public class SettingsController implements Initializable {
         this.selectedGame = selectedGame;
 
         // Set the initial positions and properties of the objects
-        // Set the initial positions and properties of the objects
         this.startX = startX;
         this.startY = startY;
         this.targetX = targetX;

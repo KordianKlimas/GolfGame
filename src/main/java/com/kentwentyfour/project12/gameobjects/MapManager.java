@@ -18,6 +18,10 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
+
+/**
+ *  Allows managing the state of all objects in the visualised in game
+ */
 public class MapManager {
     public final int WIDTH = 600;
     public final int HEIGHT = 600;
@@ -43,14 +47,10 @@ public class MapManager {
         MatrixMapArea[][] terrainData = new MatrixMapArea[matrixSize][matrixSize];
         for (int row = 0; row < matrixSize; ++row) {
             for (int col = 0; col < matrixSize; ++col) {
-                //double height = this.computeHeight(row/(matrixSize/mapWidth),col/(matrixSize/mapWidth));
                 // centers rows and columns and scales the map
-               // double x = (row - matrixSize / 2) / (matrixSize / mapWidth);
-               // double y = (col - matrixSize / 2) / (matrixSize / mapWidth);
                 double[] arr = matrixToCoordinates(row,col);
                 double x = arr[0];
                 double y = arr[1];
-                //System.out.println("x: "+x+"y: "+y);
                 double height = this.computeHeight(x, y);
                 try {
                     if (height < 0.0) {
@@ -64,13 +64,8 @@ public class MapManager {
                     System.err.println("Error computing height at row " + row + ", col " + col + ": " + var7.getMessage());
                     terrainData[row][col] = new Grass(height);
                 }
-                MatrixMapArea area =terrainData[row][col];
-                //System.err.println("x: "+x+"y: "+y+" H: "+height);
-               // System.err.println("AreaType: "+"Grass: "+(area instanceof Grass)+"Water: "+(area instanceof Water)+"Sand: "+(area instanceof Sand));
             }
         }
-        //System.err.println(terrainData[0][0] instanceof Water);
-
         this.terrainData = terrainData;
     }
 
@@ -121,9 +116,6 @@ public class MapManager {
         // calculates  indexes
         arr[0] = midPoint + (int) Math.round(x * changeLimit);
         arr[1] = midPoint - (int) Math.round(y * changeLimit);
-        //System.out.println( changeLimit);
-        //System.out.println( midPoint);
-        //System.out.println( "X: "+ arr[0] + " Y: "+ arr[1]);
         return arr;
     }
     /**
@@ -143,7 +135,6 @@ public class MapManager {
         arr[0] = (x - midPoint) / changeLimit;
         arr[1] = (y - midPoint) / -changeLimit;
 
-        // Return the coordinates
         return arr;
     }
     /**
@@ -155,15 +146,14 @@ public class MapManager {
      */
     public int[] coordinatesToPixel(double x, double y) {
         int[] arr = new int[2];
+
         // We assume midPixelX and midPixelY are  (0 [m],0 [m]) of coordinates
         int midPixelX = (int) (this.WIDTH / 2.0 );//middle pixel of the map x
         int midPixelY = (int) (this.HEIGHT / 2.0 );//middle pixel of the map y
-       // System.out.println( "midPixelX"+ midPixelX+"midPixelY"+ midPixelY);
 
         arr[0] = midPixelX + (int) Math.round(x * scaleFactor);
         arr[1] = midPixelY - (int) Math.round(y * scaleFactor);
 
-      //  System.out.println("base pixel coordinates"+ arr[0]+" "+ arr[1]);
         return arr;
     }
 
@@ -221,12 +211,8 @@ public class MapManager {
         int[] pixelCoords = coordinatesToPixel(obj.getX(),obj.getY());
         visualRepresentation.setLayoutX(pixelCoords[0]-obj.getDistanceFromOrigin()*this.scaleFactor);
         visualRepresentation.setLayoutY(pixelCoords[1]-obj.getDistanceFromOrigin()*this.scaleFactor);
-      //  System.err.println( obj.getDistanceFromOrigin()+" "+visualRepresentation.getLayoutX());
-      //  System.err.println( obj.getDistanceFromOrigin()+" "+visualRepresentation.getLayoutY());
         visualRepresentation.setScaleX(this.scaleFactor);
         visualRepresentation.setScaleY(this.scaleFactor);
-      //  System.out.println("distance from middle: "+obj.getDistanceFromOrigin()+"  after scaling: "+ obj.getDistanceFromOrigin()*this.scaleFactor+" final: "+(pixelCoords[1]-obj.getDistanceFromOrigin()*this.scaleFactor)+" scaling factor: "+this.scaleFactor);
-      //  System.out.println(obj.getX()+" "+obj.getY());
         this.root.getChildren().add(visualRepresentation);
     }
     /**
@@ -240,8 +226,6 @@ public class MapManager {
         //Translating object so  the origin point matches right pixel
         visualRepresentation.setLayoutX(pixelCoords[0]-obj.getDistanceFromOrigin()*this.scaleFactor);
         visualRepresentation.setLayoutY(pixelCoords[1]-obj.getDistanceFromOrigin()*this.scaleFactor);
-        //System.out.println(" v: "+(pixelCoords[0]-obj.getDistanceFromOrigin()*this.scaleFactor)+" " + pixelCoords[0] +" - "+obj.getDistanceFromOrigin()*scaleFactor);
-
         if (!this.root.getChildren().contains(visualRepresentation)) {
             addMovableObjectToMap(obj);
         }
@@ -282,30 +266,4 @@ public class MapManager {
         timeline.setCycleCount(1);
         timeline.play();
     }
-    // public void animateMovableObject(MovableObjects obj, CoordinatesPath coordinatesPath) {
-    //     double[][] path = coordinatesPath.getPath();
-    //     double timeInterval = 2.0/path[0].length;
-    //     Node objVisualRepresentation = obj.getVisualRepresentation();
-    //     // Creating a timeline for the animation
-    //     Timeline timeline = new Timeline();
-    //     for (int i = 0; i < path[0].length; i++) {
-    //         double newX = path[0][i];
-    //         double newY = path[1][i];
-    //         // Updating encapsulated obj coordinates
-    //         obj.setPositionX(newX);
-    //         obj.setPositionY(newY);
-    //         //Translating object so  the origin point matches right pixel
-    //         int[] pixelCoords = coordinatesToPixel(newX,newY);
-    //         double newX_pixel = pixelCoords[0]-obj.getDistanceFromOrigin()*this.scaleFactor;
-    //         double newY_pixel = pixelCoords[1]-obj.getDistanceFromOrigin()*this.scaleFactor;
-    //         Duration duration = Duration.seconds(timeInterval);
-    //         timeline.getKeyFrames().add(
-    //                 new KeyFrame(duration, new KeyValue(objVisualRepresentation.translateXProperty(), newX_pixel), new KeyValue(objVisualRepresentation.translateYProperty(), newY_pixel))
-    //         );
-    //     }
-    //     timeline.play();
-    // }
-
-    //}
-
 }

@@ -307,19 +307,19 @@ public class FormulaCalculator{
             return stack.pop();
         }
     }
-    public static void main(String[] args){
-        FormulaCalculator calc = new FormulaCalculator();
-        List<String> formulaRPN1 = new ArrayList<>();
-
-        String formula1 = " dh/dy + dh/dy + dh/dy";
-        formulaRPN1 = calc.parseString(formula1);
-        PartialDerivative c = new PartialDerivative("h","x ^ 2 + y","x", "y");
-        calc.addPartialDerivative(c);
-
-        System.out.println(calc.parseString(formula1));
-        System.out.println(calc.calculateRPN(formulaRPN1));
-
-    }
+//    public static void main(String[] args){
+//        FormulaCalculator calc = new FormulaCalculator();
+//        List<String> formulaRPN1 = new ArrayList<>();
+//
+//        String formula1 = " dh/dy + dh/dy + dh/dy";
+//        formulaRPN1 = calc.parseString(formula1);
+//        PartialDerivative c = new PartialDerivative("h","x ^ 2 + y","x", "y");
+//        calc.addPartialDerivative(c);
+//
+//        System.out.println(calc.parseString(formula1));
+//        System.out.println(calc.calculateRPN(formulaRPN1));
+//
+//    }
 }
 /*
         // RULES FOR INPUT
