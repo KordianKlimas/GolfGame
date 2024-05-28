@@ -9,7 +9,6 @@ import com.kentwentyfour.project12.physicsengine.PhysicsEngine;
 import java.util.ArrayList;
 import java.util.List;
 
-
 /**
  * (singleton pattern)
  *
@@ -25,7 +24,6 @@ import java.util.List;
 public  class ReferenceStore {
     // Singleton instance
     private static ReferenceStore instance;
-
 
     //  Game Objects variables
     private ArrayList<GolfBall> listOfGolfBalls = new ArrayList<>();
@@ -50,8 +48,6 @@ public  class ReferenceStore {
         return instance;
     }
 
-
-
     // Game Objects - AreaTypes
     /**
      * Sets the kinetic and static frictions for the specified AreaType object.
@@ -72,8 +68,6 @@ public  class ReferenceStore {
             Sand.static_Friction= static_friction;
         }
     }
-
-
     //  Game Objects
     /**
      * Sets reference for Hole
@@ -131,14 +125,12 @@ public  class ReferenceStore {
      * Returns reference for PhysicsEngine
      * @return PhysicsEngine
      */
-    public PhysicsEngine getPhysicsEngine() {return this.physicsEngine;}
+    public PhysicsEngine getPhysicsEngine() { return this.physicsEngine; }
     /**
      * Sets reference for courseProfileFormula
      * @param courseProfileFormula
      */
-    public void setCourseProfileFormula(String courseProfileFormula) {
-        this.courseProfileFormula = courseProfileFormula;
-    }
+    public void setCourseProfileFormula(String courseProfileFormula) { this.courseProfileFormula = courseProfileFormula; }
     /**
      * Returns reference for formula
      * @return courseProfileFormula
@@ -146,8 +138,5 @@ public  class ReferenceStore {
     public String getCourseProfileFormula() {
         return this.courseProfileFormula;
     }
-
-
-
 
 }
