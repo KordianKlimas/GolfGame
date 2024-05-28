@@ -111,6 +111,7 @@ public class PhysicsEngine {
         double stepSize = 0.01;
         int in_Time = 2;
         if (customTimeAndStepSize){
+            System.out.println("Changed");
              stepSize = customStepSize;
              in_Time = customTime;
         }
@@ -127,28 +128,33 @@ public class PhysicsEngine {
             //System.out.println(Arrays.toString(results[4]));
             double  x_velocity =  results[1][0];
             double  y_velocity =  results[2][0];
-
+            //System.out.println(Arrays.toString(results[3]));
+            //System.out.println(Arrays.toString(results[4]));
             for(int i=0;i<results[0].length;i++ ){
+
+                double y_coordinate_change=1; // values must be over 0.01
+                double x_coordinate_change=1;
+                double x_velocity_change=1;
+                double y_velocity_change=1;
 
                 //updating velocities and coordinates
                 x_coordinate = results[3][i];
                 y_coordinate = results[4][i];
-                double x_velocity_change=1;
-                double y_velocity_change=1;
+
                 if(i>1){
                     x_velocity_change = abs(results[1][i]-x_velocity);
                     y_velocity_change = abs(results[2][i]-y_velocity);
                     x_velocity = results[1][i];
                     y_velocity= results[2][i];
+                    x_coordinate_change = abs(results[3][i]-results[3][i-1]);
+                    y_coordinate_change = abs(results[4][i]-results[4][i-1]);
                 }
 
                 // checking for stopping condition
                 double pd_value_dx = height_PartialDerivative.calculatePD_notation("dh/dx",x_coordinate,y_coordinate);
                 double pd_value_dy = height_PartialDerivative.calculatePD_notation("dh/dy",x_coordinate,y_coordinate);
                 MatrixMapArea obj = mapManager.accessObject(x_coordinate,y_coordinate);
-                stoppingCondition = checkStoppingConditions(obj,golfBall,pd_value_dx,pd_value_dy,x_velocity_change,y_velocity_change,x_velocity,y_velocity, x_coordinate, y_coordinate);
-
-
+                stoppingCondition = checkStoppingConditions(obj,golfBall,pd_value_dx,pd_value_dy,x_velocity_change,y_velocity_change,x_velocity,y_velocity, x_coordinate, y_coordinate,x_coordinate_change,y_coordinate_change);
                 // updating frictions for new position if the ball is on AreaType area
                 area =  mapManager.accessObject(x_coordinate,y_coordinate);
                 if(area instanceof AreaType && stoppingCondition.isEmpty() ){
@@ -206,7 +212,7 @@ public class PhysicsEngine {
      * - hits an obstacle
      * - stops moving due to friction
      */
-    public String checkStoppingConditions(MatrixMapArea obj, GolfBall golfBall, double dh_dx, double dh_dy, double x_velocity_change, double y_velocity_change, double x_velocity_last, double y_velocity_last, double x_coordinate, double y_coordinate){
+    public String checkStoppingConditions(MatrixMapArea obj, GolfBall golfBall, double dh_dx, double dh_dy, double x_velocity_change, double y_velocity_change, double x_velocity_last, double y_velocity_last, double x_coordinate, double y_coordinate,double x_coordinate_change,double y_coordinate_change){
 
         if(ballInHole( x_velocity_last, y_velocity_last,  x_coordinate,  y_coordinate)){
             return "ball_in_the_hole";
@@ -225,8 +231,10 @@ public class PhysicsEngine {
                 if (areaType.getStaticFriction() > formula_value)  {
                   //  System.err.println(areaType.getStaticFriction() +" > "+ formula_value);
                     return "static_friction_overcomes_the_force";
+                }else if(formula_value !=1&& x_coordinate_change<0.0001 && y_coordinate_change<0.0001){ // not flat surface
+                    return "static_friction_overcomes_the_force";
                 }
-                else if(x_velocity_change<0.0006 && y_velocity_change<0.0006){
+                else if(formula_value ==1&&x_velocity_change<0.001 && y_velocity_change<0.001){ // flat surface
                     return "static_friction_overcomes_the_force";
                 }
             }

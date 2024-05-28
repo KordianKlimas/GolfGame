@@ -2,6 +2,7 @@ package com.kentwentyfour.project12.Bots;
 
 import com.kentwentyfour.project12.gameobjects.*;
 import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
+import com.kentwentyfour.project12.gameobjects.movableobjects.Hole;
 import com.kentwentyfour.project12.physicsengine.CoordinatesPath;
 import com.kentwentyfour.project12.physicsengine.PhysicsEngine;
 import com.kentwentyfour.project12.ReferenceStore;
@@ -9,17 +10,19 @@ import com.kentwentyfour.project12.ReferenceStore;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Bot {
-    private MapManager mapGenerator;
+public class AdvancedBot implements BotPlayer {
     private PhysicsEngine physicsEngine;
     private ReferenceStore referenceStore = ReferenceStore.getInstance();
 
-    public Bot(GolfBall golf_ball) {
+    public AdvancedBot() {
         this.physicsEngine = referenceStore.getPhysicsEngine();
-        this.mapGenerator = referenceStore.getMapManager();
     }
 
-    public Double[][] newCoordinates(GolfBall golfBall, double targetX, double targetY) {
+    public CoordinatesPath calculatePath(GolfBall golfBall) {
+        Hole hole = referenceStore.getHole();
+        CoordinatesPath path = null;
+        double targetX = hole.getX();
+        double targetY = hole.getY();
         double[] direction = calculateDirection(targetX, targetY, golfBall);
         double angleDegrees = calculateAngleDegree(direction, targetY, targetX, golfBall);
         double angleRadians = calculateAngleRadian(angleDegrees);
@@ -31,14 +34,8 @@ public class Bot {
         double velocityY = velocities[1];
 
         CoordinatesPath coordinatesPath = physicsEngine.calculateCoordinatePath(golfBall, velocityX, velocityY);
-        double[][] path = coordinatesPath.getPath();
-        Double[][] res = new Double[path.length][path[0].length];
-        for (int i = 0; i < path.length; i++) {
-            for (int j = 0; j < path[i].length; j++) {
-                res[i][j] = path[i][j];
-            }
-        }
-        return res;
+         path = coordinatesPath;
+        return path;
     }
 
     public double[] calculateDirection(double targetx, double targety, GolfBall golfBall) {
@@ -111,18 +108,10 @@ public class Bot {
         GolfBall ball = new GolfBall(0.0, 0.0, 0.0459, 0.15);
         ArrayList<GolfBall> golfBalls = new ArrayList<>();
         golfBalls.add(ball);
+        ReferenceStore referenceStore = ReferenceStore.getInstance();
+        Hole hole = new Hole(1,1,0.15);
+        referenceStore.setHoleReference(hole);
+        AdvancedBot advancedBot = new AdvancedBot();
 
-        Bot bot = new Bot(ball);
-
-        double targetX = 5;
-        double targetY = 7;
-
-       Double[][] newCoordinates = bot.newCoordinates(ball, targetX, targetY);
-        System.out.println("--------X----------");
-        System.out.println(Arrays.toString(newCoordinates[0]));
-        System.out.println(" ");
-        System.out.println("--------Y----------");
-        System.out.print(Arrays.toString(newCoordinates[1]));
-        System.out.println(" ");
     }
 }

@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e80e0ac-204d-49c9-baf6-18865c982760" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/Bot/BotNewtonRaphson.java" afterDir="false" />
+    <list default="true" id="9e80e0ac-204d-49c9-baf6-18865c982760" name="Changes" comment="refactoring the filese, adding new Bot, minor changes in physic engine">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/Bots/BotPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/Bots/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/Bots/AdvancedBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/Bots/BotNewtonRaphson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/Bots/BotNewtonRaphson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/physicsengine/PhysicsEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/physicsengine/PhysicsEngine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/GameSetupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/GameSetupController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/SettingsController.java" afterDir="false" />
@@ -19,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -83,13 +86,13 @@
       <recent name="com.kentwentyfour.project12.presentation.controllers" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainApplication">
+  <component name="RunManager" selected="Application.BotNewtonRaphson">
     <configuration name="BotNewtonRaphson" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.kentwentyfour.project12.Bot.BotNewtonRaphson" />
+      <option name="MAIN_CLASS_NAME" value="com.kentwentyfour.project12.Bots.BotNewtonRaphson" />
       <module name="Project12" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.kentwentyfour.project12.Bot.*" />
+          <option name="PATTERN" value="com.kentwentyfour.project12.Bots.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -151,8 +154,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainApplication" />
         <item itemvalue="Application.BotNewtonRaphson" />
+        <item itemvalue="Application.MainApplication" />
         <item itemvalue="Application.ODESolver" />
         <item itemvalue="Application.PhysicsEngine" />
         <item itemvalue="Application.FormulaCalculator" />
@@ -176,7 +179,7 @@
       <updated>1716661909278</updated>
       <workItem from="1716661910295" duration="17819000" />
       <workItem from="1716712645065" duration="58357000" />
-      <workItem from="1716848192302" duration="13500000" />
+      <workItem from="1716848192302" duration="25799000" />
     </task>
     <task id="LOCAL-00001" summary="Changing timeStep and initial time in PhysicEngine to improve calculation and animation. Adding  Stopping conditions support in game.">
       <option name="closed" value="true" />
@@ -202,7 +205,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716835083793</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="refactoring the filese, adding new Bot, minor changes in physic engine">
+      <option name="closed" value="true" />
+      <created>1716903569363</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1716903569363</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,7 +234,8 @@
     <MESSAGE value="Changing timeStep and initial time in PhysicEngine to improve calculation and animation. Adding  Stopping conditions support in game." />
     <MESSAGE value="Adding Lera's basicBot" />
     <MESSAGE value="adding lera's stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding lera's stuff" />
+    <MESSAGE value="refactoring the filese, adding new Bot, minor changes in physic engine" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring the filese, adding new Bot, minor changes in physic engine" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -245,13 +257,33 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/physicsengine/PhysicsEngine.java</url>
-          <line>209</line>
+          <line>215</line>
           <option name="timeStamp" value="108" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/physicsengine/PhysicsEngine.java</url>
-          <line>206</line>
+          <line>212</line>
           <option name="timeStamp" value="109" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/physicsengine/PhysicsEngine.java</url>
+          <line>163</line>
+          <option name="timeStamp" value="115" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/physicsengine/PhysicsEngine.java</url>
+          <line>224</line>
+          <option name="timeStamp" value="116" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/physicsengine/PhysicsEngine.java</url>
+          <line>221</line>
+          <option name="timeStamp" value="117" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/physicsengine/PhysicsEngine.java</url>
+          <line>234</line>
+          <option name="timeStamp" value="123" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.util.EmptyStackException" package="java.util" />
