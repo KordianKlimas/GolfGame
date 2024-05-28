@@ -1,4 +1,4 @@
-package com.kentwentyfour.project12.Bot;
+package com.kentwentyfour.project12.Bots;
 
 
 import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;

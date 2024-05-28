@@ -29,6 +29,10 @@ public class PhysicsEngine {
     private double pi = Math.PI;
     public MapManager mapManager;
 
+    public boolean customTimeAndStepSize = false;
+    public double customStepSize = 0;
+    public int customTime = 0;
+
     // main solver
     ODESolver solver = new ODESolver();
     //  calculator for CourseProfileFormula h(x,y)
@@ -105,7 +109,11 @@ public class PhysicsEngine {
         };
         List<String> variables = Arrays.asList( "t","vx","vy","x", "y","k_f");
         double stepSize = 0.01;
-        int in_Time = 5;
+        int in_Time = 2;
+        if (customTimeAndStepSize){
+             stepSize = customStepSize;
+             in_Time = customTime;
+        }
         double[] in_Conditions = {0,velocityX, velocityY,x_coordinate,y_coordinate,current_kf};
 
         // calculating new coordinates until any stopping condition is met
@@ -175,6 +183,7 @@ public class PhysicsEngine {
             in_Conditions[5] = current_kf;
 
             if(!stoppingCondition.isEmpty()){
+                customTimeAndStepSize = false;
                 break;
             }
         }
