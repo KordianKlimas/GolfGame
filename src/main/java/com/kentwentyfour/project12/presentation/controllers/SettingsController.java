@@ -1,7 +1,7 @@
 package com.kentwentyfour.project12.presentation.controllers;
 
-import com.kentwentyfour.project12.Bots.Bot;
-import com.kentwentyfour.project12.Bots.BotNewtonRaphson;
+import com.kentwentyfour.project12.Bots.AdvancedBot;
+import com.kentwentyfour.project12.Bots.BotPlayer;
 import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
 import com.kentwentyfour.project12.gameobjects.MapManager;
 import com.kentwentyfour.project12.gameobjects.movableobjects.MovableObjects;
@@ -52,13 +52,11 @@ public class SettingsController implements Initializable {
     private MapManager mapManager;
     private PhysicsEngine physicsEngine;
     private ArrayList<GolfBall> balls;
-    private Bot bot;
-
+    private BotPlayer bot;
     private static final ButtonType BUTTON_RESTART = new ButtonType("Start from the beginning", ButtonBar.ButtonData.OK_DONE);
     private static final ButtonType BUTTON_CONTINUE = new ButtonType("Continue", ButtonBar.ButtonData.CANCEL_CLOSE);
 
     private ReferenceStore referenceStore = ReferenceStore.getInstance();
-    private BotNewtonRaphson botNewtonRaphson;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -179,14 +177,12 @@ public class SettingsController implements Initializable {
 
         // Set the list of golf balls
         this.balls = balls;
-        this.botNewtonRaphson = new BotNewtonRaphson(balls.getFirst());
         //this.bot = new Bot(balls.getFirst());
     }
     @FXML
     public void BotMove() {
-        Double[][] botCoordinates = bot.newCoordinates(balls.get(0), targetX, targetY);
-
-        CoordinatesPath coordinatesPath = physicsEngine.calculateCoordinatePath(balls.get(0), botCoordinates[0][0], botCoordinates[0][1]);
+        this.bot = new AdvancedBot();
+       CoordinatesPath coordinatesPath = bot.calculatePath(balls.get(0));
         mapManager.animateMovableObject(balls.get(0), coordinatesPath);
         String stopping = coordinatesPath.getStoppingCondition();
         handleStop(stopping, coordinatesPath.getPath());
