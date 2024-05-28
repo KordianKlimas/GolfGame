@@ -15,7 +15,6 @@ import java.util.Objects;
 
 public class MainApplication extends Application {
     private Stage stage;
-    //test
 
     public static void main(String[] args) {
         launch(args);
@@ -91,13 +90,11 @@ public class MainApplication extends Application {
         showView("views/game-setup-menu.fxml", "css/setup-menu.css");
     }
 
-    /*
+    /**
      * Exit the program
      */
     public void exit() {
         stage.close();
     }
-
-
 
 }

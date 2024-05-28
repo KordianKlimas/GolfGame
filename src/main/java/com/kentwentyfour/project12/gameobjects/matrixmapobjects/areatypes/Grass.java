@@ -57,5 +57,4 @@ public class Grass implements AreaType {
         }
         this.color = color;
     }
-
 }

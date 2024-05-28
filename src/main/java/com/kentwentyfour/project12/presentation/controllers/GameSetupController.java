@@ -37,22 +37,16 @@ public class GameSetupController extends BaseController {
 
     @FXML
     private TextField startYField;
-
     @FXML
     private TextField ballRadiusField;
-
     @FXML
     private TextField staticfrictionsand;
     @FXML
     private TextField targetRadiusField;
-
     @FXML
     private TextField targetXField;
-
     @FXML
     private TextField targetYField;
-
-
     @FXML
     private TextField kineticfrictionsand;
     @FXML
@@ -68,8 +62,8 @@ public class GameSetupController extends BaseController {
 
     @FXML
     protected void onStartGameButtonClick() {
+        //gets all entered variables
         String selectedGame = gameComboBox.getValue();
-
         double startX = strToDouble(startXField.getText().isEmpty() ? "1" : startXField.getText());
         double startY = strToDouble(startYField.getText().isEmpty() ? "1" : startYField.getText());
         double targetX = strToDouble(targetXField.getText().isEmpty() ? "2" : targetXField.getText());
@@ -84,14 +78,22 @@ public class GameSetupController extends BaseController {
 
        // formula = "0.4 * ( 0.9 -  2.718 ^ ( (  x ^ 2 + y ^ 2 ) / -8 ) )";
        //formula="1";
-        ReferenceStore referenceStore = ReferenceStore.getInstance();
-        referenceStore.setCourseProfileFormula(formula);
-        mapManager = new MapManager();
 
+        // Get reference store
+        ReferenceStore referenceStore = ReferenceStore.getInstance();
+
+        //store given formula
+        referenceStore.setCourseProfileFormula(formula);
+
+        //create and store MapManager
+        mapManager = new MapManager();
         referenceStore.setMapManagerReference(mapManager);
 
+        //create and store golf balls
         ArrayList<GolfBall> balls =  new ArrayList<GolfBall>();
        balls.add(new GolfBall(startX,startY,.1,ballRadius));
+
+       //create and store PhysicsEngine
        physicsEngine = new PhysicsEngine();
         referenceStore.setPhysicsEngine(physicsEngine);
 
@@ -103,13 +105,10 @@ public class GameSetupController extends BaseController {
         try {
             FXMLLoader settingsLoader = new FXMLLoader(getClass().getResource("/com/kentwentyfour/project12/views/Settings.fxml"));
             settingsRoot = settingsLoader.load();
-            // Get reference store
-
 
             //Set frictions
             referenceStore.setFrictionsAreaType("Grass",kineticFrictionGrass,staticFrictionGrass );
             referenceStore.setFrictionsAreaType("Sand",kineticFrictionSand,staticFrictionSand );
-
 
             // Initialize mapManager and map
             mapManager = new MapManager();

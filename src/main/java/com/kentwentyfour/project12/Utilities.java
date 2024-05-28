@@ -51,6 +51,4 @@ public final class Utilities {
             return "";
         }
     }
-
-
 }

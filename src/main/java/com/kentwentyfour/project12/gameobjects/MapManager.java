@@ -85,7 +85,6 @@ public class MapManager {
         int[] arr = coordinatesToMatrix(x, y);
         // prevents out of boundary  indexes
 
-
         if (!(arr[0] >= this.matrixSize) && !(arr[1] >= this.matrixSize) && !(arr[0] <0) && !(arr[1]<0) && isTerrainDataInitialized) {
             return terrainData[arr[0]][arr[1]];
         } else if (!isTerrainDataInitialized) {
@@ -173,11 +172,8 @@ public class MapManager {
      * @return Pane - the map with  MappableObjects
      */
     private void createMap() {
-        int numRows = matrixSize;
-        int numCols = matrixSize;
 
         double cellWidth = (double) (WIDTH / (double) matrixSize);
-
         double cellHeight = (double) (HEIGHT / (double) matrixSize);
         Pane root = new Pane();
         int newNumRows = matrixSize;

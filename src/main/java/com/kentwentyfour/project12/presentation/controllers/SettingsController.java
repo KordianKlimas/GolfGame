@@ -53,12 +53,12 @@ public class SettingsController implements Initializable {
     private PhysicsEngine physicsEngine;
     private ArrayList<GolfBall> balls;
     private Bot bot;
+    private BotNewtonRaphson botNewtonRaphson;
 
     private static final ButtonType BUTTON_RESTART = new ButtonType("Start from the beginning", ButtonBar.ButtonData.OK_DONE);
     private static final ButtonType BUTTON_CONTINUE = new ButtonType("Continue", ButtonBar.ButtonData.CANCEL_CLOSE);
 
     private ReferenceStore referenceStore = ReferenceStore.getInstance();
-    private BotNewtonRaphson botNewtonRaphson;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -80,6 +80,9 @@ public class SettingsController implements Initializable {
         // bot = new Bot(balls.getFirst(), physicsEngine, mapManager);
 
     }
+    /**
+     * "hit" button settings
+     */
     @FXML
     public void hit () {
         double xVelocityValue = vx.getValue();
@@ -94,6 +97,9 @@ public class SettingsController implements Initializable {
         handleStop(stopping,coordinatesPath.getPath());
 
     }
+    /**
+     * conditions for stopping the ball
+     */
     private void handleStop(String condition, double[][] path) {
         Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(2), event -> {
             if ("outside_of_playable_area".equals(condition)) {
@@ -142,7 +148,9 @@ public class SettingsController implements Initializable {
         }));
         timeline.play();
     }
-
+    /**
+     * "Game Over" alert
+     */
     public static Optional<ButtonType> showGameOverPopup() {
         javafx.scene.control.Alert alert = new javafx.scene.control.Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Game Over");
@@ -151,7 +159,9 @@ public class SettingsController implements Initializable {
         alert.getButtonTypes().setAll(BUTTON_RESTART, BUTTON_CONTINUE);
         return alert.showAndWait();
     }
-
+    /**
+     * Obstacle alert
+     */
     public static Optional<ButtonType> showObstacleHitPopup() {
         javafx.scene.control.Alert alert = new javafx.scene.control.Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Obstacle hit");
@@ -160,7 +170,10 @@ public class SettingsController implements Initializable {
         alert.getButtonTypes().setAll(BUTTON_RESTART, BUTTON_CONTINUE);
         return alert.showAndWait();
     }
-
+    /**
+     * sets the initial Values given by the player
+     * @param -all adjustable game settings
+     */
     public void setInitialValues(String selectedGame, double startX, double startY, double targetX, double targetY, double targetRadius, MapManager mapManager, PhysicsEngine physicsEngine, ArrayList<GolfBall> balls, MovableObjects hole) {
         // Set the selected game mode
         this.selectedGame = selectedGame;
@@ -185,7 +198,6 @@ public class SettingsController implements Initializable {
     @FXML
     public void BotMove() {
         Double[][] botCoordinates = bot.newCoordinates(balls.get(0), targetX, targetY);
-
         CoordinatesPath coordinatesPath = physicsEngine.calculateCoordinatePath(balls.get(0), botCoordinates[0][0], botCoordinates[0][1]);
         mapManager.animateMovableObject(balls.get(0), coordinatesPath);
         String stopping = coordinatesPath.getStoppingCondition();

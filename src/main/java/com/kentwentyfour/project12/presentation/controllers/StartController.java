@@ -5,7 +5,9 @@ import com.kentwentyfour.project12.MainApplication;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Screen;
 
-
+/**
+ * Controller for the start view.
+ */
 public class StartController extends BaseController {
 
     @FXML

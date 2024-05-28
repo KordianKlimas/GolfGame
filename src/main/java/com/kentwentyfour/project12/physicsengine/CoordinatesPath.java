@@ -1,9 +1,7 @@
 package com.kentwentyfour.project12.physicsengine;
 
-
-
 /**
- * Encapsulates the path of the object along with it's stopping condition and timeInterval
+ * Encapsulates the path of the object along with its stopping condition and timeInterval
  */
 public class CoordinatesPath {
     private double[][] path;

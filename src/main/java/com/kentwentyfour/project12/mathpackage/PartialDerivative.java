@@ -181,6 +181,4 @@ public class PartialDerivative {
         System.out.println(c.notationOfPd("dh/dy"));
 
     }
-
-
 }
