@@ -74,10 +74,10 @@ public class GameSetupController extends BaseController {
         double kineticFrictionSand = strToDouble(kineticfrictionsand.getText().isEmpty() ? "0.1" : kineticfrictionsand.getText());
         double staticFrictionGrass = strToDouble(staticfrictiongrass.getText().isEmpty() ? "0.1" : staticfrictiongrass.getText());
         double kineticFrictionGrass = strToDouble(kineticfrictiongrass.getText().isEmpty() ? "0.05" : kineticfrictiongrass.getText());
-        String formula = formulaField.getText().isEmpty() ? "sin( ( x - y ) / 7 ) + 0.5" : formulaField.getText();
+        String formula = formulaField.getText().isEmpty() ? "sin( ( x - y ) / 7 ) + 0.5 " : formulaField.getText();
 
-       //formula = "0.4 * ( 0.9 -  2.718 ^ ( (  x ^ 2 + y ^ 2 ) / -8 ) )";
-       //formula="1";
+        //formula = "0.4 * ( 0.9 -  2.718 ^ ( (  x ^ 2 + y ^ 2 ) / -8 ) ";
+        //formula="1";
 
         // Get reference store
         ReferenceStore referenceStore = ReferenceStore.getInstance();
@@ -91,10 +91,10 @@ public class GameSetupController extends BaseController {
 
         //create and store golf balls
         ArrayList<GolfBall> balls =  new ArrayList<GolfBall>();
-       balls.add(new GolfBall(startX,startY,.1,ballRadius));
+        balls.add(new GolfBall(startX,startY,.1,ballRadius));
 
        //create and store PhysicsEngine
-       physicsEngine = new PhysicsEngine();
+        physicsEngine = new PhysicsEngine();
         referenceStore.setPhysicsEngine(physicsEngine);
 
 

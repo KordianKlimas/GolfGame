@@ -138,5 +138,18 @@ public  class ReferenceStore {
     public String getCourseProfileFormula() {
         return this.courseProfileFormula;
     }
+    public double getFrictionCoefficient() {
+        // Assuming we have a method to get the current surface type
+        String surfaceType = getCourseProfileFormula();
 
+        // Default friction coefficients for different surfaces
+        switch (surfaceType) {
+            case "Grass":
+                return Grass.kinetic_Friction;
+            case "Sand":
+                return Sand.kinetic_Friction;
+            default:
+                return 0.1;
+        }
+    }
 }

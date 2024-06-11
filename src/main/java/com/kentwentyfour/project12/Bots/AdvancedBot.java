@@ -11,12 +11,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class AdvancedBot implements BotPlayer {
-    private PhysicsEngine physicsEngine;
-    private ReferenceStore referenceStore = ReferenceStore.getInstance();
 
-    public AdvancedBot() {
-        this.physicsEngine = referenceStore.getPhysicsEngine();
-    }
+    private ReferenceStore referenceStore = ReferenceStore.getInstance();
+    private PhysicsEngine physicsEngine = referenceStore.getPhysicsEngine();
+
+    public AdvancedBot() {}
 
     public CoordinatesPath calculatePath(GolfBall golfBall) {
         Hole hole = referenceStore.getHole();
@@ -32,10 +31,11 @@ public class AdvancedBot implements BotPlayer {
         double[] velocities = calculateVelocities(angleRadians, direction, targetX, targetY, golfBall);
         double velocityX = velocities[0];
         double velocityY = velocities[1];
-
-        CoordinatesPath coordinatesPath = physicsEngine.calculateCoordinatePath(golfBall, velocityX, velocityY);
-         path = coordinatesPath;
+        System.out.println(velocityX + " " + velocityY);
+         path = physicsEngine.calculateCoordinatePath(golfBall, velocityX, velocityY);
+        System.err.println(Arrays.deepToString(path.getPath()));
         return path;
+    //    return physicsEngine.calculateCoordinatePath(golfBall, velocityX, velocityY);
     }
 
     public double[] calculateDirection(double targetx, double targety, GolfBall golfBall) {
@@ -59,7 +59,9 @@ public class AdvancedBot implements BotPlayer {
         double scaleFactor = chooseScaleFactor(targetx, targety, golfBall);
         double slopeFactor = calculateSlopeFactor(golfBall.getX(), golfBall.getY());
         double v = Math.sqrt(directions[0] * directions[0] + directions[1] * directions[1]);
-        v = v * scaleFactor * slopeFactor;
+        double friction = referenceStore.getFrictionCoefficient();
+        v = v * scaleFactor * slopeFactor * friction;
+
         double vx = v * Math.cos(angleRad);
         double vy = v * Math.sin(angleRad);
         double[] velocities = {vx, vy, scaleFactor};
@@ -72,6 +74,7 @@ public class AdvancedBot implements BotPlayer {
         double d = Math.sqrt(dx * dx + dy * dy);
         return 0.25 * d;
     }
+
 
     private double calculateSlopeFactor(double x, double y) {
         double dhdx = physicsEngine.height_PartialDerivative.calculatePD_notation("dh/dx", x, y);
@@ -104,14 +107,4 @@ public class AdvancedBot implements BotPlayer {
         return (angle * Math.PI) / 180;
     }
 
-    public static void main(String args[]) {
-        GolfBall ball = new GolfBall(0.0, 0.0, 0.0459, 0.15);
-        ArrayList<GolfBall> golfBalls = new ArrayList<>();
-        golfBalls.add(ball);
-        ReferenceStore referenceStore = ReferenceStore.getInstance();
-        Hole hole = new Hole(1,1,0.15);
-        referenceStore.setHoleReference(hole);
-        AdvancedBot advancedBot = new AdvancedBot();
-
-    }
 }

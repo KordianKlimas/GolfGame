@@ -1,6 +1,7 @@
 package com.kentwentyfour.project12.presentation.controllers;
 
 import com.kentwentyfour.project12.Bots.AdvancedBot;
+import com.kentwentyfour.project12.Bots.BasicBot;
 import com.kentwentyfour.project12.Bots.BotPlayer;
 import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
 import com.kentwentyfour.project12.gameobjects.MapManager;
@@ -181,7 +182,7 @@ public class SettingsController implements Initializable {
     @FXML
     public void BotMove() {
         this.bot = new AdvancedBot();
-       CoordinatesPath coordinatesPath = bot.calculatePath(balls.get(0));
+        CoordinatesPath coordinatesPath = bot.calculatePath(balls.get(0));
         mapManager.animateMovableObject(balls.get(0), coordinatesPath);
         String stopping = coordinatesPath.getStoppingCondition();
         handleStop(stopping, coordinatesPath.getPath());
