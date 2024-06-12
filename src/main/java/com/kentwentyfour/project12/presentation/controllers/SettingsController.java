@@ -130,8 +130,10 @@ public class SettingsController implements Initializable {
                             GolfBall ball = balls.get(0);
                             if(path[0].length>2){
                                 ball.setPosition(path[0][path[0].length - 2], path[1][path[1].length - 2]);
+                                //System.err.println(ball.getX()+" "+ball.getY());
                             }else{
-                                ball.setPosition(ball.getX(),ball.getY());
+                                ball.setPosition(path[0][0], path[1][0]);
+                               // System.err.println(ball.getX()+" & "+ball.getY());
                             }
                             mapManager.updateCoordinates(ball);
                         }
@@ -141,7 +143,6 @@ public class SettingsController implements Initializable {
         }));
         timeline.play();
     }
-
     public static Optional<ButtonType> showGameOverPopup() {
         javafx.scene.control.Alert alert = new javafx.scene.control.Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Game Over");

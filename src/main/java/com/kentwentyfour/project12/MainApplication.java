@@ -34,7 +34,9 @@ public class MainApplication extends Application {
         // Set the title of the stage
         stage.setTitle("Putting Game | Group 24");
         // Set the stage properties
-        stage.setFullScreen(true);
+        stage.setWidth(800);
+        stage.setHeight(600);
+        stage.setFullScreen(false);
         // Show the menu
         showStart();
     }
@@ -58,12 +60,13 @@ public class MainApplication extends Application {
             Scene scene = stage.getScene();
             if (scene == null) {
                 scene = new Scene(root);
-                stage.setFullScreen(true);
+                stage.setFullScreen(false);
                 stage.setScene(scene);
             } else {
-                stage.setFullScreen(true);
+                stage.setFullScreen(false);
                 scene.setRoot(root);
             }
+            //stage.setFullScreen(false);
 
             // Get the controller instance from the FXMLLoader
             BaseController sceneController = fxmlLoader.getController();

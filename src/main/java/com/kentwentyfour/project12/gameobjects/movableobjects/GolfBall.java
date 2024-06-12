@@ -1,5 +1,6 @@
 package com.kentwentyfour.project12.gameobjects.movableobjects;
 
+import com.kentwentyfour.project12.physicsengine.CoordinatesPath;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
@@ -9,6 +10,7 @@ public class GolfBall implements MovableObjects {
     private double mass;
     private double radius;
     private Circle visualRepresentation;
+    private CoordinatesPath currentCoordinatePath;
     /**
      * Creates ball object
      * @param coordinate_X
@@ -28,6 +30,7 @@ public class GolfBall implements MovableObjects {
         // Circle drawn by middle coordinates
         return 0;
     }
+
     /**
      * Create a graphical representation of the ball
      * @return Circle representing the ball
