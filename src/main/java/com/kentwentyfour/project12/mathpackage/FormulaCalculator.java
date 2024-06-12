@@ -240,9 +240,7 @@ public class FormulaCalculator{
                         //if the previous element is +  or -
                         if( i<list.size() && (list.get(i-1).equals("+") || list.get(i-1).equals("-"))){
                             stack.push(-elem1);
-                        }//else if(i<list.size() && list.get(i-1).equals("-")){//if the previous element is -
-                        //    stack.push(-elem1);
-                        //}
+                        }
                         else{
                             elem2=stack.pop();
                             stack.push(elem2 - elem1);
@@ -307,19 +305,30 @@ public class FormulaCalculator{
             return stack.pop();
         }
     }
-//    public static void main(String[] args){
-//        FormulaCalculator calc = new FormulaCalculator();
-//        List<String> formulaRPN1 = new ArrayList<>();
-//
-//        String formula1 = " dh/dy + dh/dy + dh/dy";
-//        formulaRPN1 = calc.parseString(formula1);
-//        PartialDerivative c = new PartialDerivative("h","x ^ 2 + y","x", "y");
-//        calc.addPartialDerivative(c);
-//
-//        System.out.println(calc.parseString(formula1));
-//        System.out.println(calc.calculateRPN(formulaRPN1));
-//
-//    }
+    public static void main(String[] args){
+        long startTime = System.nanoTime();
+
+        FormulaCalculator calc = new FormulaCalculator();
+        List<String> formulaRPN1 = new ArrayList<>();
+
+        String formula1 = " dh/dy + dh/dy + dh/dy";
+        formulaRPN1 = calc.parseString(formula1);
+        PartialDerivative c = new PartialDerivative("h","x ^ 2 + y","x", "y");
+        calc.addPartialDerivative(c);
+
+        System.out.println(calc.parseString(formula1));
+        System.out.println(calc.calculateRPN(formulaRPN1));
+
+        long endTime = System.nanoTime();
+
+        // Calculate elapsed time in milliseconds
+        double durationInMillis = (endTime - startTime) / 1_000_000.0;
+
+        // Print the duration
+        System.out.println("Execution time: " + durationInMillis + " milliseconds");
+
+
+    }
 }
 /*
         // RULES FOR INPUT

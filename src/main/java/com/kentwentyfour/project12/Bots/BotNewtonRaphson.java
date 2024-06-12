@@ -37,9 +37,7 @@ public class BotNewtonRaphson implements BotPlayer {
         CoordinatesPath path = null;
         for (int iter = 0; iter < maxIter; iter++) {
             learningRate-=0.02;
-            physicsEngine.customStepSize = this.customStepSize;
-            physicsEngine.customTime= this.customTime;
-            path = physicsEngine.calculateCoordinatePath(golf_ball, Vx, Vy);
+            path = physicsEngine.calculateCoordinatePath(golf_ball, Vx, Vy,0.05,1);
             if ("ball_in_the_hole".equals(path.getStoppingCondition())) {
                 System.out.println("Converged to the hole with velocities: vx = " + Vx + ", vy = " + Vy);
                 return path;

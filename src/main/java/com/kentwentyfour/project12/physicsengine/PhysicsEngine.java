@@ -30,8 +30,6 @@ public class PhysicsEngine {
     public MapManager mapManager;
 
     public boolean customTimeAndStepSize = false;
-    public double customStepSize = 0;
-    public int customTime = 0;
 
     // main solver
     ODESolver solver = new ODESolver();
@@ -83,11 +81,12 @@ public class PhysicsEngine {
      *
      * @return double[Number of coordinates][2]
      */
-    public CoordinatesPath calculateCoordinatePath(GolfBall golfBall, double velocityX, double velocityY){
-
+    public CoordinatesPath calculateCoordinatePath(GolfBall golfBall, double velocityX, double velocityY) {
+        return calculateCoordinatePath(golfBall, velocityX, velocityY, 0.01,1); // Default step size
+    }
+    public CoordinatesPath calculateCoordinatePath(GolfBall golfBall, double velocityX, double velocityY, double customStepSize,int customInitialTime){
         double x_coordinate =  golfBall.getX();
         double y_coordinate =  golfBall.getY();
-        //System.out.println("Starting ball coords: "+ x_coordinate+" " + y_coordinate);
 
         // getting frictions for current position of ball
         MatrixMapArea area =  mapManager.accessObject(x_coordinate,y_coordinate);
@@ -97,7 +96,7 @@ public class PhysicsEngine {
         }else{
             System.err.println("The starting position of ball is not playable area");
             System.err.println("X: "+x_coordinate+"Y: "+y_coordinate);
-            System.err.println("AreaType: "+"Grass: "+(area instanceof Grass)+"Water: "+(area instanceof Water)+"Sand: "+(area instanceof Sand));
+            System.err.println("AreaType: "+"Grass: "+(area instanceof Grass)+" Water: "+(area instanceof Water)+" Sand: "+(area instanceof Sand));
         }
 
         // setting up formulas and ODE solver
@@ -108,13 +107,8 @@ public class PhysicsEngine {
                 "vy"
         };
         List<String> variables = Arrays.asList( "t","vx","vy","x", "y","k_f");
-        double stepSize = 0.01;
-        int in_Time =2;
-        if (customTimeAndStepSize){
-            System.out.println("Changed");
-             stepSize = customStepSize;
-             in_Time = customTime;
-        }
+
+
         double[] in_Conditions = {0,velocityX, velocityY,x_coordinate,y_coordinate,current_kf};
 
         // calculating new coordinates until any stopping condition is met
@@ -123,7 +117,7 @@ public class PhysicsEngine {
 
         String stoppingCondition="";
         while (stoppingCondition.isEmpty()){
-            Double[][] results = ODESolver.rungeKutta(equations, stepSize, in_Time, in_Conditions, variables);
+            Double[][] results = ODESolver.rungeKutta(equations, customStepSize, customInitialTime, in_Conditions, variables);
             double  x_velocity =  results[1][0];
             double  y_velocity =  results[2][0];
             for(int i=0;i<results[0].length;i++ ){
@@ -195,8 +189,10 @@ public class PhysicsEngine {
             finalPath[0][i] = path_coordinates_X.get(i);
             finalPath[1][i] = path_coordinates_Y.get(i);
         }
+
+
         // stepSize is timeInterval as it is used as  chang of time in ODE solver
-        return new CoordinatesPath(finalPath,stepSize,stoppingCondition);
+        return new CoordinatesPath(finalPath,customStepSize,stoppingCondition);
     }
 
 

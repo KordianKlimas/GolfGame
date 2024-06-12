@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e80e0ac-204d-49c9-baf6-18865c982760" name="Changes" comment="getting rid of comments">
+    <list default="true" id="9e80e0ac-204d-49c9-baf6-18865c982760" name="Changes" comment="- fixing &quot;ball&quot; bug ( after hitting obstacle twice in row it's start position was in obstacle ). &#10;- changing GUI from fullscreen to window size">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/MainApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/MapManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/MapManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/movableobjects/GolfBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/movableobjects/GolfBall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/SettingsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/mathpackage/FormulaCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/mathpackage/FormulaCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/mathpackage/ODESolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/mathpackage/ODESolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/physicsengine/PhysicsEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/physicsengine/PhysicsEngine.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,10 +154,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainApplication" />
-        <item itemvalue="Application.BotNewtonRaphson" />
-        <item itemvalue="Application.ODESolver" />
-        <item itemvalue="Application.PhysicsEngine" />
         <item itemvalue="Application.FormulaCalculator" />
+        <item itemvalue="Application.ODESolver" />
+        <item itemvalue="Application.BotNewtonRaphson" />
+        <item itemvalue="Application.PhysicsEngine" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +189,7 @@
       <workItem from="1717928068789" duration="599000" />
       <workItem from="1718089923745" duration="5028000" />
       <workItem from="1718105366319" duration="616000" />
-      <workItem from="1718194232441" duration="3297000" />
+      <workItem from="1718194232441" duration="6962000" />
     </task>
     <task id="LOCAL-00001" summary="Changing timeStep and initial time in PhysicEngine to improve calculation and animation. Adding  Stopping conditions support in game.">
       <option name="closed" value="true" />
@@ -232,7 +231,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716930473166</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="- fixing &quot;ball&quot; bug ( after hitting obstacle twice in row it's start position was in obstacle ). &#10;- changing GUI from fullscreen to window size">
+      <option name="closed" value="true" />
+      <created>1718197931455</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1718197931455</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,31 +262,12 @@
     <MESSAGE value="adding lera's stuff" />
     <MESSAGE value="last commit before examination" />
     <MESSAGE value="getting rid of comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="getting rid of comments" />
+    <MESSAGE value="- fixing &quot;ball&quot; bug ( after hitting obstacle twice in row it's start position was in obstacle ). &#10;- changing GUI from fullscreen to window size" />
+    <option name="LAST_COMMIT_MESSAGE" value="- fixing &quot;ball&quot; bug ( after hitting obstacle twice in row it's start position was in obstacle ). &#10;- changing GUI from fullscreen to window size" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/mathpackage/FormulaCalculator.java</url>
-          <line>269</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/mathpackage/FormulaCalculator.java</url>
-          <line>273</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/mathpackage/ODESolver.java</url>
-          <line>245</line>
-          <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/mathpackage/ODESolver.java</url>
-          <line>204</line>
-          <option name="timeStamp" value="110" />
-        </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.util.EmptyStackException" package="java.util" />
           <option name="timeStamp" value="14" />
