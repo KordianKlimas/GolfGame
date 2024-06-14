@@ -35,15 +35,15 @@ public class Grass implements AreaType {
         } else if (height < 1.1) {
             this.color = Color.rgb(17,124,19);
         }  else if (height < 1.3) {
-            this.color = Color.rgb(14, 105, 16); // Darker green
+            this.color = Color.rgb(14, 105, 16);
         } else if (height < 1.5) {
-            this.color = Color.rgb(11, 86, 13); // Darker green
+            this.color = Color.rgb(11, 86, 13);
         } else if (height < 1.7) {
-            this.color = Color.rgb(8, 67, 10); // Darker green
+            this.color = Color.rgb(8, 67, 10);
         }   else if(height < 1.9) {
-            this.color = Color.rgb(9, 39, 10); // Darker green
+            this.color = Color.rgb(9, 39, 10);
         }else {
-            this.color = Color.rgb(9, 30, 10); // Darker green
+            this.color = Color.rgb(9, 30, 10);
         }
     }
     @Override

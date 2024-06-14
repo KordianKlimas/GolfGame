@@ -4,6 +4,7 @@ import com.kentwentyfour.project12.Constants;
 import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
 import com.kentwentyfour.project12.gameobjects.movableobjects.Hole;
 import com.kentwentyfour.project12.gameobjects.MapManager;
+import com.kentwentyfour.project12.gameobjects.movableobjects.Tree;
 import com.kentwentyfour.project12.physicsengine.PhysicsEngine;
 import com.kentwentyfour.project12.ReferenceStore;
 import javafx.fxml.FXML;
@@ -111,8 +112,6 @@ public class GameSetupController extends BaseController {
             referenceStore.setFrictionsAreaType("Sand",kineticFrictionSand,staticFrictionSand );
 
             // Initialize mapManager and map
-            mapManager = new MapManager();
-            mapManager.generateTerrainData();
             Pane pane = mapManager.getMap();
 
             // Add movable objects to the map
@@ -120,6 +119,11 @@ public class GameSetupController extends BaseController {
             referenceStore.setHoleReference(hole);
             mapManager.addMovableObjectToMap(hole);
             mapManager.addMovableObjectToMap(balls.getFirst());
+
+            mapManager.addObstacle(new Tree(1,-2,.5));
+            mapManager.addObstacle(new Tree(4,1,.3));
+            mapManager.addObstacle(new Tree(-2,-4,.4));
+            mapManager.addObstacle(new Tree(4,-4,.2));
 
             // Create the layout
             HBox root = new HBox();

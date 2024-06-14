@@ -1,7 +1,6 @@
 package com.kentwentyfour.project12.presentation.controllers;
 
-import com.kentwentyfour.project12.Bots.AdvancedBot;
-import com.kentwentyfour.project12.Bots.BasicBot;
+import com.kentwentyfour.project12.Bots.BotHillClimbing;
 import com.kentwentyfour.project12.Bots.BotPlayer;
 import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
 import com.kentwentyfour.project12.gameobjects.MapManager;
@@ -53,7 +52,8 @@ public class SettingsController implements Initializable {
     private MapManager mapManager;
     private PhysicsEngine physicsEngine;
     private ArrayList<GolfBall> balls;
-    private BotPlayer bot;
+   private BotPlayer bot;
+
     private static final ButtonType BUTTON_RESTART = new ButtonType("Start from the beginning", ButtonBar.ButtonData.OK_DONE);
     private static final ButtonType BUTTON_CONTINUE = new ButtonType("Continue", ButtonBar.ButtonData.CANCEL_CLOSE);
 
@@ -182,7 +182,7 @@ public class SettingsController implements Initializable {
     }
     @FXML
     public void BotMove() {
-        this.bot = new AdvancedBot();
+        this.bot = new BotHillClimbing(balls.get(0),physicsEngine,mapManager);
         CoordinatesPath coordinatesPath = bot.calculatePath(balls.get(0));
         mapManager.animateMovableObject(balls.get(0), coordinatesPath);
         String stopping = coordinatesPath.getStoppingCondition();
