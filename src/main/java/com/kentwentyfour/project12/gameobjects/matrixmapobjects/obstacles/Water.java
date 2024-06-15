@@ -6,5 +6,4 @@ public class Water implements ObstacleArea {
     public Color getColor() {
         return Color.BLUE;
     }
-
 }

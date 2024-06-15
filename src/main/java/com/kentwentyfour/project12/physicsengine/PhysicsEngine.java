@@ -164,24 +164,6 @@ public class PhysicsEngine {
                         break;
                     }
                 }
-                //MovableObjects obstacle =  mapManager.checkForCollisionWithObstacle(golfBall,x_coordinate,y_coordinate);
-                //if(obstacle != null && obstacle instanceof ReboundingObstacle){
-                //    // balls collision can be implemented too.
-                //    double restitutionCoefficient = ((ReboundingObstacle) obstacle).getRestitutionCoefficient();
-                //    x_velocity = -1 * x_velocity * restitutionCoefficient;
-                //    y_velocity = -1 * y_velocity * restitutionCoefficient;
-                //    //  init conditions set for previous coordinate
-                //    if(i>0){
-                //        x_coordinate = results[3][i-1];
-                //        y_coordinate = results[4][i-1];
-                //    }
-                //    else{  // the ball was adjacent to obstacle before
-                //        x_coordinate = results[3][i];
-                //        y_coordinate = results[4][i];
-                //    }
-                //    break;
-                //}
-
                 MovableObjects obstacle = mapManager.checkForCollisionWithObstacle(golfBall, x_coordinate, y_coordinate);
                 if (obstacle != null && obstacle instanceof ReboundingObstacle) {
 
@@ -207,16 +189,15 @@ public class PhysicsEngine {
 
                     // Update coordinates based on previous state
                     if (i > 0) {
-                        x_coordinate = results[3][i - 1];  // Assuming results[][] holds previous coordinates
+                        x_coordinate = results[3][i - 1];
                         y_coordinate = results[4][i - 1];
                     } else {
-                        x_coordinate = results[3][i];  // Assuming results[][] holds current coordinates
+                        x_coordinate = results[3][i];
                         y_coordinate = results[4][i];
                     }
-
+                    // calculates new path with new initial conditions
                     break;
                 }
-
 
                 // saves coordinates to final path ( includes coordinates where ball hit the obstacle )
                 path_coordinates_X.add(x_coordinate);

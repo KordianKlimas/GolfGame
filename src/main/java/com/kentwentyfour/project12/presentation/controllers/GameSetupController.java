@@ -1,6 +1,7 @@
 package com.kentwentyfour.project12.presentation.controllers;
 
 import com.kentwentyfour.project12.Constants;
+import com.kentwentyfour.project12.gameobjects.matrixmapobjects.obstacles.Water;
 import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
 import com.kentwentyfour.project12.gameobjects.movableobjects.Hole;
 import com.kentwentyfour.project12.gameobjects.MapManager;
@@ -69,7 +70,7 @@ public class GameSetupController extends BaseController {
         double startY = strToDouble(startYField.getText().isEmpty() ? "1" : startYField.getText());
         double targetX = strToDouble(targetXField.getText().isEmpty() ? "2" : targetXField.getText());
         double targetY = strToDouble(targetYField.getText().isEmpty() ? "2" : targetYField.getText());
-        double ballRadius = strToDouble(ballRadiusField.getText().isEmpty() ? "0.1" : ballRadiusField.getText());
+        double ballRadius = strToDouble(ballRadiusField.getText().isEmpty() ? "0.05" : ballRadiusField.getText());
         double targetRadius = strToDouble(targetRadiusField.getText().isEmpty() ? "0.15" : targetRadiusField.getText());
         double staticFrictionSand = strToDouble(staticfrictionsand.getText().isEmpty() ? "0.2" : staticfrictionsand.getText());
         double kineticFrictionSand = strToDouble(kineticfrictionsand.getText().isEmpty() ? "0.1" : kineticfrictionsand.getText());
@@ -89,6 +90,8 @@ public class GameSetupController extends BaseController {
         //create and store MapManager
         mapManager = new MapManager();
         referenceStore.setMapManagerReference(mapManager);
+
+        //mapManager.addArea(new Water(),0,0,-3,-5);
 
         //create and store golf balls
         ArrayList<GolfBall> balls =  new ArrayList<GolfBall>();
@@ -120,10 +123,10 @@ public class GameSetupController extends BaseController {
             mapManager.addMovableObjectToMap(hole);
             mapManager.addMovableObjectToMap(balls.getFirst());
 
-            mapManager.addObstacle(new Tree(1,-2,.5));
-            mapManager.addObstacle(new Tree(4,1,.3));
-            mapManager.addObstacle(new Tree(-2,-4,.4));
-            mapManager.addObstacle(new Tree(4,-4,.2));
+            mapManager.addObstacle(new Tree(1,-2,.6));
+            mapManager.addObstacle(new Tree(4,1,.7));
+            mapManager.addObstacle(new Tree(-2,-4,.5));
+            mapManager.addObstacle(new Tree(4,-4,0.8));
 
             // Create the layout
             HBox root = new HBox();

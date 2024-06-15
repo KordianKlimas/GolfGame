@@ -3,9 +3,11 @@ import java.util.ArrayList;
 import java.util.EmptyStackException;
 import java.util.List;
 
+import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.AreaType;
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.Grass;
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.Sand;
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.MatrixMapArea;
+import com.kentwentyfour.project12.gameobjects.matrixmapobjects.obstacles.ObstacleArea;
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.obstacles.Water;
 import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
 import com.kentwentyfour.project12.gameobjects.movableobjects.MovableObjects;
@@ -111,6 +113,14 @@ public class MapManager {
         return this.root;
     }
     /**
+     * Rerenders and returns whole map
+     * @return Pane - map
+     */
+    public Pane getRerenderedMap(){
+        createMap();
+        return this.root;
+    }
+    /**
      * Returns object from map based on it's coordinates
      *
      * @param x
@@ -194,12 +204,8 @@ public class MapManager {
 
         arr[0] = midPixelX + (int) Math.round(x * scaleFactor);
         arr[1] = midPixelY - (int) Math.round(y * scaleFactor);
-
         return arr;
     }
-
-
-
 
     /**
      * Adds MovableObject object to map. Scales it from physic unit [meters] to relative pixel size.
@@ -273,11 +279,11 @@ public class MapManager {
      * @return
      */
     public MovableObjects checkForCollisionWithObstacle(GolfBall ball,double x_coordinate,double y_coordinate) {
-        double ballRadius = ball.getDistanceFromOrigin()*2;
+        double ballRadius = ball.getDistanceFromOrigin();
 
         for (MovableObjects obj2 : this.obstacleList) {
             if(obj2 instanceof Tree){
-                double obj2Radius = obj2.getDistanceFromOrigin()*2;
+                double obj2Radius = obj2.getDistanceFromOrigin();
                 double obj2X = obj2.getX();
                 double obj2Y = obj2.getY();
 
@@ -290,14 +296,6 @@ public class MapManager {
                     return obj2; // Return the object that the ball collided with
                 }
             }
-//            else if(obj2 instanceof Box){
-//                Box rectangle = (Box)obj2;
-//                Rectangle rectangleVisual = (Rectangle)obj2.getVisualRepresentation();
-////                double rectangleX =   rectangleVisual.getWidth()
-////                double rectangleY = rectangleVisual.getHeight()
-//                if()
-//            }
-
         }
 
         return null; // No collision detected
@@ -309,5 +307,42 @@ public class MapManager {
     public void addObstacle(MovableObjects obstacle){
         this.obstacleList.add(obstacle);
         addMovableObjectToMap(obstacle);
+    }
+
+    /**
+     * Creates rectangle on map from given obstacle area. Dose not rerender map
+     *
+     * @param area - area type/obstacle
+     * @param coordinateX1 - left top coordinate X
+     * @param coordinateY1 - left top coordinate Y
+     * @param coordinateX2 - right bottom coordinate X
+     * @param coordinateY2 - right bottom coordinate Y
+     */
+    public void addArea(ObstacleArea area, double coordinateX1, double coordinateY1,double coordinateX2, double coordinateY2){
+        int[] leftTopCellYX = coordinatesToMatrix(coordinateX1,coordinateY1);
+        int[] rightBottomCellYX = coordinatesToMatrix(coordinateX2,coordinateY2);
+
+        int cellX1 = leftTopCellYX[1];
+        int cellY1 = leftTopCellYX[0];
+        int cellX2 = rightBottomCellYX[1];
+        int cellY2= rightBottomCellYX[0];
+
+        if(cellY1>cellY2){
+            int temp = cellY1;
+            cellY1 =  cellY2;
+            cellY2 =  temp;
+        }
+        if(cellX1>cellX2){
+            int temp = cellX1;
+            cellX1 =  cellX2;
+            cellX2 =  temp;
+        }
+        for(int i =cellX1; i<=cellX2; i++ ){
+            for(int d =cellY1; d<=cellY2; d++ ){
+                terrainData[i][d] = area;
+            }
+        }
+
+
     }
 }
