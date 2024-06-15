@@ -177,7 +177,7 @@ public class MapManager {
      * @return an array containing the coordinates corresponding to the given cell indexes,
      * or {@code null} if the indexes are outside the matrix bounds
      */
-    private double[] matrixToCoordinates(int x, int y) {
+    public double[] matrixToCoordinates(int x, int y) {
         double[] arr = new double[2];
         int midPoint = (int) (this.matrixSize / 2.0 - 0.5); // index of the middle of matrix. We assume it is (0 [m],0 [m])
         double changeLimit = (this.matrixSize - 1) / this.mapWidth; // calculates how much coordinate (x or y) must change to change the cell in matrix
