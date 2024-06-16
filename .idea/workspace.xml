@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e80e0ac-204d-49c9-baf6-18865c982760" name="Changes" comment="- implemented trees and bouncing behaviour.">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/Bots/Algorithms/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/Bots/Algorithms/Node.java" afterDir="false" />
+    <list default="true" id="9e80e0ac-204d-49c9-baf6-18865c982760" name="Changes" comment="added A* Algorithm WITHOUT any implementations yet">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/Bots/Algorithms/AStarAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/Bots/Algorithms/AStarAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/Bots/BotHillClimbing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/Bots/BotHillClimbing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/ReferenceStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/ReferenceStore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/MapManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/MapManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/GameSetupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/GameSetupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/SettingsController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,36 +59,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.BotNewtonRaphson.executor&quot;: &quot;Run&quot;,
-    &quot;Application.FormulaCalculator.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MainApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ODESolver.executor&quot;: &quot;Run&quot;,
-    &quot;Application.PhysicsEngine.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SuperClass.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;game&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/kordi/Desktop/Uni/Project12/src/main/java/com/kentwentyfour/project12/gameobjects/textures&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.AStarAlgorithm.executor": "Run",
+    "Application.BotNewtonRaphson.executor": "Run",
+    "Application.FormulaCalculator.executor": "Run",
+    "Application.MainApplication.executor": "Run",
+    "Application.ODESolver.executor": "Run",
+    "Application.PhysicsEngine.executor": "Run",
+    "Application.SuperClass.executor": "Debug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "game",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/kordi/Desktop/Uni/Project12/src/main/java/com/kentwentyfour/project12/gameobjects/textures",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\kordi\Desktop\Uni\Project12\src\main\java\com\kentwentyfour\project12\gameobjects\textures" />
       <recent name="C:\Users\kordi\Desktop\Uni\Project12\src\main\java\com\kentwentyfour\project12\gameobjects\movableobjects" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/Bots/Algorithms" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/Bots" />
       <recent name="C:\Users\kordi\Desktop\Uni\Project12\src\main\java\com\kentwentyfour\project12\gameobjects\textures" />
       <recent name="C:\Users\kordi\Desktop\Uni\Project12\src\main\java\com\kentwentyfour\project12\Bots" />
     </key>
@@ -202,7 +210,9 @@
       <workItem from="1718362013451" duration="731000" />
       <workItem from="1718374614417" duration="14727000" />
       <workItem from="1718447912907" duration="7357000" />
-      <workItem from="1718457994379" duration="352000" />
+      <workItem from="1718457994379" duration="3239000" />
+      <workItem from="1718545409811" duration="727000" />
+      <workItem from="1718546146770" duration="5598000" />
     </task>
     <task id="LOCAL-00001" summary="Changing timeStep and initial time in PhysicEngine to improve calculation and animation. Adding  Stopping conditions support in game.">
       <option name="closed" value="true" />
@@ -268,7 +278,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718389334835</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added A* Algorithm WITHOUT any implementations yet">
+      <option name="closed" value="true" />
+      <created>1718458472083</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1718458472083</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,7 +312,8 @@
     <MESSAGE value="- fixing &quot;ball&quot; bug ( after hitting obstacle twice in row it's start position was in obstacle ). &#10;- changing GUI from fullscreen to window size" />
     <MESSAGE value="- added support for custom stepSize/initialTime in PhysicsEngine" />
     <MESSAGE value="- implemented trees and bouncing behaviour." />
-    <option name="LAST_COMMIT_MESSAGE" value="- implemented trees and bouncing behaviour." />
+    <MESSAGE value="added A* Algorithm WITHOUT any implementations yet" />
+    <option name="LAST_COMMIT_MESSAGE" value="added A* Algorithm WITHOUT any implementations yet" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -305,7 +324,7 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/Bots/BotHillClimbing.java</url>
-          <line>62</line>
+          <line>68</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

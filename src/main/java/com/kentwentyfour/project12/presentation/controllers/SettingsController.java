@@ -1,5 +1,6 @@
 package com.kentwentyfour.project12.presentation.controllers;
 
+import com.kentwentyfour.project12.Bots.Algorithms.AStarAlgorithm;
 import com.kentwentyfour.project12.Bots.BotHillClimbing;
 import com.kentwentyfour.project12.Bots.BotPlayer;
 import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
@@ -182,7 +183,7 @@ public class SettingsController implements Initializable {
     }
     @FXML
     public void BotMove() {
-        this.bot = new BotHillClimbing(balls.get(0),physicsEngine,mapManager);
+        this.bot = new BotHillClimbing();
         CoordinatesPath coordinatesPath = bot.calculatePath(balls.get(0));
         mapManager.animateMovableObject(balls.get(0), coordinatesPath);
         String stopping = coordinatesPath.getStoppingCondition();

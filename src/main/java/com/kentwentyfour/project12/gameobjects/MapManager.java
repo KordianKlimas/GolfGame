@@ -308,6 +308,9 @@ public class MapManager {
         this.obstacleList.add(obstacle);
         addMovableObjectToMap(obstacle);
     }
+    public List<MovableObjects> getObstacles() {
+        return obstacleList;
+    }
 
     /**
      * Creates rectangle on map from given obstacle area. Dose not rerender map

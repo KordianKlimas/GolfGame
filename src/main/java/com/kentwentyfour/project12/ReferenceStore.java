@@ -1,9 +1,11 @@
 package com.kentwentyfour.project12;
+import com.kentwentyfour.project12.Bots.Algorithms.AStarAlgorithm;
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.Grass;
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.Sand;
 import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
 import com.kentwentyfour.project12.gameobjects.movableobjects.Hole;
 import com.kentwentyfour.project12.gameobjects.MapManager;
+import com.kentwentyfour.project12.gameobjects.movableobjects.MovableObjects;
 import com.kentwentyfour.project12.physicsengine.PhysicsEngine;
 
 import java.util.ArrayList;
@@ -31,6 +33,7 @@ public  class ReferenceStore {
     private MapManager mapManager;
     private PhysicsEngine physicsEngine;
     private String courseProfileFormula;
+    private AStarAlgorithm aStarAlgorithm;
 
     // Private constructor to prevent instantiation
     private ReferenceStore() {
@@ -151,5 +154,15 @@ public  class ReferenceStore {
             default:
                 return 0.1;
         }
+    }
+    public void setAStarAlgorithm(AStarAlgorithm aStarAlgorithm) {
+        this.aStarAlgorithm = aStarAlgorithm;
+    }
+
+    public AStarAlgorithm getAStarAlgorithm() {
+        return this.aStarAlgorithm;
+    }
+    public List<MovableObjects> getObstacles() {
+        return mapManager.getObstacles();
     }
 }

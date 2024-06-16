@@ -1,5 +1,7 @@
 package com.kentwentyfour.project12.Bots;
 
+import com.kentwentyfour.project12.Bots.Algorithms.AStarAlgorithm;
+import com.kentwentyfour.project12.Bots.Algorithms.Node;
 import com.kentwentyfour.project12.gameobjects.*;
 import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
 import com.kentwentyfour.project12.gameobjects.movableobjects.Hole;
@@ -8,17 +10,21 @@ import com.kentwentyfour.project12.physicsengine.PhysicsEngine;
 import com.kentwentyfour.project12.ReferenceStore;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class BotHillClimbing implements BotPlayer {
     private MapManager mapGenerator;
     private PhysicsEngine physicsEngine;
     private ReferenceStore referenceStore = ReferenceStore.getInstance();
     private Hole hole;
+    private AStarAlgorithm aStarAlgorithm;
+    private int count = 0;
 
-    public BotHillClimbing(GolfBall golf_ball, PhysicsEngine physicsEngine, MapManager mapGenerator) {
+    public BotHillClimbing() {
         this.physicsEngine = referenceStore.getPhysicsEngine();
         this.mapGenerator = referenceStore.getMapManager();
         this.hole = referenceStore.getHole();
+        this.aStarAlgorithm = referenceStore.getAStarAlgorithm();
     }
     public CoordinatesPath calculatePath(GolfBall golfBall) {
         if (hole == null) {
