@@ -1,8 +1,8 @@
 package com.kentwentyfour.project12.presentation.controllers;
 
 import com.kentwentyfour.project12.Bots.Algorithms.AStarAlgorithm;
+import com.kentwentyfour.project12.Bots.Algorithms.Node;
 import com.kentwentyfour.project12.Constants;
-import com.kentwentyfour.project12.gameobjects.matrixmapobjects.obstacles.Water;
 import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
 import com.kentwentyfour.project12.gameobjects.movableobjects.Hole;
 import com.kentwentyfour.project12.gameobjects.MapManager;
@@ -22,6 +22,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 import static com.kentwentyfour.project12.Utilities.strToDouble;
 
@@ -150,6 +151,23 @@ public class GameSetupController extends BaseController {
 
             // Call setInitialValues for SettingsController
             SettingsController settingsController = settingsLoader.getController();
+            astarAlgorithm = referenceStore.getAStarAlgorithm();
+            int[] startMatrix = mapManager.coordinatesToMatrix(startX, startY);
+            int[] targetMatrix = mapManager.coordinatesToMatrix(targetX, targetY);
+
+            int startX1 = startMatrix[0];
+            int startY1 = startMatrix[1];
+            int targetX1 = targetMatrix[0];
+            int targetY1 = targetMatrix[1];
+
+            // decrease range for more midpoints 1=max 100=min
+            List<Node> aStarPath = astarAlgorithm.findPath(mapManager, startX1, startY1, targetX1, targetY1, 100);
+            referenceStore.setAStarPath(aStarPath);
+            System.out.println("A* Path coordinates:");
+            for (Node node : aStarPath) {
+                double[] coords = mapManager.matrixToCoordinates(node.matrixX, node.matrixY);
+                System.out.println("Node: (" + coords[0] + ", " + coords[1] + ")");
+            }
             settingsController.setInitialValues(selectedGame, startX, startY, targetX, targetY, targetRadius, mapManager, physicsEngine, balls,hole);
 
 

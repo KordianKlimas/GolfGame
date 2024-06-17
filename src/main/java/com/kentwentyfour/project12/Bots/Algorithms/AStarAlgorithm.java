@@ -18,25 +18,17 @@ public class AStarAlgorithm {
     public AStarAlgorithm() {
         this.physicsEngine = referenceStore.getPhysicsEngine();
         this.mapManager = referenceStore.getMapManager();
-        this.obstacles = referenceStore.getObstacles(); // Retrieve the obstacles from the reference store
+        this.obstacles = referenceStore.getObstacles();
     }
 
-    public List<Node> findPath(MapManager mapManager, double startCoordX, double startCoordY, double endCoordX, double endCoordY, int range) {
-        int[] startMatrix = mapManager.coordinatesToMatrix(startCoordX, startCoordY);
-        int[] endMatrix = mapManager.coordinatesToMatrix(endCoordX, endCoordY);
-
-        int startX = startMatrix[0];
-        int startY = startMatrix[1];
-        int endX = endMatrix[0];
-        int endY = endMatrix[1];
-
+    public List<Node> findPath(MapManager mapManager, int startX, int startY, int endX, int endY, int range) {
         PriorityQueue<Node> openList = new PriorityQueue<>(Comparator.comparingDouble(n -> n.totalCost));
         Set<Node> closedList = new HashSet<>();
 
-        Node startNode = new Node(startX, startY, startCoordX, startCoordY);
-        Node endNode = new Node(endX, endY, endCoordX, endCoordY);
+        Node startNode = new Node(startX, startY);
+        Node endNode = new Node(endX, endY);
         startNode.currentCost = 0;
-        startNode.expectedCost = heuristic(startCoordX, startCoordY, endCoordX, endCoordY);
+        startNode.expectedCost = heuristic(startNode, endNode);
         startNode.totalCost = startNode.currentCost + startNode.expectedCost;
         openList.add(startNode);
 
@@ -58,14 +50,13 @@ public class AStarAlgorithm {
                         continue;
                     }
 
-                    double[] newCoords = mapManager.matrixToCoordinates(newX, newY);
                     double tentativeCurrentCost = currentNode.currentCost + Math.sqrt(dx * dx + dy * dy);
-                    Node neighbor = new Node(newX, newY, newCoords[0], newCoords[1]);
+                    Node neighbor = new Node(newX, newY);
 
                     if (!openList.contains(neighbor) || tentativeCurrentCost < neighbor.currentCost) {
                         neighbor.parent = currentNode;
                         neighbor.currentCost = tentativeCurrentCost;
-                        neighbor.expectedCost = heuristic(newCoords[0], newCoords[1], endCoordX, endCoordY);
+                        neighbor.expectedCost = heuristic(neighbor, endNode);
                         neighbor.totalCost = neighbor.currentCost + neighbor.expectedCost;
                         if (!openList.contains(neighbor)) {
                             openList.add(neighbor);
@@ -88,36 +79,30 @@ public class AStarAlgorithm {
     }
 
     private boolean isValidPosition(int x, int y, MapManager mapManager) {
-        int range = 5;
-        for (int dx = -range; dx <= range; dx++) {
-            for (int dy = -range; dy <= range; dy++) {
-                int newX = x + dx;
-                int newY = y + dy;
-                if (newX < 0 || newY < 0 || newX >= mapManager.WIDTH || newY >= mapManager.HEIGHT) {
-                    continue;
-                }
+        if (x < 0 || y < 0 || x >= mapManager.WIDTH || y >= mapManager.HEIGHT) {
+            return false;
+        }
 
-                double[] coords = mapManager.matrixToCoordinates(newX, newY);
-                MatrixMapArea mapArea = mapManager.accessObject(coords[0], coords[1]);
-                if (mapArea == null || mapArea instanceof Water) {
-                    return false;
-                }
+        double[] coords = mapManager.matrixToCoordinates(x, y);
+        MatrixMapArea mapArea = mapManager.accessObject(coords[0], coords[1]);
+        if (mapArea == null || mapArea instanceof Water) {
+            return false;
+        }
 
-                for (MovableObjects obstacle : obstacles) {
-                    double distance = Math.sqrt(Math.pow(obstacle.getX() - coords[0], 2) + Math.pow(obstacle.getY() - coords[1], 2));
-                    if (distance < obstacle.getDistanceFromOrigin()) {
-                        return false;
-                    }
-                }
+        for (MovableObjects obstacle : obstacles) {
+            int[] obstacleMatrixCoords = mapManager.coordinatesToMatrix(obstacle.getX(), obstacle.getY());
+            double distance = Math.sqrt(Math.pow(obstacleMatrixCoords[0] - x, 2) + Math.pow(obstacleMatrixCoords[1] - y, 2));
+            if (distance < obstacle.getDistanceFromOrigin()) {
+                return false;
             }
         }
+
         return true;
     }
 
-    private double heuristic(double x1, double y1, double x2, double y2) {
-        return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
+    double heuristic(Node a, Node b) {
+        return Math.sqrt(Math.pow(a.matrixX - b.matrixX, 2) + Math.pow(a.matrixY - b.matrixY, 2)); // Euclidean distance}
     }
-
     public void printObstacleList() {
         System.out.println("List of Obstacles:");
         for (MovableObjects obstacle : obstacles) {
@@ -125,3 +110,4 @@ public class AStarAlgorithm {
         }
     }
 }
+

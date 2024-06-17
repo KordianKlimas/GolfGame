@@ -1,5 +1,6 @@
 package com.kentwentyfour.project12;
 import com.kentwentyfour.project12.Bots.Algorithms.AStarAlgorithm;
+import com.kentwentyfour.project12.Bots.Algorithms.Node;
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.Grass;
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.Sand;
 import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
@@ -34,6 +35,7 @@ public  class ReferenceStore {
     private PhysicsEngine physicsEngine;
     private String courseProfileFormula;
     private AStarAlgorithm aStarAlgorithm;
+    private List<Node> aStarPath;
 
     // Private constructor to prevent instantiation
     private ReferenceStore() {
@@ -164,5 +166,12 @@ public  class ReferenceStore {
     }
     public List<MovableObjects> getObstacles() {
         return mapManager.getObstacles();
+    }
+    public void setAStarPath(List<Node> aStarPath) {
+        this.aStarPath = aStarPath;
+    }
+
+    public List<Node> getAStarPath() {
+        return this.aStarPath;
     }
 }

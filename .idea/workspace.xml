@@ -9,7 +9,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/Bots/Algorithms/AStarAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/Bots/Algorithms/AStarAlgorithm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/Bots/BotHillClimbing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/Bots/BotHillClimbing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/ReferenceStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/ReferenceStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/MapManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/MapManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/GameSetupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/GameSetupController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/SettingsController.java" afterDir="false" />
     </list>
@@ -59,31 +58,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.AStarAlgorithm.executor": "Run",
-    "Application.BotNewtonRaphson.executor": "Run",
-    "Application.FormulaCalculator.executor": "Run",
-    "Application.MainApplication.executor": "Run",
-    "Application.ODESolver.executor": "Run",
-    "Application.PhysicsEngine.executor": "Run",
-    "Application.SuperClass.executor": "Debug",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "game",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/kordi/Desktop/Uni/Project12/src/main/java/com/kentwentyfour/project12/gameobjects/textures",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.AStarAlgorithm.executor&quot;: &quot;Run&quot;,
+    &quot;Application.BotNewtonRaphson.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FormulaCalculator.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ODESolver.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PhysicsEngine.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SuperClass.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;game&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kordi/Desktop/Uni/Project12/src/main/java/com/kentwentyfour/project12/gameobjects/textures&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\kordi\Desktop\Uni\Project12\src\main\java\com\kentwentyfour\project12\gameobjects\textures" />
@@ -322,11 +321,6 @@
           <properties class="java.util.EmptyStackException" package="java.util" />
           <option name="timeStamp" value="14" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/Bots/BotHillClimbing.java</url>
-          <line>68</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/physicsengine/PhysicsEngine.java</url>
           <line>325</line>
