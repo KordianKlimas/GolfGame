@@ -39,14 +39,8 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <ComboBox fx:id="gameComboBox" prefHeight="31.0" prefWidth="122.0" promptText="Select Game Type" GridPane.columnIndex="3" VBox.vgrow="ALWAYS">
-                    <VBox.margin>
-                        <Insets />
-                    </VBox.margin>
-                    <GridPane.margin>
-                        <Insets right="5.0" />
-                    </GridPane.margin>
-                </ComboBox>
+
+
                 <TextField fx:id="startXField" promptText="Start X" GridPane.columnIndex="1" GridPane.rowIndex="2">
                     <VBox.margin>
                         <Insets top="5.0" />
@@ -64,6 +58,8 @@
                 <TextField fx:id="targetRadiusField" promptText="Target Radius" GridPane.columnIndex="3" GridPane.rowIndex="4" />
                 <TextField fx:id="staticfrictiongrass" promptText="Static Friction " GridPane.columnIndex="5" GridPane.rowIndex="6" />
                 <StackPane prefHeight="18.0" prefWidth="73.0" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                <TextField fx:id="playerCountInput" promptText="Enter number of players" GridPane.rowIndex="6" GridPane.columnIndex="3"/>
+
             </children>
         </GridPane>
     </StackPane>

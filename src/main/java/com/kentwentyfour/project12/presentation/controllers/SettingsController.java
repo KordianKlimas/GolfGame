@@ -175,8 +175,8 @@ public class SettingsController implements Initializable {
         return alert.showAndWait();
     }
 
-    public void setInitialValues(String selectedGame, double startX, double startY, double targetX, double targetY, double targetRadius, MapManager mapManager, PhysicsEngine physicsEngine, ArrayList<GolfBall> balls, Hole hole) {
-        this.selectedGame = selectedGame;
+    public void setInitialValues( double startX, double startY, double targetX, double targetY, double targetRadius, MapManager mapManager, PhysicsEngine physicsEngine, ArrayList<GolfBall> balls, Hole hole) {
+
         this.startX = startX;
         this.startY = startY;
         this.targetX = targetX;

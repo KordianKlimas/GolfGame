@@ -29,11 +29,7 @@ public class GameSetupController extends BaseController {
 
     @FXML
     private ComboBox<String> gameComboBox;
-    @FXML
-    private void initialize() {
-        // Initialize ComboBox with options
-        gameComboBox.getItems().addAll("Single Player", "Multiplayer");
-    }
+
 
     @FXML
     private TextField startXField;
@@ -62,19 +58,21 @@ public class GameSetupController extends BaseController {
     private GolfBall ball;
     private Constants constants;
     private PhysicsEngine physicsEngine;
-    private int currentPlayerIndex = 0;
     private List<Player> players;
-    private boolean isMultiplayer;
 
+    @FXML
+    private TextField playerCountInput;
 
 
 
     @FXML
     protected void onStartGameButtonClick() {
         //gets all entered variables
+        int playerCount = Integer.parseInt(playerCountInput.getText().trim());
+      //  String selectedGame = gameComboBox.getValue();
 
-        String selectedGame = gameComboBox.getValue();
-        boolean isMultiplayer = selectedGame.equals("Multiplayer");
+        boolean isMultiplayer = playerCount>0;
+
         double startX = strToDouble(startXField.getText().isEmpty() ? "1" : startXField.getText());
         double startY = strToDouble(startYField.getText().isEmpty() ? "1" : startYField.getText());
         double targetX = strToDouble(targetXField.getText().isEmpty() ? "2" : targetXField.getText());
@@ -102,11 +100,19 @@ public class GameSetupController extends BaseController {
 
         //create and store golf balls
         ArrayList<GolfBall> balls =  new ArrayList<GolfBall>();
-        balls.add(new GolfBall(startX,startY,.1,ballRadius));
-        balls.add(new GolfBall(startX,startY,.1,ballRadius));
         players = new ArrayList<>();
-        players.add(new Player("Player 1",balls.get(0)));
-        players.add(new Player("Player 2",balls.get(1)));
+        for (int i = 0; i < playerCount; i++) {
+            balls.add(new GolfBall(startX,startY,.1,ballRadius)); // Initialize golf ball as needed
+            players.add(new Player("Player " +(i+1),balls.get(i))); // Player with ID and associated ball
+
+          //  players.add(player);
+        }
+
+
+       // balls.add(new GolfBall(startX,startY,.1,ballRadius));
+        //players = new ArrayList<>();
+       // players.add(new Player("Player 1",balls.get(0)));
+       // players.add(new Player("Player 2",balls.get(1)));
        //create and store PhysicsEngine
         physicsEngine = new PhysicsEngine();
         referenceStore.setPhysicsEngine(physicsEngine);
@@ -151,7 +157,7 @@ public class GameSetupController extends BaseController {
 
             // Call setInitialValues for SettingsController
            SettingsController settingsController = settingsLoader.getController();
-            settingsController.setInitialValues(selectedGame, startX, startY, targetX, targetY, targetRadius, mapManager, physicsEngine, balls,hole);
+            settingsController.setInitialValues( startX, startY, targetX, targetY, targetRadius, mapManager, physicsEngine, balls,hole);
          //   int playerCount = playerCountSpinner.getValue(); // Get the number of players
 
          //   SettingsController gameController = loader.getController();
