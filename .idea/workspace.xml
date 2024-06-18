@@ -5,17 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3edf719a-ec39-4795-9a98-4677744abc1e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/GolfGame/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GolfGame/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GolfGame/.idea/shelf/Uncommitted_changes_before_Update_at_28_05_2024_19_47_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GolfGame/.idea/shelf/Uncommitted_changes_before_Update_at_28_05_2024_19_47__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GolfGame/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GolfGame/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GolfGame/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GolfGame/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GolfGame/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GolfGame/src/main/java/com/kentwentyfour/project12/presentation/controllers/GameSetupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GolfGame/src/main/java/com/kentwentyfour/project12/presentation/controllers/GameSetupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GolfGame/src/main/java/com/kentwentyfour/project12/presentation/controllers/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GolfGame/src/main/java/com/kentwentyfour/project12/presentation/controllers/SettingsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GolfGame/src/main/resources/com/kentwentyfour/project12/views/game-setup-menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/GolfGame/src/main/resources/com/kentwentyfour/project12/views/game-setup-menu.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/Bots/Algorithms/AStarAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/Bots/BotHillClimbing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/ReferenceStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/ReferenceStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/MapManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/MapManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/GameSetupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/GameSetupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/SettingsController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +22,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/GolfGame" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -38,16 +37,71 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.AStarAlgorithm.executor": "Run",
+    "Application.BotNewtonRaphson.executor": "Run",
+    "Application.FormulaCalculator.executor": "Run",
+    "Application.MainApplication.executor": "Run",
+    "Application.ODESolver.executor": "Run",
+    "Application.PhysicsEngine.executor": "Run",
+    "Application.SuperClass.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "game",
-    "last_opened_file_path": "C:/Users/Super User/Desktop/GolfGame",
-    "project.structure.last.edited": "Modules",
+    "git-widget-placeholder": "Merging game",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/kordi/Desktop/Uni/Project12/src/main/java/com/kentwentyfour/project12/gameobjects/textures",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kordi\Desktop\Uni\Project12\src\main\java\com\kentwentyfour\project12\gameobjects\textures" />
+      <recent name="C:\Users\kordi\Desktop\Uni\Project12\src\main\java\com\kentwentyfour\project12\gameobjects\movableobjects" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/Bots/Algorithms" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/Bots" />
+      <recent name="C:\Users\kordi\Desktop\Uni\Project12\src\main\java\com\kentwentyfour\project12\gameobjects\textures" />
+      <recent name="C:\Users\kordi\Desktop\Uni\Project12\src\main\java\com\kentwentyfour\project12\Bots" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kentwentyfour.project12.presentation.controllers" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.MainApplication">
+    <configuration name="BotNewtonRaphson" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kentwentyfour.project12.Bot.BotNewtonRaphson" />
+      <module name="Project12" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kentwentyfour.project12.Bot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FormulaCalculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kentwentyfour.project12.mathpackage.FormulaCalculator" />
+      <module name="Project12" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kentwentyfour.project12.mathpackage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.kentwentyfour.project12.MainApplication" />
       <module name="Project12" />
@@ -74,8 +128,150 @@
       <created>1718733227427</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1718733227427</updated>
+      <updated>1716661909278</updated>
+      <workItem from="1716661910295" duration="17819000" />
+      <workItem from="1716712645065" duration="58357000" />
+      <workItem from="1716848192302" duration="13500000" />
+      <workItem from="1716923905766" duration="6375000" />
+      <workItem from="1716971459613" duration="2121000" />
+      <workItem from="1717059973808" duration="1803000" />
+      <workItem from="1717164012988" duration="25000" />
+      <workItem from="1717456485453" duration="1711000" />
+      <workItem from="1717505633904" duration="676000" />
+      <workItem from="1717850354924" duration="1196000" />
+      <workItem from="1717928068789" duration="599000" />
+      <workItem from="1718089923745" duration="5028000" />
+      <workItem from="1718105366319" duration="616000" />
+      <workItem from="1718194232441" duration="15306000" />
+      <workItem from="1718273118122" duration="31714000" />
+      <workItem from="1718356601705" duration="5288000" />
+      <workItem from="1718362013451" duration="731000" />
+      <workItem from="1718374614417" duration="14727000" />
+      <workItem from="1718447912907" duration="7357000" />
+      <workItem from="1718457994379" duration="3239000" />
+      <workItem from="1718545409811" duration="727000" />
+      <workItem from="1718546146770" duration="5598000" />
     </task>
+    <task id="LOCAL-00001" summary="Changing timeStep and initial time in PhysicEngine to improve calculation and animation. Adding  Stopping conditions support in game.">
+      <option name="closed" value="true" />
+      <created>1716826330237</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716826330237</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Adding Lera's basicBot">
+      <option name="closed" value="true" />
+      <created>1716826566207</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1716826566207</updated>
+    </task>
+    <task id="LOCAL-00003" summary="adding lera's stuff">
+      <option name="closed" value="true" />
+      <created>1716835083793</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716835083793</updated>
+    </task>
+    <task id="LOCAL-00004" summary="last commit before examination">
+      <option name="closed" value="true" />
+      <created>1716918727066</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1716918727066</updated>
+    </task>
+    <task id="LOCAL-00005" summary="getting rid of comments">
+      <option name="closed" value="true" />
+      <created>1716930473166</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716930473166</updated>
+    </task>
+    <task id="LOCAL-00006" summary="- fixing &quot;ball&quot; bug ( after hitting obstacle twice in row it's start position was in obstacle ). &#10;- changing GUI from fullscreen to window size">
+      <option name="closed" value="true" />
+      <created>1718197931455</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1718197931455</updated>
+    </task>
+    <task id="LOCAL-00007" summary="- added support for custom stepSize/initialTime in PhysicsEngine">
+      <option name="closed" value="true" />
+      <created>1718201708445</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1718201708445</updated>
+    </task>
+    <task id="LOCAL-00008" summary="- implemented trees and bouncing behaviour.">
+      <option name="closed" value="true" />
+      <created>1718389334835</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1718389334835</updated>
+    </task>
+    <task id="LOCAL-00009" summary="added A* Algorithm WITHOUT any implementations yet">
+      <option name="closed" value="true" />
+      <created>1718458472083</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1718458472083</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Changing timeStep and initial time in PhysicEngine to improve calculation and animation. Adding  Stopping conditions support in game." />
+    <MESSAGE value="Adding Lera's basicBot" />
+    <MESSAGE value="adding lera's stuff" />
+    <MESSAGE value="last commit before examination" />
+    <MESSAGE value="getting rid of comments" />
+    <MESSAGE value="- fixing &quot;ball&quot; bug ( after hitting obstacle twice in row it's start position was in obstacle ). &#10;- changing GUI from fullscreen to window size" />
+    <MESSAGE value="- added support for custom stepSize/initialTime in PhysicsEngine" />
+    <MESSAGE value="- implemented trees and bouncing behaviour." />
+    <MESSAGE value="added A* Algorithm WITHOUT any implementations yet" />
+    <MESSAGE value="added multiplayer" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.EmptyStackException" package="java.util" />
+          <option name="timeStamp" value="14" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/physicsengine/PhysicsEngine.java</url>
+          <line>325</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.kentwentyfour.project12.MathPackage.PartialDerivative" memberName="variables" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

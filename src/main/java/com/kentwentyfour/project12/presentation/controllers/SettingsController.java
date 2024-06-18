@@ -187,10 +187,21 @@ public class SettingsController implements Initializable {
         this.balls = balls;
         this.hole = hole; // Save the hole parameter
     }
+<<<<<<< HEAD
 
     public void setGameMode(boolean isMultiplayer) {
         this.isMultiplayer = isMultiplayer;
         turnIndicatorLabel.setVisible(isMultiplayer);
+=======
+    public void BotMove() {
+        if (this.bot == null) {
+            this.bot = new BotHillClimbing();
+        }
+        CoordinatesPath coordinatesPath = bot.calculatePath(balls.get(0));
+        mapManager.animateMovableObject(balls.get(0), coordinatesPath);
+        String stopping = coordinatesPath.getStoppingCondition();
+        handleStop(stopping, coordinatesPath.getPath());
+>>>>>>> origin/game
     }
 
     public void setPlayers(List<Player> players) {

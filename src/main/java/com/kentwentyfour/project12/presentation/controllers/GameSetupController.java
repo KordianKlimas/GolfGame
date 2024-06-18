@@ -1,7 +1,12 @@
 package com.kentwentyfour.project12.presentation.controllers;
 
+import com.kentwentyfour.project12.Bots.Algorithms.AStarAlgorithm;
+import com.kentwentyfour.project12.Bots.Algorithms.Node;
 import com.kentwentyfour.project12.Constants;
+<<<<<<< HEAD
 import com.kentwentyfour.project12.Player;
+=======
+>>>>>>> origin/game
 import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
 import com.kentwentyfour.project12.gameobjects.movableobjects.Hole;
 import com.kentwentyfour.project12.gameobjects.MapManager;
@@ -58,12 +63,16 @@ public class GameSetupController extends BaseController {
     private GolfBall ball;
     private Constants constants;
     private PhysicsEngine physicsEngine;
+<<<<<<< HEAD
     private List<Player> players;
 
     @FXML
     private TextField playerCountInput;
 
 
+=======
+    private AStarAlgorithm astarAlgorithm;
+>>>>>>> origin/game
 
     @FXML
     protected void onStartGameButtonClick() {
@@ -85,7 +94,8 @@ public class GameSetupController extends BaseController {
         double kineticFrictionGrass = strToDouble(kineticfrictiongrass.getText().isEmpty() ? "0.05" : kineticfrictiongrass.getText());
         String formula = formulaField.getText().isEmpty() ? "sin( ( x - y ) / 7 ) + 0.5 " : formulaField.getText();
 
-        //formula = "0.4 * ( 0.9 -  2.718 ^ ( (  x ^ 2 + y ^ 2 ) / -8 ) ";
+        //formula = "0.4 * ( 0.9 -  2.718 ^ ( (  x ^ 2 + y ^ 2 ) / -8 ) )";
+        //formula = "( 0.05 * sin( 0.1 * x ) * sin( 0.1 * y ) - 0.02 * cos( 0.5 * x ) * cos( 0.5 * y ) )"
         //formula="1";
 
         // Get reference store
@@ -117,6 +127,9 @@ public class GameSetupController extends BaseController {
         physicsEngine = new PhysicsEngine();
         referenceStore.setPhysicsEngine(physicsEngine);
 
+        //create and store path
+        astarAlgorithm = new AStarAlgorithm();
+        referenceStore.setAStarAlgorithm(astarAlgorithm);
 
         Stage settingsStage = new Stage();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/kentwentyfour/project12/views/Settings.fxml"));
@@ -141,6 +154,14 @@ public class GameSetupController extends BaseController {
             mapManager.addMovableObjectToMap(hole);
             mapManager.addMovableObjectToMap(balls.getFirst());
 
+<<<<<<< HEAD
+=======
+            mapManager.addObstacle(new Tree(1,-2,.6));
+            mapManager.addObstacle(new Tree(4,1,.7));
+            mapManager.addObstacle(new Tree(-2,-4,.5));
+            mapManager.addObstacle(new Tree(4,-4,.8));
+
+>>>>>>> origin/game
             // Create the layout
             HBox root = new HBox();
             VBox settingsBox = new VBox();
@@ -156,9 +177,31 @@ public class GameSetupController extends BaseController {
 
 
             // Call setInitialValues for SettingsController
+<<<<<<< HEAD
            SettingsController settingsController = settingsLoader.getController();
             settingsController.setInitialValues( startX, startY, targetX, targetY, targetRadius, mapManager, physicsEngine, balls,hole);
          //   int playerCount = playerCountSpinner.getValue(); // Get the number of players
+=======
+            SettingsController settingsController = settingsLoader.getController();
+            astarAlgorithm = referenceStore.getAStarAlgorithm();
+            int[] startMatrix = mapManager.coordinatesToMatrix(startX, startY);
+            int[] targetMatrix = mapManager.coordinatesToMatrix(targetX, targetY);
+
+            int startX1 = startMatrix[0];
+            int startY1 = startMatrix[1];
+            int targetX1 = targetMatrix[0];
+            int targetY1 = targetMatrix[1];
+
+            // decrease range for more midpoints 1=max 100=min
+            List<Node> aStarPath = astarAlgorithm.findPath(mapManager, startX1, startY1, targetX1, targetY1, 100);
+            referenceStore.setAStarPath(aStarPath);
+            System.out.println("A* Path coordinates:");
+            for (Node node : aStarPath) {
+                double[] coords = mapManager.matrixToCoordinates(node.matrixX, node.matrixY);
+                System.out.println("Node: (" + coords[0] + ", " + coords[1] + ")");
+            }
+            settingsController.setInitialValues(selectedGame, startX, startY, targetX, targetY, targetRadius, mapManager, physicsEngine, balls,hole);
+>>>>>>> origin/game
 
          //   SettingsController gameController = loader.getController();
             settingsController.setGameMode(isMultiplayer); // Set the game mode

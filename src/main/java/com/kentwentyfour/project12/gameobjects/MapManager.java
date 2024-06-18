@@ -266,4 +266,82 @@ public class MapManager {
         timeline.setCycleCount(1);
         timeline.play();
     }
+
+
+    /**
+     * Checks for Collision with 1 MovableObject (obstacle) from obstacleList
+     * @param
+     * @return
+     */
+    public MovableObjects checkForCollisionWithObstacle(GolfBall ball,double x_coordinate,double y_coordinate) {
+        double ballRadius = ball.getDistanceFromOrigin();
+
+        for (MovableObjects obj2 : this.obstacleList) {
+            if(obj2 instanceof Tree){
+                double obj2Radius = obj2.getDistanceFromOrigin();
+                double obj2X = obj2.getX();
+                double obj2Y = obj2.getY();
+
+                // Calculate distance between centers of ball and obj2
+                double distance = Math.sqrt(Math.pow(obj2X - x_coordinate, 2) + Math.pow(obj2Y - y_coordinate, 2));
+
+                // Check if circles intersect
+                if (distance <= ballRadius + obj2Radius) {
+                    // System.err.println("Collision detected between ball and object");
+                    return obj2; // Return the object that the ball collided with
+                }
+            }
+        }
+
+        return null; // No collision detected
+    }
+
+    /**
+     * Adds obstacle to map.
+     */
+    public void addObstacle(MovableObjects obstacle){
+        this.obstacleList.add(obstacle);
+        addMovableObjectToMap(obstacle);
+    }
+    public List<MovableObjects> getObstacles() {
+        return obstacleList;
+    }
+
+    /**
+     * Creates rectangle on map from given obstacle area. Dose not rerender map
+     *
+     * @param area - area type/obstacle
+     * @param coordinateX1 - left top coordinate X
+     * @param coordinateY1 - left top coordinate Y
+     * @param coordinateX2 - right bottom coordinate X
+     * @param coordinateY2 - right bottom coordinate Y
+     */
+    public void addArea(ObstacleArea area, double coordinateX1, double coordinateY1,double coordinateX2, double coordinateY2){
+        int[] leftTopCellYX = coordinatesToMatrix(coordinateX1,coordinateY1);
+        int[] rightBottomCellYX = coordinatesToMatrix(coordinateX2,coordinateY2);
+
+        int cellX1 = leftTopCellYX[1];
+        int cellY1 = leftTopCellYX[0];
+        int cellX2 = rightBottomCellYX[1];
+        int cellY2= rightBottomCellYX[0];
+
+        if(cellY1>cellY2){
+            int temp = cellY1;
+            cellY1 =  cellY2;
+            cellY2 =  temp;
+        }
+        if(cellX1>cellX2){
+            int temp = cellX1;
+            cellX1 =  cellX2;
+            cellX2 =  temp;
+        }
+        for(int i =cellX1; i<=cellX2; i++ ){
+            for(int d =cellY1; d<=cellY2; d++ ){
+                terrainData[i][d] = area;
+            }
+        }
+
+
+    }
+
 }
