@@ -2,16 +2,14 @@ package com.kentwentyfour.project12.physicsengine;
 
 
 import com.kentwentyfour.project12.gameobjects.*;
-import com.kentwentyfour.project12.gameobjects.movableobjects.ReboundingObstacle;
-import com.kentwentyfour.project12.gameobjects.matrixmapobjects.obstacles.Water;
+import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areaobstacles.Water;
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.AreaType;
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.MatrixMapArea;
-import com.kentwentyfour.project12.gameobjects.matrixmapobjects.obstacles.ObstacleArea;
+import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areaobstacles.ObstacleType;
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.Grass;
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.Sand;
 import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
 import com.kentwentyfour.project12.gameobjects.movableobjects.Hole;
-import com.kentwentyfour.project12.gameobjects.movableobjects.MovableObjects;
 import com.kentwentyfour.project12.mathpackage.FormulaCalculator;
 import com.kentwentyfour.project12.mathpackage.ODESolver;
 import com.kentwentyfour.project12.mathpackage.PartialDerivative;
@@ -31,6 +29,7 @@ public class PhysicsEngine {
     private double pi = Math.PI;
     public MapManager mapManager;
 
+    public boolean customTimeAndStepSize = false;
 
     // main solver
     ODESolver solver = new ODESolver();
@@ -86,20 +85,18 @@ public class PhysicsEngine {
         return calculateCoordinatePath(golfBall, velocityX, velocityY, 0.01,1); // Default step size
     }
     public CoordinatesPath calculateCoordinatePath(GolfBall golfBall, double velocityX, double velocityY, double customStepSize,int customInitialTime){
-        //velocityX =  1.8767497876519854;
-        //velocityY = 1.0509900368707568;
         double x_coordinate =  golfBall.getX();
         double y_coordinate =  golfBall.getY();
 
         // getting frictions for current position of ball
-        MatrixMapArea mapObj =  mapManager.accessObject(x_coordinate,y_coordinate);
+        MatrixMapArea area =  mapManager.accessObject(x_coordinate,y_coordinate);
         double current_kf =0.1;
-        if(mapObj instanceof AreaType){
-            current_kf = ((AreaType) mapObj).getKineticFriction();
+        if(area instanceof AreaType){
+            current_kf = ((AreaType) area).getKineticFriction();
         }else{
             System.err.println("The starting position of ball is not playable area");
             System.err.println("X: "+x_coordinate+"Y: "+y_coordinate);
-            System.err.println("AreaType: "+"Grass: "+(mapObj instanceof Grass)+" Water: "+(mapObj instanceof Water)+" Sand: "+(mapObj instanceof Sand));
+            System.err.println("AreaType: "+"Grass: "+(area instanceof Grass)+" Water: "+(area instanceof Water)+" Sand: "+(area instanceof Sand));
         }
 
         // setting up formulas and ODE solver
@@ -110,15 +107,16 @@ public class PhysicsEngine {
                 "vy"
         };
         List<String> variables = Arrays.asList( "t","vx","vy","x", "y","k_f");
+
+
         double[] in_Conditions = {0,velocityX, velocityY,x_coordinate,y_coordinate,current_kf};
 
         // calculating new coordinates until any stopping condition is met
-        String stoppingCondition="";
         LinkedList<Double> path_coordinates_X = new LinkedList<>();
         LinkedList<Double> path_coordinates_Y = new LinkedList<>();
 
+        String stoppingCondition="";
         while (stoppingCondition.isEmpty()){
-            //System.err.println(in_Conditions[3]+" , "+  in_Conditions[4]);
             Double[][] results = ODESolver.rungeKutta(equations, customStepSize, customInitialTime, in_Conditions, variables);
             double  x_velocity =  results[1][0];
             double  y_velocity =  results[2][0];
@@ -133,94 +131,66 @@ public class PhysicsEngine {
                 x_coordinate = results[3][i];
                 y_coordinate = results[4][i];
 
-
-
-                // checking for stopping condition
                 if(i>1){
-                    x_velocity_change =abs( abs(results[1][i])-abs(x_velocity));
-                    y_velocity_change =abs( abs(results[2][i])-abs(y_velocity));
+                    x_velocity_change = abs(results[1][i]-x_velocity);
+                    y_velocity_change = abs(results[2][i]-y_velocity);
                     x_velocity = results[1][i];
                     y_velocity= results[2][i];
                     x_coordinate_change = abs(results[3][i]-results[3][i-1]);
                     y_coordinate_change = abs(results[4][i]-results[4][i-1]);
                 }
-                stoppingCondition = checkStoppingConditions(golfBall,x_velocity_change,y_velocity_change,x_velocity,y_velocity, x_coordinate, y_coordinate,x_coordinate_change,y_coordinate_change);
-                if(!stoppingCondition.isEmpty()){
-                    // saves coordinates to final path ( includes coordinates where ball hit the obstacle )
-                    path_coordinates_X.add(x_coordinate);
-                    path_coordinates_Y.add(y_coordinate);
-                    break;
-                }
 
+                // checking for stopping condition
+                double pd_value_dx = height_PartialDerivative.calculatePD_notation("dh/dx",x_coordinate,y_coordinate);
+                double pd_value_dy = height_PartialDerivative.calculatePD_notation("dh/dy",x_coordinate,y_coordinate);
+                MatrixMapArea obj = mapManager.accessObject(x_coordinate,y_coordinate);
+                stoppingCondition = checkStoppingConditions(obj,golfBall,pd_value_dx,pd_value_dy,x_velocity_change,y_velocity_change,x_velocity,y_velocity, x_coordinate, y_coordinate,x_coordinate_change,y_coordinate_change);
                 // updating frictions for new position if the ball is on AreaType area
-                mapObj =  mapManager.accessObject(x_coordinate,y_coordinate);
-                if(mapObj instanceof AreaType ){
-                    double new_kf = ((AreaType) mapObj).getKineticFriction();
+                area =  mapManager.accessObject(x_coordinate,y_coordinate);
+                if(area instanceof AreaType && stoppingCondition.isEmpty() ){
+                    double new_kf = ((AreaType) area).getKineticFriction();
                     if(current_kf!=new_kf){
                         // repeat calculations for new friction
                         current_kf = new_kf;
+                        in_Conditions[1] = x_velocity;
+                        in_Conditions[2] = y_velocity;
+                        in_Conditions[3] = x_coordinate;
+                        in_Conditions[4] = y_coordinate;
+                        in_Conditions[5] = current_kf;
                         path_coordinates_X.add(x_coordinate);
                         path_coordinates_Y.add(y_coordinate);
                         break;
                     }
                 }
-                MovableObjects obstacle = mapManager.checkForCollisionWithObstacle(golfBall, x_coordinate, y_coordinate);
-                if (obstacle != null && obstacle instanceof ReboundingObstacle) {
-
-                    double restitutionCoefficient = ((ReboundingObstacle) obstacle).getRestitutionCoefficient();
-
-                    // Calculate collision normal vector
-                    double normalX = x_coordinate - obstacle.getX();
-                    double normalY = y_coordinate - obstacle.getY();
-
-                    // Calculate magnitude of normal vector
-                    double normalMagnitude = Math.sqrt(normalX * normalX + normalY * normalY);
-
-                    // Normalize the normal vector
-                    double normalUnitX = normalX / normalMagnitude;
-                    double normalUnitY = normalY / normalMagnitude;
-
-                    // Calculate dot product of velocity and normal vector
-                    double dotProduct = x_velocity * normalUnitX + y_velocity * normalUnitY;
-
-                    // Reflect velocities based on the collision
-                    x_velocity = x_velocity - 2 * dotProduct * normalUnitX * restitutionCoefficient;
-                    y_velocity = y_velocity - 2 * dotProduct * normalUnitY * restitutionCoefficient;
-
-                    // Update coordinates based on previous state
-                    if (i > 0) {
-                        x_coordinate = results[3][i - 1];
-                        y_coordinate = results[4][i - 1];
-                    } else {
-                        x_coordinate = results[3][i];
-                        y_coordinate = results[4][i];
-                    }
-                    // calculates new path with new initial conditions
-                    break;
-                }
-
                 // saves coordinates to final path ( includes coordinates where ball hit the obstacle )
                 path_coordinates_X.add(x_coordinate);
                 path_coordinates_Y.add(y_coordinate);
 
+                // ends calculations if stopping condition present
                 if(!stoppingCondition.isEmpty()){
                     break;
                 }
-
-
             }
-            // updating initial condition for next while loop
-            in_Conditions = new double[]{0,x_velocity, y_velocity, x_coordinate, y_coordinate, current_kf};
+            // updating initial condition for next loop
+            in_Conditions[1] = x_velocity;
+            in_Conditions[2] = y_velocity;
+            in_Conditions[3] = x_coordinate;
+            in_Conditions[4] = y_coordinate;
+            in_Conditions[5] = current_kf;
 
+            if(!stoppingCondition.isEmpty()){
+                customTimeAndStepSize = false;
+                break;
+            }
         }
-
-
         // Returning the list of coordinates
         double[][] finalPath = new double[2][path_coordinates_X.size()];
         for (int i = 0; i < path_coordinates_X.size(); i++) {
             finalPath[0][i] = path_coordinates_X.get(i);
             finalPath[1][i] = path_coordinates_Y.get(i);
         }
+
+
         // stepSize is timeInterval as it is used as  chang of time in ODE solver
         return new CoordinatesPath(finalPath,customStepSize,stoppingCondition);
     }
@@ -232,11 +202,8 @@ public class PhysicsEngine {
      * - hits an obstacle
      * - stops moving due to friction
      */
-    private String checkStoppingConditions( GolfBall golfBall, double x_velocity_change, double y_velocity_change, double x_velocity_last, double y_velocity_last, double x_coordinate, double y_coordinate,double x_coordinate_change,double y_coordinate_change){
-        double dh_dx = height_PartialDerivative.calculatePD_notation("dh/dx",x_coordinate,y_coordinate);
-        double dh_dy = height_PartialDerivative.calculatePD_notation("dh/dy",x_coordinate,y_coordinate);
+    public String checkStoppingConditions(MatrixMapArea obj, GolfBall golfBall, double dh_dx, double dh_dy, double x_velocity_change, double y_velocity_change, double x_velocity_last, double y_velocity_last, double x_coordinate, double y_coordinate,double x_coordinate_change,double y_coordinate_change){
 
-        MatrixMapArea obj = mapManager.accessObject(x_coordinate,y_coordinate);
         if(ballInHole( x_velocity_last, y_velocity_last,  x_coordinate,  y_coordinate)){
             return "ball_in_the_hole";
         }
@@ -244,7 +211,7 @@ public class PhysicsEngine {
             case null -> {
                 return "outside_of_playable_area";
             }
-            case ObstacleArea obstacleArea -> {
+            case ObstacleType obstacleType -> {
                 return "obstacle_hit";
             }
             case AreaType areaType -> {
@@ -265,7 +232,6 @@ public class PhysicsEngine {
         return "";
     }
 
-
     /**
      * Checks midpoint of ball is in hole area
      * @param x_velocity_last
@@ -284,59 +250,24 @@ public class PhysicsEngine {
         // Ball in the hole
         return distance < radiusOfHole && x_velocity_last < 4 && y_velocity_last < 4;
     }
-    public static void main(String[] args){
-        //setting up golf ball/s
-
-        String formula = "sin( ( x - y ) / 7 ) + 0.5 ";
-
-
-        // Get reference store
-        ReferenceStore referenceStore = ReferenceStore.getInstance();
-
-        //store given formula
-        referenceStore.setCourseProfileFormula(formula);
-
-        //create and store MapManager
-        MapManager  mapManager = new MapManager();
-        referenceStore.setMapManagerReference(mapManager);
-
-        //create and store golf balls
-        ArrayList<GolfBall> balls =  new ArrayList<GolfBall>();
-        balls.add(new GolfBall(1,1,.1,0.1));
-
-        Hole hole = new Hole(2,2,0.15);
-        referenceStore.setHoleReference(hole);
-
-        PhysicsEngine engine =  new PhysicsEngine();
-        for(int d=0; d<10;d++){
-            CoordinatesPath results = engine.calculateCoordinatePath(balls.get(0),2,2);
-            double[][] path = results.getPath();
-
-            double holeX = hole.getX();
-            double holeY = hole.getY();
-            double minDistanceSquared = Double.POSITIVE_INFINITY;
-
-            for (int i = 0; i < path[0].length; i++) {
-                double ballX = path[0][i];
-                double ballY = path[1][i];
-
-                double distanceSquared = (ballX - holeX) * (ballX - holeX) + (ballY - holeY) * (ballY - holeY);
-                minDistanceSquared = Math.min(minDistanceSquared, distanceSquared);
-            }
-            System.out.println( Math.sqrt(minDistanceSquared));
-        }
-
-
-
-
-
-       //// System.out.println("_____X__");
-       //// System.out.println(Arrays.toString(path[0]));
-       //// System.out.println("_____Y__");
-       //// System.out.println(Arrays.toString(path[1]));
-       //// System.out.println("___Stopping_Condition___");
-       // System.out.println(results.getStoppingCondition());
-
-    }
+//    public static void main(String[] args){
+//        //setting up golf ball/s
+//        GolfBall golfBallPlayer1= new GolfBall(0.0,0.0,0.0459,0.15);
+//        ArrayList<GolfBall> golf_balls =  new ArrayList<GolfBall>();
+//        golf_balls.add(golfBallPlayer1);
+//        golfBallPlayer1.setPosition(2,2);
+//        MapManager mapManager = new MapManager();
+//        mapManager.generateTerrainData();
+//        PhysicsEngine engine =  new PhysicsEngine();
+//
+//        CoordinatesPath results = engine.calculateCoordinatePath(golf_balls.get(0),2,2);
+//        double[][] path = results.getPath();
+//       //// System.out.println("_____X__");
+//       //// System.out.println(Arrays.toString(path[0]));
+//       //// System.out.println("_____Y__");
+//       //// System.out.println(Arrays.toString(path[1]));
+//       //// System.out.println("___Stopping_Condition___");
+//        System.out.println(results.getStoppingCondition());
+//    }
 }
 

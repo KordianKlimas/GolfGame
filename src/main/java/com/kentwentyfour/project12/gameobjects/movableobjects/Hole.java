@@ -25,7 +25,7 @@ public class Hole implements MovableObjects {
 
     public double getDistanceFromOrigin(){
         // Circle drawn by middle coordinates
-        return radius;
+        return 0;
     }
     /**
      * Create a graphical representation of the ball

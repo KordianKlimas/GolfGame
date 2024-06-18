@@ -7,7 +7,7 @@ import javafx.scene.paint.Color;
  * Groups  Area types present in game
  */
 public interface AreaType extends MatrixMapArea {
-
+    Color getColor();
     void setColor(Color color);
     double getKineticFriction();
     double getStaticFriction();
