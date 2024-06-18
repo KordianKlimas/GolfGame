@@ -3,6 +3,7 @@ module com.kentwentyfour.project12 {
     requires javafx.fxml;
 
     requires org.controlsfx.controls;
+    requires javafx.graphics;
 
     opens com.kentwentyfour.project12 to javafx.fxml;
     exports com.kentwentyfour.project12;
