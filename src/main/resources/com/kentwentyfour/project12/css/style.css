@@ -1,0 +1,79 @@
+@import url('./common.css');
+@import url('./buttons.css');
+
+
+/* Common styles for all text fields */
+.text-field-common {
+    -fx-background-color: white;
+    -fx-background-radius: 4px;
+    -fx-border-width: 2px;
+    -fx-border-color: transparent;
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+    -fx-pref-height: 40px;
+    -fx-pref-width: 200px;
+    -fx-padding: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 1);
+    -fx-opacity: 0.9;
+    -fx-cursor: text;
+
+}
+
+/* Focus state */
+.text-field-common:focused {
+    -fx-border-color: #4a9183; /* Adjust the color for focused state */
+    -fx-effect: dropshadow(gaussian, rgb(255, 255, 255), 10, 0, 0, 0);
+
+}
+
+/* Disabled state */
+.text-field-common:disabled {
+    -fx-opacity: 0.6;
+}
+
+
+.combo-box-common {
+    -fx-background-color: white;
+    -fx-background-radius: 4px;
+    -fx-border-width: 2px;
+    -fx-border-color: transparent;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-pref-height: 40px;
+    -fx-pref-width: 200px;
+    -fx-padding: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 1);
+    -fx-opacity: 0.9;
+    -fx-cursor: hand;
+    -fx-start-margin: 10px;
+}
+
+/* Focus state */
+.combo-box-common:focused {
+    -fx-border-color: #4a9183; /* Adjust the color for focused state */
+    -fx-effect: dropshadow(gaussian, rgb(255, 255, 255), 10, 0, 0, 0);
+}
+
+/* Disabled state */
+.combo-box-common:disabled {
+    -fx-opacity: 0.6;
+}
+
+/* Common styles for all sliders */
+.slider-common {
+    -fx-font-size: 17px;
+    -fx-font-weight: 600;
+    -fx-cursor: grab;
+}
+.slider-common .track {
+    -fx-cursor: grab;
+}
+.slider-common .thumb:pressed {
+    -fx-cursor: grabbing;
+}
+
+.text-regular{
+    -fx-font-weight: 700;
+    -fx-font-size: 15;
+    -fx-text-fill: #363636;
+}
