@@ -2,13 +2,14 @@ package com.kentwentyfour.project12.presentation.controllers;
 
 import com.kentwentyfour.project12.Bots.Algorithms.AStarAlgorithm;
 import com.kentwentyfour.project12.Bots.Algorithms.Node;
-import com.kentwentyfour.project12.Constants;
 import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
 import com.kentwentyfour.project12.gameobjects.movableobjects.Hole;
 import com.kentwentyfour.project12.gameobjects.MapManager;
 import com.kentwentyfour.project12.gameobjects.movableobjects.Tree;
 import com.kentwentyfour.project12.physicsengine.PhysicsEngine;
 import com.kentwentyfour.project12.ReferenceStore;
+import com.kentwentyfour.project12.presentation.controllers.maps.GameSetupLevels;
+import com.kentwentyfour.project12.presentation.controllers.maps.GameSetupVariables;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -31,14 +32,10 @@ public class GameSetupController extends BaseController {
     @FXML
     private ComboBox<String> gameComboBox;
     @FXML
-    private void initialize() {
-        // Initialize ComboBox with options
-        gameComboBox.getItems().addAll("Single Player", "Multiplayer");
-    }
+    private ComboBox<String> levelComboBox;
 
     @FXML
     private TextField startXField;
-
     @FXML
     private TextField startYField;
     @FXML
@@ -60,15 +57,41 @@ public class GameSetupController extends BaseController {
     @FXML
     private TextField formulaField;
     private MapManager mapManager;
-    private GolfBall ball;
-    private Constants constants;
     private PhysicsEngine physicsEngine;
     private AStarAlgorithm astarAlgorithm;
+    @FXML
+    private void initialize() {
+        // Initialize ComboBox with difficulty levels
+        levelComboBox.getItems().addAll("TestMap_1", "TestMap_2", "TestMap_3");
+        gameComboBox.getItems().addAll("Single Player", "Multiplayer");
+        GameSetupLevels.initializePredefinedSets();
+        // Set default values based on selected difficulty level
+        levelComboBox.setOnAction(event -> {
+            String selectedLevel = levelComboBox.getValue();
+            if (selectedLevel != null) {
+                GameSetupVariables variables = GameSetupLevels.getVariablesForLevel(selectedLevel);
+                if (variables != null) {
+                    startXField.setText(String.valueOf(variables.getStartX()));
+                    startYField.setText(String.valueOf(variables.getStartY()));
+                    ballRadiusField.setText(String.valueOf(variables.getBallRadius()));
+                    staticfrictionsand.setText(String.valueOf(variables.getStaticFrictionSand()));
+                    targetRadiusField.setText(String.valueOf(variables.getTargetRadius()));
+                    targetXField.setText(String.valueOf(variables.getTargetX()));
+                    targetYField.setText(String.valueOf(variables.getTargetY()));
+                    kineticfrictionsand.setText(String.valueOf(variables.getKineticFrictionSand()));
+                    kineticfrictiongrass.setText(String.valueOf(variables.getKineticFrictionGrass()));
+                    staticfrictiongrass.setText(String.valueOf(variables.getStaticFrictionGrass()));
+                    formulaField.setText(variables.getFormula());
+                }
+            }
+        });
+    }
 
     @FXML
     protected void onStartGameButtonClick() {
         //gets all entered variables
         String selectedGame = gameComboBox.getValue();
+        String selectedLevel = levelComboBox.getValue();
         double startX = strToDouble(startXField.getText().isEmpty() ? "1" : startXField.getText());
         double startY = strToDouble(startYField.getText().isEmpty() ? "1" : startYField.getText());
         double targetX = strToDouble(targetXField.getText().isEmpty() ? "2" : targetXField.getText());
@@ -80,6 +103,7 @@ public class GameSetupController extends BaseController {
         double staticFrictionGrass = strToDouble(staticfrictiongrass.getText().isEmpty() ? "0.1" : staticfrictiongrass.getText());
         double kineticFrictionGrass = strToDouble(kineticfrictiongrass.getText().isEmpty() ? "0.05" : kineticfrictiongrass.getText());
         String formula = formulaField.getText().isEmpty() ? "sin( ( x - y ) / 7 ) + 0.5 " : formulaField.getText();
+
 
         //formula = "0.4 * ( 0.9 -  2.718 ^ ( (  x ^ 2 + y ^ 2 ) / -8 ) )";
         //formula = "( 0.05 * sin( 0.1 * x ) * sin( 0.1 * y ) - 0.02 * cos( 0.5 * x ) * cos( 0.5 * y ) )"
@@ -101,7 +125,7 @@ public class GameSetupController extends BaseController {
         ArrayList<GolfBall> balls =  new ArrayList<GolfBall>();
         balls.add(new GolfBall(startX,startY,.1,ballRadius));
 
-       //create and store PhysicsEngine
+        //create and store PhysicsEngine
         physicsEngine = new PhysicsEngine();
         referenceStore.setPhysicsEngine(physicsEngine);
 
@@ -170,8 +194,7 @@ public class GameSetupController extends BaseController {
                 double[] coords = mapManager.matrixToCoordinates(node.matrixX, node.matrixY);
                 System.out.println("Node: (" + coords[0] + ", " + coords[1] + ")");
             }
-            settingsController.setInitialValues(selectedGame, startX, startY, targetX, targetY, targetRadius, mapManager, physicsEngine, balls,hole);
-
+            settingsController.setInitialValues( startX, startY,  mapManager, physicsEngine, balls,hole);
 
         } catch (IOException e) {
             e.printStackTrace();
