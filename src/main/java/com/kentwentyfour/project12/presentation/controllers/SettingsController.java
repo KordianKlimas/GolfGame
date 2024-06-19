@@ -42,13 +42,6 @@ public class SettingsController implements Initializable {
     private String selectedGame;
     private double startX;
     private double startY;
-    private double targetX;
-    private double targetY;
-    private double targetRadius;
-    private double staticFrictionSand;
-    private double kineticFrictionSand;
-    private double staticFrictionGrass;
-    private double kineticFrictionGrass;
     private MapManager mapManager;
     private PhysicsEngine physicsEngine;
     private ArrayList<GolfBall> balls;
@@ -161,16 +154,12 @@ public class SettingsController implements Initializable {
         return alert.showAndWait();
     }
 
-    public void setInitialValues(String selectedGame, double startX, double startY, double targetX, double targetY, double targetRadius, MapManager mapManager, PhysicsEngine physicsEngine, ArrayList<GolfBall> balls, MovableObjects hole) {
+    public void setInitialValues( double startX, double startY,  MapManager mapManager, PhysicsEngine physicsEngine, ArrayList<GolfBall> balls, MovableObjects hole) {
         // Set the selected game mode
-        this.selectedGame = selectedGame;
-
         // Set the initial positions and properties of the objects
         this.startX = startX;
         this.startY = startY;
-        this.targetX = targetX;
-        this.targetY = targetY;
-        this.targetRadius = targetRadius;
+
 
         // Set the map manager and physics engine
         this.mapManager = mapManager;

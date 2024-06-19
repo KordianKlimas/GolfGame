@@ -35,7 +35,7 @@
             </rowConstraints>
 
                 <ComboBox fx:id="gameComboBox" styleClass="combo-box-common" promptText="Select Mode" GridPane.columnIndex="1" VBox.vgrow="ALWAYS"/>
-                <ComboBox  fx:id="gameComboc" styleClass="combo-box-common" promptText="Select Map" GridPane.columnIndex="2" VBox.vgrow="ALWAYS">
+                <ComboBox  fx:id="levelComboBox" styleClass="combo-box-common" promptText="Select Map" GridPane.columnIndex="2" VBox.vgrow="ALWAYS">
                     <VBox.margin>
                         <Insets />
                     </VBox.margin>
