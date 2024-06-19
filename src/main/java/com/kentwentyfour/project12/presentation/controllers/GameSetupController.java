@@ -3,13 +3,10 @@ package com.kentwentyfour.project12.presentation.controllers;
 import com.kentwentyfour.project12.Bots.Algorithms.AStarAlgorithm;
 import com.kentwentyfour.project12.Bots.Algorithms.Node;
 import com.kentwentyfour.project12.Constants;
-<<<<<<< HEAD
-import com.kentwentyfour.project12.Player;
-=======
->>>>>>> origin/game
 import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
 import com.kentwentyfour.project12.gameobjects.movableobjects.Hole;
 import com.kentwentyfour.project12.gameobjects.MapManager;
+import com.kentwentyfour.project12.gameobjects.movableobjects.Tree;
 import com.kentwentyfour.project12.physicsengine.PhysicsEngine;
 import com.kentwentyfour.project12.ReferenceStore;
 import javafx.fxml.FXML;
@@ -17,7 +14,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
@@ -34,7 +30,11 @@ public class GameSetupController extends BaseController {
 
     @FXML
     private ComboBox<String> gameComboBox;
-
+    @FXML
+    private void initialize() {
+        // Initialize ComboBox with options
+        gameComboBox.getItems().addAll("Single Player", "Multiplayer");
+    }
 
     @FXML
     private TextField startXField;
@@ -63,30 +63,17 @@ public class GameSetupController extends BaseController {
     private GolfBall ball;
     private Constants constants;
     private PhysicsEngine physicsEngine;
-<<<<<<< HEAD
-    private List<Player> players;
-
-    @FXML
-    private TextField playerCountInput;
-
-
-=======
     private AStarAlgorithm astarAlgorithm;
->>>>>>> origin/game
 
     @FXML
     protected void onStartGameButtonClick() {
         //gets all entered variables
-        int playerCount = Integer.parseInt(playerCountInput.getText().trim());
-      //  String selectedGame = gameComboBox.getValue();
-
-        boolean isMultiplayer = playerCount>0;
-
+        String selectedGame = gameComboBox.getValue();
         double startX = strToDouble(startXField.getText().isEmpty() ? "1" : startXField.getText());
         double startY = strToDouble(startYField.getText().isEmpty() ? "1" : startYField.getText());
         double targetX = strToDouble(targetXField.getText().isEmpty() ? "2" : targetXField.getText());
         double targetY = strToDouble(targetYField.getText().isEmpty() ? "2" : targetYField.getText());
-        double ballRadius = strToDouble(ballRadiusField.getText().isEmpty() ? "0.1" : ballRadiusField.getText());
+        double ballRadius = strToDouble(ballRadiusField.getText().isEmpty() ? "0.05" : ballRadiusField.getText());
         double targetRadius = strToDouble(targetRadiusField.getText().isEmpty() ? "0.15" : targetRadiusField.getText());
         double staticFrictionSand = strToDouble(staticfrictionsand.getText().isEmpty() ? "0.2" : staticfrictionsand.getText());
         double kineticFrictionSand = strToDouble(kineticfrictionsand.getText().isEmpty() ? "0.1" : kineticfrictionsand.getText());
@@ -108,21 +95,12 @@ public class GameSetupController extends BaseController {
         mapManager = new MapManager();
         referenceStore.setMapManagerReference(mapManager);
 
+        //mapManager.addArea(new Water(),0,0,-3,-5);
+
         //create and store golf balls
         ArrayList<GolfBall> balls =  new ArrayList<GolfBall>();
-        players = new ArrayList<>();
-        for (int i = 0; i < playerCount; i++) {
-            balls.add(new GolfBall(startX,startY,.1,ballRadius)); // Initialize golf ball as needed
-            players.add(new Player("Player " +(i+1),balls.get(i))); // Player with ID and associated ball
+        balls.add(new GolfBall(startX,startY,.1,ballRadius));
 
-          //  players.add(player);
-        }
-
-
-       // balls.add(new GolfBall(startX,startY,.1,ballRadius));
-        //players = new ArrayList<>();
-       // players.add(new Player("Player 1",balls.get(0)));
-       // players.add(new Player("Player 2",balls.get(1)));
        //create and store PhysicsEngine
         physicsEngine = new PhysicsEngine();
         referenceStore.setPhysicsEngine(physicsEngine);
@@ -144,8 +122,6 @@ public class GameSetupController extends BaseController {
             referenceStore.setFrictionsAreaType("Sand",kineticFrictionSand,staticFrictionSand );
 
             // Initialize mapManager and map
-            mapManager = new MapManager();
-            mapManager.generateTerrainData();
             Pane pane = mapManager.getMap();
 
             // Add movable objects to the map
@@ -154,14 +130,11 @@ public class GameSetupController extends BaseController {
             mapManager.addMovableObjectToMap(hole);
             mapManager.addMovableObjectToMap(balls.getFirst());
 
-<<<<<<< HEAD
-=======
             mapManager.addObstacle(new Tree(1,-2,.6));
             mapManager.addObstacle(new Tree(4,1,.7));
             mapManager.addObstacle(new Tree(-2,-4,.5));
             mapManager.addObstacle(new Tree(4,-4,.8));
 
->>>>>>> origin/game
             // Create the layout
             HBox root = new HBox();
             VBox settingsBox = new VBox();
@@ -177,11 +150,6 @@ public class GameSetupController extends BaseController {
 
 
             // Call setInitialValues for SettingsController
-<<<<<<< HEAD
-           SettingsController settingsController = settingsLoader.getController();
-            settingsController.setInitialValues( startX, startY, targetX, targetY, targetRadius, mapManager, physicsEngine, balls,hole);
-         //   int playerCount = playerCountSpinner.getValue(); // Get the number of players
-=======
             SettingsController settingsController = settingsLoader.getController();
             astarAlgorithm = referenceStore.getAStarAlgorithm();
             int[] startMatrix = mapManager.coordinatesToMatrix(startX, startY);
@@ -201,19 +169,7 @@ public class GameSetupController extends BaseController {
                 System.out.println("Node: (" + coords[0] + ", " + coords[1] + ")");
             }
             settingsController.setInitialValues(selectedGame, startX, startY, targetX, targetY, targetRadius, mapManager, physicsEngine, balls,hole);
->>>>>>> origin/game
 
-         //   SettingsController gameController = loader.getController();
-            settingsController.setGameMode(isMultiplayer); // Set the game mode
-            settingsController.setPlayers(players);
-         //   for (int i = 0; i < playerCount; i++) {
-          //      GolfBall ball = new GolfBall(startX, startY, ballRadius, mapManager);
-            //    Player player = new Player(ball);
-            //    players.add(player);
-          ///  }
-
-            // Pass players to the game controller
-          //  gameController.setPlayers(players);
 
         } catch (IOException e) {
             e.printStackTrace();

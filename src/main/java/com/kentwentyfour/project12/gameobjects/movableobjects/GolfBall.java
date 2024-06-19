@@ -28,7 +28,7 @@ public class GolfBall implements MovableObjects {
 
     public double getDistanceFromOrigin(){
         // Circle drawn by middle coordinates
-        return 0;
+        return radius;
     }
 
     /**

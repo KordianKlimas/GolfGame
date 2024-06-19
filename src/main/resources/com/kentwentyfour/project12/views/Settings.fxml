@@ -32,5 +32,4 @@
    <VBox fx:id="mapContainer" prefHeight="171.0" prefWidth="0.0" style="-fx-background-color: lightgray;">
 
    </VBox>
-   <Label fx:id="turnIndicatorLabel" layoutX="50" layoutY="20" text="Player 1's Turn" visible="true"/>
 </HBox>

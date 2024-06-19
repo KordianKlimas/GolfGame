@@ -1,13 +1,17 @@
 package com.kentwentyfour.project12.gameobjects;
 import java.util.ArrayList;
 import java.util.EmptyStackException;
+import java.util.List;
 
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.AreaType;
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.Grass;
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.Sand;
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.MatrixMapArea;
-import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areaobstacles.Water;
+import com.kentwentyfour.project12.gameobjects.matrixmapobjects.obstacles.ObstacleArea;
+import com.kentwentyfour.project12.gameobjects.matrixmapobjects.obstacles.Water;
+import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
 import com.kentwentyfour.project12.gameobjects.movableobjects.MovableObjects;
+import com.kentwentyfour.project12.gameobjects.movableobjects.Tree;
 import com.kentwentyfour.project12.mathpackage.FormulaCalculator;
 import com.kentwentyfour.project12.physicsengine.CoordinatesPath;
 import com.kentwentyfour.project12.ReferenceStore;
@@ -23,8 +27,8 @@ import javafx.util.Duration;
  *  Allows managing the state of all objects in the visualised in game
  */
 public class MapManager {
-    public final int WIDTH = 600;
-    public final int HEIGHT = 600;
+    public final int WIDTH = 1000;
+    public final int HEIGHT = 1000;
     private final int matrixSize = 101;//101
     private double mapWidth = 10; // in meters ex. 10 means coordinates from -5 to 5
     double scaleFactor = WIDTH / mapWidth; // scalar  to  match [m]  with the pixel size
@@ -33,7 +37,9 @@ public class MapManager {
     FormulaCalculator calcCPF = new FormulaCalculator();
     ArrayList<String> CPF_parsed;
     private Pane root; // the map
+    private List<MovableObjects> obstacleList = new ArrayList<>(); // List with all obstacles
     private ReferenceStore referenceStore = ReferenceStore.getInstance();
+
 
 
     public MapManager() {
@@ -48,6 +54,7 @@ public class MapManager {
         for (int row = 0; row < matrixSize; ++row) {
             for (int col = 0; col < matrixSize; ++col) {
                 // centers rows and columns and scales the map
+
                 double[] arr = matrixToCoordinates(row,col);
                 double x = arr[0];
                 double y = arr[1];
@@ -67,8 +74,52 @@ public class MapManager {
             }
         }
         this.terrainData = terrainData;
-    }
 
+    }
+    /**
+     * Generates basic map for the game
+     * @return Pane - the map with  MappableObjects
+     */
+    private void createMap() {
+
+        double cellWidth = (double) (WIDTH / (double) matrixSize);
+        double cellHeight = (double) (HEIGHT / (double) matrixSize);
+        Pane root = new Pane();
+        int newNumRows = matrixSize;
+        int newNumCols = matrixSize;
+
+        for (int row = 0; row < newNumRows; ++row) {
+            for (int col = 0; col < newNumCols; ++col) {
+                MatrixMapArea objectOnMap = terrainData[row * matrixSize / newNumRows][col * matrixSize / newNumCols];
+                double x = (double) col * cellWidth;
+                double y = (double) row * cellHeight;
+                Rectangle cell = new Rectangle(x, y, cellWidth, cellHeight);
+                Color color = objectOnMap.getColor();
+                cell.setFill(color);
+                root.getChildren().add(cell);
+            }
+        }
+        this.root = root;
+    }
+    /**
+     * Creates or returns existing map
+     * @return Pane - map
+     */
+    public Pane getMap(){
+        if(this.root!= null){
+            return this.root;
+        }
+        createMap();
+        return this.root;
+    }
+    /**
+     * Rerenders and returns whole map
+     * @return Pane - map
+     */
+    public Pane getRerenderedMap(){
+        createMap();
+        return this.root;
+    }
     /**
      * Returns object from map based on it's coordinates
      *
@@ -81,7 +132,7 @@ public class MapManager {
         // prevents out of boundary  indexes
 
         if (!(arr[0] >= this.matrixSize) && !(arr[1] >= this.matrixSize) && !(arr[0] <0) && !(arr[1]<0) && isTerrainDataInitialized) {
-            return terrainData[arr[0]][arr[1]];
+            return terrainData[arr[1]][arr[0]];
         } else if (!isTerrainDataInitialized) {
             System.err.println("Map not generated");
         }
@@ -126,9 +177,9 @@ public class MapManager {
      * @return an array containing the coordinates corresponding to the given cell indexes,
      * or {@code null} if the indexes are outside the matrix bounds
      */
-    private double[] matrixToCoordinates(int x, int y) {
+    public double[] matrixToCoordinates(int x, int y) {
         double[] arr = new double[2];
-        int midPoint = (int) (this.matrixSize / 2.0 - 0.5); // index of the middle of matrix. We assume this is (0 [m],0 [m]) in
+        int midPoint = (int) (this.matrixSize / 2.0 - 0.5); // index of the middle of matrix. We assume it is (0 [m],0 [m])
         double changeLimit = (this.matrixSize - 1) / this.mapWidth; // calculates how much coordinate (x or y) must change to change the cell in matrix
 
         // Calculate coordinates
@@ -153,53 +204,8 @@ public class MapManager {
 
         arr[0] = midPixelX + (int) Math.round(x * scaleFactor);
         arr[1] = midPixelY - (int) Math.round(y * scaleFactor);
-
         return arr;
     }
-
-    /**
-     * Generates basic map for the game
-     * @return Pane - the map with  MappableObjects
-     */
-    private void createMap() {
-
-        double cellWidth = (double) (WIDTH / (double) matrixSize);
-        double cellHeight = (double) (HEIGHT / (double) matrixSize);
-        Pane root = new Pane();
-        int newNumRows = matrixSize;
-        int newNumCols = matrixSize;
-
-        for (int row = 0; row < newNumRows; ++row) {
-            for (int col = 0; col < newNumCols; ++col) {
-                MatrixMapArea objectOnMap = terrainData[row * matrixSize / newNumRows][col * matrixSize / newNumCols];
-                double x = (double) col * cellWidth;
-                double y = (double) row * cellHeight;
-                Rectangle cell = new Rectangle(x, y, cellWidth, cellHeight);
-                Color color = Color.GREEN;
-                if (objectOnMap instanceof AreaType) {
-                    color = ((AreaType) objectOnMap).getColor();
-
-                } else if (objectOnMap instanceof Water) {
-                    color = ((Water) objectOnMap).getColor();
-                }
-                cell.setFill(color);
-                root.getChildren().add(cell);
-            }
-        }
-        this.root = root;
-    }
-    /**
-     * Creates or returns existing map
-     * @return Pane - map
-     */
-    public Pane getMap(){
-        if(this.root!= null){
-            return this.root;
-        }
-        createMap();
-        return this.root;
-    }
-
 
     /**
      * Adds MovableObject object to map. Scales it from physic unit [meters] to relative pixel size.
@@ -209,8 +215,8 @@ public class MapManager {
     public  void addMovableObjectToMap (MovableObjects obj){
         Node visualRepresentation = obj.getVisualRepresentation();
         int[] pixelCoords = coordinatesToPixel(obj.getX(),obj.getY());
-        visualRepresentation.setLayoutX(pixelCoords[0]-obj.getDistanceFromOrigin()*this.scaleFactor);
-        visualRepresentation.setLayoutY(pixelCoords[1]-obj.getDistanceFromOrigin()*this.scaleFactor);
+        visualRepresentation.setLayoutX(pixelCoords[0]);//-obj.getDistanceFromOrigin()*this.scaleFactor); // to be used if there are any objects drawn that are not circle like
+        visualRepresentation.setLayoutY(pixelCoords[1]);//-obj.getDistanceFromOrigin()*this.scaleFactor);
         visualRepresentation.setScaleX(this.scaleFactor);
         visualRepresentation.setScaleY(this.scaleFactor);
         this.root.getChildren().add(visualRepresentation);
@@ -224,8 +230,8 @@ public class MapManager {
         Node visualRepresentation = obj.getVisualRepresentation();
         int[] pixelCoords = coordinatesToPixel(obj.getX(),obj.getY());
         //Translating object so  the origin point matches right pixel
-        visualRepresentation.setLayoutX(pixelCoords[0]-obj.getDistanceFromOrigin()*this.scaleFactor);
-        visualRepresentation.setLayoutY(pixelCoords[1]-obj.getDistanceFromOrigin()*this.scaleFactor);
+        visualRepresentation.setLayoutX(pixelCoords[0]);//-obj.getDistanceFromOrigin()*this.scaleFactor);
+        visualRepresentation.setLayoutY(pixelCoords[1]);//-obj.getDistanceFromOrigin()*this.scaleFactor);
         if (!this.root.getChildren().contains(visualRepresentation)) {
             addMovableObjectToMap(obj);
         }
@@ -266,7 +272,6 @@ public class MapManager {
         timeline.setCycleCount(1);
         timeline.play();
     }
-
 
     /**
      * Checks for Collision with 1 MovableObject (obstacle) from obstacleList
@@ -343,5 +348,4 @@ public class MapManager {
 
 
     }
-
 }
