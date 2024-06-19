@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e80e0ac-204d-49c9-baf6-18865c982760" name="Changes" comment="added A* Algorithm WITHOUT any implementations yet">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_05_2024_19_47__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_05_2024_19_47__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/Bots/Algorithms/AStarAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/Bots/Algorithms/AStarAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/Bots/BotHillClimbing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/Bots/BotHillClimbing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/ReferenceStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/ReferenceStore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/GameSetupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/GameSetupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/SettingsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/kentwentyfour/project12/css/buttons.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/kentwentyfour/project12/css/buttons.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/kentwentyfour/project12/views/Settings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/kentwentyfour/project12/views/Settings.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/kentwentyfour/project12/views/game-setup-menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/kentwentyfour/project12/views/game-setup-menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/kentwentyfour/project12/views/start-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/kentwentyfour/project12/views/start-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +53,7 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2gyFSRRM9LqsCuHPAkPUun3MqfF" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -177,8 +179,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
+        <option value="jdk-22-openjdk-22-4caba194b151-f504ca98" />
       </set>
     </attachedChunks>
   </component>
@@ -212,6 +213,7 @@
       <workItem from="1718457994379" duration="3239000" />
       <workItem from="1718545409811" duration="727000" />
       <workItem from="1718546146770" duration="5598000" />
+      <workItem from="1718803474512" duration="6586000" />
     </task>
     <task id="LOCAL-00001" summary="Changing timeStep and initial time in PhysicEngine to improve calculation and animation. Adding  Stopping conditions support in game.">
       <option name="closed" value="true" />

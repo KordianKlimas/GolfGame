@@ -146,6 +146,8 @@ public class GameSetupController extends BaseController {
             // Show the settings stage
             settingsStage.setTitle("Settings");
             settingsStage.setScene(new Scene(root));
+            root.setStyle("-fx-background-color: #4a9183;"); // Background color for VBox
+
             settingsStage.show();
 
 
