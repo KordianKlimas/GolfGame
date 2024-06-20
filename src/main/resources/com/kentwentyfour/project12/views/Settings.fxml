@@ -27,9 +27,5 @@
          <ComboBox fx:id="botChooseBox" styleClass="combo-box-common" promptText="Select Bot" maxWidth="150"  />
          <Button styleClass="button-common" minHeight="30" minWidth="50" onAction="#BotMove" prefHeight="32.0" prefWidth="90.0" text="Bot move" />
       </VBox>
-      <Region prefHeight="50.0" />
-      <VBox alignment="CENTER" style=" -fx-background-color: #55AD9B;-fx-padding: 20px 0 20px 0;" spacing="20" visible="false" fx:id="movingBotVBox">
-         <Label styleClass="text-regular" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="324.0"   fx:id="botLabel" text="Waiting for bot..."/>
-      </VBox>
    </VBox>
 </HBox>

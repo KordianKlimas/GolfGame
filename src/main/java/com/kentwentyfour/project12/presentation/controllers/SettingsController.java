@@ -2,7 +2,7 @@ package com.kentwentyfour.project12.presentation.controllers;
 
 import com.kentwentyfour.project12.Bots.AdvancedBot;
 import com.kentwentyfour.project12.Bots.BasicBot;
-import com.kentwentyfour.project12.Bots.BotHillClimbing;
+import com.kentwentyfour.project12.Bots.BotHillClimbingImproved;
 import com.kentwentyfour.project12.Bots.BotPlayer;
 import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
 import com.kentwentyfour.project12.gameobjects.MapManager;
@@ -43,10 +43,6 @@ public class SettingsController implements Initializable {
     private Slider vx;
     @FXML
     private Button hit;
-    @FXML
-    private VBox movingBotVBox;
-    @FXML
-    private Label botLabel;
     // all variables
     private int turnCount=1;
     private double startX;
@@ -61,7 +57,7 @@ public class SettingsController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        botChooseBox.getItems().addAll("BasicBot","AdvancedBot","BotHillClimbing" );
+        botChooseBox.getItems().addAll("BasicBot","AdvancedBot","BotHillClimbingImproved" );
         vy.valueProperty().addListener(new ChangeListener<Number>() {
             @Override
             public void changed(ObservableValue<? extends Number> observableValue, Number oldValue, Number newValue) {
@@ -84,7 +80,6 @@ public class SettingsController implements Initializable {
     public void hit () {
         double xVelocityValue = vx.getValue();
         double yVelocityValue = vy.getValue();
-        movingBotVBox.setVisible(false);
         CoordinatesPath coordinatesPath=  physicsEngine.calculateCoordinatePath(balls.getFirst(),xVelocityValue, yVelocityValue);
         mapManager.animateMovableObject(balls.getFirst(),coordinatesPath);
         String stopping = coordinatesPath.getStoppingCondition();
@@ -128,7 +123,7 @@ public class SettingsController implements Initializable {
                             }
                         } else if (result.get() == BUTTON_END_GAME) {
                             Platform.runLater(() -> {
-                                Stage stage = (Stage) movingBotVBox.getScene().getWindow();
+                                Stage stage = (Stage) vx.getScene().getWindow();
                                 stage.close();
                             });
                         }
@@ -208,26 +203,22 @@ public class SettingsController implements Initializable {
 
         try {
             if (selectedBot == null) {
-                movingBotVBox.setVisible(true);
-                botLabel.setText("Please select a bot.");
                 return;
             }
 
             switch (selectedBot) {
-                case "BotHillClimbing" -> bot = new BotHillClimbing();
+                case "BotHillClimbingImproved" -> bot = new BotHillClimbingImproved();
                 case "BasicBot" -> bot = new BasicBot();
                 case "AdvancedBot" -> bot = new AdvancedBot();
-                default -> bot = new BotHillClimbing();
+                default -> bot = new BotHillClimbingImproved();
             }
 
-            movingBotVBox.setVisible(true);
             CoordinatesPath coordinatesPath = bot.calculatePath(balls.get(0));
             mapManager.animateMovableObject(balls.get(0), coordinatesPath);
             String stopping = coordinatesPath.getStoppingCondition();
             handleStop(stopping, coordinatesPath.getPath());
         } catch (Exception e) {
             e.printStackTrace();
-            botLabel.setText("Error occurred :c  ~Continue game~");
         }
     }
 }
