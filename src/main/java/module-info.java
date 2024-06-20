@@ -12,11 +12,8 @@ module com.kentwentyfour.project12 {
     opens com.kentwentyfour.project12.presentation.controllers.alerts to javafx.fxml;
     exports com.kentwentyfour.project12.presentation.controllers.maps;
     opens com.kentwentyfour.project12.presentation.controllers.maps to javafx.fxml;
+    exports com.kentwentyfour.project12.gameobjects;
+    opens com.kentwentyfour.project12.gameobjects to javafx.fxml;
+    exports com.kentwentyfour.project12.gameobjects.matrixmapobjects.obstacles;
+    exports com.kentwentyfour.project12.gameobjects.movableobjects;
 }
-//module com.kentwentyfour.project12 {
-//        requires javafx.controls;
-//        requires javafx.fxml;
-//        requires javafx.graphics;
-//
-//        exports com.kentwentyfour.project12.GameObjects;
-//        }

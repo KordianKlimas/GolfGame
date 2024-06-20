@@ -318,34 +318,35 @@ public class MapManager {
      * @param area - area type/obstacle
      * @param coordinateX1 - left top coordinate X
      * @param coordinateY1 - left top coordinate Y
-     * @param coordinateX2 - right bottom coordinate X
-     * @param coordinateY2 - right bottom coordinate Y
+     * @param width -width of rectangle area
+     * @param height-height of rectangle area
      */
-    public void addArea(ObstacleArea area, double coordinateX1, double coordinateY1,double coordinateX2, double coordinateY2){
-        int[] leftTopCellYX = coordinatesToMatrix(coordinateX1,coordinateY1);
-        int[] rightBottomCellYX = coordinatesToMatrix(coordinateX2,coordinateY2);
+    public void addArea(MatrixMapArea area, double coordinateX1, double coordinateY1, double width, double height) {
+        int[] leftTopCellYX = coordinatesToMatrix(coordinateX1, coordinateY1);
+        int[] rightBottomCellYX = coordinatesToMatrix(coordinateX1 + width, coordinateY1 + height);
 
         int cellX1 = leftTopCellYX[1];
         int cellY1 = leftTopCellYX[0];
         int cellX2 = rightBottomCellYX[1];
-        int cellY2= rightBottomCellYX[0];
+        int cellY2 = rightBottomCellYX[0];
 
-        if(cellY1>cellY2){
+        if (cellY1 > cellY2) {
             int temp = cellY1;
-            cellY1 =  cellY2;
-            cellY2 =  temp;
+            cellY1 = cellY2;
+            cellY2 = temp;
         }
-        if(cellX1>cellX2){
+        if (cellX1 > cellX2) {
             int temp = cellX1;
-            cellX1 =  cellX2;
-            cellX2 =  temp;
+            cellX1 = cellX2;
+            cellX2 = temp;
         }
-        for(int i =cellX1; i<=cellX2; i++ ){
-            for(int d =cellY1; d<=cellY2; d++ ){
-                terrainData[i][d] = area;
+
+        for (int i = cellX1; i <= cellX2; i++) {
+            for (int d = cellY1; d <= cellY2; d++) {
+                if (d >= 0 && d < terrainData[i].length) {
+                    terrainData[i][d] = area;
+                }
             }
         }
-
-
     }
 }
