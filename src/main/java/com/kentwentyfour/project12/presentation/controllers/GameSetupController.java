@@ -160,8 +160,6 @@ public class GameSetupController extends BaseController {
                     }
                 }
             }
-           // mapManager.addAreaObstacle(new Water(0,0,0,0),0,0,-3,-5);
-
             // Initialize mapManager and map
             Pane pane = mapManager.getMap();
 
@@ -183,7 +181,7 @@ public class GameSetupController extends BaseController {
             // Show the settings stage
             settingsStage.setTitle("Settings");
             settingsStage.setScene(new Scene(root));
-            root.setStyle("-fx-background-color: #4a9183;"); // Background color for VBox
+            root.setStyle("-fx-background-color: #4a9183;");
 
             settingsStage.show();
 

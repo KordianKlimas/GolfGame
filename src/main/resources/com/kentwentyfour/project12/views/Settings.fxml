@@ -4,35 +4,32 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.Region?>
 
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.geometry.Insets?>
-<HBox style=" -fx-background-color: #55AD9B;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kentwentyfour.project12.presentation.controllers.SettingsController" stylesheets="@../css/style.css">
-   <VBox style=" -fx-background-color: #55AD9B;-fx-padding: 10px 0 0 0;" prefHeight="344.0" prefWidth="324.0"  >
-      <Label styleClass="text-regular" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="324.0" text="X Velocity" fx:id="xVelocity">
-
-      </Label>
-      <Slider fx:id="vx" styleClass="slider-common" blockIncrement="0.1" majorTickUnit="1.0" max="5.0" min="-5.0" prefHeight="59.0" prefWidth="324.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
-      <Label styleClass="text-regular" fx:id="yVelocity" alignment="CENTER" prefHeight="38.0" prefWidth="318.0" text="Y Velocity">
-
-      </Label>
-      <Slider fx:id="vy" styleClass="slider-common" blockIncrement="0.1" majorTickUnit="1.0" max="5.0" min="-5.0" prefHeight="58.0" prefWidth="324.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
-      <Pane fx:id="pane" prefHeight="152.0" prefWidth="324.0">
-
-         <StackPane alignment="CENTER">
-            <!-- Apply padding to create margins around the VBox -->
-            <padding>
-               <Insets top="30" left="85"/>
-            </padding>
-
-            <VBox alignment="CENTER" spacing="10">
-               <Button styleClass="button-common" fx:id="hit" minHeight="30" minWidth="50" onAction="#hit" prefHeight="32.0" prefWidth="75.0" text="Hit" />
-               <Button styleClass="button-common" minHeight="30" minWidth="50" onAction="#BotMove" prefHeight="32.0" prefWidth="90.0" text="Bot move" />
-            </VBox>
-         </StackPane>
-      </Pane>
+<HBox  xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kentwentyfour.project12.presentation.controllers.SettingsController" stylesheets="@../css/style.css">
+   <VBox>
+      <VBox alignment="CENTER" style=" -fx-background-color: #55AD9B;-fx-padding: 20px 0 20px 0;" spacing="10" >
+         <Label styleClass="text-title" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="324.0" text="Turn: 0" fx:id="turnCounter"/>
+      </VBox>
+      <Region prefHeight="50.0" />
+      <VBox alignment="CENTER" style=" -fx-background-color: #55AD9B;-fx-padding: 20px 0 20px 0;" >
+         <Label styleClass="text-regular" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="324.0" text="X Velocity: 0.00" fx:id="xVelocity"/>
+         <Slider fx:id="vx" styleClass="slider-common" blockIncrement="0.1" majorTickUnit="1.0" max="5.0" min="-5.0" prefHeight="59.0" prefWidth="324.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+         <Label styleClass="text-regular" fx:id="yVelocity" alignment="CENTER" prefHeight="38.0" prefWidth="318.0" text="Y Velocity: 0.00"/>
+         <Slider fx:id="vy" styleClass="slider-common" blockIncrement="0.1" majorTickUnit="1.0" max="5.0" min="-5.0" prefHeight="58.0" prefWidth="324.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+         <Region prefHeight="20.0" />
+         <Button styleClass="button-common"  fx:id="hit" minHeight="30" minWidth="50" onAction="#hit" prefHeight="32.0" prefWidth="75.0" text="Hit" />
+      </VBox>
+      <Region prefHeight="50.0" />
+      <VBox alignment="CENTER" style=" -fx-background-color: #55AD9B;-fx-padding: 20px 0 20px 0;" spacing="20">
+         <ComboBox fx:id="botChooseBox" styleClass="combo-box-common" promptText="Select Bot" maxWidth="150"  />
+         <Button styleClass="button-common" minHeight="30" minWidth="50" onAction="#BotMove" prefHeight="32.0" prefWidth="90.0" text="Bot move" />
+      </VBox>
+      <Region prefHeight="50.0" />
+      <VBox alignment="CENTER" style=" -fx-background-color: #55AD9B;-fx-padding: 20px 0 20px 0;" spacing="20" visible="false" fx:id="movingBotVBox">
+         <Label styleClass="text-regular" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="324.0"   fx:id="botLabel" text="Waiting for bot..."/>
+      </VBox>
    </VBox>
 </HBox>
