@@ -61,7 +61,6 @@ public class GameSetupController extends BaseController {
     private TextField formulaField;
     private MapManager mapManager;
     private PhysicsEngine physicsEngine;
-    private AStarAlgorithm astarAlgorithm;
     @FXML
     private void initialize() {
         // Initialize ComboBox with difficulty levels
@@ -127,15 +126,14 @@ public class GameSetupController extends BaseController {
 
         //create and store golf balls
         ArrayList<GolfBall> balls =  new ArrayList<GolfBall>();
-        balls.add(new GolfBall(startX,startY,.1,ballRadius));
+        GolfBall ball1 = new GolfBall(startX,startY,.1,ballRadius);
+        balls.add(ball1);
+        referenceStore.addGolfballReference(ball1);
 
         //create and store PhysicsEngine
         physicsEngine = new PhysicsEngine();
         referenceStore.setPhysicsEngine(physicsEngine);
 
-        //create and store path
-        astarAlgorithm = new AStarAlgorithm();
-        referenceStore.setAStarAlgorithm(astarAlgorithm);
 
         Stage settingsStage = new Stage();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/kentwentyfour/project12/views/Settings.fxml"));
@@ -188,23 +186,7 @@ public class GameSetupController extends BaseController {
 
             // Call setInitialValues for SettingsController
             SettingsController settingsController = settingsLoader.getController();
-            astarAlgorithm = referenceStore.getAStarAlgorithm();
-            int[] startMatrix = mapManager.coordinatesToMatrix(startX, startY);
-            int[] targetMatrix = mapManager.coordinatesToMatrix(targetX, targetY);
 
-            int startX1 = startMatrix[0];
-            int startY1 = startMatrix[1];
-            int targetX1 = targetMatrix[0];
-            int targetY1 = targetMatrix[1];
-
-            // decrease range for more midpoints 1=max 100=min
-          //  List<Node> aStarPath = astarAlgorithm.findPath(mapManager, startX1, startY1, targetX1, targetY1, 100);
-          //  referenceStore.setAStarPath(aStarPath);
-          //  System.out.println("A* Path coordinates:");
-          //  for (Node node : aStarPath) {
-          //      double[] coords = mapManager.matrixToCoordinates(node.matrixX, node.matrixY);
-          //      System.out.println("Node: (" + coords[0] + ", " + coords[1] + ")");
-          //  }
             settingsController.setInitialValues( startX, startY,  mapManager, physicsEngine, balls,hole);
 
         } catch (IOException e) {

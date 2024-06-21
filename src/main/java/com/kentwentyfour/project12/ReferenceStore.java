@@ -34,8 +34,6 @@ public  class ReferenceStore {
     private MapManager mapManager;
     private PhysicsEngine physicsEngine;
     private String courseProfileFormula;
-    private AStarAlgorithm aStarAlgorithm;
-    private List<Node> aStarPath;
 
     // Private constructor to prevent instantiation
     private ReferenceStore() {
@@ -102,7 +100,7 @@ public  class ReferenceStore {
      * Returns List of used Golfballs
      * @return List<GolfBall>
      */
-    public  List<GolfBall> getGolfballList(){
+    public  ArrayList<GolfBall> getGolfballList(){
         return this.listOfGolfBalls;
     }
     /**
@@ -157,21 +155,7 @@ public  class ReferenceStore {
                 return 0.1;
         }
     }
-    public void setAStarAlgorithm(AStarAlgorithm aStarAlgorithm) {
-        this.aStarAlgorithm = aStarAlgorithm;
-    }
-
-    public AStarAlgorithm getAStarAlgorithm() {
-        return this.aStarAlgorithm;
-    }
     public List<MovableObjects> getObstacles() {
         return mapManager.getObstacles();
-    }
-    public void setAStarPath(List<Node> aStarPath) {
-        this.aStarPath = aStarPath;
-    }
-
-    public List<Node> getAStarPath() {
-        return this.aStarPath;
     }
 }

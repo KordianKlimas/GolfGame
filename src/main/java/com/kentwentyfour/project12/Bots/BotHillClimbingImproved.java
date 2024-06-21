@@ -1,5 +1,6 @@
 package com.kentwentyfour.project12.Bots;
 
+import com.kentwentyfour.project12.Bots.Algorithms.AStarAlgorithm;
 import com.kentwentyfour.project12.Bots.Algorithms.Node;
 import com.kentwentyfour.project12.gameobjects.*;
 import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
@@ -7,6 +8,8 @@ import com.kentwentyfour.project12.gameobjects.movableobjects.Hole;
 import com.kentwentyfour.project12.physicsengine.CoordinatesPath;
 import com.kentwentyfour.project12.physicsengine.PhysicsEngine;
 import com.kentwentyfour.project12.ReferenceStore;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class BotHillClimbingImproved implements BotPlayer {
@@ -15,13 +18,34 @@ public class BotHillClimbingImproved implements BotPlayer {
     private ReferenceStore referenceStore = ReferenceStore.getInstance();
     private Hole hole;
     private List<Node> aStarPath;
+    private GolfBall ball;
     private int count = 0;
 
     public BotHillClimbingImproved() {
         this.physicsEngine = referenceStore.getPhysicsEngine();
         this.mapGenerator = referenceStore.getMapManager();
         this.hole = referenceStore.getHole();
-        this.aStarPath = referenceStore.getAStarPath();
+        ArrayList<GolfBall> golfBallArrayList = referenceStore.getGolfballList();
+        this.ball = golfBallArrayList.getFirst() ;
+
+        int[] startMatrix = mapGenerator.coordinatesToMatrix(ball.getX(), ball.getY());
+        int[] targetMatrix = mapGenerator.coordinatesToMatrix(hole.getX(), hole.getY());
+
+        int startX1 = startMatrix[0];
+        int startY1 = startMatrix[1];
+        int targetX1 = targetMatrix[0];
+        int targetY1 = targetMatrix[1];
+
+        // decrease range for more midpoints 1=max 100=min
+        AStarAlgorithm astarAlgorithm = new AStarAlgorithm();
+        List<Node> aStarPath = astarAlgorithm.findPath(mapGenerator, startX1, startY1, targetX1, targetY1, 20);
+        this.aStarPath = aStarPath;
+        System.out.println("A* Path coordinates:");
+        for (Node node : aStarPath) {
+            double[] coords = mapGenerator.matrixToCoordinates(node.matrixX, node.matrixY);
+            System.out.println("Node: (" + coords[0] + ", " + coords[1] + ")");
+        }
+
     }
 
     public CoordinatesPath calculatePath(GolfBall golfBall) {
