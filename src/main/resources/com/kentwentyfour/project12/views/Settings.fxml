@@ -1,31 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.layout.Region?>
 
-<HBox  xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kentwentyfour.project12.presentation.controllers.SettingsController" stylesheets="@../css/style.css">
-   <VBox>
-      <VBox alignment="CENTER" style=" -fx-background-color: #55AD9B;-fx-padding: 20px 0 20px 0;" spacing="10" >
-         <Label styleClass="text-title" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="324.0" text="Turn: 0" fx:id="turnCounter"/>
-      </VBox>
-      <Region prefHeight="50.0" />
-      <VBox alignment="CENTER" style=" -fx-background-color: #55AD9B;-fx-padding: 20px 0 20px 0;" >
-         <Label styleClass="text-regular" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="324.0" text="X Velocity: 0.00" fx:id="xVelocity"/>
-         <Slider fx:id="vx" styleClass="slider-common" blockIncrement="0.1" majorTickUnit="1.0" max="5.0" min="-5.0" prefHeight="59.0" prefWidth="324.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
-         <Label styleClass="text-regular" fx:id="yVelocity" alignment="CENTER" prefHeight="38.0" prefWidth="318.0" text="Y Velocity: 0.00"/>
-         <Slider fx:id="vy" styleClass="slider-common" blockIncrement="0.1" majorTickUnit="1.0" max="5.0" min="-5.0" prefHeight="58.0" prefWidth="324.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
-         <Region prefHeight="20.0" />
-         <Button styleClass="button-common"  fx:id="hit" minHeight="30" minWidth="50" onAction="#hit" prefHeight="32.0" prefWidth="75.0" text="Hit" />
-      </VBox>
-      <Region prefHeight="50.0" />
-      <VBox alignment="CENTER" style=" -fx-background-color: #55AD9B;-fx-padding: 20px 0 20px 0;" spacing="20">
-         <ComboBox fx:id="botChooseBox" styleClass="combo-box-common" promptText="Select Bot" maxWidth="150"  />
-         <Button styleClass="button-common" minHeight="30" minWidth="50" onAction="#BotMove" prefHeight="32.0" prefWidth="90.0" text="Bot move" />
-      </VBox>
-   </VBox>
+<HBox prefHeight="657.0" prefWidth="413.0" style="-fx-background-color: #72A361;" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kentwentyfour.project12.presentation.controllers.SettingsController">
+   <AnchorPane>
+      <children>
+         <AnchorPane layoutX="34.0" layoutY="122.0" prefHeight="274.0" prefWidth="350.0" style="-fx-background-color: #496E41;">
+            <children>
+               <Slider fx:id="vx" blockIncrement="0.1" layoutX="13.0" layoutY="54.0" majorTickUnit="1.0" max="5.0" min="-5.0" prefHeight="59.0" prefWidth="324.0" showTickLabels="false" showTickMarks="false" snapToTicks="true" styleClass="slider-common" />
+               <Label alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="14.0" prefHeight="40.0" prefWidth="324.0" styleClass="text-regular" text="X Velocity: 0.00" fx:id="xVelocity" />
+               <Label fx:id="yVelocity" alignment="CENTER" layoutX="16.0" layoutY="99.0" prefHeight="38.0" prefWidth="318.0" styleClass="text-regular" text="Y Velocity: 0.00" />
+               <Slider fx:id="vy" blockIncrement="0.1" layoutX="13.0" layoutY="137.0" majorTickUnit="1.0" max="5.0" min="-5.0" prefHeight="58.0" prefWidth="324.0" showTickLabels="false" showTickMarks="false" snapToTicks="true" styleClass="slider-common" />
+               <Button fx:id="hit" layoutX="138.0" layoutY="205.0" minHeight="30" minWidth="50" onAction="#hit" prefHeight="32.0" prefWidth="75.0" styleClass="button-common" text="Hit" />
+            </children>
+         </AnchorPane>
+         <AnchorPane layoutX="34.0" layoutY="419.0" prefHeight="162.0" prefWidth="350.0" style="-fx-background-color: #496E41;">
+            <children>
+               <Button layoutX="130.0" layoutY="93.0" minHeight="30" minWidth="50" onAction="#BotMove" prefHeight="32.0" prefWidth="90.0" styleClass="button-common" text="Bot move" />
+               <ComboBox fx:id="botChooseBox" layoutX="100.0" layoutY="29.0" maxWidth="150" promptText="Select Bot" styleClass="combo-box-common" />
+            </children>
+         </AnchorPane>
+         <AnchorPane layoutX="34.0" layoutY="29.0" prefHeight="71.0" prefWidth="350.0" style="-fx-background-color: #496E41;">
+            <children>
+               <Label fx:id="turnCounter" alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="16.0" prefHeight="40.0" prefWidth="288.0" styleClass="text-title" text="Turn: 0" />
+            </children>
+         </AnchorPane>
+      </children>
+   </AnchorPane>
 </HBox>

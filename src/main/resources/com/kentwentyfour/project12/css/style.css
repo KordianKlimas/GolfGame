@@ -63,7 +63,14 @@
 .slider-common {
     -fx-font-size: 17px;
     -fx-font-weight: 600;
+    -fx-text-fill: #ffffff;
     -fx-cursor: grab;
+}
+.slider-common .axis .axis-label {
+    -fx-text-fill: white;
+}
+.slider-common .axis .tick {
+    -fx-stroke: white;
 }
 .slider-common .track {
     -fx-cursor: grab;
@@ -75,10 +82,10 @@
 .text-regular{
     -fx-font-weight: 700;
     -fx-font-size: 15;
-    -fx-text-fill: #363636;
+    -fx-text-fill: #ffffff;
 }
 .text-title{
     -fx-font-weight: 800;
     -fx-font-size: 18;
-    -fx-text-fill: #363636;
+    -fx-text-fill: #ffffff;
 }

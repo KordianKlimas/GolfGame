@@ -2,12 +2,9 @@ package com.kentwentyfour.project12;
 
 import com.kentwentyfour.project12.presentation.controllers.BaseController;
 import javafx.application.Application;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.StackPane;
-import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -33,12 +30,8 @@ public class MainApplication extends Application {
         this.stage = primaryStage;
         // Set the title of the stage
         stage.setTitle("Putting Game | Group 24");
-        // Set the stage properties
-        stage.setWidth(800);
-        stage.setHeight(600);
-        stage.setFullScreen(false);
         // Show the menu
-        showStart();
+        showGameSetupMenu();
     }
 
     /**
@@ -85,19 +78,8 @@ public class MainApplication extends Application {
     /**
      * Show the Menu View in the stage
      */
-    public void showStart() {
-        showView("views/start-view.fxml", "css/menu.css");
-    }
-
     public void showGameSetupMenu() {
-        showView("views/game-setup-menu.fxml", "css/setup-menu.css");
-    }
-
-    /**
-     * Exit the program
-     */
-    public void exit() {
-        stage.close();
+        showView("views/game-setup-menu.fxml", "css/menu.css");
     }
 
 }

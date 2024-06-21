@@ -1,14 +1,10 @@
 package com.kentwentyfour.project12.presentation.controllers;
 
-import com.kentwentyfour.project12.Bots.Algorithms.AStarAlgorithm;
-import com.kentwentyfour.project12.Bots.Algorithms.Node;
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.obstacles.ObstacleArea;
-import com.kentwentyfour.project12.gameobjects.matrixmapobjects.obstacles.Water;
 import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
 import com.kentwentyfour.project12.gameobjects.movableobjects.Hole;
 import com.kentwentyfour.project12.gameobjects.MapManager;
 import com.kentwentyfour.project12.gameobjects.movableobjects.ReboundingObstacle;
-import com.kentwentyfour.project12.gameobjects.movableobjects.Tree;
 import com.kentwentyfour.project12.physicsengine.PhysicsEngine;
 import com.kentwentyfour.project12.ReferenceStore;
 import com.kentwentyfour.project12.presentation.controllers.maps.GameSetupLevels;
@@ -26,14 +22,11 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 import static com.kentwentyfour.project12.Utilities.strToDouble;
 
 public class GameSetupController extends BaseController {
 
-    @FXML
-    private ComboBox<String> gameComboBox;
     @FXML
     private ComboBox<String> levelComboBox;
 
@@ -65,7 +58,6 @@ public class GameSetupController extends BaseController {
     private void initialize() {
         // Initialize ComboBox with difficulty levels
         levelComboBox.getItems().addAll("TestMap_1", "TestMap_2", "TestMap_3","TestMap_4 cool map ^-^","test_obstacleArea");
-        gameComboBox.getItems().addAll("Single Player", "Multiplayer");
         GameSetupLevels.initializePredefinedSets();
         // Set default values based on selected difficulty level
         levelComboBox.setOnAction(event -> {
@@ -92,7 +84,6 @@ public class GameSetupController extends BaseController {
     @FXML
     protected void onStartGameButtonClick() {
         //gets all entered variables
-        String selectedGame = gameComboBox.getValue();
         String selectedLevel = levelComboBox.getValue();
         double startX = strToDouble(startXField.getText().isEmpty() ? "1" : startXField.getText());
         double startY = strToDouble(startYField.getText().isEmpty() ? "1" : startYField.getText());
@@ -179,7 +170,7 @@ public class GameSetupController extends BaseController {
             // Show the settings stage
             settingsStage.setTitle("Settings");
             settingsStage.setScene(new Scene(root));
-            root.setStyle("-fx-background-color: #4a9183;");
+            root.setStyle("-fx-background-color: #72A361;");
 
             settingsStage.show();
 

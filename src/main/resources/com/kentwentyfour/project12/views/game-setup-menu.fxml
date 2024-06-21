@@ -1,70 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
 
-<VBox  style=" -fx-background-color: #4a9183;" alignment="CENTER" VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kentwentyfour.project12.presentation.controllers.GameSetupController"  stylesheets="@../css/style.css">
-    <StackPane>
+<AnchorPane maxHeight="670.0" maxWidth="580.0" prefHeight="670.0" prefWidth="580.0" style="-fx-background-color: #72A361;" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kentwentyfour.project12.presentation.controllers.GameSetupController">
+   <children>
+      <AnchorPane layoutX="347.0" layoutY="107.0" prefHeight="212.0" prefWidth="178.0" style="-fx-background-color: #496E41;">
+         <children>
+            <Text fill="WHITE" layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-regular,text-title " text="Hole" textAlignment="CENTER" wrappingWidth="60.0" />
 
-        <GridPane  hgap="25.0" vgap="15.0" style="-fx-padding: 30px 0 0 0;">
-        <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            </columnConstraints>
-            <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                   <TextField fx:id="targetRadiusField" layoutX="95.0" layoutY="46.0" maxWidth="60.0" styleClass="text-field-common" />
+                 <TextField fx:id="targetXField" layoutX="95.0" layoutY="98.0" maxWidth="60.0" styleClass="text-field-common" />
+                 <TextField fx:id="targetYField" layoutX="95.0" layoutY="151.0" maxWidth="60.0" styleClass="text-field-common" />
+            <Text fill="WHITE" layoutX="29.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-regular " text="Start X " wrappingWidth="60.0" />
+            <Text fill="WHITE" layoutX="29.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-regular " text="Radius" wrappingWidth="60.0" />
+            <Text fill="WHITE" layoutX="29.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-regular " text="Start Y" wrappingWidth="60.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="54.0" layoutY="107.0" prefHeight="212.0" prefWidth="178.0" style="-fx-background-color: #496E41;">
+         <children>
+            <Text fill="WHITE" layoutX="25.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-regular " text="Start X " wrappingWidth="60.0" />
+            <Text fill="WHITE" layoutX="3.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-regular,text-title" text="Ball" textAlignment="CENTER" wrappingWidth="60.0" />
+            <Text fill="WHITE" layoutX="25.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-regular " text="Radius" wrappingWidth="60.0" />
 
-            </rowConstraints>
+                                         <TextField fx:id="ballRadiusField" layoutX="94.0" layoutY="48.0" maxWidth="60.0" styleClass="text-field-common" />
+                 <TextField fx:id="startXField" layoutX="94.0" layoutY="101.0" maxWidth="60.0" styleClass="text-field-common" />
+                 <TextField fx:id="startYField" layoutX="94.0" layoutY="154.0" maxWidth="60.0" prefWidth="68.0" styleClass="text-field-common" />
+            <Text fill="WHITE" layoutX="25.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-regular " text="Start Y" wrappingWidth="60.0" />
+         </children>
+      </AnchorPane>
 
-                <ComboBox fx:id="gameComboBox" styleClass="combo-box-common" promptText="Select Mode" GridPane.columnIndex="1" VBox.vgrow="ALWAYS"/>
-                <ComboBox  fx:id="levelComboBox" styleClass="combo-box-common" promptText="Select Map" GridPane.columnIndex="2" VBox.vgrow="ALWAYS">
-                    <VBox.margin>
-                        <Insets />
-                    </VBox.margin>
-                    <GridPane.margin>
-                        <Insets right="5.0" />
-                    </GridPane.margin>
-                </ComboBox>
+                             <ComboBox fx:id="levelComboBox" layoutX="191.0" layoutY="27.0" prefHeight="50.0" prefWidth="259.0" promptText="Select Ready Map" styleClass="combo-box-common" />
 
-                <TextField styleClass="text-field-common"  fx:id="ballRadiusField" promptText="Ball Radius" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                <TextField styleClass="text-field-common" fx:id="startXField" promptText="Start X" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
-                <TextField styleClass="text-field-common" fx:id="startYField" promptText="Start Y" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                   <Button layoutX="244.0" layoutY="599.0" onAction="#onStartGameButtonClick" prefHeight="30.0" prefWidth="103.0" styleClass="button-common" text="Start Game" />
+      <AnchorPane layoutX="54.0" layoutY="333.0" prefHeight="162.0" prefWidth="230.0" style="-fx-background-color: #496E41;">
+         <children>
+            <Text fill="WHITE" layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-regular,text-title" text="Sand" textAlignment="CENTER" wrappingWidth="60.0" />
+            <Text fill="WHITE" layoutX="14.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-regular " text="Kinetic Friction " wrappingWidth="120.0" />
+            <Text fill="WHITE" layoutX="14.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-regular " text="Static Friction " wrappingWidth="120.0" />
+                 <TextField fx:id="staticfrictiongrass" layoutX="136.0" layoutY="107.0" maxWidth="60.0" prefWidth="48.0" styleClass="text-field-common" />
 
-                <TextField styleClass="text-field-common" fx:id="targetRadiusField" promptText="Target Radius" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                <TextField styleClass="text-field-common" fx:id="targetXField" promptText="Target X" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                <TextField styleClass="text-field-common"  fx:id="targetYField" promptText="Target Y" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-
-
-
-                <TextField styleClass="text-field-common" fx:id="formulaField" promptText="Formula" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                <TextField styleClass="text-field-common" fx:id="kineticfrictiongrass" promptText="Kinetic Friction Grass" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                <TextField styleClass="text-field-common" fx:id="kineticfrictionsand" prefHeight="31.0" prefWidth="148.0" promptText="Kinetic Friction Grass " GridPane.columnIndex="1" GridPane.rowIndex="8" />
-
-                <TextField styleClass="text-field-common" fx:id="staticfrictionsand" promptText="Static Friction Sand" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-                <TextField styleClass="text-field-common" fx:id="staticfrictiongrass" promptText="Static Friction Sand " GridPane.columnIndex="2" GridPane.rowIndex="8" />
-
-                <Button  styleClass="button-common"  onAction="#onStartGameButtonClick" prefHeight="30.0" prefWidth="103.0" text="Start Game" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                                   <TextField fx:id="staticfrictionsand" layoutX="136.0" layoutY="45.0" maxWidth="60.0" styleClass="text-field-common" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="295.0" layoutY="333.0" prefHeight="162.0" prefWidth="230.0" style="-fx-background-color: #496E41;">
+         <children>
+            <Text fill="WHITE" layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-regular,text-title" text="Grass" textAlignment="CENTER" wrappingWidth="60.0" />
+            <Text fill="WHITE" layoutX="14.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-regular " text="Kinetic Friction " wrappingWidth="120.0" />
+            <Text fill="WHITE" layoutX="14.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-regular " text="Static Friction " wrappingWidth="120.0" />
+                 <TextField fx:id="kineticfrictionsand" layoutX="137.0" layoutY="44.0" maxWidth="60.0" prefHeight="31.0" prefWidth="60.0" styleClass="text-field-common" />
+                 <TextField fx:id="kineticfrictiongrass" layoutX="137.0" layoutY="106.0" maxWidth="60.0" prefWidth="60.0" styleClass="text-field-common" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="55.0" layoutY="518.0" prefHeight="66.0" prefWidth="471.0" style="-fx-background-color: #496E41;">
+         <children>
+            <Text fill="WHITE" layoutX="12.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-regular,text-title" text="Formula" textAlignment="CENTER" wrappingWidth="80.0" />
 
 
-                <StackPane prefHeight="18.0" prefWidth="73.0" GridPane.columnIndex="2" GridPane.rowIndex="12" />
-        </GridPane>
-    </StackPane>
-</VBox>
+
+                                   <TextField fx:id="formulaField" layoutX="128.0" layoutY="15.0" maxWidth="320.0" minWidth="320.0" prefHeight="25.0" prefWidth="320.0" styleClass="text-field-common" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="200.0" fitWidth="125.0" layoutX="228.0" layoutY="108.0">
+         <image>
+            <Image url="@../images/pahtImage.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
