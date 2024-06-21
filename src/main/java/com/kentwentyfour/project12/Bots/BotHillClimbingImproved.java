@@ -20,6 +20,8 @@ public class BotHillClimbingImproved implements BotPlayer {
     private List<Node> aStarPath;
     private GolfBall ball;
     private int count = 0;
+    private long computationTime;
+    private int numberOfTurns = 1;
 
     public BotHillClimbingImproved() {
         this.physicsEngine = referenceStore.getPhysicsEngine();
@@ -49,6 +51,7 @@ public class BotHillClimbingImproved implements BotPlayer {
     }
 
     public CoordinatesPath calculatePath(GolfBall golfBall) {
+        long startTime = System.nanoTime();
         if (hole == null) {
             System.err.println("Hole is not initialized!");
             return null;
@@ -62,6 +65,10 @@ public class BotHillClimbingImproved implements BotPlayer {
         } else {
             System.out.println("Hill climbing found a path.");
         }
+
+        long endTime = System.nanoTime();
+        computationTime = endTime - startTime;
+
         return path;
     }
 
@@ -141,5 +148,20 @@ public class BotHillClimbingImproved implements BotPlayer {
             System.err.println("Hill climbing did not find a valid path.");
         }
         return bestPath;
+    }
+
+    @Override
+    public long getComputationTime() {
+        return computationTime;
+    }
+
+    @Override
+    public String getName() {
+        return "BasicBot";
+    }
+
+    @Override
+    public int getNumberOfTurns() {
+        return numberOfTurns;
     }
 }

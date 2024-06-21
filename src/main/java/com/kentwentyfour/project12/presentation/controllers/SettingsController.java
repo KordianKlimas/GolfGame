@@ -14,6 +14,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.Alert;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Optional;
@@ -41,6 +44,7 @@ public class SettingsController implements Initializable {
     @FXML
     private Button hit;
     // all variables
+    private  String selectedLevel;
     private int turnCount=1;
     private double startX;
     private double startY;
@@ -181,12 +185,12 @@ public class SettingsController implements Initializable {
         return alert.showAndWait();
     }
 
-    public void setInitialValues( double startX, double startY,  MapManager mapManager, PhysicsEngine physicsEngine, ArrayList<GolfBall> balls, MovableObjects hole) {
+    public void setInitialValues( double startX, double startY,  MapManager mapManager, PhysicsEngine physicsEngine, ArrayList<GolfBall> balls, String selectedLevel) {
         // Set the selected game mode
         // Set the initial positions and properties of the objects
         this.startX = startX;
         this.startY = startY;
-
+        this.selectedLevel = selectedLevel;
 
         // Set the map manager and physics engine
         this.mapManager = mapManager;
@@ -213,9 +217,29 @@ public class SettingsController implements Initializable {
             CoordinatesPath coordinatesPath = bot.calculatePath(balls.get(0));
             mapManager.animateMovableObject(balls.get(0), coordinatesPath);
             String stopping = coordinatesPath.getStoppingCondition();
+            exportExperimentData(bot,coordinatesPath,selectedLevel);
             handleStop(stopping, coordinatesPath.getPath());
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    public void exportExperimentData(BotPlayer bot, CoordinatesPath path,String selectedLevel){
+        String csvFilePath = "src/main/java/com/kentwentyfour/project12/_ExperimentsData/experiment_data.csv";
+
+        try (FileWriter writer = new FileWriter(csvFilePath, true)) {
+            // If the file doesn't exist yet, write the header
+            if (!new File(csvFilePath).exists()) {
+                writer.append("Level,BotName,ComputationTime(ms),NumberOfTurns\n");
+            }
+
+            double computationTimeMillis = bot.getComputationTime() / 1000000.0; // Convert nanoseconds to milliseconds
+            writer.append(String.format("%s,%s,%f,%d\n", selectedLevel, bot.getName(), computationTimeMillis, bot.getNumberOfTurns()));
+
+            System.out.println("Data has been appended to " + csvFilePath);
+
+        } catch (IOException e) {
+            System.err.println("Error writing to CSV file: " + e.getMessage());
         }
     }
 }

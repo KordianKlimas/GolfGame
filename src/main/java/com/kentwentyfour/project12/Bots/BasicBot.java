@@ -1,6 +1,5 @@
 package com.kentwentyfour.project12.Bots;
 
-import com.kentwentyfour.project12.gameobjects.*;
 import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
 import com.kentwentyfour.project12.gameobjects.movableobjects.Hole;
 import com.kentwentyfour.project12.physicsengine.CoordinatesPath;
@@ -14,10 +13,12 @@ public class BasicBot implements BotPlayer {
 
     private ReferenceStore referenceStore = ReferenceStore.getInstance();
     private PhysicsEngine physicsEngine = referenceStore.getPhysicsEngine();
-
+    private long computationTime;
+    private int numberOfTurns = 1;
     public BasicBot() {}
 
     public CoordinatesPath calculatePath(GolfBall golfBall) {
+        long startTime = System.nanoTime();
         Hole hole = referenceStore.getHole();
         CoordinatesPath path = null;
         double targetX = hole.getX();
@@ -31,9 +32,13 @@ public class BasicBot implements BotPlayer {
         double[] velocities = calculateVelocities(angleRadians, direction, targetX, targetY, golfBall);
         double velocityX = velocities[0];
         double velocityY = velocities[1];
-        System.out.println(velocityX + " " + velocityY);
+        //System.out.println(velocityX + " " + velocityY);
          path = physicsEngine.calculateCoordinatePath(golfBall, velocityX, velocityY);
-        System.err.println(Arrays.deepToString(path.getPath()));
+        //System.err.println(Arrays.deepToString(path.getPath()));
+
+        long endTime = System.nanoTime();
+        computationTime = endTime - startTime;
+
         return path;
     //    return physicsEngine.calculateCoordinatePath(golfBall, velocityX, velocityY);
     }
@@ -107,4 +112,18 @@ public class BasicBot implements BotPlayer {
         return (angle * Math.PI) / 180;
     }
 
+    @Override
+    public long getComputationTime() {
+        return computationTime;
+    }
+
+    @Override
+    public String getName() {
+        return "BasicBot";
+    }
+
+    @Override
+    public int getNumberOfTurns() {
+        return numberOfTurns;
+    }
 }

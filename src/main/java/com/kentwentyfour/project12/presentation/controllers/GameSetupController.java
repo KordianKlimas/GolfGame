@@ -178,7 +178,7 @@ public class GameSetupController extends BaseController {
             // Call setInitialValues for SettingsController
             SettingsController settingsController = settingsLoader.getController();
 
-            settingsController.setInitialValues( startX, startY,  mapManager, physicsEngine, balls,hole);
+            settingsController.setInitialValues( startX, startY,  mapManager, physicsEngine, balls,selectedLevel);
 
         } catch (IOException e) {
             e.printStackTrace();

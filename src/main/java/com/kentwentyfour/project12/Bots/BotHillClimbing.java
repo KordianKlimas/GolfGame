@@ -12,6 +12,8 @@ public class BotHillClimbing implements BotPlayer {
     private PhysicsEngine physicsEngine;
     private ReferenceStore referenceStore = ReferenceStore.getInstance();
     private Hole hole;
+    private long computationTime;
+    private int numberOfTurns = 1;
 
     public BotHillClimbing() {
         this.physicsEngine = referenceStore.getPhysicsEngine();
@@ -47,6 +49,7 @@ public class BotHillClimbing implements BotPlayer {
         return Math.sqrt(minDistanceSquared);
     }
     private CoordinatesPath hillClimbing(GolfBall golfBall){
+        long startTime = System.nanoTime();
         double bestDistance = Double.POSITIVE_INFINITY;
         CoordinatesPath bestPath = null;
         int max = 100;
@@ -92,6 +95,24 @@ public class BotHillClimbing implements BotPlayer {
         if (bestPath ==null){
             System.err.println("Hill climbing did not find a valid path.");
         }
+
+        long endTime = System.nanoTime();
+        computationTime = endTime - startTime;
+
         return bestPath;
+    }
+
+    @Override
+    public long getComputationTime() {
+        return computationTime;
+    }
+
+    @Override
+    public String getName() {
+        return "BasicBot";
+    }
+    @Override
+    public int getNumberOfTurns() {
+        return numberOfTurns;
     }
 }
