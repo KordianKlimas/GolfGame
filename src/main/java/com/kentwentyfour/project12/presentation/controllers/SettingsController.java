@@ -54,7 +54,7 @@ public class SettingsController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        botChooseBox.getItems().addAll("BasicBot","BotHillClimbing","BotHillClimbingImproved" );
+        botChooseBox.getItems().addAll("BasicBot","AdvancedBot","BotHillClimbingImproved" );
         vy.valueProperty().addListener(new ChangeListener<Number>() {
             @Override
             public void changed(ObservableValue<? extends Number> observableValue, Number oldValue, Number newValue) {
@@ -206,7 +206,7 @@ public class SettingsController implements Initializable {
             switch (selectedBot) {
                 case "BotHillClimbingImproved" -> bot = new BotHillClimbingImproved();
                 case "BasicBot" -> bot = new BasicBot();
-                case "BotHillClimbing" -> bot = new BotHillClimbing();
+                case "AdvancedBot" -> bot = new BotHillClimbing();
                 default -> bot = new BotHillClimbingImproved();
             }
 

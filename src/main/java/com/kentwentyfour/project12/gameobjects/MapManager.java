@@ -27,8 +27,8 @@ import javafx.util.Duration;
  *  Allows managing the state of all objects in the visualised in game
  */
 public class MapManager {
-    public final int WIDTH = 800;
-    public final int HEIGHT = 800;
+    public final int WIDTH = 1000;
+    public final int HEIGHT = 1000;
     private final int matrixSize = 101;//101
     private double mapWidth = 10; // in meters ex. 10 means coordinates from -5 to 5
     double scaleFactor = WIDTH / mapWidth; // scalar  to  match [m]  with the pixel size
