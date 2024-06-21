@@ -68,7 +68,7 @@ public class MapManager {
                         terrainData[row][col] = new Grass(height);
                     }
                 } catch (EmptyStackException var7) {
-                    System.err.println(STR."Error computing height at row \{row}, col \{col}: \{var7.getMessage()}");
+                    //System.err.println(STR."Error computing height at row \{row}, col \{col}: \{var7.getMessage()}");
                     terrainData[row][col] = new Grass(height);
                 }
             }
