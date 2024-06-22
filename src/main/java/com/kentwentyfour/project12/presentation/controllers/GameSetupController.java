@@ -57,8 +57,11 @@ public class GameSetupController extends BaseController {
     @FXML
     private void initialize() {
         // Initialize ComboBox with difficulty levels
-        levelComboBox.getItems().addAll("TestMap_1", "TestMap_2", "TestMap_3","TestMap_4 cool map ^-^","test_obstacleArea");
         GameSetupLevels.initializePredefinedSets();
+
+        String[] mapNames =GameSetupLevels.getLevelNames();
+        levelComboBox.getItems().addAll(mapNames);
+
         // Set default values based on selected difficulty level
         levelComboBox.setOnAction(event -> {
             String selectedLevel = levelComboBox.getValue();

@@ -6,6 +6,7 @@ import com.kentwentyfour.project12.gameobjects.matrixmapobjects.obstacles.Water;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class GameSetupLevels {
     private static final Map<String, GameSetupVariables> predefinedSets = new HashMap<>();
@@ -18,12 +19,20 @@ public class GameSetupLevels {
         predefinedSets.put("TestMap_2", new GameSetupVariables( 2.0, 2.0, 3.0, 3.0, 0.1, 0.2, 0.3, 0.15, 0.15, 0.1, "0.4 * ( 0.9 -  2.718 ^ ( (  x ^ 2 + y ^ 2 ) / -8 ) )"));
         predefinedSets.put("TestMap_3", new GameSetupVariables( 2.0, 2.0, 3.0, 3.0, 0.1, 0.2, 0.3, 0.15, 0.15, 0.1, "sin( ( x - y ) / 7 ) + 0.5 "));
         predefinedSets.put("TestMap_4 cool map ^-^", new GameSetupVariables(-4, -4, 4.0, 4.0, 0.15, 0.25, 0.4, 0.2, 0.2, 0.15, " 0.17 * sin( 0.1 * x ) * sin( 0.1 * y ) - 0.12 * cos( 0.5 * x ) * cos( 0.5 * y ) + .02"));
-        predefinedSets.put("test_obstacleArea", new GameSetupVariables( 0.0, -3.0, 0.0, 3.0, 0.05, 0.15, 0.2, 0.1, 0.1, 0.05, "1",
+        predefinedSets.put("test_obstacleArea_1", new GameSetupVariables( 0.0, -3.0, 0.0, 3.0, 0.05, 0.15, 0.2, 0.1, 0.1, 0.05, "1",
             List.of(
                     new Water(-1,1,3.4,.1),
                     new Water(-4,0,4,.1),
                     new Water(-1,-1,5,.1)
             )
+        ));
+
+        predefinedSets.put("test_obstacleArea_2", new GameSetupVariables( 0.0, -3.0, 0.0, 3.0, 0.05, 0.15, 0.2, 0.1, 0.1, 0.05, "1",
+                List.of(
+                        new Water(-1,1,6,.1),
+                        new Water(-5,0,6,.1),
+                        new Water(-1,-1,6,.1)
+                )
         ));
     }
     /**
@@ -33,5 +42,9 @@ public class GameSetupLevels {
      */
     public static GameSetupVariables getVariablesForLevel(String selectedLevel) {
         return predefinedSets.get(selectedLevel);
+    }
+    public  static String[] getLevelNames(){
+        Set<String> keySet = predefinedSets.keySet();
+        return keySet.toArray(new String[0]);
     }
 }

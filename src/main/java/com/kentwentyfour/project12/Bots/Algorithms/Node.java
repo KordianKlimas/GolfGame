@@ -8,7 +8,18 @@ public class Node {
     public double coordX;
     public double coordY;
     double currentCost, expectedCost, totalCost;
+
+    double topCost=0;
+    double topRightCost=0;
+    double rightCost =0;
+    double bottomRightCost=0;
+    double bottomCost=0;
+    double bottomLeftCost=0;
+    double leftCost=0;
+    double topLeftCost=0;
+    String currentDirection;
     Node parent;
+    Node lastDirectionChangingNode;
 
     // Constructor for matrix coordinates
     public Node(int matrixX, int matrixY) {

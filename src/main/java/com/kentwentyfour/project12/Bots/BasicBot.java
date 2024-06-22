@@ -32,9 +32,9 @@ public class BasicBot implements BotPlayer {
         double[] velocities = calculateVelocities(angleRadians, direction, targetX, targetY, golfBall);
         double velocityX = velocities[0];
         double velocityY = velocities[1];
-        //System.out.println(velocityX + " " + velocityY);
+        System.out.println(velocityX + " " + velocityY);
          path = physicsEngine.calculateCoordinatePath(golfBall, velocityX, velocityY);
-        //System.err.println(Arrays.deepToString(path.getPath()));
+        System.err.println(Arrays.deepToString(path.getPath()));
 
         long endTime = System.nanoTime();
         computationTime = endTime - startTime;

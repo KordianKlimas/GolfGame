@@ -27,7 +27,7 @@ import javafx.util.Duration;
 public class MapManager {
     public final int WIDTH = 1000;
     public final int HEIGHT = 1000;
-    private final int matrixSize = 100;//101
+    private final int matrixSize = 101;//101
     private double mapWidth = 10; // in meters ex. 10 means coordinates from -5 to 5
     double scaleFactor = WIDTH / mapWidth; // scalar  to  match [m]  with the pixel size
     private MatrixMapArea[][] terrainData;
@@ -178,11 +178,11 @@ public class MapManager {
     public double[] matrixToCoordinates(int x, int y) {
         double[] arr = new double[2];
         int midPoint = (int) (this.matrixSize / 2.0 - 0.5); // index of the middle of matrix. We assume it is (0 [m],0 [m])
-        double changeLimit = (this.matrixSize - 1) / this.mapWidth; // calculates how much coordinate (x or y) must change to change the cell in matrix
+        double changeLimit = (this.matrixSize) / this.mapWidth; // calculates how much coordinate (x or y) must change to change the cell in matrix
 
         // Calculate coordinates
-        arr[0] = (x - midPoint) / changeLimit;
-        arr[1] = (y - midPoint) / -changeLimit;
+        arr[0] = (x - midPoint ) / changeLimit;
+        arr[1] = (y - midPoint ) / -changeLimit;
 
         return arr;
     }

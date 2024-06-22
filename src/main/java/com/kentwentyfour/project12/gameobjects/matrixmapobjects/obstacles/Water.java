@@ -12,10 +12,7 @@ public class Water implements ObstacleArea {
     private double heightShape=0;
     private  double height;
 
-    public Water(double height) {
-        this.height = height;
-
-    }
+    public Water(double height) {this.height = height;}
     public Water(double coordinateX1, double coordinateY1, double width, double height) {
         this.coordinateX1 = coordinateX1;
         this.coordinateY1 = coordinateY1;

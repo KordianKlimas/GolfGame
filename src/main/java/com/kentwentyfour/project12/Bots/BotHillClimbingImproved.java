@@ -40,7 +40,7 @@ public class BotHillClimbingImproved implements BotPlayer {
 
         // decrease range for more midpoints 1=max 100=min
         AStarAlgorithm astarAlgorithm = new AStarAlgorithm();
-        List<Node> aStarPath = astarAlgorithm.findPath(mapGenerator, startX1, startY1, targetX1, targetY1, 20);
+        List<Node> aStarPath = astarAlgorithm.findPath(mapGenerator, startX1, startY1, targetX1, targetY1);
         this.aStarPath = aStarPath;
         System.out.println("A* Path coordinates:");
         for (Node node : aStarPath) {
@@ -81,7 +81,7 @@ public class BotHillClimbingImproved implements BotPlayer {
         double holeX = holeCoords[0];
         double holeY = holeCoords[1];
 
-        System.out.println("Checking path for " + holeX + " " + holeY);
+        //System.out.println("Checking path for " + holeX + " " + holeY);
 
         double minDistanceSquared = Double.POSITIVE_INFINITY;
 
