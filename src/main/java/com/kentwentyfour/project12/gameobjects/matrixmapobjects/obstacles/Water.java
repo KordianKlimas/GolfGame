@@ -8,15 +8,19 @@ public class Water implements ObstacleArea {
     }
     private double coordinateX1=0;
     private double coordinateY1=0;
-    private double width=0;
-    private double height=0;
+    private double widthShape=0;
+    private double heightShape=0;
+    private  double height;
 
-    public Water() {}
+    public Water(double height) {
+        this.height = height;
+
+    }
     public Water(double coordinateX1, double coordinateY1, double width, double height) {
         this.coordinateX1 = coordinateX1;
         this.coordinateY1 = coordinateY1;
-        this.width = width;
-        this.height = height;
+        this.widthShape = width;
+        this.heightShape = height;
     }
 
     // Getters
@@ -28,11 +32,11 @@ public class Water implements ObstacleArea {
         return coordinateY1;
     }
 
-    public double getWidth() {
-        return width;
+    public double getShapeWidth() {
+        return widthShape;
     }
 
-    public double getHeight() {
-        return height;
+    public double getShapeHeight() {
+        return heightShape;
     }
 }

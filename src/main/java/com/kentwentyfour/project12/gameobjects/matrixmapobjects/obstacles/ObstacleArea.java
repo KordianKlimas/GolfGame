@@ -9,6 +9,6 @@ import javafx.scene.paint.Color;
 public interface ObstacleArea extends MatrixMapArea {
     double getCoordinateX1();
     double getCoordinateY1();
-    double getWidth();
-    double getHeight();
+    double getShapeWidth();
+    double getShapeHeight();
 }

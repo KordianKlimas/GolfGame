@@ -3,11 +3,9 @@ import java.util.ArrayList;
 import java.util.EmptyStackException;
 import java.util.List;
 
-import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.AreaType;
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.Grass;
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.Sand;
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.MatrixMapArea;
-import com.kentwentyfour.project12.gameobjects.matrixmapobjects.obstacles.ObstacleArea;
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.obstacles.Water;
 import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
 import com.kentwentyfour.project12.gameobjects.movableobjects.MovableObjects;
@@ -29,7 +27,7 @@ import javafx.util.Duration;
 public class MapManager {
     public final int WIDTH = 1000;
     public final int HEIGHT = 1000;
-    private final int matrixSize = 101;//101
+    private final int matrixSize = 100;//101
     private double mapWidth = 10; // in meters ex. 10 means coordinates from -5 to 5
     double scaleFactor = WIDTH / mapWidth; // scalar  to  match [m]  with the pixel size
     private MatrixMapArea[][] terrainData;
@@ -61,9 +59,9 @@ public class MapManager {
                 double height = this.computeHeight(x, y);
                 try {
                     if (height < 0.0) {
-                        terrainData[row][col] = new Water();
+                        terrainData[row][col] = new Water(height);
                     } else if (height < 0.3) {
-                        terrainData[row][col] = new Sand();
+                        terrainData[row][col] = new Sand(height);
                     } else {
                         terrainData[row][col] = new Grass(height);
                     }

@@ -142,7 +142,7 @@ public class GameSetupController extends BaseController {
                 GameSetupVariables variables = GameSetupLevels.getVariablesForLevel(selectedLevel);
                 if (variables != null) {
                     for(ObstacleArea areaObstacles: variables.getAreaObstacles()){
-                        mapManager.addArea(areaObstacles,areaObstacles.getCoordinateX1(),areaObstacles.getCoordinateY1(),areaObstacles.getWidth(),areaObstacles.getHeight());
+                        mapManager.addArea(areaObstacles,areaObstacles.getCoordinateX1(),areaObstacles.getCoordinateY1(),areaObstacles.getShapeWidth(),areaObstacles.getShapeHeight());
                     }
                     for(ReboundingObstacle reboundingObstacles: variables.getReboundingObstacles()){
                         mapManager.addObstacle(reboundingObstacles);

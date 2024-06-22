@@ -5,8 +5,16 @@ import javafx.scene.paint.Color;
 public class Sand implements AreaType {
     public static double kinetic_Friction = 0.1; // default value
     public static double static_Friction = 0.3; // default value
-    private Color color = Color.SANDYBROWN;
+    private Color color;
 
+    public Sand(double height){
+        this.color = Color.rgb	(225,191,146);
+        if (height < 0.1) {
+            this.color = Color.rgb(246,215,176);
+        } else if (height < 0.2) {
+            this.color = Color.rgb(236,204,162);
+        }
+    }
     @Override
     public Color getColor() {
         return color;
