@@ -187,6 +187,8 @@ public class PhysicsEngine {
                     x_velocity = x_velocity - 2 * dotProduct * normalUnitX * restitutionCoefficient;
                     y_velocity = y_velocity - 2 * dotProduct * normalUnitY * restitutionCoefficient;
 
+
+
                     // Update coordinates based on previous state
                     if (i > 0) {
                         x_coordinate = results[3][i - 1];

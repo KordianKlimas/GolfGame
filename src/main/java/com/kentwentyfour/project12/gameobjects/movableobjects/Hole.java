@@ -1,6 +1,9 @@
 package com.kentwentyfour.project12.gameobjects.movableobjects;
 
+import javafx.scene.Node;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 
 public class Hole implements MovableObjects {
@@ -8,6 +11,7 @@ public class Hole implements MovableObjects {
     private double coordinate_Y;
     private double radius;
     private Circle visualRepresentation;
+    private Image nodeImage;
     /**
      * Creates Hole object
      *
@@ -19,13 +23,15 @@ public class Hole implements MovableObjects {
         this.coordinate_X = coordinate_X;
         this.coordinate_Y = coordinate_Y;
         this.radius = radius;
+        this.nodeImage = new Image("file:src/main/java/com/kentwentyfour/project12/gameobjects/textures/hole_texture1.png");
         this.visualRepresentation = createVisualRepresentation();
     }
 
 
+
     public double getDistanceFromOrigin(){
         // Circle drawn by middle coordinates
-        return radius;
+        return 0;
     }
     /**
      * Create a graphical representation of the ball
@@ -33,7 +39,8 @@ public class Hole implements MovableObjects {
      */
     private Circle createVisualRepresentation() {
         Circle circle = new Circle(coordinate_X, coordinate_Y, radius);
-        circle.setFill(Color.BLACK); // Set color of the ball
+        circle.setFill(Color.BLACK);
+        circle.setFill(new ImagePattern(nodeImage));
         return circle;
     }
     /**

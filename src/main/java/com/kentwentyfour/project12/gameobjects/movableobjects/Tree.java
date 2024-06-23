@@ -46,7 +46,6 @@ public class Tree implements  ReboundingObstacle {
     }
 
 
-
     public double getRestitutionCoefficient() {
         return DEFAULT_RESTITUTION_COEFFICIENT;
     }

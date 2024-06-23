@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.EmptyStackException;
 import java.util.List;
 
+import com.kentwentyfour.project12.bots.improvedbot.resources.Waypoint;
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.Grass;
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.Sand;
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.MatrixMapArea;
@@ -18,6 +19,7 @@ import javafx.animation.Timeline;
 import javafx.scene.Node;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
 
@@ -25,9 +27,9 @@ import javafx.util.Duration;
  *  Allows managing the state of all objects in the visualised in game
  */
 public class MapManager {
-    public final int WIDTH = 1000;
-    public final int HEIGHT = 1000;
-    private final int matrixSize = 101;//101
+    public final int WIDTH = 800;
+    public final int HEIGHT = 800;
+    private final int matrixSize = 100;//101
     private double mapWidth = 10; // in meters ex. 10 means coordinates from -5 to 5
     double scaleFactor = WIDTH / mapWidth; // scalar  to  match [m]  with the pixel size
     private MatrixMapArea[][] terrainData;
@@ -36,6 +38,7 @@ public class MapManager {
     ArrayList<String> CPF_parsed;
     private Pane root; // the map
     private List<MovableObjects> obstacleList = new ArrayList<>(); // List with all obstacles
+    private List<MovableObjects>  topLayerObjects = new ArrayList<>(); // List objects that must be always displayed on top
     private ReferenceStore referenceStore = ReferenceStore.getInstance();
 
 
@@ -213,7 +216,7 @@ public class MapManager {
     public  void addMovableObjectToMap (MovableObjects obj){
         Node visualRepresentation = obj.getVisualRepresentation();
         int[] pixelCoords = coordinatesToPixel(obj.getX(),obj.getY());
-        visualRepresentation.setLayoutX(pixelCoords[0]);//-obj.getDistanceFromOrigin()*this.scaleFactor); // to be used if there are any objects drawn that are not circle like
+        visualRepresentation.setLayoutX(pixelCoords[0]);//+obj.getDistanceFromOrigin()*this.scaleFactor); // to be used if there are any objects drawn that are not circle like
         visualRepresentation.setLayoutY(pixelCoords[1]);//-obj.getDistanceFromOrigin()*this.scaleFactor);
         visualRepresentation.setScaleX(this.scaleFactor);
         visualRepresentation.setScaleY(this.scaleFactor);
@@ -232,9 +235,23 @@ public class MapManager {
         visualRepresentation.setLayoutY(pixelCoords[1]);//-obj.getDistanceFromOrigin()*this.scaleFactor);
         if (!this.root.getChildren().contains(visualRepresentation)) {
             addMovableObjectToMap(obj);
+
+        }
+        updateCoordinatesOfTopLayerObjects();
+    }
+
+    /**
+     * Brings to top objects that were added to  topLayerObjects List
+     */
+    public  void  updateCoordinatesOfTopLayerObjects(){
+        for(MovableObjects obj: topLayerObjects){
+            obj.getVisualRepresentation().toFront();
         }
     }
 
+    public  void  addToTopLayerObjects(MovableObjects obj){
+        topLayerObjects.add(obj);
+    }
     /**
      * Animates movable objects on the map based on {@link CoordinatesPath}.
      *
@@ -267,6 +284,7 @@ public class MapManager {
             }
         }
         // Start the animation
+
         timeline.setCycleCount(1);
         timeline.play();
     }
@@ -277,7 +295,7 @@ public class MapManager {
      * @return
      */
     public MovableObjects checkForCollisionWithObstacle(GolfBall ball,double x_coordinate,double y_coordinate) {
-        double ballRadius = ball.getDistanceFromOrigin();
+        double ballRadius = ball.getRadius();
 
         for (MovableObjects obj2 : this.obstacleList) {
             if(obj2 instanceof Tree){
@@ -347,4 +365,25 @@ public class MapManager {
             }
         }
     }
+
+    public void drawAStarPath(List<Waypoint> path) {
+        if (path == null || path.isEmpty()) {
+            return;
+        }
+
+        for (int i = 0; i < path.size() - 1; i++) {
+            Waypoint startCoords = path.get(i);
+            Waypoint endCoords = path.get(i + 1);
+
+            int[] startPixels = coordinatesToPixel(startCoords.x, startCoords.y);
+            int[] endPixels = coordinatesToPixel(endCoords.x, endCoords.y);
+
+            Line line = new Line(startPixels[0], startPixels[1], endPixels[0], endPixels[1]);
+            line.setStroke(Color.RED); // Choose any color you prefer for the path
+            line.setStrokeWidth(2); // Adjust the width as needed
+
+            root.getChildren().add(line);
+        }
+    }
+
 }

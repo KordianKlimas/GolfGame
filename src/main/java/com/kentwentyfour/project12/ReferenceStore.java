@@ -1,6 +1,4 @@
 package com.kentwentyfour.project12;
-import com.kentwentyfour.project12.Bots.Algorithms.AStarAlgorithm;
-import com.kentwentyfour.project12.Bots.Algorithms.Node;
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.Grass;
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.Sand;
 import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;

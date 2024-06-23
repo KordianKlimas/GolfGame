@@ -1,7 +1,5 @@
-package com.kentwentyfour.project12.Bots;
+package com.kentwentyfour.project12.bots;
 
-import com.kentwentyfour.project12.Bots.Algorithms.AStarAlgorithm;
-import com.kentwentyfour.project12.Bots.Algorithms.Node;
 import com.kentwentyfour.project12.gameobjects.*;
 import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
 import com.kentwentyfour.project12.gameobjects.movableobjects.Hole;
@@ -9,56 +7,23 @@ import com.kentwentyfour.project12.physicsengine.CoordinatesPath;
 import com.kentwentyfour.project12.physicsengine.PhysicsEngine;
 import com.kentwentyfour.project12.ReferenceStore;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class BotHillClimbingImproved implements BotPlayer {
+public class BotHillClimbing implements BotPlayer {
     private MapManager mapGenerator;
     private PhysicsEngine physicsEngine;
     private ReferenceStore referenceStore = ReferenceStore.getInstance();
-    private Hole hole;
-    private List<Node> aStarPath;
-    private GolfBall ball;
-    private int count = 0;
+    private double targetX;
+    private double targetY;
     private long computationTime;
     private int numberOfTurns = 1;
 
-    public BotHillClimbingImproved() {
+    public BotHillClimbing() {
         this.physicsEngine = referenceStore.getPhysicsEngine();
         this.mapGenerator = referenceStore.getMapManager();
-        this.hole = referenceStore.getHole();
-        ArrayList<GolfBall> golfBallArrayList = referenceStore.getGolfballList();
-        this.ball = golfBallArrayList.getFirst() ;
-
-        int[] startMatrix = mapGenerator.coordinatesToMatrix(ball.getX(), ball.getY());
-        int[] targetMatrix = mapGenerator.coordinatesToMatrix(hole.getX(), hole.getY());
-
-        int startX1 = startMatrix[0];
-        int startY1 = startMatrix[1];
-        int targetX1 = targetMatrix[0];
-        int targetY1 = targetMatrix[1];
-
-        // decrease range for more midpoints 1=max 100=min
-        AStarAlgorithm astarAlgorithm = new AStarAlgorithm();
-        List<Node> aStarPath = astarAlgorithm.findPath(mapGenerator, startX1, startY1, targetX1, targetY1);
-        this.aStarPath = aStarPath;
-        System.out.println("A* Path coordinates:");
-        for (Node node : aStarPath) {
-            double[] coords = mapGenerator.matrixToCoordinates(node.matrixX, node.matrixY);
-            System.out.println("Node: (" + coords[0] + ", " + coords[1] + ")");
-        }
-
     }
-
-    public CoordinatesPath calculatePath(GolfBall golfBall) {
+    public CoordinatesPath calculatePath(GolfBall golfBall,double targetX, double targetY) {
         long startTime = System.nanoTime();
-        if (hole == null) {
-            System.err.println("Hole is not initialized!");
-            return null;
-        }
-        if (count < aStarPath.size() - 1) {
-            count++;
-        }
+        this.targetX = targetX;
+        this.targetY = targetY;
         CoordinatesPath path = hillClimbing(golfBall);
         if (path == null) {
             System.err.println("Hill climbing did not find a valid path.");
@@ -68,20 +33,10 @@ public class BotHillClimbingImproved implements BotPlayer {
 
         long endTime = System.nanoTime();
         computationTime = endTime - startTime;
-
         return path;
     }
-
     public double checkDistanceFromHole(CoordinatesPath coordinatesPath) {
         double[][] path = coordinatesPath.getPath();
-
-        // Convert matrix coordinates to physical coordinates
-        Node targetNode = aStarPath.get(count);
-        double[] holeCoords = mapGenerator.matrixToCoordinates(targetNode.matrixX, targetNode.matrixY);
-        double holeX = holeCoords[0];
-        double holeY = holeCoords[1];
-
-        //System.out.println("Checking path for " + holeX + " " + holeY);
 
         double minDistanceSquared = Double.POSITIVE_INFINITY;
 
@@ -89,13 +44,13 @@ public class BotHillClimbingImproved implements BotPlayer {
             double ballX = path[0][i];
             double ballY = path[1][i];
 
-            double distanceSquared = (ballX - holeX) * (ballX - holeX) + (ballY - holeY) * (ballY - holeY);
+            double distanceSquared = (ballX - targetX) * (ballX - targetX) + (ballY - targetY) * (ballY - targetY);
             minDistanceSquared = Math.min(minDistanceSquared, distanceSquared);
         }
         return Math.sqrt(minDistanceSquared);
     }
+    private CoordinatesPath hillClimbing(GolfBall golfBall){
 
-    private CoordinatesPath hillClimbing(GolfBall golfBall) {
         double bestDistance = Double.POSITIVE_INFINITY;
         CoordinatesPath bestPath = null;
         int max = 100;
@@ -104,16 +59,10 @@ public class BotHillClimbingImproved implements BotPlayer {
         double stepDecay = 0.99;
         double acceptableDistance = 0.15;
 
-        // Convert matrix coordinates to physical coordinates for the target node
-        Node targetNode = aStarPath.get(count);
-        double[] targetCoords = mapGenerator.matrixToCoordinates(targetNode.matrixX, targetNode.matrixY);
-        double targetX = targetCoords[0];
-        double targetY = targetCoords[1];
+        double BorderX =targetX - golfBall.getX();
+        double BorderY =targetY - golfBall.getY();
 
-        double BorderX = targetX - golfBall.getX();
-        double BorderY = targetY - golfBall.getY();
-
-        for (int restart = 0; restart < restartLimit; restart++) {
+        for (int restart = 0; restart< restartLimit;restart++) {
             double[] veloc = {(Math.random() * BorderX), (Math.random() * BorderY)};
             for (int i = 0; i < max; i++) {
                 double stepSize = initialStepSize * Math.pow(stepDecay, i);
@@ -123,7 +72,7 @@ public class BotHillClimbingImproved implements BotPlayer {
                 };
                 CoordinatesPath newPath = physicsEngine.calculateCoordinatePath(golfBall, newVeloc[0], newVeloc[1]);
                 if (newPath == null) {
-                    // System.err.println("Iteration " + i + ": New path is null.");
+                    //  System.err.println("Iteration " + i + ": New path is null.");
                     continue;
                 }
                 double newDis = checkDistanceFromHole(newPath);
@@ -134,8 +83,8 @@ public class BotHillClimbingImproved implements BotPlayer {
                     bestPath = newPath;
                     bestDistance = newDis;
                     // System.out.println("Iteration " + i + ": Best path updated. Best Distance: " + bestDistance);
-                    if (bestDistance < acceptableDistance) {
-                        // System.out.print("Acceptable distance reached.");
+                    if (bestDistance<acceptableDistance){
+                        //    System.out.print("Acceptable distance reached.");
                         return bestPath;
                     }
                 }
@@ -144,9 +93,13 @@ public class BotHillClimbingImproved implements BotPlayer {
                 break;
             }
         }
-        if (bestPath == null) {
+        if (bestPath ==null){
             System.err.println("Hill climbing did not find a valid path.");
         }
+
+
+
+
         return bestPath;
     }
 
@@ -157,9 +110,8 @@ public class BotHillClimbingImproved implements BotPlayer {
 
     @Override
     public String getName() {
-        return "BasicBot";
+        return "BotHillClimbing";
     }
-
     @Override
     public int getNumberOfTurns() {
         return numberOfTurns;

@@ -1,6 +1,7 @@
 package com.kentwentyfour.project12.presentation.controllers;
 
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.obstacles.ObstacleArea;
+import com.kentwentyfour.project12.gameobjects.movableobjects.Flag;
 import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
 import com.kentwentyfour.project12.gameobjects.movableobjects.Hole;
 import com.kentwentyfour.project12.gameobjects.MapManager;
@@ -159,6 +160,9 @@ public class GameSetupController extends BaseController {
             Hole hole = new Hole(targetX,targetY,targetRadius);
             referenceStore.setHoleReference(hole);
             mapManager.addMovableObjectToMap(hole);
+            Flag flag = new Flag(hole.getX(),hole.getY(),hole.getRadius());
+            mapManager.addToTopLayerObjects(flag);
+            mapManager.addMovableObjectToMap(flag);
             mapManager.addMovableObjectToMap(balls.getFirst());
 
 
@@ -181,7 +185,7 @@ public class GameSetupController extends BaseController {
             // Call setInitialValues for SettingsController
             SettingsController settingsController = settingsLoader.getController();
 
-            settingsController.setInitialValues( startX, startY,  mapManager, physicsEngine, balls,selectedLevel);
+            settingsController.setInitialValues( startX, startY,  mapManager, physicsEngine, balls,targetX,targetY,selectedLevel);
 
         } catch (IOException e) {
             e.printStackTrace();

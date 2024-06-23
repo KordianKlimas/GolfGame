@@ -8,11 +8,17 @@ public class Sand implements AreaType {
     private Color color;
 
     public Sand(double height){
-        this.color = Color.rgb	(225,191,146);
-        if (height < 0.1) {
+        this.color = Color.rgb(225,191,146);
+        if (height < 0.05) {
             this.color = Color.rgb(246,215,176);
+        }
+        else if (height < 0.1) {
+            this.color = Color.rgb(242,210,169);
+        }
+        else if (height < 0.15) {
+            this.color = Color.rgb	(236,204,162);
         } else if (height < 0.2) {
-            this.color = Color.rgb(236,204,162);
+            this.color = Color.rgb(231,196,150);
         }
     }
     @Override

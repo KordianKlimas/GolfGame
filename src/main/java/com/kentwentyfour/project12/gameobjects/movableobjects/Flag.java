@@ -1,55 +1,61 @@
 package com.kentwentyfour.project12.gameobjects.movableobjects;
 
-import com.kentwentyfour.project12.physicsengine.CoordinatesPath;
+
+import javafx.scene.Node;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
 
-public class GolfBall implements MovableObjects {
+public class Flag implements MovableObjects {
     private double coordinate_X;
     private double coordinate_Y;
-    private double mass;
-    private double radius;
-    private Circle visualRepresentation;
+
+    private Rectangle visualRepresentation;
     private Image nodeImage;
-    private CoordinatesPath currentCoordinatePath;
+    private double height;
+    private double width;
     /**
-     * Creates ball object
+     * Creates Flag
+     *
      * @param coordinate_X
      * @param coordinate_Y
-     * @param mass
+     * @param holeRadius - based hole radius,  height of flag will be set
      */
-    public GolfBall(double coordinate_X, double coordinate_Y, double mass,double radius){
-        this.coordinate_X = coordinate_X;
-        this.coordinate_Y = coordinate_Y;
-        this.mass = mass;
-        this.radius = radius;
-        this.nodeImage = new Image("file:src/main/java/com/kentwentyfour/project12/gameobjects/textures/ball_texture.png");
+    public Flag(double coordinate_X, double coordinate_Y, double holeRadius){
+        this.height = 2 * holeRadius*2;
+        this.width = height *0.55;
+        this.coordinate_X = coordinate_X + width/2;
+        this.coordinate_Y = coordinate_Y + height/2 ;//- height;
+
+
+        this.nodeImage = new Image("file:src/main/java/com/kentwentyfour/project12/gameobjects/textures/Flag.png");
         this.visualRepresentation = createVisualRepresentation();
     }
 
 
-    public double getDistanceFromOrigin(){
-        // Circle drawn by middle coordinates
-        return 0;
-    }
 
+    public double getDistanceFromOrigin(){
+        return     Math.sqrt(height*height + width*width)/2;
+    }
     /**
      * Create a graphical representation of the ball
      * @return Circle representing the ball
      */
-    private Circle createVisualRepresentation() {
-        Circle circle = new Circle(coordinate_X, coordinate_Y, radius);
-        circle.setFill(Color.BLACK);
-        circle.setFill(new ImagePattern(nodeImage));
-        return circle;
+    private Rectangle createVisualRepresentation() {
+        Rectangle rectangle = new Rectangle(coordinate_X, coordinate_Y, width, height);
+        this.nodeImage = new Image("file:src/main/java/com/kentwentyfour/project12/gameobjects/textures/flag.png");
+
+        rectangle.setFill(new ImagePattern(nodeImage));
+
+        return rectangle;
     }
     /**
      * Get the graphical representation of the ball
      * @return Circle representing the ball
      */
-    public Circle getVisualRepresentation() {
+    public Rectangle getVisualRepresentation() {
         return visualRepresentation;
     }
     //setters
@@ -76,13 +82,7 @@ public class GolfBall implements MovableObjects {
     public void setPositionY(double coordinate_Y){
         this.coordinate_Y = coordinate_Y;
     }
-    /**
-     * Sets mass
-     * @param mass
-     */
-    public void setMass(double mass){
-        this.mass = mass;
-    }
+
     //getters
     /**
      *  Returns Coordinate X
@@ -98,18 +98,6 @@ public class GolfBall implements MovableObjects {
     public double getY() {
         return coordinate_Y;
     }
-    /**
-     *  Returns mass of ball
-     * @return double
-     */
-    public double getRadius() {
-        return this.radius;
-    }
-    /**
-     *  Returns mass of ball
-     * @return double
-     */
-    public double getMass() {
-        return mass;
-    }
+
 }
+

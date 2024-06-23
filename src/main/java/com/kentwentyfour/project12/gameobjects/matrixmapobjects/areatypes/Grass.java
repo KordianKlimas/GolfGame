@@ -42,7 +42,11 @@ public class Grass implements AreaType {
             this.color = Color.rgb(8, 67, 10);
         }   else if(height < 1.9) {
             this.color = Color.rgb(9, 39, 10);
-        }else {
+        }
+        else if(height < 2.1) {
+            this.color = Color.rgb(9, 30, 10);
+        }
+        else {
             this.color = Color.rgb(9, 30, 10);
         }
     }
