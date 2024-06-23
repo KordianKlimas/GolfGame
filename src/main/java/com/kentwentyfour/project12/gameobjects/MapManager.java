@@ -29,7 +29,7 @@ import javafx.util.Duration;
 public class MapManager {
     public final int WIDTH = 800;
     public final int HEIGHT = 800;
-    private final int matrixSize = 100;//101
+    private final int matrixSize = 101;//101
     private double mapWidth = 10; // in meters ex. 10 means coordinates from -5 to 5
     double scaleFactor = WIDTH / mapWidth; // scalar  to  match [m]  with the pixel size
     private MatrixMapArea[][] terrainData;
@@ -200,8 +200,8 @@ public class MapManager {
         int[] arr = new int[2];
 
         // We assume midPixelX and midPixelY are  (0 [m],0 [m]) of coordinates
-        int midPixelX = (int) (this.WIDTH / 2.0 );//middle pixel of the map x
-        int midPixelY = (int) (this.HEIGHT / 2.0 );//middle pixel of the map y
+        int midPixelX = (int) Math.round(this.WIDTH / 2.0 );//middle pixel of the map x
+        int midPixelY = (int) Math.round(this.HEIGHT / 2.0 );//middle pixel of the map y
 
         arr[0] = midPixelX + (int) Math.round(x * scaleFactor);
         arr[1] = midPixelY - (int) Math.round(y * scaleFactor);
@@ -235,7 +235,6 @@ public class MapManager {
         visualRepresentation.setLayoutY(pixelCoords[1]);//-obj.getDistanceFromOrigin()*this.scaleFactor);
         if (!this.root.getChildren().contains(visualRepresentation)) {
             addMovableObjectToMap(obj);
-
         }
         updateCoordinatesOfTopLayerObjects();
     }
@@ -370,7 +369,6 @@ public class MapManager {
         if (path == null || path.isEmpty()) {
             return;
         }
-
         for (int i = 0; i < path.size() - 1; i++) {
             Waypoint startCoords = path.get(i);
             Waypoint endCoords = path.get(i + 1);

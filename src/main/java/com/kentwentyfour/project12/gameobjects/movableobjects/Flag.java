@@ -25,12 +25,12 @@ public class Flag implements MovableObjects {
      */
     public Flag(double coordinate_X, double coordinate_Y, double holeRadius){
         this.height = 2 * holeRadius*2;
-        this.width = height *0.55;
-        this.coordinate_X = coordinate_X + width/2;
-        this.coordinate_Y = coordinate_Y + height/2 ;//- height;
+        this.width = height*0.6;
+        this.coordinate_X = coordinate_X + width/2 - 0.03;
+        this.coordinate_Y = coordinate_Y + height/2;
 
 
-        this.nodeImage = new Image("file:src/main/java/com/kentwentyfour/project12/gameobjects/textures/Flag.png");
+        this.nodeImage = new Image("file:src/main/java/com/kentwentyfour/project12/gameobjects/textures/flag_new2.png");
         this.visualRepresentation = createVisualRepresentation();
     }
 
@@ -45,7 +45,6 @@ public class Flag implements MovableObjects {
      */
     private Rectangle createVisualRepresentation() {
         Rectangle rectangle = new Rectangle(coordinate_X, coordinate_Y, width, height);
-        this.nodeImage = new Image("file:src/main/java/com/kentwentyfour/project12/gameobjects/textures/flag.png");
 
         rectangle.setFill(new ImagePattern(nodeImage));
 

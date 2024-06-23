@@ -120,9 +120,12 @@ public class SettingsController implements Initializable {
                         } else if (result.get() == BUTTON_CONTINUE) {
                             GolfBall ball = balls.get(0);
                             ball.setPosition(ball.getX(), ball.getY());
+
                             mapManager.updateCoordinates(ball);
-                            multipleBotTurnsCounter++;
-                            BotMoveMultipleTurns(multipleBotTurnsCounter);
+                            if(multipleBotTurns){
+                                multipleBotTurnsCounter++;
+                                BotMoveMultipleTurns(multipleBotTurnsCounter);
+                            }
                         }
                     }
                 });
@@ -136,7 +139,6 @@ public class SettingsController implements Initializable {
                             if (firstBall != null) {
                                 firstBall.setPosition(startX, startY);
                                 mapManager.updateCoordinates(firstBall);
-
                                 turnCount=1;
                                 turnCounter.setText("Turn: "+turnCount);
                                 multipleBotTurnsCounter = 0;
@@ -172,8 +174,10 @@ public class SettingsController implements Initializable {
                                 ball.setPosition(path[0][0], path[1][0]);
                             }
                             mapManager.updateCoordinates(ball);
-                            multipleBotTurnsCounter++;
-                            BotMoveMultipleTurns(multipleBotTurnsCounter);
+                            if(multipleBotTurns){
+                                multipleBotTurnsCounter++;
+                                BotMoveMultipleTurns(multipleBotTurnsCounter);
+                            }
                         }
                     }
                 });

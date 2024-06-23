@@ -23,7 +23,7 @@ public class Hole implements MovableObjects {
         this.coordinate_X = coordinate_X;
         this.coordinate_Y = coordinate_Y;
         this.radius = radius;
-        this.nodeImage = new Image("file:src/main/java/com/kentwentyfour/project12/gameobjects/textures/hole_texture1.png");
+        this.nodeImage = new Image("file:src/main/java/com/kentwentyfour/project12/gameobjects/textures/hole_new_texture.png");
         this.visualRepresentation = createVisualRepresentation();
     }
 

@@ -3,10 +3,7 @@ package com.kentwentyfour.project12.presentation.controllers.maps;
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.obstacles.ObstacleArea;
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.obstacles.Water;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class GameSetupLevels {
     private static final Map<String, GameSetupVariables> predefinedSets = new HashMap<>();
@@ -49,8 +46,6 @@ public class GameSetupLevels {
                         new Water(-1,3,4,.1),
                         new Water(-1,3,0.1,1),
                         new Water(1,3,0.1,1)
-
-
                 )
         ));
     }
@@ -64,6 +59,8 @@ public class GameSetupLevels {
     }
     public  static String[] getLevelNames(){
         Set<String> keySet = predefinedSets.keySet();
-        return keySet.toArray(new String[0]);
+        String[] levelNames = keySet.toArray(new String[0]);
+        Arrays.sort(levelNames);
+        return levelNames;
     }
 }
