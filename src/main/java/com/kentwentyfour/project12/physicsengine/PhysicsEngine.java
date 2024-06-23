@@ -13,9 +13,10 @@ import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
 import com.kentwentyfour.project12.gameobjects.movableobjects.Hole;
 import com.kentwentyfour.project12.gameobjects.movableobjects.MovableObjects;
 import com.kentwentyfour.project12.mathpackage.FormulaCalculator;
-import com.kentwentyfour.project12.mathpackage.ODESolver;
+import com.kentwentyfour.project12.mathpackage.ODESolverInterface;
 import com.kentwentyfour.project12.mathpackage.PartialDerivative;
 import com.kentwentyfour.project12.ReferenceStore;
+import com.kentwentyfour.project12.mathpackage.RungeKuttaSolver;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -33,7 +34,8 @@ public class PhysicsEngine {
 
 
     // main solver
-    ODESolver solver = new ODESolver();
+    // Select the solver to use (Euler or Runge-Kutta)
+   private ODESolverInterface solver = new RungeKuttaSolver();
     //  calculator for CourseProfileFormula h(x,y)
     FormulaCalculator calcCPF = new FormulaCalculator();
     ArrayList<String> CPF_parsed = new ArrayList<>();
@@ -47,7 +49,8 @@ public class PhysicsEngine {
         this.CPF_parsed =new ArrayList<>(calcCPF.parseString(CourseProfileFormula));
         height_PartialDerivative.setEquation(CourseProfileFormula);
         height_PartialDerivative.addVariables("x","y");
-        ODESolver.addPartialDerivative(height_PartialDerivative);
+        this.solver = new RungeKuttaSolver(); // or new EulerSolver();
+        this.solver.addPartialDerivative(height_PartialDerivative);
     }
 
     /**
@@ -119,7 +122,7 @@ public class PhysicsEngine {
 
         while (stoppingCondition.isEmpty()){
             //System.err.println(in_Conditions[3]+" , "+  in_Conditions[4]);
-            Double[][] results = ODESolver.rungeKutta(equations, customStepSize, customInitialTime, in_Conditions, variables);
+            Double[][] results = solver.solve(equations, customStepSize, customInitialTime, in_Conditions, variables);
             double  x_velocity =  results[1][0];
             double  y_velocity =  results[2][0];
             for(int i=0;i<results[0].length;i++ ){
