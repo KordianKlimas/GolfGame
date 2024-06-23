@@ -121,6 +121,8 @@ public class SettingsController implements Initializable {
                             GolfBall ball = balls.get(0);
                             ball.setPosition(ball.getX(), ball.getY());
                             mapManager.updateCoordinates(ball);
+                            multipleBotTurnsCounter++;
+                            BotMoveMultipleTurns(multipleBotTurnsCounter);
                         }
                     }
                 });
@@ -143,7 +145,6 @@ public class SettingsController implements Initializable {
                             Platform.runLater(() -> {
                                 Stage stage = (Stage) vx.getScene().getWindow();
                                 stage.close();
-
                             });
                         }
                     }
@@ -171,19 +172,16 @@ public class SettingsController implements Initializable {
                                 ball.setPosition(path[0][0], path[1][0]);
                             }
                             mapManager.updateCoordinates(ball);
+                            multipleBotTurnsCounter++;
+                            BotMoveMultipleTurns(multipleBotTurnsCounter);
                         }
                     }
                 });
+            }else  if(multipleBotTurns){
+                multipleBotTurnsCounter++;
+                BotMoveMultipleTurns(multipleBotTurnsCounter);
             }
-
-
-
-
         }));
-        if(multipleBotTurns){
-            multipleBotTurnsCounter++;
-            BotMoveMultipleTurns(multipleBotTurnsCounter);
-        }
         timeline.play();
     }
     private Optional<ButtonType> showGameOverPopup() {
