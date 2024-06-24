@@ -1,0 +1,1428 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"9e80e0ac-204d-49c9-baf6-18865c982760\" name=\"Changes\" comment=\"small bug fix\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/textures/flag_new2.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/textures/flag_new_texture.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/textures/hole_new_texture.png\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/_ExperimentsData/experiment_data.csv\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/_ExperimentsData/experiment_data.csv\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/MapManager.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/MapManager.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/movableobjects/Flag.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/movableobjects/Flag.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/movableobjects/Hole.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/movableobjects/Hole.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/SettingsController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/SettingsController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/maps/GameSetupLevels.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/maps/GameSetupLevels.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n        <option value=\"Interface\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n    <option name=\"UPDATE_TYPE\" value=\"REBASE\" />\r\n  </component>\r\n  <component name=\"GitLabMergeRequestFiltersHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPENED&quot;,\r\n    &quot;assignee&quot;: {\r\n      &quot;type&quot;: &quot;org.jetbrains.plugins.gitlab.mergerequest.ui.filters.GitLabMergeRequestsFiltersValue.MergeRequestsMemberFilterValue.MergeRequestsAssigneeFilterValue&quot;,\r\n      &quot;username&quot;: &quot;I6366669&quot;,\r\n      &quot;fullname&quot;: &quot;Klimas, Kordian (Stud. DACS)&quot;\r\n    }\r\n  }\r\n}</component>\r\n  <component name=\"GitLabMergeRequestsSettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;first&quot;: &quot;https://gitlab.maastrichtuniversity.nl/ken_group24_20231/ken_project24_2023.git&quot;,\r\n    &quot;second&quot;: &quot;3bc631ba-5a82-40c4-b7e4-ce3df066dcb6&quot;\r\n  }\r\n}</component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 4\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2gyFSRRM9LqsCuHPAkPUun3MqfF\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Application.BotNewtonRaphson.executor\": \"Run\",\r\n    \"Application.FormulaCalculator.executor\": \"Run\",\r\n    \"Application.MainApplication.executor\": \"Run\",\r\n    \"Application.ODESolver.executor\": \"Run\",\r\n    \"Application.PhysicsEngine.executor\": \"Run\",\r\n    \"Application.SuperClass.executor\": \"Debug\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"git-widget-placeholder\": \"game\",\r\n    \"kotlin-language-version-configured\": \"true\",\r\n    \"last_opened_file_path\": \"C:/Users/kordi/IdeaProjects/GolfGameClone/src/main/java/com/kentwentyfour/project12/Bots/ImprovedBot/Algorithms\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"project.structure.last.edited\": \"Project\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.0\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\kordi\\IdeaProjects\\GolfGameClone\\src\\main\\java\\com\\kentwentyfour\\project12\\Bots\\ImprovedBot\\Algorithms\" />\r\n      <recent name=\"C:\\Users\\kordi\\IdeaProjects\\GolfGameClone\\src\\main\\java\\com\\kentwentyfour\\project12\\Bots\\ImprovedBot\" />\r\n      <recent name=\"C:\\Users\\kordi\\IdeaProjects\\GolfGameClone\\src\\main\\java\\com\\kentwentyfour\\project12\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\kordi\\IdeaProjects\\GolfGameClone\\src\\main\\java\\com\\kentwentyfour\\project12\\gameobjects\\textures\" />\r\n      <recent name=\"C:\\Users\\kordi\\Desktop\\Uni\\Project12\\src\\main\\java\\com\\kentwentyfour\\project12\\Bots\" />\r\n    </key>\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"com.kentwentyfour.project12.presentation.controllers\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.MainApplication\">\r\n    <configuration name=\"BotNewtonRaphson\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.kentwentyfour.project12.Bot.BotNewtonRaphson\" />\r\n      <module name=\"Project12\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.kentwentyfour.project12.Bot.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"FormulaCalculator\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.kentwentyfour.project12.mathpackage.FormulaCalculator\" />\r\n      <module name=\"Project12\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.kentwentyfour.project12.mathpackage.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"MainApplication\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.kentwentyfour.project12.MainApplication\" />\r\n      <module name=\"Project12\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.kentwentyfour.project12.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ODESolver\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.kentwentyfour.project12.mathpackage.ODESolver\" />\r\n      <module name=\"Project12\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.kentwentyfour.project12.mathpackage.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"PhysicsEngine\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.kentwentyfour.project12.physicsengine.PhysicsEngine\" />\r\n      <module name=\"Project12\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.kentwentyfour.project12.physicsengine.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.MainApplication\" />\r\n        <item itemvalue=\"Application.PhysicsEngine\" />\r\n        <item itemvalue=\"Application.FormulaCalculator\" />\r\n        <item itemvalue=\"Application.ODESolver\" />\r\n        <item itemvalue=\"Application.BotNewtonRaphson\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"jdk-22-openjdk-22-4caba194b151-f504ca98\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"9e80e0ac-204d-49c9-baf6-18865c982760\" name=\"Changes\" comment=\"\" />\r\n      <created>1716661909278</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1716661909278</updated>\r\n      <workItem from=\"1716661910295\" duration=\"17819000\" />\r\n      <workItem from=\"1716712645065\" duration=\"58357000\" />\r\n      <workItem from=\"1716848192302\" duration=\"13500000\" />\r\n      <workItem from=\"1716923905766\" duration=\"6375000\" />\r\n      <workItem from=\"1716971459613\" duration=\"2121000\" />\r\n      <workItem from=\"1717059973808\" duration=\"1803000\" />\r\n      <workItem from=\"1717164012988\" duration=\"25000\" />\r\n      <workItem from=\"1717456485453\" duration=\"1711000\" />\r\n      <workItem from=\"1717505633904\" duration=\"676000\" />\r\n      <workItem from=\"1717850354924\" duration=\"1196000\" />\r\n      <workItem from=\"1717928068789\" duration=\"599000\" />\r\n      <workItem from=\"1718089923745\" duration=\"5028000\" />\r\n      <workItem from=\"1718105366319\" duration=\"616000\" />\r\n      <workItem from=\"1718194232441\" duration=\"15306000\" />\r\n      <workItem from=\"1718273118122\" duration=\"31714000\" />\r\n      <workItem from=\"1718356601705\" duration=\"5288000\" />\r\n      <workItem from=\"1718362013451\" duration=\"731000\" />\r\n      <workItem from=\"1718374614417\" duration=\"11215000\" />\r\n      <workItem from=\"1719002933193\" duration=\"419000\" />\r\n      <workItem from=\"1719067558497\" duration=\"19751000\" />\r\n      <workItem from=\"1719139335716\" duration=\"29008000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Changing timeStep and initial time in PhysicEngine to improve calculation and animation. Adding  Stopping conditions support in game.\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716826330237</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716826330237</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Adding Lera's basicBot\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716826566207</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716826566207</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"adding lera's stuff\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716835083793</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716835083793</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"last commit before examination\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716918727066</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716918727066</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"getting rid of comments\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716930473166</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716930473166</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"- fixing &quot;ball&quot; bug ( after hitting obstacle twice in row it's start position was in obstacle ). &#10;- changing GUI from fullscreen to window size\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1718197931455</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1718197931455</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"- added support for custom stepSize/initialTime in PhysicsEngine\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1718201708445</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1718201708445</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"adding experiment data output as csv file.\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1719003346984</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1719003346984</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"small map look changes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1719068505412</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1719068505412</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"lot of small changes, Path generation for improved bot\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1719086626678</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1719086626678</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"adding flag, adding support for multiple turns\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1719163657051</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1719163657051</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"small bug fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1719164022750</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1719164022750</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"13\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Changing timeStep and initial time in PhysicEngine to improve calculation and animation. Adding  Stopping conditions support in game.\" />\r\n    <MESSAGE value=\"Adding Lera's basicBot\" />\r\n    <MESSAGE value=\"adding lera's stuff\" />\r\n    <MESSAGE value=\"last commit before examination\" />\r\n    <MESSAGE value=\"getting rid of comments\" />\r\n    <MESSAGE value=\"- fixing &quot;ball&quot; bug ( after hitting obstacle twice in row it's start position was in obstacle ). &#10;- changing GUI from fullscreen to window size\" />\r\n    <MESSAGE value=\"- added support for custom stepSize/initialTime in PhysicsEngine\" />\r\n    <MESSAGE value=\"adding experiment data output as csv file.\" />\r\n    <MESSAGE value=\"small map look changes\" />\r\n    <MESSAGE value=\"lot of small changes, Path generation for improved bot\" />\r\n    <MESSAGE value=\"adding flag, adding support for multiple turns\" />\r\n    <MESSAGE value=\"small bug fix\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"small bug fix\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <breakpoint enabled=\"true\" type=\"java-exception\">\r\n          <properties class=\"java.util.EmptyStackException\" package=\"java.util\" />\r\n          <option name=\"timeStamp\" value=\"14\" />\r\n        </breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/physicsengine/PhysicsEngine.java</url>\r\n          <line>327</line>\r\n          <option name=\"timeStamp\" value=\"35\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n    <pin-to-top-manager>\r\n      <pinned-members>\r\n        <PinnedItemInfo parentTag=\"com.kentwentyfour.project12.bots.improvedbot.MazeBot\" memberName=\"aStarPath\" />\r\n        <PinnedItemInfo parentTag=\"com.kentwentyfour.project12.bots.improvedbot.MazeBot\" memberName=\"ball\" />\r\n        <PinnedItemInfo parentTag=\"com.kentwentyfour.project12.MathPackage.PartialDerivative\" memberName=\"variables\" />\r\n      </pinned-members>\r\n    </pin-to-top-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 50b5852052494679fe1157d839b86b4485e7d93b)
++++ b/.idea/workspace.xml	(date 1719222756728)
+@@ -4,17 +4,15 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="9e80e0ac-204d-49c9-baf6-18865c982760" name="Changes" comment="small bug fix">
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/textures/flag_new2.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/textures/flag_new_texture.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/textures/hole_new_texture.png" afterDir="false" />
++    <list default="true" id="9e80e0ac-204d-49c9-baf6-18865c982760" name="Changes" comment="small gui improvements">
++      <change afterPath="$PROJECT_DIR$/UML_Class_diagram.drawio" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/UML_Class_diagram.png" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/_ExperimentsData/experiment_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/_ExperimentsData/experiment_data.csv" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/MapManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/MapManager.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/movableobjects/Flag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/movableobjects/Flag.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/movableobjects/Hole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/movableobjects/Hole.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/SettingsController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/maps/GameSetupLevels.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/maps/GameSetupLevels.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/bots/BasicBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/bots/BasicBot.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/bots/improvedbot/MazeBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/bots/improvedbot/MazeBot.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/mathpackage/ODESolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/mathpackage/ODESolver.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/physicsengine/PhysicsEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/physicsengine/PhysicsEngine.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -31,7 +29,6 @@
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+-    <option name="UPDATE_TYPE" value="REBASE" />
+   </component>
+   <component name="GitLabMergeRequestFiltersHistory">{
+   &quot;lastFilter&quot;: {
+@@ -61,30 +58,30 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "Application.BotNewtonRaphson.executor": "Run",
+-    "Application.FormulaCalculator.executor": "Run",
+-    "Application.MainApplication.executor": "Run",
+-    "Application.ODESolver.executor": "Run",
+-    "Application.PhysicsEngine.executor": "Run",
+-    "Application.SuperClass.executor": "Debug",
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "git-widget-placeholder": "game",
+-    "kotlin-language-version-configured": "true",
+-    "last_opened_file_path": "C:/Users/kordi/IdeaProjects/GolfGameClone/src/main/java/com/kentwentyfour/project12/Bots/ImprovedBot/Algorithms",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "npm",
+-    "project.structure.last.edited": "Project",
+-    "project.structure.proportion": "0.15",
+-    "project.structure.side.proportion": "0.0",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;Application.BotNewtonRaphson.executor&quot;: &quot;Run&quot;,
++    &quot;Application.FormulaCalculator.executor&quot;: &quot;Run&quot;,
++    &quot;Application.MainApplication.executor&quot;: &quot;Run&quot;,
++    &quot;Application.ODESolver.executor&quot;: &quot;Run&quot;,
++    &quot;Application.PhysicsEngine.executor&quot;: &quot;Run&quot;,
++    &quot;Application.SuperClass.executor&quot;: &quot;Debug&quot;,
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;game&quot;,
++    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/kordi/IdeaProjects/GolfGameClone/src/main/java/com/kentwentyfour/project12/Bots/ImprovedBot/Algorithms&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="C:\Users\kordi\IdeaProjects\GolfGameClone\src\main\java\com\kentwentyfour\project12\Bots\ImprovedBot\Algorithms" />
+@@ -92,6 +89,8 @@
+       <recent name="C:\Users\kordi\IdeaProjects\GolfGameClone\src\main\java\com\kentwentyfour\project12" />
+     </key>
+     <key name="MoveFile.RECENT_KEYS">
++      <recent name="C:\Users\kordi\IdeaProjects\GolfGameClone" />
++      <recent name="C:\Users\kordi\IdeaProjects\GolfGameClone\target\classes\com\kentwentyfour\project12\views" />
+       <recent name="C:\Users\kordi\IdeaProjects\GolfGameClone\src\main\java\com\kentwentyfour\project12\gameobjects\textures" />
+       <recent name="C:\Users\kordi\Desktop\Uni\Project12\src\main\java\com\kentwentyfour\project12\Bots" />
+     </key>
+@@ -168,9 +167,9 @@
+     <recent_temporary>
+       <list>
+         <item itemvalue="Application.MainApplication" />
++        <item itemvalue="Application.ODESolver" />
+         <item itemvalue="Application.PhysicsEngine" />
+         <item itemvalue="Application.FormulaCalculator" />
+-        <item itemvalue="Application.ODESolver" />
+         <item itemvalue="Application.BotNewtonRaphson" />
+       </list>
+     </recent_temporary>
+@@ -210,7 +209,9 @@
+       <workItem from="1718374614417" duration="11215000" />
+       <workItem from="1719002933193" duration="419000" />
+       <workItem from="1719067558497" duration="19751000" />
+-      <workItem from="1719139335716" duration="29008000" />
++      <workItem from="1719139335716" duration="32813000" />
++      <workItem from="1719220069252" duration="1233000" />
++      <workItem from="1719222302715" duration="453000" />
+     </task>
+     <task id="LOCAL-00001" summary="Changing timeStep and initial time in PhysicEngine to improve calculation and animation. Adding  Stopping conditions support in game.">
+       <option name="closed" value="true" />
+@@ -308,7 +309,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1719164022750</updated>
+     </task>
+-    <option name="localTasksCounter" value="13" />
++    <task id="LOCAL-00013" summary="small gui improvements">
++      <option name="closed" value="true" />
++      <created>1719178387577</created>
++      <option name="number" value="00013" />
++      <option name="presentableId" value="LOCAL-00013" />
++      <option name="project" value="LOCAL" />
++      <updated>1719178387577</updated>
++    </task>
++    <option name="localTasksCounter" value="14" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -338,7 +347,8 @@
+     <MESSAGE value="lot of small changes, Path generation for improved bot" />
+     <MESSAGE value="adding flag, adding support for multiple turns" />
+     <MESSAGE value="small bug fix" />
+-    <option name="LAST_COMMIT_MESSAGE" value="small bug fix" />
++    <MESSAGE value="small gui improvements" />
++    <option name="LAST_COMMIT_MESSAGE" value="small gui improvements" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
+@@ -351,6 +361,11 @@
+           <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/physicsengine/PhysicsEngine.java</url>
+           <line>327</line>
+           <option name="timeStamp" value="35" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="java-line">
++          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/mathpackage/ODESolver.java</url>
++          <line>202</line>
++          <option name="timeStamp" value="65" />
+         </line-breakpoint>
+       </breakpoints>
+     </breakpoint-manager>
+Index: src/main/java/com/kentwentyfour/project12/_ExperimentsData/experiment_data.csv
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>TestMap_1,BasicBot,615.371600,1\r\nTestMap_1,BasicBot,471.606200,1\r\ntest_obstacleArea,BasicBot,1298.209800,1\r\ntest_obstacleArea,BasicBot,37488.729200,1\r\nTestMap_1,BasicBot,385.103800,1\r\nTestMap_1,BasicBot,340.453000,1\r\nTestMap_1,BasicBot,1564.429500,1\r\nTestMap_1,BasicBot,516.588300,1\r\ntest_obstacleArea,BasicBot,190.489500,1\r\ntest_obstacleArea,BasicBot,7391.474700,1\r\ntest_obstacleArea,BasicBot,2754.454400,1\r\ntest_obstacleArea,BasicBot,10608.825700,1\r\ntest_obstacleArea,BasicBot,26151.187000,1\r\ntest_obstacleArea,BasicBot,4541.014200,1\r\ntest_obstacleArea,BasicBot,8467.542700,1\r\ntest_obstacleArea,BasicBot,18255.833300,1\r\ntest_obstacleArea,BasicBot,10602.052000,1\r\ntest_obstacleArea,BasicBot,955.854900,1\r\ntest_obstacleArea,BasicBot,5457.903400,1\r\ntest_obstacleArea,BasicBot,543.033800,1\r\ntest_obstacleArea,BasicBot,540.120000,1\r\ntest_obstacleArea,BasicBot,548.355200,1\r\ntest_obstacleArea,BasicBot,532.754600,1\r\ntest_obstacleArea,BasicBot,523.255000,1\r\ntest_obstacleArea,BasicBot,742.499100,1\r\ntest_obstacleArea,BasicBot,542.643900,1\r\ntest_obstacleArea,BasicBot,536.864800,1\r\ntest_obstacleArea,BasicBot,32054.505200,1\r\ntest_obstacleArea,BasicBot,563.902000,1\r\ntest_obstacleArea,BasicBot,527.457000,1\r\ntest_obstacleArea,BasicBot,527.766900,1\r\ntest_obstacleArea,BasicBot,342.374000,1\r\ntest_obstacleArea,BasicBot,558.029300,1\r\ntest_obstacleArea,BasicBot,551.163500,1\r\ntest_obstacleArea,BasicBot,731.216500,1\r\ntest_obstacleArea,BasicBot,533.821700,1\r\ntest_obstacleArea,BasicBot,526.922800,1\r\ntest_obstacleArea,BasicBot,755.434300,1\r\ntest_obstacleArea,BasicBot,715.528800,1\r\ntest_obstacleArea,BasicBot,511.752700,1\r\ntest_obstacleArea,BasicBot,7470.666600,1\r\ntest_obstacleArea,BasicBot,530.061100,1\r\ntest_obstacleArea,BasicBot,342.010300,1\r\ntest_obstacleArea,BasicBot,522.027300,1\r\ntest_obstacleArea,BasicBot,211.544400,1\r\ntest_obstacleArea,BasicBot,476.523300,1\r\ntest_obstacleArea,BasicBot,203.739200,1\r\ntest_obstacleArea,BasicBot,390.474200,1\r\ntest_obstacleArea,BasicBot,392.999400,1\r\ntest_obstacleArea,BasicBot,188.016400,1\r\ntest_obstacleArea,BasicBot,1432.085100,1\r\ntest_obstacleArea,BasicBot,169.679700,1\r\ntest_obstacleArea,BasicBot,192.067300,1\r\ntest_obstacleArea,BasicBot,1188.733400,1\r\ntest_obstacleArea,BasicBot,335.113000,1\r\ntest_obstacleArea,BasicBot,1365.224400,1\r\ntest_obstacleArea,BasicBot,2955.824200,1\r\ntest_obstacleArea,BasicBot,529.751000,1\r\ntest_obstacleArea,BasicBot,400.968900,1\r\ntest_obstacleArea,BasicBot,461.100300,1\r\ntest_obstacleArea,BasicBot,535.237400,1\r\ntest_obstacleArea,BasicBot,20765.307000,1\r\ntest_obstacleArea,BasicBot,4930.756700,1\r\ntest_obstacleArea,BasicBot,1196.043100,1\r\ntest_obstacleArea,BasicBot,4053.743000,1\r\ntest_obstacleArea,BasicBot,523.545700,1\r\ntest_obstacleArea,BasicBot,345.616000,1\r\ntest_obstacleArea,BasicBot,350.729000,1\r\ntest_obstacleArea_2,BasicBot,384.506000,1\r\ntest_obstacleArea_2,BasicBot,354.267900,1\r\ntest_obstacleArea_2,BasicBot,730.056500,1\r\ntest_obstacleArea_2,BasicBot,209.016900,1\r\ntest_obstacleArea_2,BasicBot,368.740000,1\r\ntest_obstacleArea_1,BasicBot,313.633100,1\r\ntest_obstacleArea_3,BasicBot,528.511600,1\r\nTestMap_4 cool map ^-^,BasicBot,579.420800,1\r\ntest_obstacleArea_1,BasicBot,8198.125400,1\r\nTestMap_2,BasicBot,27316.860500,1\r\nTestMap_4 cool map ^-^,BasicBot,1025.518900,1\r\nTestMap_3,BasicBot,2065.679300,1\r\nTestMap_3,BotHillClimbing,47852.522800,1\r\ntest_obstacleArea_1,BasicBot,1331.524300,1\r\ntest_obstacleArea_1,BasicBot,1409.533000,1\r\ntest_obstacleArea_1,BasicBot,698.036000,1\r\nTestMap_1,BasicBot,1160.207800,1\r\nTestMap_1,BasicBot,1268.408700,1\r\nTestMap_1,BasicBot,899.587600,1\r\nTestMap_2,BotHillClimbing,112092.906000,1\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/kentwentyfour/project12/_ExperimentsData/experiment_data.csv b/src/main/java/com/kentwentyfour/project12/_ExperimentsData/experiment_data.csv
+--- a/src/main/java/com/kentwentyfour/project12/_ExperimentsData/experiment_data.csv	(revision 50b5852052494679fe1157d839b86b4485e7d93b)
++++ b/src/main/java/com/kentwentyfour/project12/_ExperimentsData/experiment_data.csv	(date 1719221116878)
+@@ -1,88 +1,7 @@
+-TestMap_1,BasicBot,615.371600,1
+-TestMap_1,BasicBot,471.606200,1
+-test_obstacleArea,BasicBot,1298.209800,1
+-test_obstacleArea,BasicBot,37488.729200,1
+-TestMap_1,BasicBot,385.103800,1
+-TestMap_1,BasicBot,340.453000,1
+-TestMap_1,BasicBot,1564.429500,1
+-TestMap_1,BasicBot,516.588300,1
+-test_obstacleArea,BasicBot,190.489500,1
+-test_obstacleArea,BasicBot,7391.474700,1
+-test_obstacleArea,BasicBot,2754.454400,1
+-test_obstacleArea,BasicBot,10608.825700,1
+-test_obstacleArea,BasicBot,26151.187000,1
+-test_obstacleArea,BasicBot,4541.014200,1
+-test_obstacleArea,BasicBot,8467.542700,1
+-test_obstacleArea,BasicBot,18255.833300,1
+-test_obstacleArea,BasicBot,10602.052000,1
+-test_obstacleArea,BasicBot,955.854900,1
+-test_obstacleArea,BasicBot,5457.903400,1
+-test_obstacleArea,BasicBot,543.033800,1
+-test_obstacleArea,BasicBot,540.120000,1
+-test_obstacleArea,BasicBot,548.355200,1
+-test_obstacleArea,BasicBot,532.754600,1
+-test_obstacleArea,BasicBot,523.255000,1
+-test_obstacleArea,BasicBot,742.499100,1
+-test_obstacleArea,BasicBot,542.643900,1
+-test_obstacleArea,BasicBot,536.864800,1
+-test_obstacleArea,BasicBot,32054.505200,1
+-test_obstacleArea,BasicBot,563.902000,1
+-test_obstacleArea,BasicBot,527.457000,1
+-test_obstacleArea,BasicBot,527.766900,1
+-test_obstacleArea,BasicBot,342.374000,1
+-test_obstacleArea,BasicBot,558.029300,1
+-test_obstacleArea,BasicBot,551.163500,1
+-test_obstacleArea,BasicBot,731.216500,1
+-test_obstacleArea,BasicBot,533.821700,1
+-test_obstacleArea,BasicBot,526.922800,1
+-test_obstacleArea,BasicBot,755.434300,1
+-test_obstacleArea,BasicBot,715.528800,1
+-test_obstacleArea,BasicBot,511.752700,1
+-test_obstacleArea,BasicBot,7470.666600,1
+-test_obstacleArea,BasicBot,530.061100,1
+-test_obstacleArea,BasicBot,342.010300,1
+-test_obstacleArea,BasicBot,522.027300,1
+-test_obstacleArea,BasicBot,211.544400,1
+-test_obstacleArea,BasicBot,476.523300,1
+-test_obstacleArea,BasicBot,203.739200,1
+-test_obstacleArea,BasicBot,390.474200,1
+-test_obstacleArea,BasicBot,392.999400,1
+-test_obstacleArea,BasicBot,188.016400,1
+-test_obstacleArea,BasicBot,1432.085100,1
+-test_obstacleArea,BasicBot,169.679700,1
+-test_obstacleArea,BasicBot,192.067300,1
+-test_obstacleArea,BasicBot,1188.733400,1
+-test_obstacleArea,BasicBot,335.113000,1
+-test_obstacleArea,BasicBot,1365.224400,1
+-test_obstacleArea,BasicBot,2955.824200,1
+-test_obstacleArea,BasicBot,529.751000,1
+-test_obstacleArea,BasicBot,400.968900,1
+-test_obstacleArea,BasicBot,461.100300,1
+-test_obstacleArea,BasicBot,535.237400,1
+-test_obstacleArea,BasicBot,20765.307000,1
+-test_obstacleArea,BasicBot,4930.756700,1
+-test_obstacleArea,BasicBot,1196.043100,1
+-test_obstacleArea,BasicBot,4053.743000,1
+-test_obstacleArea,BasicBot,523.545700,1
+-test_obstacleArea,BasicBot,345.616000,1
+-test_obstacleArea,BasicBot,350.729000,1
+-test_obstacleArea_2,BasicBot,384.506000,1
+-test_obstacleArea_2,BasicBot,354.267900,1
+-test_obstacleArea_2,BasicBot,730.056500,1
+-test_obstacleArea_2,BasicBot,209.016900,1
+-test_obstacleArea_2,BasicBot,368.740000,1
+-test_obstacleArea_1,BasicBot,313.633100,1
+-test_obstacleArea_3,BasicBot,528.511600,1
+-TestMap_4 cool map ^-^,BasicBot,579.420800,1
+-test_obstacleArea_1,BasicBot,8198.125400,1
+-TestMap_2,BasicBot,27316.860500,1
+-TestMap_4 cool map ^-^,BasicBot,1025.518900,1
+-TestMap_3,BasicBot,2065.679300,1
+-TestMap_3,BotHillClimbing,47852.522800,1
+-test_obstacleArea_1,BasicBot,1331.524300,1
+-test_obstacleArea_1,BasicBot,1409.533000,1
+-test_obstacleArea_1,BasicBot,698.036000,1
+-TestMap_1,BasicBot,1160.207800,1
+-TestMap_1,BasicBot,1268.408700,1
+-TestMap_1,BasicBot,899.587600,1
+-TestMap_2,BotHillClimbing,112092.906000,1
++TestMap_1,BasicBot,16205.852900,1
++TestMap_1,BasicBot,14122.956600,1
++TestMap_1,BasicBot,17398.629500,1
++TestMap_1,BasicBot,14733.319200,1
++TestMap_1,BasicBot,14866.909100,1
++TestMap_1,BasicBot,15142.768000,1
++TestMap_1,BasicBot,14451.658400,1
+Index: src/main/java/com/kentwentyfour/project12/mathpackage/ODESolver.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.kentwentyfour.project12.mathpackage;\r\n\r\nimport java.util.ArrayList;\r\nimport java.util.Arrays;\r\nimport java.util.List;\r\n\r\n// Problems:\r\n// the runge kutta solver requiers the t value as first in independent values but dose not use it.\r\npublic class ODESolver  {\r\n\r\n    // Function to solve the system of ODEs using Euler's method\r\n    static List<PartialDerivative> partialDerivatives =new ArrayList<>();\r\n    /**\r\n     * Solves a system of ordinary differential equations (ODEs) using Euler's method.\r\n     *\r\n     * @param equation     The system of ODEs as an array of strings\r\n     * @param stepSize     The step size used for the numerical integration\r\n     * @param in_Time      The total integration time\r\n     * @param in_Conditions The initial conditions for the system\r\n     * @param variables    The list of independent variables in the equations\r\n     * @return The solution of the system of ODEs as a 2D array of doubles\r\n     * @author Filippo\r\n     */\r\n    public static Double[][] euler(String[] equation, double stepSize, int in_Time, double[] in_Conditions, List<String> variables){\r\n        FormulaCalculator calc = new FormulaCalculator();\r\n        for(PartialDerivative pd: partialDerivatives){\r\n            calc.addPartialDerivative(pd);\r\n        }\r\n\r\n\r\n        Double[][] results = new Double[equation.length+1][(int)(in_Time / stepSize)+1];\r\n        List<List<String>> equationList = new ArrayList<List<String>>();\r\n\r\n        for(int i = 0; i < equation.length; i++) {\r\n            //transform the string[] equation array into a List of Lists of String\r\n            //this so that later we can use the same calculator\r\n            List<String>temp = calc.parseString(equation[i]);\r\n            equationList.add(temp);\r\n        }\r\n\r\n        //setting all the time slots at which we are measuring\r\n        results[0][0] =0.0;\r\n        for(int i = 1; i < results[0].length; i++) {\r\n            results[0][i] = stepSize + results[0][i-1];\r\n        }\r\n\r\n        //setting all the initial conditions\r\n        for(int i = 0; i <results.length;i++){\r\n            results[i][0] = in_Conditions[i];\r\n            calc.setIndependendValue(variables.get(i),in_Conditions[i]);\r\n        }\r\n        //setting all the additional variables\r\n        for (int i = 0; i < in_Conditions.length; i++) {\r\n            calc.setIndependendValue(variables.get(i), in_Conditions[i]);\r\n        }\r\n        for(int i = 1; i <results[0].length;i++){\r\n            //stopping conditions\r\n            // update partial derviative for x,y\r\n            for(int j = 1; j < results.length;j++){\r\n\r\n                //calculating the next points\r\n\r\n                results[j][i] = results[j][i-1] + (calc.calculateRPN(equationList.get(j-1)) * stepSize);\r\n\r\n                //  Xn+1 = Xn + (X'n * StepSize)\r\n\r\n            }\r\n            for(int k = 0; k <results.length;k++){\r\n\r\n                //updating the values of the variables with the points calculated\r\n                calc.setIndependendValue(variables.get(k),results[k][i]);\r\n            }\r\n        }\r\n        return results;\r\n    }\r\n    /**\r\n     * Solves a system of ordinary differential equations (ODEs) using the Runge-Kutta method.\r\n     *\r\n     * @param equation     The system of ODEs as an array of strings\r\n     * @param stepSize     The step size used for the numerical integration\r\n     * @param in_Time      The total integration time\r\n     * @param in_Conditions The initial conditions for the system\r\n     * @param variables    The list of independent variables in the equations\r\n     * @return The solution of the system of ODEs as a 2D array of doubles\r\n     * @author Filippo\r\n     */\r\n    public static Double[][] rungeKutta(String[] equation, double stepSize, int in_Time, double[] in_Conditions, List<String> variables) {\r\n        List<Double> tempResults = new ArrayList<Double>();\r\n        FormulaCalculator calc = new FormulaCalculator();\r\n        for(PartialDerivative pd: partialDerivatives){\r\n            calc.addPartialDerivative(pd);\r\n        }\r\n        Double[][] results = new Double[equation.length + 1][(int) (in_Time / stepSize)+1];\r\n        List<List<String>> equationList = new ArrayList<List<String>>();\r\n\r\n        for (int i = 0; i < equation.length; i++) {\r\n            //transform the string[] equation array into a List of Lists of String\r\n            //this so that later we can use the same calculator\r\n            List<String> temp = calc.parseString(equation[i]);\r\n            equationList.add(temp);\r\n        }\r\n        //setting all the time slots at witch we are measuring\r\n        results[0][0] = 0.0;\r\n        for (int i = 1; i < results[0].length; i++) {\r\n            results[0][i] = stepSize + results[0][i - 1];\r\n        }\r\n\r\n        //setting all the initial conditions\r\n        for (int i = 0; i < results.length; i++) {\r\n            results[i][0] = in_Conditions[i];\r\n            calc.setIndependendValue(variables.get(i), in_Conditions[i]);\r\n        }\r\n        //setting all the additional variables\r\n        for (int i = 0; i < in_Conditions.length; i++) {\r\n            calc.setIndependendValue(variables.get(i), in_Conditions[i]);\r\n        }\r\n\r\n        for (int i = 1; i < results[0].length; i++) {\r\n\r\n            for (int j = 1; j < results.length; j++) {\r\n                //calculating the next points\r\n\r\n                // for k1\r\n\r\n                double k1 = stepSize * calc.calculateRPN(equationList.get(j - 1));\r\n\r\n                //for k2\r\n                for (int k = 0; k < results.length; k++) {\r\n                    //updating the values of the variables with the points calculated\r\n                    if (variables.get(k).equals(\"t\")) {\r\n                        calc.setIndependendValue(variables.get(k), results[k][i - 1] + (stepSize/ 2));\r\n                    } else {\r\n                        calc.setIndependendValue(variables.get(k), results[k][i - 1] + stepSize * (k1 / 2));\r\n                    }\r\n                }\r\n                double k2 = stepSize * calc.calculateRPN(equationList.get(j - 1));\r\n\r\n                //for k3\r\n                for (int k = 0; k < results.length; k++) {\r\n                    //updating the values of the variables with the points calculated\r\n                    if (variables.get(k).equals(\"t\")) {\r\n                        calc.setIndependendValue(variables.get(k), results[k][i - 1] + (stepSize / 2));\r\n                    } else {\r\n                        calc.setIndependendValue(variables.get(k), results[k][i - 1] + stepSize * (k2 / 2));\r\n                    }\r\n                }\r\n                double k3 = stepSize * calc.calculateRPN(equationList.get(j - 1));\r\n\r\n                //for k4\r\n                for (int k = 0; k < results.length; k++) {\r\n                    //updating the values of the variables with the points calculated\r\n                    if (variables.get(k).equals(\"t\")) {\r\n                        calc.setIndependendValue(variables.get(k), results[k][i - 1] + stepSize );\r\n                    } else {\r\n                        calc.setIndependendValue(variables.get(k), results[k][i - 1] + stepSize * k3);\r\n                    }\r\n                }\r\n                double k4 = stepSize * calc.calculateRPN(equationList.get(j - 1));\r\n\r\n                //I save the results in a new List so that the values change only before taking the next step\r\n                tempResults.add(results[j][i - 1] +  (k1 + 2 * k2 + 2 * k3 + k4)/ 6.0 );\r\n            }\r\n            //Putting the new points in their right slot in results\r\n            for (int l = 0; l < tempResults.size(); l++) {\r\n                results[l + 1][i] = tempResults.get(l);\r\n            }\r\n            tempResults.clear();\r\n            //updating the values of the variables with the points calculated\r\n            for (int k = 0; k < results.length; k++) {\r\n                calc.setIndependendValue(variables.get(k), results[k][i]);\r\n            }\r\n        }\r\n        return results;\r\n    }\r\n\r\n    /**\r\n     * Adds partial derivative formula to all odesolvers. Makes sure there are only unique formulas.\r\n     * If pd with same name and formula as one in list is added, the stored pd will be replaced.\r\n     * No pd's with same name allowed\r\n     * * @param pd - PartialDerivative\r\n     */\r\n\r\n    public static void addPartialDerivative(PartialDerivative pd){\r\n        boolean found = false;\r\n        for (PartialDerivative storedPd : partialDerivatives) {\r\n            if (storedPd.getName().equals(pd.getName())) {\r\n                if (!storedPd.getParsedEquation().equals(pd.getParsedEquation())) {\r\n                    // Update storedPd's parsed equation\r\n                    storedPd.setParsedEquation(pd.getParsedEquation());\r\n                }\r\n                found = true;\r\n                break;\r\n            }\r\n        }\r\n        if (!found) {\r\n            // If not found, add the new PartialDerivative\r\n            partialDerivatives.add(pd);\r\n        }\r\n   }\r\n\r\n\r\n    public static void main(String[] args){\r\n        long startTime = System.nanoTime();\r\n\r\n\r\n        String[] equations = new String[] {\r\n                \"-9.81 * dh/dx / ( 1 + dh/dx ^ 2 + dh/dy ^ 2 ) - k_f * 9.81 / sqrt( 1 + dh/dx ^ 2 + dh/dy ^ 2 ) * vx / sqrt( vx ^ 2 + vy ^ 2  + ( dh/dx * vx + dh/dy * vy ) ^ 2 )\", // dvx/dt\r\n                \"-9.81 * dh/dy / ( 1 + dh/dx ^ 2 + dh/dy ^ 2 ) - k_f * 9.81 / sqrt( 1 + dh/dx ^ 2 + dh/dy ^ 2 ) * vy / sqrt( vx ^ 2 + vy ^ 2  + ( dh/dx * vx + dh/dy * vy ) ^ 2 )\",  // dvy/dt\r\n                \"vx\",  // dx/dt\r\n                \"vy\",  // dy/dt\r\n       };\r\n        double stepSize = 0.1;\r\n        int in_Time = 10;\r\n\r\n        double[] in_Conditions = {0,2,2,2,0,0.1};\r\n        List<String> variables = Arrays.asList( \"t\",\"vx\",\"vy\",\"x\",\"y\",\"k_f\");\r\n        //PartialDerivative pd = new PartialDerivative(\"h\",\"0,4  * ( 0.9 - 2.71828 ^ ( ( x ^ 2 + y ^ 2 ) / -8 ) )\",\"x\",\"y\");\r\n        PartialDerivative pd = new PartialDerivative(\"h\",\"sin( ( x - y ) / 7 ) + 0.5\",\"x\",\"y\");\r\n        ODESolver.addPartialDerivative(pd);\r\n        ODESolver.addPartialDerivative(pd); //test\r\n\r\n\r\n        Double[][] results = rungeKutta(equations, stepSize, in_Time, in_Conditions, variables);\r\n\r\n        for(int i=0; i< 100; i++){\r\n            results = rungeKutta(equations, stepSize, in_Time, in_Conditions, variables);\r\n        }\r\n        in_Conditions[1]=3;\r\n        //ODESolver.addPartialDerivatives(pd);\r\n        in_Conditions[2]=3;\r\n\r\n        //System.out.println(Arrays.toString(results[0]));\r\n        //System.out.println(\"_______\");\r\n        //System.out.println(Arrays.toString(results[1]));\r\n        //System.out.println(\"_______\");\r\n        //System.out.println(Arrays.toString(results[2]));\r\n        //System.out.println(\"_____X__\");\r\n        //System.out.println(Arrays.toString(results[3]));\r\n        //System.out.println(\"_____Y__\");\r\n        System.out.println(Arrays.toString(results[4]));\r\n\r\n        long endTime = System.nanoTime();\r\n\r\n        // Calculate elapsed time in milliseconds\r\n        double durationInMillis = (endTime - startTime) / 1_000_000.0;\r\n\r\n        // Print the duration\r\n        System.out.println(\"Execution time: \" + durationInMillis + \" milliseconds\");\r\n\r\n       //  ODESolver.addPartialDerivative(pd2); //test\r\n\r\n    }\r\n}\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/kentwentyfour/project12/mathpackage/ODESolver.java b/src/main/java/com/kentwentyfour/project12/mathpackage/ODESolver.java
+--- a/src/main/java/com/kentwentyfour/project12/mathpackage/ODESolver.java	(revision 50b5852052494679fe1157d839b86b4485e7d93b)
++++ b/src/main/java/com/kentwentyfour/project12/mathpackage/ODESolver.java	(date 1719181851593)
+@@ -6,91 +6,92 @@
+ 
+ // Problems:
+ // the runge kutta solver requiers the t value as first in independent values but dose not use it.
+-public class ODESolver  {
++public class ODESolver {
+ 
+     // Function to solve the system of ODEs using Euler's method
+-    static List<PartialDerivative> partialDerivatives =new ArrayList<>();
++    static List<PartialDerivative> partialDerivatives = new ArrayList<>();
++
+     /**
+      * Solves a system of ordinary differential equations (ODEs) using Euler's method.
+      *
+-     * @param equation     The system of ODEs as an array of strings
+-     * @param stepSize     The step size used for the numerical integration
+-     * @param in_Time      The total integration time
++     * @param equation      The system of ODEs as an array of strings
++     * @param stepSize      The step size used for the numerical integration
++     * @param in_Time       The total integration time
+      * @param in_Conditions The initial conditions for the system
+-     * @param variables    The list of independent variables in the equations
++     * @param variables     The list of independent variables in the equations
+      * @return The solution of the system of ODEs as a 2D array of doubles
+      * @author Filippo
+      */
+-    public static Double[][] euler(String[] equation, double stepSize, int in_Time, double[] in_Conditions, List<String> variables){
++    public static Double[][] euler(String[] equation, double stepSize, int in_Time, double[] in_Conditions, List<String> variables) {
+         FormulaCalculator calc = new FormulaCalculator();
+-        for(PartialDerivative pd: partialDerivatives){
++        for (PartialDerivative pd : partialDerivatives) {
+             calc.addPartialDerivative(pd);
+         }
+ 
+-
+-        Double[][] results = new Double[equation.length+1][(int)(in_Time / stepSize)+1];
++        Double[][] results = new Double[equation.length + 1][(int) (in_Time / stepSize) + 1];
+         List<List<String>> equationList = new ArrayList<List<String>>();
+ 
+-        for(int i = 0; i < equation.length; i++) {
++        for (int i = 0; i < equation.length; i++) {
+             //transform the string[] equation array into a List of Lists of String
+             //this so that later we can use the same calculator
+-            List<String>temp = calc.parseString(equation[i]);
++            List<String> temp = calc.parseString(equation[i]);
+             equationList.add(temp);
+         }
+ 
+         //setting all the time slots at which we are measuring
+-        results[0][0] =0.0;
+-        for(int i = 1; i < results[0].length; i++) {
+-            results[0][i] = stepSize + results[0][i-1];
++        results[0][0] = 0.0;
++        for (int i = 1; i < results[0].length; i++) {
++            results[0][i] = stepSize + results[0][i - 1];
+         }
+ 
+         //setting all the initial conditions
+-        for(int i = 0; i <results.length;i++){
++        for (int i = 0; i < results.length; i++) {
+             results[i][0] = in_Conditions[i];
+-            calc.setIndependendValue(variables.get(i),in_Conditions[i]);
++            calc.setIndependendValue(variables.get(i), in_Conditions[i]);
+         }
+         //setting all the additional variables
+         for (int i = 0; i < in_Conditions.length; i++) {
+             calc.setIndependendValue(variables.get(i), in_Conditions[i]);
+         }
+-        for(int i = 1; i <results[0].length;i++){
++        for (int i = 1; i < results[0].length; i++) {
+             //stopping conditions
+             // update partial derviative for x,y
+-            for(int j = 1; j < results.length;j++){
++            for (int j = 1; j < results.length; j++) {
+ 
+                 //calculating the next points
+ 
+-                results[j][i] = results[j][i-1] + (calc.calculateRPN(equationList.get(j-1)) * stepSize);
++                results[j][i] = results[j][i - 1] + (calc.calculateRPN(equationList.get(j - 1)) * stepSize);
+ 
+                 //  Xn+1 = Xn + (X'n * StepSize)
+ 
+             }
+-            for(int k = 0; k <results.length;k++){
++            for (int k = 0; k < results.length; k++) {
+ 
+                 //updating the values of the variables with the points calculated
+-                calc.setIndependendValue(variables.get(k),results[k][i]);
++                calc.setIndependendValue(variables.get(k), results[k][i]);
+             }
+         }
+         return results;
+     }
++
+     /**
+      * Solves a system of ordinary differential equations (ODEs) using the Runge-Kutta method.
+      *
+-     * @param equation     The system of ODEs as an array of strings
+-     * @param stepSize     The step size used for the numerical integration
+-     * @param in_Time      The total integration time
++     * @param equation      The system of ODEs as an array of strings
++     * @param stepSize      The step size used for the numerical integration
++     * @param in_Time       The total integration time
+      * @param in_Conditions The initial conditions for the system
+-     * @param variables    The list of independent variables in the equations
++     * @param variables     The list of independent variables in the equations
+      * @return The solution of the system of ODEs as a 2D array of doubles
+      * @author Filippo
+      */
+-    public static Double[][] rungeKutta(String[] equation, double stepSize, int in_Time, double[] in_Conditions, List<String> variables) {
++    public static Double[][] rungeKutta(String[] equation, double stepSize, double in_Time, double[] in_Conditions, List<String> variables) {
+         List<Double> tempResults = new ArrayList<Double>();
+         FormulaCalculator calc = new FormulaCalculator();
+-        for(PartialDerivative pd: partialDerivatives){
++        for (PartialDerivative pd : partialDerivatives) {
+             calc.addPartialDerivative(pd);
+         }
+-        Double[][] results = new Double[equation.length + 1][(int) (in_Time / stepSize)+1];
++        Double[][] results = new Double[equation.length + 1][(int) (in_Time / stepSize) + 1];
+         List<List<String>> equationList = new ArrayList<List<String>>();
+ 
+         for (int i = 0; i < equation.length; i++) {
+@@ -128,7 +129,7 @@
+                 for (int k = 0; k < results.length; k++) {
+                     //updating the values of the variables with the points calculated
+                     if (variables.get(k).equals("t")) {
+-                        calc.setIndependendValue(variables.get(k), results[k][i - 1] + (stepSize/ 2));
++                        calc.setIndependendValue(variables.get(k), results[k][i - 1] + (stepSize / 2));
+                     } else {
+                         calc.setIndependendValue(variables.get(k), results[k][i - 1] + stepSize * (k1 / 2));
+                     }
+@@ -150,7 +151,7 @@
+                 for (int k = 0; k < results.length; k++) {
+                     //updating the values of the variables with the points calculated
+                     if (variables.get(k).equals("t")) {
+-                        calc.setIndependendValue(variables.get(k), results[k][i - 1] + stepSize );
++                        calc.setIndependendValue(variables.get(k), results[k][i - 1] + stepSize);
+                     } else {
+                         calc.setIndependendValue(variables.get(k), results[k][i - 1] + stepSize * k3);
+                     }
+@@ -158,7 +159,7 @@
+                 double k4 = stepSize * calc.calculateRPN(equationList.get(j - 1));
+ 
+                 //I save the results in a new List so that the values change only before taking the next step
+-                tempResults.add(results[j][i - 1] +  (k1 + 2 * k2 + 2 * k3 + k4)/ 6.0 );
++                tempResults.add(results[j][i - 1] + (k1 + 2 * k2 + 2 * k3 + k4) / 6.0);
+             }
+             //Putting the new points in their right slot in results
+             for (int l = 0; l < tempResults.size(); l++) {
+@@ -180,7 +181,7 @@
+      * * @param pd - PartialDerivative
+      */
+ 
+-    public static void addPartialDerivative(PartialDerivative pd){
++    public static void addPartialDerivative(PartialDerivative pd) {
+         boolean found = false;
+         for (PartialDerivative storedPd : partialDerivatives) {
+             if (storedPd.getName().equals(pd.getName())) {
+@@ -196,38 +197,32 @@
+             // If not found, add the new PartialDerivative
+             partialDerivatives.add(pd);
+         }
+-   }
++    }
+ 
+-
+-    public static void main(String[] args){
++    public static void main(String[] args) {
+         long startTime = System.nanoTime();
+ 
+-
+-        String[] equations = new String[] {
++        String[] equations = new String[]{
+                 "-9.81 * dh/dx / ( 1 + dh/dx ^ 2 + dh/dy ^ 2 ) - k_f * 9.81 / sqrt( 1 + dh/dx ^ 2 + dh/dy ^ 2 ) * vx / sqrt( vx ^ 2 + vy ^ 2  + ( dh/dx * vx + dh/dy * vy ) ^ 2 )", // dvx/dt
+                 "-9.81 * dh/dy / ( 1 + dh/dx ^ 2 + dh/dy ^ 2 ) - k_f * 9.81 / sqrt( 1 + dh/dx ^ 2 + dh/dy ^ 2 ) * vy / sqrt( vx ^ 2 + vy ^ 2  + ( dh/dx * vx + dh/dy * vy ) ^ 2 )",  // dvy/dt
+                 "vx",  // dx/dt
+                 "vy",  // dy/dt
+-       };
++        };
+         double stepSize = 0.1;
+-        int in_Time = 10;
++        double in_Time = 0.1;
+ 
+-        double[] in_Conditions = {0,2,2,2,0,0.1};
+-        List<String> variables = Arrays.asList( "t","vx","vy","x","y","k_f");
++        double[] in_Conditions = {0, 2, 2, 2, 0, 0.1};
++        List<String> variables = Arrays.asList("t", "vx", "vy", "x", "y", "k_f");
+         //PartialDerivative pd = new PartialDerivative("h","0,4  * ( 0.9 - 2.71828 ^ ( ( x ^ 2 + y ^ 2 ) / -8 ) )","x","y");
+-        PartialDerivative pd = new PartialDerivative("h","sin( ( x - y ) / 7 ) + 0.5","x","y");
++        PartialDerivative pd = new PartialDerivative("h", "sin( ( x - y ) / 7 ) + 0.5", "x", "y");
+         ODESolver.addPartialDerivative(pd);
+         ODESolver.addPartialDerivative(pd); //test
+ 
+ 
+         Double[][] results = rungeKutta(equations, stepSize, in_Time, in_Conditions, variables);
+-
+-        for(int i=0; i< 100; i++){
+-            results = rungeKutta(equations, stepSize, in_Time, in_Conditions, variables);
+-        }
+-        in_Conditions[1]=3;
++        in_Conditions[1] = 3;
+         //ODESolver.addPartialDerivatives(pd);
+-        in_Conditions[2]=3;
++        in_Conditions[2] = 3;
+ 
+         //System.out.println(Arrays.toString(results[0]));
+         //System.out.println("_______");
+@@ -247,8 +242,11 @@
+         // Print the duration
+         System.out.println("Execution time: " + durationInMillis + " milliseconds");
+ 
+-       //  ODESolver.addPartialDerivative(pd2); //test
++        //  ODESolver.addPartialDerivative(pd2); //test
++    }
++
++
+ 
+-    }
+ }
++
+ 
+Index: src/main/java/com/kentwentyfour/project12/physicsengine/PhysicsEngine.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.kentwentyfour.project12.physicsengine;\r\n\r\n\r\nimport com.kentwentyfour.project12.gameobjects.*;\r\nimport com.kentwentyfour.project12.gameobjects.movableobjects.ReboundingObstacle;\r\nimport com.kentwentyfour.project12.gameobjects.matrixmapobjects.obstacles.Water;\r\nimport com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.AreaType;\r\nimport com.kentwentyfour.project12.gameobjects.matrixmapobjects.MatrixMapArea;\r\nimport com.kentwentyfour.project12.gameobjects.matrixmapobjects.obstacles.ObstacleArea;\r\nimport com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.Grass;\r\nimport com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes.Sand;\r\nimport com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;\r\nimport com.kentwentyfour.project12.gameobjects.movableobjects.Hole;\r\nimport com.kentwentyfour.project12.gameobjects.movableobjects.MovableObjects;\r\nimport com.kentwentyfour.project12.mathpackage.FormulaCalculator;\r\nimport com.kentwentyfour.project12.mathpackage.ODESolver;\r\nimport com.kentwentyfour.project12.mathpackage.PartialDerivative;\r\nimport com.kentwentyfour.project12.ReferenceStore;\r\n\r\nimport java.util.ArrayList;\r\nimport java.util.Arrays;\r\nimport java.util.LinkedList;\r\nimport java.util.List;\r\n\r\nimport static java.lang.Math.abs;\r\n\r\npublic class PhysicsEngine {\r\n\r\n    private ReferenceStore referenceStore = ReferenceStore.getInstance();\r\n    private double grav_constant = 9.81;\r\n    private double pi = Math.PI;\r\n    public MapManager mapManager;\r\n\r\n\r\n    // main solver\r\n    ODESolver solver = new ODESolver();\r\n    //  calculator for CourseProfileFormula h(x,y)\r\n    FormulaCalculator calcCPF = new FormulaCalculator();\r\n    ArrayList<String> CPF_parsed = new ArrayList<>();\r\n    public PartialDerivative height_PartialDerivative = new PartialDerivative(\"h\");\r\n\r\n\r\n    public PhysicsEngine(){\r\n        //  preparation of  CourseProfileFormula for calculations\r\n        this.mapManager = referenceStore.getMapManager();\r\n        String CourseProfileFormula = referenceStore.getCourseProfileFormula();\r\n        this.CPF_parsed =new ArrayList<>(calcCPF.parseString(CourseProfileFormula));\r\n        height_PartialDerivative.setEquation(CourseProfileFormula);\r\n        height_PartialDerivative.addVariables(\"x\",\"y\");\r\n        ODESolver.addPartialDerivative(height_PartialDerivative);\r\n    }\r\n\r\n    /**\r\n     * computes the force normal to  terrarian / parallel to friction force, based on applied force and angle\r\n     * @param angle\r\n     * @param force\r\n     * @return double[2] containing: [0]-Fx  and  [1]-Fy\r\n     * @author Kordian\r\n     */\r\n    public double[] computeAppliedForceDistribution(double angle, double force){\r\n        double[] X_Y_forces = new double[2];\r\n        //calculating force towards X axis\r\n        X_Y_forces[0] = force*Math.cos(angle);\r\n        X_Y_forces[1] = force*Math.sin(angle);\r\n        return X_Y_forces;\r\n    }\r\n    /**\r\n     * computes h(x,y) formula for given coordinates\r\n     * @param x\r\n     * @param y\r\n     * @return z coordinate ( height )\r\n     * @author Kordian\r\n     */\r\n    public double computeHeight(double x, double y){\r\n        calcCPF.setIndependendValue(\"x\",x);\r\n        calcCPF.setIndependendValue(\"y\",y);\r\n        return calcCPF.calculateRPN(CPF_parsed);\r\n    }\r\n\r\n    /**\r\n     * Calculates the path of the golf ball\r\n     *\r\n     * @return double[Number of coordinates][2]\r\n     */\r\n    public CoordinatesPath calculateCoordinatePath(GolfBall golfBall, double velocityX, double velocityY) {\r\n        return calculateCoordinatePath(golfBall, velocityX, velocityY, 0.01,1); // Default step size\r\n    }\r\n    public CoordinatesPath calculateCoordinatePath(GolfBall golfBall, double velocityX, double velocityY, double customStepSize,int customInitialTime){\r\n        //velocityX =  1.8767497876519854;\r\n        //velocityY = 1.0509900368707568;\r\n        double x_coordinate =  golfBall.getX();\r\n        double y_coordinate =  golfBall.getY();\r\n\r\n        // getting frictions for current position of ball\r\n        MatrixMapArea mapObj =  mapManager.accessObject(x_coordinate,y_coordinate);\r\n        double current_kf =0.1;\r\n        if(mapObj instanceof AreaType){\r\n            current_kf = ((AreaType) mapObj).getKineticFriction();\r\n        }else{\r\n            System.err.println(\"The starting position of ball is not playable area\");\r\n            System.err.println(\"X: \"+x_coordinate+\"Y: \"+y_coordinate);\r\n            System.err.println(\"AreaType: \"+\"Grass: \"+(mapObj instanceof Grass)+\" Water: \"+(mapObj instanceof Water)+\" Sand: \"+(mapObj instanceof Sand));\r\n        }\r\n\r\n        // setting up formulas and ODE solver\r\n        String[] equations = new String[] {\r\n                \"-9.81 * dh/dx / ( 1 + dh/dx ^ 2 + dh/dy ^ 2 ) - k_f * 9.81 / sqrt( 1 + dh/dx ^ 2 + dh/dy ^ 2 ) * vx / sqrt( vx ^ 2 + vy ^ 2  + ( dh/dx * vx + dh/dy * vy ) ^ 2 )\", // dvx/dt\r\n                \"-9.81 * dh/dy / ( 1 + dh/dx ^ 2 + dh/dy ^ 2 ) - k_f * 9.81 / sqrt( 1 + dh/dx ^ 2 + dh/dy ^ 2 ) * vy / sqrt( vx ^ 2 + vy ^ 2  + ( dh/dx * vx + dh/dy * vy ) ^ 2 )\",  // dvy/dt\r\n                \"vx\",\r\n                \"vy\"\r\n        };\r\n        List<String> variables = Arrays.asList( \"t\",\"vx\",\"vy\",\"x\", \"y\",\"k_f\");\r\n        double[] in_Conditions = {0,velocityX, velocityY,x_coordinate,y_coordinate,current_kf};\r\n\r\n        // calculating new coordinates until any stopping condition is met\r\n        String stoppingCondition=\"\";\r\n        LinkedList<Double> path_coordinates_X = new LinkedList<>();\r\n        LinkedList<Double> path_coordinates_Y = new LinkedList<>();\r\n\r\n        while (stoppingCondition.isEmpty()){\r\n            //System.err.println(in_Conditions[3]+\" , \"+  in_Conditions[4]);\r\n            Double[][] results = ODESolver.rungeKutta(equations, customStepSize, customInitialTime, in_Conditions, variables);\r\n            double  x_velocity =  results[1][0];\r\n            double  y_velocity =  results[2][0];\r\n            for(int i=0;i<results[0].length;i++ ){\r\n\r\n                double y_coordinate_change=1; // values must be over 0.01\r\n                double x_coordinate_change=1;\r\n                double x_velocity_change=1;\r\n                double y_velocity_change=1;\r\n\r\n                //updating velocities and coordinates\r\n                x_coordinate = results[3][i];\r\n                y_coordinate = results[4][i];\r\n\r\n\r\n\r\n                // checking for stopping condition\r\n                if(i>1){\r\n                    x_velocity_change =abs( abs(results[1][i])-abs(x_velocity));\r\n                    y_velocity_change =abs( abs(results[2][i])-abs(y_velocity));\r\n                    x_velocity = results[1][i];\r\n                    y_velocity= results[2][i];\r\n                    x_coordinate_change = abs(results[3][i]-results[3][i-1]);\r\n                    y_coordinate_change = abs(results[4][i]-results[4][i-1]);\r\n                }\r\n                stoppingCondition = checkStoppingConditions(golfBall,x_velocity_change,y_velocity_change,x_velocity,y_velocity, x_coordinate, y_coordinate,x_coordinate_change,y_coordinate_change);\r\n                if(!stoppingCondition.isEmpty()){\r\n                    // saves coordinates to final path ( includes coordinates where ball hit the obstacle )\r\n                    path_coordinates_X.add(x_coordinate);\r\n                    path_coordinates_Y.add(y_coordinate);\r\n                    break;\r\n                }\r\n\r\n                // updating frictions for new position if the ball is on AreaType area\r\n                mapObj =  mapManager.accessObject(x_coordinate,y_coordinate);\r\n                if(mapObj instanceof AreaType ){\r\n                    double new_kf = ((AreaType) mapObj).getKineticFriction();\r\n                    if(current_kf!=new_kf){\r\n                        // repeat calculations for new friction\r\n                        current_kf = new_kf;\r\n                        path_coordinates_X.add(x_coordinate);\r\n                        path_coordinates_Y.add(y_coordinate);\r\n                        break;\r\n                    }\r\n                }\r\n                MovableObjects obstacle = mapManager.checkForCollisionWithObstacle(golfBall, x_coordinate, y_coordinate);\r\n                if (obstacle != null && obstacle instanceof ReboundingObstacle) {\r\n\r\n                    double restitutionCoefficient = ((ReboundingObstacle) obstacle).getRestitutionCoefficient();\r\n\r\n                    // Calculate collision normal vector\r\n                    double normalX = x_coordinate - obstacle.getX();\r\n                    double normalY = y_coordinate - obstacle.getY();\r\n\r\n                    // Calculate magnitude of normal vector\r\n                    double normalMagnitude = Math.sqrt(normalX * normalX + normalY * normalY);\r\n\r\n                    // Normalize the normal vector\r\n                    double normalUnitX = normalX / normalMagnitude;\r\n                    double normalUnitY = normalY / normalMagnitude;\r\n\r\n                    // Calculate dot product of velocity and normal vector\r\n                    double dotProduct = x_velocity * normalUnitX + y_velocity * normalUnitY;\r\n\r\n                    // Reflect velocities based on the collision\r\n                    x_velocity = x_velocity - 2 * dotProduct * normalUnitX * restitutionCoefficient;\r\n                    y_velocity = y_velocity - 2 * dotProduct * normalUnitY * restitutionCoefficient;\r\n\r\n\r\n\r\n                    // Update coordinates based on previous state\r\n                    if (i > 0) {\r\n                        x_coordinate = results[3][i - 1];\r\n                        y_coordinate = results[4][i - 1];\r\n                    } else {\r\n                        x_coordinate = results[3][i];\r\n                        y_coordinate = results[4][i];\r\n                    }\r\n                    // calculates new path with new initial conditions\r\n                    break;\r\n                }\r\n\r\n                // saves coordinates to final path ( includes coordinates where ball hit the obstacle )\r\n                path_coordinates_X.add(x_coordinate);\r\n                path_coordinates_Y.add(y_coordinate);\r\n\r\n                if(!stoppingCondition.isEmpty()){\r\n                    break;\r\n                }\r\n\r\n\r\n            }\r\n            // updating initial condition for next while loop\r\n            in_Conditions = new double[]{0,x_velocity, y_velocity, x_coordinate, y_coordinate, current_kf};\r\n\r\n        }\r\n\r\n\r\n        // Returning the list of coordinates\r\n        double[][] finalPath = new double[2][path_coordinates_X.size()];\r\n        for (int i = 0; i < path_coordinates_X.size(); i++) {\r\n            finalPath[0][i] = path_coordinates_X.get(i);\r\n            finalPath[1][i] = path_coordinates_Y.get(i);\r\n        }\r\n        // stepSize is timeInterval as it is used as  chang of time in ODE solver\r\n        return new CoordinatesPath(finalPath,customStepSize,stoppingCondition);\r\n    }\r\n\r\n\r\n\r\n    /**\r\n     * Checks if moving object:\r\n     * - hits an obstacle\r\n     * - stops moving due to friction\r\n     */\r\n    private String checkStoppingConditions( GolfBall golfBall, double x_velocity_change, double y_velocity_change, double x_velocity_last, double y_velocity_last, double x_coordinate, double y_coordinate,double x_coordinate_change,double y_coordinate_change){\r\n        double dh_dx = height_PartialDerivative.calculatePD_notation(\"dh/dx\",x_coordinate,y_coordinate);\r\n        double dh_dy = height_PartialDerivative.calculatePD_notation(\"dh/dy\",x_coordinate,y_coordinate);\r\n\r\n        MatrixMapArea obj = mapManager.accessObject(x_coordinate,y_coordinate);\r\n        if(ballInHole( x_velocity_last, y_velocity_last,  x_coordinate,  y_coordinate)){\r\n            return \"ball_in_the_hole\";\r\n        }\r\n        switch (obj) {\r\n            case null -> {\r\n                return \"outside_of_playable_area\";\r\n            }\r\n            case ObstacleArea obstacleArea -> {\r\n                return \"obstacle_hit\";\r\n            }\r\n            case AreaType areaType -> {\r\n                double formula_value = Math.sqrt(dh_dx * dh_dx + dh_dy * dh_dy)+1;\r\n                if (areaType.getStaticFriction() > formula_value)  {\r\n                    return \"static_friction_overcomes_the_force\";\r\n                }else if(formula_value !=1&& x_coordinate_change<0.0001 && y_coordinate_change<0.0001){ // not flat surface\r\n                    return \"static_friction_overcomes_the_force\";\r\n                }\r\n                else if(formula_value ==1&&x_velocity_change<0.001 && y_velocity_change<0.001){ // flat surface\r\n                    return \"static_friction_overcomes_the_force\";\r\n                }\r\n            }\r\n            default -> {\r\n                return \"\";\r\n            }\r\n        }\r\n        return \"\";\r\n    }\r\n\r\n\r\n    /**\r\n     * Checks midpoint of ball is in hole area\r\n     * @param x_velocity_last\r\n     * @param y_velocity_last\r\n     * @param x_coordinate\r\n     * @param y_coordinate\r\n     * @return\r\n     */\r\n    public boolean ballInHole(double x_velocity_last,double y_velocity_last, double x_coordinate, double y_coordinate){\r\n        Hole hole = referenceStore.getHole();\r\n        double radiusOfHole = hole.getRadius();\r\n        double x_hole = hole.getX();\r\n        double y_hole = hole.getY();\r\n        double distance = Math.sqrt(Math.pow(x_coordinate - x_hole, 2) + Math.pow(y_coordinate - y_hole, 2));\r\n        //System.out.println(distance +\" \"+x_velocity_last+ \" \"+y_velocity_last);\r\n        // Ball in the hole\r\n        return distance < radiusOfHole && x_velocity_last < 4 && y_velocity_last < 4;\r\n    }\r\n    public static void main(String[] args){\r\n        //setting up golf ball/s\r\n\r\n        String formula = \"sin( ( x - y ) / 7 ) + 0.5 \";\r\n\r\n\r\n        // Get reference store\r\n        ReferenceStore referenceStore = ReferenceStore.getInstance();\r\n\r\n        //store given formula\r\n        referenceStore.setCourseProfileFormula(formula);\r\n\r\n        //create and store MapManager\r\n        MapManager  mapManager = new MapManager();\r\n        referenceStore.setMapManagerReference(mapManager);\r\n\r\n        //create and store golf balls\r\n        ArrayList<GolfBall> balls =  new ArrayList<GolfBall>();\r\n        balls.add(new GolfBall(1,1,.1,0.1));\r\n\r\n        Hole hole = new Hole(2,2,0.15);\r\n        referenceStore.setHoleReference(hole);\r\n\r\n        PhysicsEngine engine =  new PhysicsEngine();\r\n        for(int d=0; d<10;d++){\r\n            CoordinatesPath results = engine.calculateCoordinatePath(balls.get(0),2,2);\r\n            double[][] path = results.getPath();\r\n\r\n            double holeX = hole.getX();\r\n            double holeY = hole.getY();\r\n            double minDistanceSquared = Double.POSITIVE_INFINITY;\r\n\r\n            for (int i = 0; i < path[0].length; i++) {\r\n                double ballX = path[0][i];\r\n                double ballY = path[1][i];\r\n\r\n                double distanceSquared = (ballX - holeX) * (ballX - holeX) + (ballY - holeY) * (ballY - holeY);\r\n                minDistanceSquared = Math.min(minDistanceSquared, distanceSquared);\r\n            }\r\n            System.out.println( Math.sqrt(minDistanceSquared));\r\n        }\r\n\r\n\r\n\r\n\r\n\r\n       //// System.out.println(\"_____X__\");\r\n       //// System.out.println(Arrays.toString(path[0]));\r\n       //// System.out.println(\"_____Y__\");\r\n       //// System.out.println(Arrays.toString(path[1]));\r\n       //// System.out.println(\"___Stopping_Condition___\");\r\n       // System.out.println(results.getStoppingCondition());\r\n\r\n    }\r\n}\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/kentwentyfour/project12/physicsengine/PhysicsEngine.java b/src/main/java/com/kentwentyfour/project12/physicsengine/PhysicsEngine.java
+--- a/src/main/java/com/kentwentyfour/project12/physicsengine/PhysicsEngine.java	(revision 50b5852052494679fe1157d839b86b4485e7d93b)
++++ b/src/main/java/com/kentwentyfour/project12/physicsengine/PhysicsEngine.java	(date 1719182219060)
+@@ -85,7 +85,7 @@
+     public CoordinatesPath calculateCoordinatePath(GolfBall golfBall, double velocityX, double velocityY) {
+         return calculateCoordinatePath(golfBall, velocityX, velocityY, 0.01,1); // Default step size
+     }
+-    public CoordinatesPath calculateCoordinatePath(GolfBall golfBall, double velocityX, double velocityY, double customStepSize,int customInitialTime){
++    public CoordinatesPath calculateCoordinatePath(GolfBall golfBall, double velocityX, double velocityY, double customStepSize,double customInitialTime){
+         //velocityX =  1.8767497876519854;
+         //velocityY = 1.0509900368707568;
+         double x_coordinate =  golfBall.getX();
+Index: src/main/java/com/kentwentyfour/project12/bots/improvedbot/MazeBot.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.kentwentyfour.project12.bots.improvedbot;\r\n\r\n\r\nimport com.kentwentyfour.project12.bots.BotPlayer;\r\nimport com.kentwentyfour.project12.bots.MultipleTurnBot;\r\nimport com.kentwentyfour.project12.bots.improvedbot.resources.AStarAlgorithm;\r\nimport com.kentwentyfour.project12.bots.improvedbot.resources.Waypoint;\r\nimport com.kentwentyfour.project12.gameobjects.*;\r\nimport com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;\r\nimport com.kentwentyfour.project12.physicsengine.CoordinatesPath;\r\nimport com.kentwentyfour.project12.physicsengine.PhysicsEngine;\r\nimport com.kentwentyfour.project12.ReferenceStore;\r\n\r\nimport java.util.ArrayList;\r\nimport java.util.List;\r\n\r\n\r\n\r\npublic class MazeBot implements BotPlayer, MultipleTurnBot {\r\n    private MapManager mapManager;\r\n    private PhysicsEngine physicsEngine;\r\n    private ReferenceStore referenceStore = ReferenceStore.getInstance();\r\n    private double  targetX;\r\n    private double targetY;\r\n    private GolfBall ball;\r\n    private List<Waypoint> aStarPath;\r\n    private int count = 0;\r\n\r\n    private long computationTime;\r\n    private int numberOfTurns = 1;\r\n\r\n    public MazeBot() {\r\n        this.physicsEngine = referenceStore.getPhysicsEngine();\r\n        this.mapManager = referenceStore.getMapManager();\r\n        ArrayList<GolfBall> golfBallArrayList = referenceStore.getGolfballList();\r\n        this.ball = golfBallArrayList.getFirst() ;\r\n    }\r\n    @Override\r\n    public CoordinatesPath calculatePath(GolfBall golfBall,double targetX,double targetY) {\r\n\r\n        this.targetX = targetX;\r\n        this.targetY = targetY;\r\n\r\n        long startTime = System.nanoTime();\r\n\r\n        if (count < aStarPath.size() - 1) {\r\n            count++;\r\n        }\r\n        CoordinatesPath path = hillClimbing(golfBall);\r\n        if (path == null) {\r\n            System.err.println(\"Hill climbing did not find a valid path.\");\r\n        } else {\r\n            System.out.println(\"Hill climbing found a path.\");\r\n        }\r\n\r\n        long endTime = System.nanoTime();\r\n        computationTime = endTime - startTime;\r\n\r\n        return path;\r\n    }\r\n\r\n    public void genereteWaypointPath(double targetX, double targetY){\r\n        // decrease range for more midpoints 1=max 100=min\r\n        this.targetX = targetX;\r\n        this.targetY = targetY;\r\n        AStarAlgorithm astarAlgorithm = new AStarAlgorithm();\r\n        this.aStarPath = astarAlgorithm.generateWaypoints(ball.getX(), ball.getY(), this.targetX, this.targetY);\r\n        if(this.aStarPath == null || this.aStarPath.isEmpty()){\r\n            System.err.println(\"No waypoints created\");\r\n        }\r\n        for (Waypoint waypoint : aStarPath) {\r\n            System.out.println(\"Waypoint: \" + waypoint);\r\n        }\r\n        mapManager.drawAStarPath(aStarPath);\r\n    }\r\n    public List<Waypoint> getCurrentWaypointPath(){\r\n        return this.aStarPath;\r\n    }\r\n\r\n\r\n    public double checkDistanceFromHole(CoordinatesPath coordinatesPath) {\r\n        double[][] path = coordinatesPath.getPath();\r\n\r\n        Waypoint targetWaypoint = aStarPath.get(count);\r\n        double holeX = targetWaypoint.x;\r\n        double holeY = targetWaypoint.y;\r\n\r\n        System.out.println(\"Checking path for \" + holeX + \" \" + holeY);\r\n\r\n        double minDistanceSquared = Double.POSITIVE_INFINITY;\r\n\r\n        for (int i = 0; i < path[0].length; i++) {\r\n            double ballX = path[0][i];\r\n            double ballY = path[1][i];\r\n\r\n            double distanceSquared = (ballX - holeX) * (ballX - holeX) + (ballY - holeY) * (ballY - holeY);\r\n            minDistanceSquared = Math.min(minDistanceSquared, distanceSquared);\r\n        }\r\n        return Math.sqrt(minDistanceSquared);\r\n    }\r\n\r\n    private CoordinatesPath hillClimbing(GolfBall golfBall) {\r\n        double bestDistance = Double.POSITIVE_INFINITY;\r\n        CoordinatesPath bestPath = null;\r\n        int max = 100;\r\n        int restartLimit = 10;\r\n        double initialStepSize = 0.5;\r\n        double stepDecay = 0.99;\r\n        double acceptableDistance = 0.15;\r\n\r\n        Waypoint targetWaypoint = aStarPath.get(count);\r\n        double targetX = targetWaypoint.x;\r\n        double targetY = targetWaypoint.y;\r\n\r\n        double BorderX = targetX - golfBall.getX();\r\n        double BorderY = targetY - golfBall.getY();\r\n\r\n        for (int restart = 0; restart < restartLimit; restart++) {\r\n            double[] veloc = {(Math.random() * BorderX), (Math.random() * BorderY)};\r\n            for (int i = 0; i < max; i++) {\r\n                double stepSize = initialStepSize * Math.pow(stepDecay, i);\r\n                double[] newVeloc = {\r\n                        Math.min(Math.max(veloc[0] + (Math.random() * 2 - 1) * stepSize, -5), 5),\r\n                        Math.min(Math.max(veloc[1] + (Math.random() * 2 - 1) * stepSize, -5), 5)\r\n                };\r\n                CoordinatesPath newPath = physicsEngine.calculateCoordinatePath(golfBall, newVeloc[0], newVeloc[1]);\r\n                if (newPath == null) {\r\n                    // System.err.println(\"Iteration \" + i + \": New path is null.\");\r\n                    continue;\r\n                }\r\n                double newDis = checkDistanceFromHole(newPath);\r\n                // System.out.println(\"Iteration \" + i + \": New path calculated. Distance: \" + newDis);\r\n\r\n                if (newDis < bestDistance) {\r\n                    veloc = newVeloc;\r\n                    bestPath = newPath;\r\n                    bestDistance = newDis;\r\n                    // System.out.println(\"Iteration \" + i + \": Best path updated. Best Distance: \" + bestDistance);\r\n                    if (bestDistance < acceptableDistance) {\r\n                        // System.out.print(\"Acceptable distance reached.\");\r\n                        return bestPath;\r\n                    }\r\n                }\r\n            }\r\n            if (bestPath != null) {\r\n                break;\r\n            }\r\n        }\r\n        if (bestPath == null) {\r\n            System.err.println(\"Hill climbing did not find a valid path.\");\r\n        }\r\n        return bestPath;\r\n    }\r\n\r\n    @Override\r\n    public long getComputationTime() {\r\n        return computationTime;\r\n    }\r\n\r\n    @Override\r\n    public String getName() {\r\n        return \"BasicBot\";\r\n    }\r\n\r\n    @Override\r\n    public int getNumberOfTurns() {\r\n        return numberOfTurns;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/kentwentyfour/project12/bots/improvedbot/MazeBot.java b/src/main/java/com/kentwentyfour/project12/bots/improvedbot/MazeBot.java
+--- a/src/main/java/com/kentwentyfour/project12/bots/improvedbot/MazeBot.java	(revision 50b5852052494679fe1157d839b86b4485e7d93b)
++++ b/src/main/java/com/kentwentyfour/project12/bots/improvedbot/MazeBot.java	(date 1719221005956)
+@@ -1,6 +1,7 @@
+ package com.kentwentyfour.project12.bots.improvedbot;
+ 
+ 
++import com.kentwentyfour.project12.bots.BasicBot;
+ import com.kentwentyfour.project12.bots.BotPlayer;
+ import com.kentwentyfour.project12.bots.MultipleTurnBot;
+ import com.kentwentyfour.project12.bots.improvedbot.resources.AStarAlgorithm;
+@@ -12,6 +13,7 @@
+ import com.kentwentyfour.project12.ReferenceStore;
+ 
+ import java.util.ArrayList;
++import java.util.Arrays;
+ import java.util.List;
+ 
+ 
+@@ -37,25 +39,51 @@
+     }
+     @Override
+     public CoordinatesPath calculatePath(GolfBall golfBall,double targetX,double targetY) {
+-
+-        this.targetX = targetX;
+-        this.targetY = targetY;
+-
+         long startTime = System.nanoTime();
++        CoordinatesPath path = null;
++        //this.targetX = targetX;
++        //this.targetY = targetY;
++
++        double velocityX = targetX - golfBall.getX();
++        double velocityY = targetY - golfBall.getY();
+ 
+-        if (count < aStarPath.size() - 1) {
+-            count++;
+-        }
+-        CoordinatesPath path = hillClimbing(golfBall);
+-        if (path == null) {
+-            System.err.println("Hill climbing did not find a valid path.");
+-        } else {
+-            System.out.println("Hill climbing found a path.");
++        double buffX = velocityX;
++        double buffY = velocityY;
++        double change = 0.25;          // Velocities are changed by substracting this value;
++        // It affects the running time;
++        // If you want the code to run faster, increase the value;
++        // the value of this variable affects the accuracy of the bot;
++        for(int i = 0; i <= (int)(Math.abs(buffX) / change); i++){
++            if(buffX > 0){
++                velocityX = buffX - (change * i);
++            }
++            if(buffX < 0){
++                velocityX = buffX + (change * i);
++            }
++            for(int j = 0; j <= (int)(Math.abs(buffY) / change); j++){
++                if(buffY > 0){
++                    velocityY = buffY - (change * j);
++                }
++                if(buffY < 0){
++                    velocityY = buffY + (change * j);
++                }
++                path = physicsEngine.calculateCoordinatePath(golfBall, velocityX, velocityY);
++                double[][] coordinates = path.getPath();
++                double lastX = Math.round(coordinates[0][coordinates[0].length - 1]);
++                double lastY = Math.round(coordinates[1][coordinates[0].length - 1]);
++                if(lastX == targetX && lastY == targetY){
++                    j = (int)(Math.abs(buffY) / change) + 1;
++                    i = (int)(Math.abs(buffX) / change) + 1;
++                }
++            }
+         }
+ 
+         long endTime = System.nanoTime();
+         computationTime = endTime - startTime;
+-
++        double[][] arrOfCoordinates =path.getPath();
++        System.err.println(Arrays.deepToString(arrOfCoordinates));
++        System.err.println("expected last coordinates: " + targetX +" " + targetY);
++        System.err.println("last coordinates: "+arrOfCoordinates[0][arrOfCoordinates[0].length-1] +" "+ arrOfCoordinates[1][arrOfCoordinates[1].length-1]);
+         return path;
+     }
+ 
+@@ -99,59 +127,6 @@
+         return Math.sqrt(minDistanceSquared);
+     }
+ 
+-    private CoordinatesPath hillClimbing(GolfBall golfBall) {
+-        double bestDistance = Double.POSITIVE_INFINITY;
+-        CoordinatesPath bestPath = null;
+-        int max = 100;
+-        int restartLimit = 10;
+-        double initialStepSize = 0.5;
+-        double stepDecay = 0.99;
+-        double acceptableDistance = 0.15;
+-
+-        Waypoint targetWaypoint = aStarPath.get(count);
+-        double targetX = targetWaypoint.x;
+-        double targetY = targetWaypoint.y;
+-
+-        double BorderX = targetX - golfBall.getX();
+-        double BorderY = targetY - golfBall.getY();
+-
+-        for (int restart = 0; restart < restartLimit; restart++) {
+-            double[] veloc = {(Math.random() * BorderX), (Math.random() * BorderY)};
+-            for (int i = 0; i < max; i++) {
+-                double stepSize = initialStepSize * Math.pow(stepDecay, i);
+-                double[] newVeloc = {
+-                        Math.min(Math.max(veloc[0] + (Math.random() * 2 - 1) * stepSize, -5), 5),
+-                        Math.min(Math.max(veloc[1] + (Math.random() * 2 - 1) * stepSize, -5), 5)
+-                };
+-                CoordinatesPath newPath = physicsEngine.calculateCoordinatePath(golfBall, newVeloc[0], newVeloc[1]);
+-                if (newPath == null) {
+-                    // System.err.println("Iteration " + i + ": New path is null.");
+-                    continue;
+-                }
+-                double newDis = checkDistanceFromHole(newPath);
+-                // System.out.println("Iteration " + i + ": New path calculated. Distance: " + newDis);
+-
+-                if (newDis < bestDistance) {
+-                    veloc = newVeloc;
+-                    bestPath = newPath;
+-                    bestDistance = newDis;
+-                    // System.out.println("Iteration " + i + ": Best path updated. Best Distance: " + bestDistance);
+-                    if (bestDistance < acceptableDistance) {
+-                        // System.out.print("Acceptable distance reached.");
+-                        return bestPath;
+-                    }
+-                }
+-            }
+-            if (bestPath != null) {
+-                break;
+-            }
+-        }
+-        if (bestPath == null) {
+-            System.err.println("Hill climbing did not find a valid path.");
+-        }
+-        return bestPath;
+-    }
+-
+     @Override
+     public long getComputationTime() {
+         return computationTime;
+Index: UML_Class_diagram.drawio
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/UML_Class_diagram.drawio b/UML_Class_diagram.drawio
+new file mode 100644
+--- /dev/null	(date 1718733030143)
++++ b/UML_Class_diagram.drawio	(date 1718733030143)
+@@ -0,0 +1,569 @@
++<mxfile host="Electron" modified="2024-06-18T17:50:06.040Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="awkJ5Pyqw3nXpeHqkMnz" version="24.2.5" type="device">
++  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
++    <mxGraphModel dx="3586" dy="2017" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
++      <root>
++        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
++        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-243" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="J02poKk9c3Ibz5ulUSr3-0" target="J02poKk9c3Ibz5ulUSr3-88">
++          <mxGeometry relative="1" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-304" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="J02poKk9c3Ibz5ulUSr3-0" target="J02poKk9c3Ibz5ulUSr3-295">
++          <mxGeometry relative="1" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-0" value="PhysicEngine" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="-700" y="70" width="300" height="270" as="geometry">
++            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-8" value="+ PartialDerivative: height_PartialDerivative" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-0">
++          <mxGeometry y="26" width="300" height="32" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-2" value="- mapManager: MapManager" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-0">
++          <mxGeometry y="58" width="300" height="26" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-9" value="- referenceStore: ReferenceStore ( singletone )" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-0">
++          <mxGeometry y="84" width="300" height="32" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-4" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-0">
++          <mxGeometry y="116" width="300" height="8" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-5" value="+ PhysicsEngine()&#xa;+ calculateCoordinatePath(golfBall: GolfBall,  velocityX:double, velocityY: double): CoordinatesPath&#xa;+ calculateCoordinatePath(... customStepSize: double, customInitialTime: int ): CoordinatesPath&#xa;- checkStoppingConditions(...): String&#xa;- ballInHole(...): boolean&#xa;&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;spacingTop=1;strokeWidth=1;fontStyle=0;textDirection=ltr;textShadow=0;labelBorderColor=none;labelBackgroundColor=none;whiteSpace=wrap;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-0">
++          <mxGeometry y="124" width="300" height="136" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-97" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="J02poKk9c3Ibz5ulUSr3-88" target="J02poKk9c3Ibz5ulUSr3-123">
++          <mxGeometry relative="1" as="geometry">
++            <mxPoint x="-1140" y="933" as="targetPoint" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-98" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="J02poKk9c3Ibz5ulUSr3-97">
++          <mxGeometry x="0.035" relative="1" as="geometry">
++            <mxPoint as="offset" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-143" value="uses" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="J02poKk9c3Ibz5ulUSr3-88" target="J02poKk9c3Ibz5ulUSr3-140">
++          <mxGeometry relative="1" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-88" value="MapManager" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="-1290" y="503" width="300" height="270" as="geometry">
++            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-89" value="+ PartialDerivative: height_PartialDerivative" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-88">
++          <mxGeometry y="26" width="300" height="32" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-90" value="- mapManager: MapManager" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-88">
++          <mxGeometry y="58" width="300" height="26" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-91" value="- referenceStore: ReferenceStore ( singletone )" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-88">
++          <mxGeometry y="84" width="300" height="32" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-92" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-88">
++          <mxGeometry y="116" width="300" height="8" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-93" value="+ PhysicsEngine()&#xa;+ calculateCoordinatePath(golfBall: GolfBall,  velocityX:double, velocityY: double): CoordinatesPath&#xa;+ calculateCoordinatePath(... customStepSize: double, customInitialTime: int ): CoordinatesPath&#xa;- checkStoppingConditions(...): String&#xa;- ballInHole(...): boolean&#xa;&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;spacingTop=1;strokeWidth=1;fontStyle=0;textDirection=ltr;textShadow=0;labelBorderColor=none;labelBackgroundColor=none;whiteSpace=wrap;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-88">
++          <mxGeometry y="124" width="300" height="136" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-132" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="J02poKk9c3Ibz5ulUSr3-99" target="J02poKk9c3Ibz5ulUSr3-123">
++          <mxGeometry relative="1" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-145" value="extends" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="J02poKk9c3Ibz5ulUSr3-132">
++          <mxGeometry x="0.0647" y="-1" relative="1" as="geometry">
++            <mxPoint as="offset" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-99" value="&lt;&lt;Interface&gt;&gt;&#xa;AreaType" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="-1670" y="1013" width="290" height="140" as="geometry">
++            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-103" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-99">
++          <mxGeometry y="40" width="290" height="8" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-104" value="+ setColor(color: Color): void&#xa;+ getKineticFriction(): double&#xa;+ getStaticFriction(): double&#xa;+ setKineticFriction(kinetic_Friction: double): void&#xa;+ setStaticFriction(static_Friction: double): void&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;spacingTop=1;strokeWidth=1;fontStyle=0;textDirection=ltr;textShadow=0;labelBorderColor=none;labelBackgroundColor=none;whiteSpace=wrap;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-99">
++          <mxGeometry y="48" width="290" height="82" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-129" value="realizes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="J02poKk9c3Ibz5ulUSr3-107" target="J02poKk9c3Ibz5ulUSr3-99">
++          <mxGeometry relative="1" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-107" value="Grass" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="-1820" y="1253" width="190" height="130" as="geometry">
++            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-108" value="- kinetic_Friction: double (static)&#xa;- static_Friction: double (static)&#xa;- color: Color&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-107">
++          <mxGeometry y="26" width="190" height="54" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-111" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-107">
++          <mxGeometry y="80" width="190" height="8" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-112" value="+ Grass(height: double)" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;spacingTop=1;strokeWidth=1;fontStyle=0;textDirection=ltr;textShadow=0;labelBorderColor=none;labelBackgroundColor=none;whiteSpace=wrap;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-107">
++          <mxGeometry y="88" width="190" height="42" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-128" value="realizes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="J02poKk9c3Ibz5ulUSr3-114" target="J02poKk9c3Ibz5ulUSr3-99">
++          <mxGeometry relative="1" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-114" value="Grass" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="-1550" y="1253" width="190" height="100" as="geometry">
++            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-115" value="- kinetic_Friction: double (static)&#xa;- static_Friction: double (static)&#xa;- color: Color&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-114">
++          <mxGeometry y="26" width="190" height="54" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-116" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-114">
++          <mxGeometry y="80" width="190" height="8" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-117" value="&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;spacingTop=1;strokeWidth=1;fontStyle=0;textDirection=ltr;textShadow=0;labelBorderColor=none;labelBackgroundColor=none;whiteSpace=wrap;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-114">
++          <mxGeometry y="88" width="190" height="12" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-134" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="J02poKk9c3Ibz5ulUSr3-120" target="J02poKk9c3Ibz5ulUSr3-123">
++          <mxGeometry relative="1" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-144" value="extends" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="J02poKk9c3Ibz5ulUSr3-134">
++          <mxGeometry x="0.2211" relative="1" as="geometry">
++            <mxPoint as="offset" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-120" value="&lt;&lt;Interface&gt;&gt;&#xa;ObstacleArea" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="-1265" y="1013" width="100" height="60" as="geometry">
++            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-121" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-120">
++          <mxGeometry y="40" width="100" height="8" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-123" value="&lt;&lt;Interface&gt;&gt;&#xa;MatrixMapArea" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="-1395" y="833" width="130" height="90" as="geometry">
++            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-124" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-123">
++          <mxGeometry y="40" width="130" height="8" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-125" value=" + getColor():Color;&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;spacingTop=1;strokeWidth=1;fontStyle=0;textDirection=ltr;textShadow=0;labelBorderColor=none;labelBackgroundColor=none;whiteSpace=wrap;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-123">
++          <mxGeometry y="48" width="130" height="32" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-191" value="realizes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="J02poKk9c3Ibz5ulUSr3-135" target="J02poKk9c3Ibz5ulUSr3-120">
++          <mxGeometry relative="1" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-135" value="Water" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="-1310" y="1133" width="190" height="74" as="geometry">
++            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-160" value="- color: Color&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-135">
++          <mxGeometry y="26" width="190" height="24" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-137" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-135">
++          <mxGeometry y="50" width="190" height="24" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-140" value="&lt;&lt;Interface&gt;&gt;&#xa;MovableObjects" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="-990" y="833" width="230" height="160" as="geometry">
++            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-141" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-140">
++          <mxGeometry y="40" width="230" height="8" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-142" value="+ getVisualRepresentation(): Node&#xa;+ getDistanceFromOrigin(): double&#xa;+ setPositionX(x: double): void&#xa;+ setPositionY(y: double): void&#xa;+ getX(): double&#xa;+ getY(): double&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;spacingTop=1;strokeWidth=1;fontStyle=0;textDirection=ltr;textShadow=0;labelBorderColor=none;labelBackgroundColor=none;whiteSpace=wrap;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-140">
++          <mxGeometry y="48" width="230" height="102" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-193" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;dashed=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="J02poKk9c3Ibz5ulUSr3-156" target="J02poKk9c3Ibz5ulUSr3-140">
++          <mxGeometry relative="1" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-156" value="Ball" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="-680" y="933" width="240" height="180" as="geometry">
++            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-157" value="- coordinate_X: double&#xa;- coordinate_Y: double&#xa;- radius: double&#xa;- visualRepresentation: Circle&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-156">
++          <mxGeometry y="26" width="240" height="74" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-158" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-156">
++          <mxGeometry y="100" width="240" height="8" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-159" value="&#xa;+ Tree(coordinate_X: double, coordinate_Y: double, radius: double)&#xa;- createVisualRepresentation(): Circle&#xa;&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;spacingTop=1;strokeWidth=1;fontStyle=0;textDirection=ltr;textShadow=0;labelBorderColor=none;labelBackgroundColor=none;whiteSpace=wrap;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-156">
++          <mxGeometry y="108" width="240" height="62" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-181" value="extends" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="J02poKk9c3Ibz5ulUSr3-164" target="J02poKk9c3Ibz5ulUSr3-140">
++          <mxGeometry relative="1" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-164" value="&lt;&lt;Interface&gt;&gt;&#xa;ReboundingObstacle" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="-975" y="1043" width="200" height="90" as="geometry">
++            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-165" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-164">
++          <mxGeometry y="40" width="200" height="8" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-166" value="+getRestitutionCoefficient():double;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;spacingTop=1;strokeWidth=1;fontStyle=0;textDirection=ltr;textShadow=0;labelBorderColor=none;labelBackgroundColor=none;whiteSpace=wrap;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-164">
++          <mxGeometry y="48" width="200" height="32" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-167" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="J02poKk9c3Ibz5ulUSr3-169" target="J02poKk9c3Ibz5ulUSr3-164">
++          <mxGeometry relative="1" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-168" value="realizes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="J02poKk9c3Ibz5ulUSr3-167">
++          <mxGeometry x="0.1662" y="1" relative="1" as="geometry">
++            <mxPoint as="offset" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-169" value="Tree" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="-1060" y="1173" width="370" height="180" as="geometry">
++            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-170" value="- DEFAULT_RESTITUTION_COEFFICIENT: double (static)&#xa;- coordinate_X: double&#xa;- coordinate_Y: double&#xa;- radius: double&#xa;- nodeImage: Image&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-169">
++          <mxGeometry y="26" width="370" height="84" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-171" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-169">
++          <mxGeometry y="110" width="370" height="8" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-172" value="&#xa;+ Tree(coordinate_X: double, coordinate_Y: double, radius: double)&#xa;&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;spacingTop=1;strokeWidth=1;fontStyle=0;textDirection=ltr;textShadow=0;labelBorderColor=none;labelBackgroundColor=none;whiteSpace=wrap;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-169">
++          <mxGeometry y="118" width="370" height="62" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-190" value="realizes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="J02poKk9c3Ibz5ulUSr3-174" target="J02poKk9c3Ibz5ulUSr3-140">
++          <mxGeometry relative="1" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-174" value="Hole" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="-675" y="623" width="230" height="180" as="geometry">
++            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-175" value="- - coordinate_X: double&#xa;- coordinate_Y: double&#xa;- radius: double&#xa;- visualRepresentation: Circle" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-174">
++          <mxGeometry y="26" width="230" height="74" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-176" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-174">
++          <mxGeometry y="100" width="230" height="8" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-177" value="&#xa;+ Tree(coordinate_X: double, coordinate_Y: double, radius: double)&#xa;- createVisualRepresentation(): Circle&#xa;&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;spacingTop=1;strokeWidth=1;fontStyle=0;textDirection=ltr;textShadow=0;labelBorderColor=none;labelBackgroundColor=none;whiteSpace=wrap;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-174">
++          <mxGeometry y="108" width="230" height="62" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-212" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=diamond;endFill=0;snapToPoint=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="J02poKk9c3Ibz5ulUSr3-208" target="J02poKk9c3Ibz5ulUSr3-194">
++          <mxGeometry relative="1" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-194" value="&lt;&lt;Static&gt;&gt;&#xa;ReferenceStore" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="981" y="296" width="520" height="364" as="geometry">
++            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-195" value="- instance: ReferenceStore&#xa;- listOfGolfBalls: ArrayList&lt;GolfBall&gt;&#xa;- hole: Hole&#xa;- mapManager: MapManager&#xa;- physicsEngine: PhysicsEngine&#xa;- courseProfileFormula: String" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-194">
++          <mxGeometry y="40" width="520" height="104" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-198" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-194">
++          <mxGeometry y="144" width="520" height="8" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-199" value="+ getInstance(): ReferenceStore&#xa;+ setFrictionsAreaType(className: String, kinetic_friction: double, static_friction: double): void&#xa;+ setHoleReference(hole: Hole): void&#xa;+ getHole(): Hole&#xa;+ addGolfballReference(golfball: GolfBall): void&#xa;+ getGolfballList(): List&lt;GolfBall&gt;&#xa;+ setMapManagerReference(mapManager: MapManager): void&#xa;+ getMapManager(): MapManager&#xa;+ setPhysicsEngine(physicsEngine: PhysicsEngine): void&#xa;+ getPhysicsEngine(): PhysicsEngine&#xa;+ setCourseProfileFormula(courseProfileFormula: String): void&#xa;+ getCourseProfileFormula(): String&#xa;+ getFrictionCoefficient(): double&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;spacingTop=1;strokeWidth=1;fontStyle=0;textDirection=ltr;textShadow=0;labelBorderColor=none;labelBackgroundColor=none;whiteSpace=wrap;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-194">
++          <mxGeometry y="152" width="520" height="212" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-208" value="Hole" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="1126" y="770" width="230" height="180" as="geometry">
++            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-209" value="- - coordinate_X: double&#xa;- coordinate_Y: double&#xa;- radius: double&#xa;- visualRepresentation: Circle" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-208">
++          <mxGeometry y="26" width="230" height="74" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-210" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-208">
++          <mxGeometry y="100" width="230" height="8" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-211" value="&#xa;+ Tree(coordinate_X: double, coordinate_Y: double, radius: double)&#xa;- createVisualRepresentation(): Circle&#xa;&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;spacingTop=1;strokeWidth=1;fontStyle=0;textDirection=ltr;textShadow=0;labelBorderColor=none;labelBackgroundColor=none;whiteSpace=wrap;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-208">
++          <mxGeometry y="108" width="230" height="62" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-213" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="1236" y="740" width="30" height="30" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-219" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="961" y="740" width="30" height="30" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-220" value="MapManager" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="811" y="770" width="300" height="270" as="geometry">
++            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-221" value="+ PartialDerivative: height_PartialDerivative" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-220">
++          <mxGeometry y="26" width="300" height="32" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-222" value="- mapManager: MapManager" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-220">
++          <mxGeometry y="58" width="300" height="26" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-223" value="- referenceStore: ReferenceStore ( singletone )" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-220">
++          <mxGeometry y="84" width="300" height="32" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-224" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-220">
++          <mxGeometry y="116" width="300" height="8" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-225" value="+ PhysicsEngine()&#xa;+ calculateCoordinatePath(golfBall: GolfBall,  velocityX:double, velocityY: double): CoordinatesPath&#xa;+ calculateCoordinatePath(... customStepSize: double, customInitialTime: int ): CoordinatesPath&#xa;- checkStoppingConditions(...): String&#xa;- ballInHole(...): boolean&#xa;&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;spacingTop=1;strokeWidth=1;fontStyle=0;textDirection=ltr;textShadow=0;labelBorderColor=none;labelBackgroundColor=none;whiteSpace=wrap;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-220">
++          <mxGeometry y="124" width="300" height="136" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-227" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=diamond;endFill=0;snapToPoint=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="J02poKk9c3Ibz5ulUSr3-220" target="J02poKk9c3Ibz5ulUSr3-194">
++          <mxGeometry relative="1" as="geometry">
++            <mxPoint x="1326" y="780" as="sourcePoint" />
++            <mxPoint x="1071" y="670" as="targetPoint" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-228" value="PhysicEngine" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="1371" y="770" width="300" height="270" as="geometry">
++            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-229" value="+ PartialDerivative: height_PartialDerivative" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-228">
++          <mxGeometry y="26" width="300" height="32" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-230" value="- mapManager: MapManager" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-228">
++          <mxGeometry y="58" width="300" height="26" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-231" value="- referenceStore: ReferenceStore ( singletone )" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-228">
++          <mxGeometry y="84" width="300" height="32" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-232" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-228">
++          <mxGeometry y="116" width="300" height="8" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-233" value="+ PhysicsEngine()&#xa;+ calculateCoordinatePath(golfBall: GolfBall,  velocityX:double, velocityY: double): CoordinatesPath&#xa;+ calculateCoordinatePath(... customStepSize: double, customInitialTime: int ): CoordinatesPath&#xa;- checkStoppingConditions(...): String&#xa;- ballInHole(...): boolean&#xa;&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;spacingTop=1;strokeWidth=1;fontStyle=0;textDirection=ltr;textShadow=0;labelBorderColor=none;labelBackgroundColor=none;whiteSpace=wrap;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-228">
++          <mxGeometry y="124" width="300" height="136" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-234" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=diamond;endFill=0;snapToPoint=0;exitX=0.544;exitY=-0.002;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="J02poKk9c3Ibz5ulUSr3-228">
++          <mxGeometry relative="1" as="geometry">
++            <mxPoint x="951" y="780" as="sourcePoint" />
++            <mxPoint x="1241" y="660" as="targetPoint" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-235" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="1531" y="740" width="30" height="30" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-236" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="1236" y="660" width="30" height="30" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-237" value="CoordinatesPath" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="-290" y="160" width="360" height="150" as="geometry">
++            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-238" value="- path: double[][]&#xa;- stoppingCondition: String" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-237">
++          <mxGeometry y="26" width="360" height="44" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-241" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-237">
++          <mxGeometry y="70" width="360" height="8" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-242" value="+ CoordinatesPath(path: double[][], stoppingCondition: String)&#xa;+ getPath(): double[][]&#xa;+ getStoppingCondition(): String&#xa;&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;spacingTop=1;strokeWidth=1;fontStyle=0;textDirection=ltr;textShadow=0;labelBorderColor=none;labelBackgroundColor=none;whiteSpace=wrap;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-237">
++          <mxGeometry y="78" width="360" height="72" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-249" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.003;entryY=0.091;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="J02poKk9c3Ibz5ulUSr3-5" target="J02poKk9c3Ibz5ulUSr3-237">
++          <mxGeometry relative="1" as="geometry">
++            <mxPoint x="-360" y="262.344827586207" as="targetPoint" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-250" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="J02poKk9c3Ibz5ulUSr3-249">
++          <mxGeometry x="-0.6091" y="-3" relative="1" as="geometry">
++            <mxPoint x="-12" y="-3" as="offset" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-283" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="J02poKk9c3Ibz5ulUSr3-285" target="J02poKk9c3Ibz5ulUSr3-295">
++          <mxGeometry relative="1" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-284" value="realizes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="J02poKk9c3Ibz5ulUSr3-283">
++          <mxGeometry x="-0.0324" relative="1" as="geometry">
++            <mxPoint x="29" as="offset" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-285" value="PartialDerivative" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="-350" y="769" width="430" height="370" as="geometry">
++            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-286" value="- calc: FormulaCalculator&#xa;- parsedEquation: List&lt;String&gt;&#xa;- variables: ArrayList&lt;String&gt;&#xa;- variables_values: HashMap&lt;String, Double&gt;&#xa;- stepSize: double&#xa;- name: String" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-285">
++          <mxGeometry y="26" width="430" height="94" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-287" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-285">
++          <mxGeometry y="120" width="430" height="8" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-288" value=" PartialDerivative(name: String)&#xa;+ PartialDerivative(name: String, equation: String, Variables: String...)&#xa;+ setEquation(equation: String): void&#xa;+ addVariables(Variables: String...): void&#xa;+ calculatePD_notation(notation: String, newVariableValues: Double...): double&#xa;+ calculatePD(variable: String, newVariableValues: Double...): double&#xa;+ changeStepSize(stepSize: double): void&#xa;+ notationOfPd(notation: String): boolean&#xa;+ getvariables(): ArrayList&lt;String&gt;&#xa;+ getVariableValue(key: String): double&#xa;+ getName(): String&#xa;+ getParsedEquation(): List&lt;String&gt;&#xa;+ setParsedEquation(parsedEquation: List&lt;String&gt;): void&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;spacingTop=1;strokeWidth=1;fontStyle=0;textDirection=ltr;textShadow=0;labelBorderColor=none;labelBackgroundColor=none;whiteSpace=wrap;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-285">
++          <mxGeometry y="128" width="430" height="232" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-289" value="realizes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="J02poKk9c3Ibz5ulUSr3-290" target="J02poKk9c3Ibz5ulUSr3-295">
++          <mxGeometry relative="1" as="geometry">
++            <Array as="points">
++              <mxPoint x="385" y="720" />
++              <mxPoint x="150" y="720" />
++            </Array>
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-290" value="FormulaCalculator" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="170" y="780" width="430" height="200" as="geometry">
++            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-291" value="- independentValues: HashMap&lt;String, Double&gt;&#xa;- partialDerivatives: ArrayList&lt;PartialDerivative&gt;&#xa;- operationsSet: Set&lt;String&gt; " style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-290">
++          <mxGeometry y="26" width="430" height="64" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-292" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-290">
++          <mxGeometry y="90" width="430" height="8" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-293" value="+ FormulaCalculator()&#xa;+ parseString(equation_string: String): List&lt;String&gt;&#xa;+ setIndependendValue(name: String, value: double): void&#xa;+ addPartialDerivative(pd: PartialDerivative): void&#xa;+ calculateRPN(list: List&lt;String&gt;): double&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;spacingTop=1;strokeWidth=1;fontStyle=0;textDirection=ltr;textShadow=0;labelBorderColor=none;labelBackgroundColor=none;whiteSpace=wrap;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-290">
++          <mxGeometry y="98" width="430" height="102" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-295" value="ODESolver" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="-180" y="500" width="660" height="170" as="geometry">
++            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-296" value="partialDerivatives: ArrayList&lt;PartialDerivative&gt;&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-295">
++          <mxGeometry y="26" width="660" height="34" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-297" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-295">
++          <mxGeometry y="60" width="660" height="8" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-298" value="+ euler(equation: String[], stepSize: double, in_Time: int, in_Conditions: double[], variables: List&lt;String&gt;): Double[][]&#xa;+ rungeKutta(equation: String[], stepSize: double, in_Time: int, in_Conditions: double[], variables: List&lt;String&gt;): Double[][]&#xa;+ addPartialDerivative(pd: PartialDerivative): void&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;spacingTop=1;strokeWidth=1;fontStyle=0;textDirection=ltr;textShadow=0;labelBorderColor=none;labelBackgroundColor=none;whiteSpace=wrap;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-295">
++          <mxGeometry y="68" width="660" height="82" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-299" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="J02poKk9c3Ibz5ulUSr3-286" target="J02poKk9c3Ibz5ulUSr3-291">
++          <mxGeometry relative="1" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-302" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="-363.6666666666665" y="272" as="geometry">
++            <mxPoint x="-188" y="103" as="offset" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-305" value="&lt;&lt;Interface&gt;&gt;&#xa;BotPlayer" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="-410" y="-520" width="320" height="90" as="geometry">
++            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-306" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-305">
++          <mxGeometry y="40" width="320" height="8" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-307" value="+ CoordinatesPath(golfball: GolfBall ): CoordinatesPath&#xa;&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;spacingTop=1;strokeWidth=1;fontStyle=0;textDirection=ltr;textShadow=0;labelBorderColor=none;labelBackgroundColor=none;whiteSpace=wrap;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-305">
++          <mxGeometry y="48" width="320" height="32" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-309" value="AdvancedBot " style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="-1290" y="-840" width="650" height="214" as="geometry">
++            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-310" value="  - referenceStore: ReferenceStore&#xa;    - physicsEngine: PhysicsEngine" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-309">
++          <mxGeometry y="26" width="650" height="44" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-313" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-309">
++          <mxGeometry y="70" width="650" height="8" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-314" value="+ AdvancedBot()&#xa;    + calculatePath(golfBall: GolfBall): CoordinatesPath&#xa;    - calculateDirection(targetx: double, targety: double, golfBall: GolfBall): double[]&#xa;    - calculateVelocities(angleRad: double, directions: double[], targetx: double, targety: double, golfBall: GolfBall): double[]&#xa;    - chooseScaleFactor(targetx: double, targety: double, golfBall: GolfBall): double&#xa;    - calculateSlopeFactor(x: double, y: double): double&#xa;- calculateAngleDegree(direction: double[], targety: double, targetx: double, golfBall: GolfBall): double&#xa;- calculateAngleRadian(angle: double): double&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;spacingTop=1;strokeWidth=1;fontStyle=0;textDirection=ltr;textShadow=0;labelBorderColor=none;labelBackgroundColor=none;whiteSpace=wrap;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-309">
++          <mxGeometry y="78" width="650" height="136" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-316" value="BasicBot" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="-1290" y="-600" width="650" height="214" as="geometry">
++            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-317" value="  - referenceStore: ReferenceStore&#xa;    - physicsEngine: PhysicsEngine" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-316">
++          <mxGeometry y="26" width="650" height="44" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-318" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-316">
++          <mxGeometry y="70" width="650" height="8" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-319" value="+ BasicBot()&#xa;+ calculatePath(golfBall: GolfBall): CoordinatesPath&#xa;- newCoordinates(golfBall: GolfBall, velocity: double, targetX: double, targetY: double): Double[][]&#xa;- findAngle(x1: double, y1: double, x2: double, y2: double): double&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;spacingTop=1;strokeWidth=1;fontStyle=0;textDirection=ltr;textShadow=0;labelBorderColor=none;labelBackgroundColor=none;whiteSpace=wrap;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-316">
++          <mxGeometry y="78" width="650" height="136" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-320" value="BotHillClimbing" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="-1290" y="-350" width="650" height="244" as="geometry">
++            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-321" value="- mapGenerator: MapManager&#xa;    - physicsEngine: PhysicsEngine&#xa;    - referenceStore: ReferenceStore&#xa;    - hole: Hole" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-320">
++          <mxGeometry y="26" width="650" height="74" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-322" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-320">
++          <mxGeometry y="100" width="650" height="8" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-325" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="J02poKk9c3Ibz5ulUSr3-320" source="J02poKk9c3Ibz5ulUSr3-323">
++          <mxGeometry relative="1" as="geometry">
++            <mxPoint x="100" y="850" as="targetPoint" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-326" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="J02poKk9c3Ibz5ulUSr3-325">
++          <mxGeometry x="-0.6065" relative="1" as="geometry">
++            <mxPoint as="offset" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-323" value=" + BotHillClimbing(golf_ball: GolfBall, physicsEngine: PhysicsEngine, mapGenerator: MapManager)&#xa;    + calculatePath(golfBall: GolfBall): CoordinatesPath&#xa;    - checkDistanceFromHole(coordinatesPath: CoordinatesPath): double&#xa;    - hillClimbing(golfBall: GolfBall): CoordinatesPath&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;spacingTop=1;strokeWidth=1;fontStyle=0;textDirection=ltr;textShadow=0;labelBorderColor=none;labelBackgroundColor=none;whiteSpace=wrap;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-320">
++          <mxGeometry y="108" width="650" height="136" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-327" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="J02poKk9c3Ibz5ulUSr3-319" target="J02poKk9c3Ibz5ulUSr3-2">
++          <mxGeometry relative="1" as="geometry">
++            <Array as="points">
++              <mxPoint x="-1430" y="-454" />
++              <mxPoint x="-1430" y="141" />
++            </Array>
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-328" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="J02poKk9c3Ibz5ulUSr3-321" target="J02poKk9c3Ibz5ulUSr3-2">
++          <mxGeometry relative="1" as="geometry">
++            <Array as="points">
++              <mxPoint x="-1430" y="-287" />
++              <mxPoint x="-1430" y="141" />
++            </Array>
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-333" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="J02poKk9c3Ibz5ulUSr3-328">
++          <mxGeometry x="-0.8837" y="-3" relative="1" as="geometry">
++            <mxPoint x="6" y="3" as="offset" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-329" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="J02poKk9c3Ibz5ulUSr3-314" target="J02poKk9c3Ibz5ulUSr3-2">
++          <mxGeometry relative="1" as="geometry">
++            <Array as="points">
++              <mxPoint x="-1430" y="-694" />
++              <mxPoint x="-1430" y="141" />
++            </Array>
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-335" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="-1359.995" y="-450" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-336" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="-1359.995" y="-690" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-337" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="J02poKk9c3Ibz5ulUSr3-323" target="J02poKk9c3Ibz5ulUSr3-307">
++          <mxGeometry relative="1" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-338" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="J02poKk9c3Ibz5ulUSr3-319" target="J02poKk9c3Ibz5ulUSr3-307">
++          <mxGeometry relative="1" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-339" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="J02poKk9c3Ibz5ulUSr3-314" target="J02poKk9c3Ibz5ulUSr3-307">
++          <mxGeometry relative="1" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-341" value="realizes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="J02poKk9c3Ibz5ulUSr3-339">
++          <mxGeometry x="0.664" y="3" relative="1" as="geometry">
++            <mxPoint x="18" y="5" as="offset" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-342" value="SettingsController" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
++          <mxGeometry x="113" y="-680" width="300" height="270" as="geometry">
++            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
++          </mxGeometry>
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-343" value="+ PartialDerivative: height_PartialDerivative" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-342">
++          <mxGeometry y="26" width="300" height="32" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-344" value="- mapManager: MapManager" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-342">
++          <mxGeometry y="58" width="300" height="26" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-345" value="- referenceStore: ReferenceStore ( singletone )" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-342">
++          <mxGeometry y="84" width="300" height="32" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-346" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-342">
++          <mxGeometry y="116" width="300" height="8" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-347" value="+ PhysicsEngine()&#xa;+ calculateCoordinatePath(golfBall: GolfBall,  velocityX:double, velocityY: double): CoordinatesPath&#xa;+ calculateCoordinatePath(... customStepSize: double, customInitialTime: int ): CoordinatesPath&#xa;- checkStoppingConditions(...): String&#xa;- ballInHole(...): boolean&#xa;&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;spacingTop=1;strokeWidth=1;fontStyle=0;textDirection=ltr;textShadow=0;labelBorderColor=none;labelBackgroundColor=none;whiteSpace=wrap;" vertex="1" parent="J02poKk9c3Ibz5ulUSr3-342">
++          <mxGeometry y="124" width="300" height="136" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-349" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.006;entryY=0.359;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="J02poKk9c3Ibz5ulUSr3-347" target="J02poKk9c3Ibz5ulUSr3-305">
++          <mxGeometry relative="1" as="geometry" />
++        </mxCell>
++        <mxCell id="J02poKk9c3Ibz5ulUSr3-353" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="J02poKk9c3Ibz5ulUSr3-349">
++          <mxGeometry x="0.3948" y="1" relative="1" as="geometry">
++            <mxPoint x="23" y="-1" as="offset" />
++          </mxGeometry>
++        </mxCell>
++      </root>
++    </mxGraphModel>
++  </diagram>
++</mxfile>
+Index: src/main/java/com/kentwentyfour/project12/bots/BasicBot.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.kentwentyfour.project12.bots;\r\n\r\nimport com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;\r\nimport com.kentwentyfour.project12.gameobjects.movableobjects.Hole;\r\nimport com.kentwentyfour.project12.physicsengine.CoordinatesPath;\r\nimport com.kentwentyfour.project12.physicsengine.PhysicsEngine;\r\nimport com.kentwentyfour.project12.ReferenceStore;\r\n\r\nimport java.util.ArrayList;\r\nimport java.util.Arrays;\r\n\r\n\r\npublic class BasicBot implements BotPlayer {\r\n    private static final double thresholdDistance = 0.1;\r\n    private ReferenceStore referenceStore = ReferenceStore.getInstance();\r\n    private PhysicsEngine physicsEngine = referenceStore.getPhysicsEngine();\r\n    private Hole hole = referenceStore.getHole();\r\n\r\n    private long computationTime;\r\n    private int numberOfTurns = 1;\r\n\r\n    private double targetX;\r\n    private double targetY;\r\n\r\n\r\n\r\n    public BasicBot() {}\r\n\r\n    public CoordinatesPath calculatePath(GolfBall golfBall,double targetX, double targetY) {\r\n        long startTime = System.nanoTime();\r\n        CoordinatesPath path = null;\r\n        System.err.println(targetX + \" \" + targetY);\r\n        this.targetX = targetX;\r\n        this.targetY = targetY;\r\n\r\n        double[] direction = calculateDirection(golfBall,targetX,targetY);\r\n        double angleDegrees = calculateAngleDegree(direction, targetY, targetX, golfBall);\r\n        double angleRadians = calculateAngleRadian(angleDegrees);\r\n\r\n        // Ensure terrain data is generated\r\n\r\n        double[] velocities = calculateVelocities(angleRadians, direction, golfBall);\r\n        double velocityX = velocities[0];\r\n        double velocityY = velocities[1];\r\n\r\n        path = physicsEngine.calculateCoordinatePath(golfBall, velocityX, velocityY);\r\n        double distance= checkDistanceFromHole(path);\r\n        if (distance > thresholdDistance) {\r\n            velocityX *= 10;\r\n            velocityY *= 10;\r\n            path = physicsEngine.calculateCoordinatePath(golfBall, velocityX, velocityY);\r\n        }\r\n        //System.err.println(path[0][path[0].size()-1] + \" \" + targetY);\r\n\r\n        long endTime = System.nanoTime();\r\n        computationTime = endTime - startTime;\r\n        System.err.println(Arrays.deepToString(path.getPath()));\r\n        return path;\r\n        //    return physicsEngine.calculateCoordinatePath(golfBall, velocityX, velocityY);\r\n    }\r\n\r\n    public double[] calculateDirection( GolfBall golfBall,double targetX, double targetY) {\r\n\r\n        this.targetX = targetX;\r\n        this.targetY = targetY;\r\n        double distancex = Math.abs(targetX - golfBall.getX());\r\n        double distancey = Math.abs(targetY - golfBall.getY());\r\n        double magnitude = Math.sqrt(distancex * distancex + distancey * distancey);\r\n        double dhdx = physicsEngine.height_PartialDerivative.calculatePD_notation(\"dh/dx\", golfBall.getX(), golfBall.getY());\r\n        double dhdy = physicsEngine.height_PartialDerivative.calculatePD_notation(\"dh/dy\", golfBall.getX(), golfBall.getY());\r\n        double slopeFactor = dhdx * distancex / magnitude + dhdy * distancey / magnitude;\r\n        double adjustedDistancex = Math.abs(distancex - slopeFactor * dhdx);\r\n        double adjustedDistancey = Math.abs(distancey - slopeFactor * dhdy);\r\n        magnitude = Math.sqrt(adjustedDistancex * adjustedDistancex + adjustedDistancey * adjustedDistancey);\r\n        double[] direction = {adjustedDistancex / magnitude, adjustedDistancey / magnitude};\r\n\r\n        return direction;\r\n    }\r\n\r\n    public double[] calculateVelocities(double angleRad, double[] directions, GolfBall golfBall) {\r\n        double slopeFactor = calculateSlopeFactor(golfBall.getX(), golfBall.getY());\r\n        double v = Math.sqrt(directions[0] * directions[0] + directions[1] * directions[1]);\r\n        double friction = referenceStore.getFrictionCoefficient();\r\n        v = v * slopeFactor * friction;\r\n        double vx = v * Math.cos(angleRad);\r\n        double vy = v * Math.sin(angleRad);\r\n        double[] velocities = {vx, vy};\r\n        return velocities;\r\n    }\r\n    private double calculateSlopeFactor(double x, double y) {\r\n        double dhdx = physicsEngine.height_PartialDerivative.calculatePD_notation(\"dh/dx\", x, y);\r\n        double dhdy = physicsEngine.height_PartialDerivative.calculatePD_notation(\"dh/dy\", x, y);\r\n        double slopeMagnitude = Math.sqrt(dhdx * dhdx + dhdy * dhdy);\r\n        return 1.0 - slopeMagnitude;\r\n    }\r\n\r\n    public double calculateAngleDegree(double[] direction, double targetY, double targetX, GolfBall golfBall) {\r\n        double angle;\r\n        if (direction[0] != 0) {\r\n            angle = Math.atan(direction[1] / direction[0]);\r\n            angle = Math.toDegrees(angle);\r\n        } else {\r\n            angle = 90;\r\n        }\r\n        if (targetX < golfBall.getX() && targetY > golfBall.getY()) {\r\n            angle = 180 - angle;\r\n        }\r\n        if (targetX < golfBall.getX() && targetY < golfBall.getY()) {\r\n            angle = 180 + angle;\r\n        }\r\n        if (targetX > golfBall.getX() && targetY < golfBall.getY()) {\r\n            angle = 360 - angle;\r\n        }\r\n        return angle;\r\n    }\r\n\r\n    public double calculateAngleRadian(double angle) {\r\n        return (angle * Math.PI) / 180;\r\n    }\r\n\r\n    public double checkDistanceFromHole(CoordinatesPath coordinatesPath) {\r\n        double[][] path = coordinatesPath.getPath();\r\n        double holeX = this.hole.getX();\r\n        double holeY = this.hole.getY();\r\n        double minDistanceSquared = Double.POSITIVE_INFINITY;\r\n\r\n        for (int i = 0; i < path[0].length; i++) {\r\n            double ballX = path[0][i];\r\n            double ballY = path[1][i];\r\n\r\n            double distanceSquared = (ballX - holeX) * (ballX - holeX) + (ballY - holeY) * (ballY - holeY);\r\n            minDistanceSquared = Math.min(minDistanceSquared, distanceSquared);\r\n        }\r\n        return Math.sqrt(minDistanceSquared);\r\n    }\r\n    @Override\r\n    public long getComputationTime() {\r\n        return computationTime;\r\n    }\r\n\r\n    @Override\r\n    public String getName() {\r\n        return \"BasicBot\";\r\n    }\r\n    @Override\r\n    public int getNumberOfTurns() {\r\n        return numberOfTurns;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/kentwentyfour/project12/bots/BasicBot.java b/src/main/java/com/kentwentyfour/project12/bots/BasicBot.java
+--- a/src/main/java/com/kentwentyfour/project12/bots/BasicBot.java	(revision 50b5852052494679fe1157d839b86b4485e7d93b)
++++ b/src/main/java/com/kentwentyfour/project12/bots/BasicBot.java	(date 1719220867393)
+@@ -14,124 +14,62 @@
+     private static final double thresholdDistance = 0.1;
+     private ReferenceStore referenceStore = ReferenceStore.getInstance();
+     private PhysicsEngine physicsEngine = referenceStore.getPhysicsEngine();
+-    private Hole hole = referenceStore.getHole();
+-
+     private long computationTime;
+     private int numberOfTurns = 1;
+ 
+-    private double targetX;
+-    private double targetY;
+-
+-
+ 
+     public BasicBot() {}
+ 
+     public CoordinatesPath calculatePath(GolfBall golfBall,double targetX, double targetY) {
+         long startTime = System.nanoTime();
+         CoordinatesPath path = null;
+-        System.err.println(targetX + " " + targetY);
+-        this.targetX = targetX;
+-        this.targetY = targetY;
+-
+-        double[] direction = calculateDirection(golfBall,targetX,targetY);
+-        double angleDegrees = calculateAngleDegree(direction, targetY, targetX, golfBall);
+-        double angleRadians = calculateAngleRadian(angleDegrees);
++        //System.err.println(targetX + " " + targetY);
++        //this.targetX = targetX;
++        //this.targetY = targetY;
++        double pointX = 2.0;     // X coordinate of the node
++        double pointY = -2.0;    // Y coordinate of the node
+ 
+-        // Ensure terrain data is generated
++        double velocityX = pointX - golfBall.getX();
++        double velocityY = pointY - golfBall.getY();
+ 
+-        double[] velocities = calculateVelocities(angleRadians, direction, golfBall);
+-        double velocityX = velocities[0];
+-        double velocityY = velocities[1];
+-
+-        path = physicsEngine.calculateCoordinatePath(golfBall, velocityX, velocityY);
+-        double distance= checkDistanceFromHole(path);
+-        if (distance > thresholdDistance) {
+-            velocityX *= 10;
+-            velocityY *= 10;
+-            path = physicsEngine.calculateCoordinatePath(golfBall, velocityX, velocityY);
++        double buffX = velocityX;
++        double buffY = velocityY;
++        double change = 0.25;          // Velocities are changed by substracting this value;
++        // It affects the running time;
++        // If you want the code to run faster, increase the value;
++        // the value of this variable affects the accuracy of the bot;
++        for(int i = 0; i <= (int)(Math.abs(buffX) / change); i++){
++            if(buffX > 0){
++                velocityX = buffX - (change * i);
++            }
++            if(buffX < 0){
++                velocityX = buffX + (change * i);
++            }
++            for(int j = 0; j <= (int)(Math.abs(buffY) / change); j++){
++                if(buffY > 0){
++                    velocityY = buffY - (change * j);
++                }
++                if(buffY < 0){
++                    velocityY = buffY + (change * j);
++                }
++                path = physicsEngine.calculateCoordinatePath(golfBall, velocityX, velocityY);
++                double[][] coordinates = path.getPath();
++                double lastX = Math.round(coordinates[0][coordinates[0].length - 1]);
++                double lastY = Math.round(coordinates[1][coordinates[0].length - 1]);
++                if(lastX == pointX && lastY == pointY){
++                    j = (int)(Math.abs(buffY) / change) + 1;
++                    i = (int)(Math.abs(buffX) / change) + 1;
++                }
++            }
+         }
+-        //System.err.println(path[0][path[0].size()-1] + " " + targetY);
+ 
+         long endTime = System.nanoTime();
+         computationTime = endTime - startTime;
+-        System.err.println(Arrays.deepToString(path.getPath()));
++        double[][] arrOfCoordinates =path.getPath();
++        System.err.println(Arrays.deepToString(arrOfCoordinates));
++        System.err.println("expected last coordinates: " +pointX +" " + pointY);
++        System.err.println("last coordinates: "+arrOfCoordinates[0][arrOfCoordinates[0].length-1] +" "+ arrOfCoordinates[1][arrOfCoordinates[1].length-1]);
+         return path;
+-        //    return physicsEngine.calculateCoordinatePath(golfBall, velocityX, velocityY);
+-    }
+-
+-    public double[] calculateDirection( GolfBall golfBall,double targetX, double targetY) {
+-
+-        this.targetX = targetX;
+-        this.targetY = targetY;
+-        double distancex = Math.abs(targetX - golfBall.getX());
+-        double distancey = Math.abs(targetY - golfBall.getY());
+-        double magnitude = Math.sqrt(distancex * distancex + distancey * distancey);
+-        double dhdx = physicsEngine.height_PartialDerivative.calculatePD_notation("dh/dx", golfBall.getX(), golfBall.getY());
+-        double dhdy = physicsEngine.height_PartialDerivative.calculatePD_notation("dh/dy", golfBall.getX(), golfBall.getY());
+-        double slopeFactor = dhdx * distancex / magnitude + dhdy * distancey / magnitude;
+-        double adjustedDistancex = Math.abs(distancex - slopeFactor * dhdx);
+-        double adjustedDistancey = Math.abs(distancey - slopeFactor * dhdy);
+-        magnitude = Math.sqrt(adjustedDistancex * adjustedDistancex + adjustedDistancey * adjustedDistancey);
+-        double[] direction = {adjustedDistancex / magnitude, adjustedDistancey / magnitude};
+-
+-        return direction;
+-    }
+-
+-    public double[] calculateVelocities(double angleRad, double[] directions, GolfBall golfBall) {
+-        double slopeFactor = calculateSlopeFactor(golfBall.getX(), golfBall.getY());
+-        double v = Math.sqrt(directions[0] * directions[0] + directions[1] * directions[1]);
+-        double friction = referenceStore.getFrictionCoefficient();
+-        v = v * slopeFactor * friction;
+-        double vx = v * Math.cos(angleRad);
+-        double vy = v * Math.sin(angleRad);
+-        double[] velocities = {vx, vy};
+-        return velocities;
+-    }
+-    private double calculateSlopeFactor(double x, double y) {
+-        double dhdx = physicsEngine.height_PartialDerivative.calculatePD_notation("dh/dx", x, y);
+-        double dhdy = physicsEngine.height_PartialDerivative.calculatePD_notation("dh/dy", x, y);
+-        double slopeMagnitude = Math.sqrt(dhdx * dhdx + dhdy * dhdy);
+-        return 1.0 - slopeMagnitude;
+-    }
+-
+-    public double calculateAngleDegree(double[] direction, double targetY, double targetX, GolfBall golfBall) {
+-        double angle;
+-        if (direction[0] != 0) {
+-            angle = Math.atan(direction[1] / direction[0]);
+-            angle = Math.toDegrees(angle);
+-        } else {
+-            angle = 90;
+-        }
+-        if (targetX < golfBall.getX() && targetY > golfBall.getY()) {
+-            angle = 180 - angle;
+-        }
+-        if (targetX < golfBall.getX() && targetY < golfBall.getY()) {
+-            angle = 180 + angle;
+-        }
+-        if (targetX > golfBall.getX() && targetY < golfBall.getY()) {
+-            angle = 360 - angle;
+-        }
+-        return angle;
+-    }
+-
+-    public double calculateAngleRadian(double angle) {
+-        return (angle * Math.PI) / 180;
+-    }
+-
+-    public double checkDistanceFromHole(CoordinatesPath coordinatesPath) {
+-        double[][] path = coordinatesPath.getPath();
+-        double holeX = this.hole.getX();
+-        double holeY = this.hole.getY();
+-        double minDistanceSquared = Double.POSITIVE_INFINITY;
+-
+-        for (int i = 0; i < path[0].length; i++) {
+-            double ballX = path[0][i];
+-            double ballY = path[1][i];
+-
+-            double distanceSquared = (ballX - holeX) * (ballX - holeX) + (ballY - holeY) * (ballY - holeY);
+-            minDistanceSquared = Math.min(minDistanceSquared, distanceSquared);
+-        }
+-        return Math.sqrt(minDistanceSquared);
+     }
+     @Override
+     public long getComputationTime() {

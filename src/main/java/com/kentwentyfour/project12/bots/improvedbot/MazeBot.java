@@ -1,6 +1,7 @@
 package com.kentwentyfour.project12.bots.improvedbot;
 
 
+import com.kentwentyfour.project12.bots.BasicBot;
 import com.kentwentyfour.project12.bots.BotPlayer;
 import com.kentwentyfour.project12.bots.MultipleTurnBot;
 import com.kentwentyfour.project12.bots.improvedbot.resources.AStarAlgorithm;
@@ -12,6 +13,7 @@ import com.kentwentyfour.project12.physicsengine.PhysicsEngine;
 import com.kentwentyfour.project12.ReferenceStore;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -37,25 +39,51 @@ public class MazeBot implements BotPlayer, MultipleTurnBot {
     }
     @Override
     public CoordinatesPath calculatePath(GolfBall golfBall,double targetX,double targetY) {
-
-        this.targetX = targetX;
-        this.targetY = targetY;
-
         long startTime = System.nanoTime();
+        CoordinatesPath path = null;
+        //this.targetX = targetX;
+        //this.targetY = targetY;
 
-        if (count < aStarPath.size() - 1) {
-            count++;
-        }
-        CoordinatesPath path = hillClimbing(golfBall);
-        if (path == null) {
-            System.err.println("Hill climbing did not find a valid path.");
-        } else {
-            System.out.println("Hill climbing found a path.");
+        double velocityX = targetX - golfBall.getX();
+        double velocityY = targetY - golfBall.getY();
+
+        double buffX = velocityX;
+        double buffY = velocityY;
+        double change = 0.25;          // Velocities are changed by substracting this value;
+        // It affects the running time;
+        // If you want the code to run faster, increase the value;
+        // the value of this variable affects the accuracy of the bot;
+        for(int i = 0; i <= (int)(Math.abs(buffX) / change); i++){
+            if(buffX > 0){
+                velocityX = buffX - (change * i);
+            }
+            if(buffX < 0){
+                velocityX = buffX + (change * i);
+            }
+            for(int j = 0; j <= (int)(Math.abs(buffY) / change); j++){
+                if(buffY > 0){
+                    velocityY = buffY - (change * j);
+                }
+                if(buffY < 0){
+                    velocityY = buffY + (change * j);
+                }
+                path = physicsEngine.calculateCoordinatePath(golfBall, velocityX, velocityY);
+                double[][] coordinates = path.getPath();
+                double lastX = Math.round(coordinates[0][coordinates[0].length - 1]);
+                double lastY = Math.round(coordinates[1][coordinates[0].length - 1]);
+                if(lastX == targetX && lastY == targetY){
+                    j = (int)(Math.abs(buffY) / change) + 1;
+                    i = (int)(Math.abs(buffX) / change) + 1;
+                }
+            }
         }
 
         long endTime = System.nanoTime();
         computationTime = endTime - startTime;
-
+        double[][] arrOfCoordinates =path.getPath();
+        System.err.println(Arrays.deepToString(arrOfCoordinates));
+        System.err.println("expected last coordinates: " + targetX +" " + targetY);
+        System.err.println("last coordinates: "+arrOfCoordinates[0][arrOfCoordinates[0].length-1] +" "+ arrOfCoordinates[1][arrOfCoordinates[1].length-1]);
         return path;
     }
 
@@ -97,59 +125,6 @@ public class MazeBot implements BotPlayer, MultipleTurnBot {
             minDistanceSquared = Math.min(minDistanceSquared, distanceSquared);
         }
         return Math.sqrt(minDistanceSquared);
-    }
-
-    private CoordinatesPath hillClimbing(GolfBall golfBall) {
-        double bestDistance = Double.POSITIVE_INFINITY;
-        CoordinatesPath bestPath = null;
-        int max = 100;
-        int restartLimit = 10;
-        double initialStepSize = 0.5;
-        double stepDecay = 0.99;
-        double acceptableDistance = 0.15;
-
-        Waypoint targetWaypoint = aStarPath.get(count);
-        double targetX = targetWaypoint.x;
-        double targetY = targetWaypoint.y;
-
-        double BorderX = targetX - golfBall.getX();
-        double BorderY = targetY - golfBall.getY();
-
-        for (int restart = 0; restart < restartLimit; restart++) {
-            double[] veloc = {(Math.random() * BorderX), (Math.random() * BorderY)};
-            for (int i = 0; i < max; i++) {
-                double stepSize = initialStepSize * Math.pow(stepDecay, i);
-                double[] newVeloc = {
-                        Math.min(Math.max(veloc[0] + (Math.random() * 2 - 1) * stepSize, -5), 5),
-                        Math.min(Math.max(veloc[1] + (Math.random() * 2 - 1) * stepSize, -5), 5)
-                };
-                CoordinatesPath newPath = physicsEngine.calculateCoordinatePath(golfBall, newVeloc[0], newVeloc[1]);
-                if (newPath == null) {
-                    // System.err.println("Iteration " + i + ": New path is null.");
-                    continue;
-                }
-                double newDis = checkDistanceFromHole(newPath);
-                // System.out.println("Iteration " + i + ": New path calculated. Distance: " + newDis);
-
-                if (newDis < bestDistance) {
-                    veloc = newVeloc;
-                    bestPath = newPath;
-                    bestDistance = newDis;
-                    // System.out.println("Iteration " + i + ": Best path updated. Best Distance: " + bestDistance);
-                    if (bestDistance < acceptableDistance) {
-                        // System.out.print("Acceptable distance reached.");
-                        return bestPath;
-                    }
-                }
-            }
-            if (bestPath != null) {
-                break;
-            }
-        }
-        if (bestPath == null) {
-            System.err.println("Hill climbing did not find a valid path.");
-        }
-        return bestPath;
     }
 
     @Override

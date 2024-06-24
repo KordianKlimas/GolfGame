@@ -14,14 +14,8 @@ public class BasicBot implements BotPlayer {
     private static final double thresholdDistance = 0.1;
     private ReferenceStore referenceStore = ReferenceStore.getInstance();
     private PhysicsEngine physicsEngine = referenceStore.getPhysicsEngine();
-    private Hole hole = referenceStore.getHole();
-
     private long computationTime;
     private int numberOfTurns = 1;
-
-    private double targetX;
-    private double targetY;
-
 
 
     public BasicBot() {}
@@ -29,109 +23,53 @@ public class BasicBot implements BotPlayer {
     public CoordinatesPath calculatePath(GolfBall golfBall,double targetX, double targetY) {
         long startTime = System.nanoTime();
         CoordinatesPath path = null;
-        System.err.println(targetX + " " + targetY);
-        this.targetX = targetX;
-        this.targetY = targetY;
+        //System.err.println(targetX + " " + targetY);
+        //this.targetX = targetX;
+        //this.targetY = targetY;
+        double pointX = 2.0;     // X coordinate of the node
+        double pointY = -2.0;    // Y coordinate of the node
 
-        double[] direction = calculateDirection(golfBall,targetX,targetY);
-        double angleDegrees = calculateAngleDegree(direction, targetY, targetX, golfBall);
-        double angleRadians = calculateAngleRadian(angleDegrees);
+        double velocityX = pointX - golfBall.getX();
+        double velocityY = pointY - golfBall.getY();
 
-        // Ensure terrain data is generated
-
-        double[] velocities = calculateVelocities(angleRadians, direction, golfBall);
-        double velocityX = velocities[0];
-        double velocityY = velocities[1];
-
-        path = physicsEngine.calculateCoordinatePath(golfBall, velocityX, velocityY);
-        double distance= checkDistanceFromHole(path);
-        if (distance > thresholdDistance) {
-            velocityX *= 10;
-            velocityY *= 10;
-            path = physicsEngine.calculateCoordinatePath(golfBall, velocityX, velocityY);
+        double buffX = velocityX;
+        double buffY = velocityY;
+        double change = 0.25;          // Velocities are changed by substracting this value;
+        // It affects the running time;
+        // If you want the code to run faster, increase the value;
+        // the value of this variable affects the accuracy of the bot;
+        for(int i = 0; i <= (int)(Math.abs(buffX) / change); i++){
+            if(buffX > 0){
+                velocityX = buffX - (change * i);
+            }
+            if(buffX < 0){
+                velocityX = buffX + (change * i);
+            }
+            for(int j = 0; j <= (int)(Math.abs(buffY) / change); j++){
+                if(buffY > 0){
+                    velocityY = buffY - (change * j);
+                }
+                if(buffY < 0){
+                    velocityY = buffY + (change * j);
+                }
+                path = physicsEngine.calculateCoordinatePath(golfBall, velocityX, velocityY);
+                double[][] coordinates = path.getPath();
+                double lastX = Math.round(coordinates[0][coordinates[0].length - 1]);
+                double lastY = Math.round(coordinates[1][coordinates[0].length - 1]);
+                if(lastX == pointX && lastY == pointY){
+                    j = (int)(Math.abs(buffY) / change) + 1;
+                    i = (int)(Math.abs(buffX) / change) + 1;
+                }
+            }
         }
-        //System.err.println(path[0][path[0].size()-1] + " " + targetY);
 
         long endTime = System.nanoTime();
         computationTime = endTime - startTime;
-        System.err.println(Arrays.deepToString(path.getPath()));
+        double[][] arrOfCoordinates =path.getPath();
+        System.err.println(Arrays.deepToString(arrOfCoordinates));
+        System.err.println("expected last coordinates: " +pointX +" " + pointY);
+        System.err.println("last coordinates: "+arrOfCoordinates[0][arrOfCoordinates[0].length-1] +" "+ arrOfCoordinates[1][arrOfCoordinates[1].length-1]);
         return path;
-        //    return physicsEngine.calculateCoordinatePath(golfBall, velocityX, velocityY);
-    }
-
-    public double[] calculateDirection( GolfBall golfBall,double targetX, double targetY) {
-
-        this.targetX = targetX;
-        this.targetY = targetY;
-        double distancex = Math.abs(targetX - golfBall.getX());
-        double distancey = Math.abs(targetY - golfBall.getY());
-        double magnitude = Math.sqrt(distancex * distancex + distancey * distancey);
-        double dhdx = physicsEngine.height_PartialDerivative.calculatePD_notation("dh/dx", golfBall.getX(), golfBall.getY());
-        double dhdy = physicsEngine.height_PartialDerivative.calculatePD_notation("dh/dy", golfBall.getX(), golfBall.getY());
-        double slopeFactor = dhdx * distancex / magnitude + dhdy * distancey / magnitude;
-        double adjustedDistancex = Math.abs(distancex - slopeFactor * dhdx);
-        double adjustedDistancey = Math.abs(distancey - slopeFactor * dhdy);
-        magnitude = Math.sqrt(adjustedDistancex * adjustedDistancex + adjustedDistancey * adjustedDistancey);
-        double[] direction = {adjustedDistancex / magnitude, adjustedDistancey / magnitude};
-
-        return direction;
-    }
-
-    public double[] calculateVelocities(double angleRad, double[] directions, GolfBall golfBall) {
-        double slopeFactor = calculateSlopeFactor(golfBall.getX(), golfBall.getY());
-        double v = Math.sqrt(directions[0] * directions[0] + directions[1] * directions[1]);
-        double friction = referenceStore.getFrictionCoefficient();
-        v = v * slopeFactor * friction;
-        double vx = v * Math.cos(angleRad);
-        double vy = v * Math.sin(angleRad);
-        double[] velocities = {vx, vy};
-        return velocities;
-    }
-    private double calculateSlopeFactor(double x, double y) {
-        double dhdx = physicsEngine.height_PartialDerivative.calculatePD_notation("dh/dx", x, y);
-        double dhdy = physicsEngine.height_PartialDerivative.calculatePD_notation("dh/dy", x, y);
-        double slopeMagnitude = Math.sqrt(dhdx * dhdx + dhdy * dhdy);
-        return 1.0 - slopeMagnitude;
-    }
-
-    public double calculateAngleDegree(double[] direction, double targetY, double targetX, GolfBall golfBall) {
-        double angle;
-        if (direction[0] != 0) {
-            angle = Math.atan(direction[1] / direction[0]);
-            angle = Math.toDegrees(angle);
-        } else {
-            angle = 90;
-        }
-        if (targetX < golfBall.getX() && targetY > golfBall.getY()) {
-            angle = 180 - angle;
-        }
-        if (targetX < golfBall.getX() && targetY < golfBall.getY()) {
-            angle = 180 + angle;
-        }
-        if (targetX > golfBall.getX() && targetY < golfBall.getY()) {
-            angle = 360 - angle;
-        }
-        return angle;
-    }
-
-    public double calculateAngleRadian(double angle) {
-        return (angle * Math.PI) / 180;
-    }
-
-    public double checkDistanceFromHole(CoordinatesPath coordinatesPath) {
-        double[][] path = coordinatesPath.getPath();
-        double holeX = this.hole.getX();
-        double holeY = this.hole.getY();
-        double minDistanceSquared = Double.POSITIVE_INFINITY;
-
-        for (int i = 0; i < path[0].length; i++) {
-            double ballX = path[0][i];
-            double ballY = path[1][i];
-
-            double distanceSquared = (ballX - holeX) * (ballX - holeX) + (ballY - holeY) * (ballY - holeY);
-            minDistanceSquared = Math.min(minDistanceSquared, distanceSquared);
-        }
-        return Math.sqrt(minDistanceSquared);
     }
     @Override
     public long getComputationTime() {
