@@ -96,10 +96,6 @@ public class BotHillClimbing implements BotPlayer {
         if (bestPath ==null){
             System.err.println("Hill climbing did not find a valid path.");
         }
-
-
-
-
         return bestPath;
     }
 

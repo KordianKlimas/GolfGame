@@ -1,13 +1,10 @@
 package com.kentwentyfour.project12.bots;
 
+
 import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
-import com.kentwentyfour.project12.gameobjects.movableobjects.Hole;
 import com.kentwentyfour.project12.physicsengine.CoordinatesPath;
 import com.kentwentyfour.project12.physicsengine.PhysicsEngine;
 import com.kentwentyfour.project12.ReferenceStore;
-
-import java.util.ArrayList;
-import java.util.Arrays;
 
 
 public class BasicBot implements BotPlayer {
@@ -16,61 +13,124 @@ public class BasicBot implements BotPlayer {
     private PhysicsEngine physicsEngine = referenceStore.getPhysicsEngine();
     private long computationTime;
     private int numberOfTurns = 1;
-
+    private double bestPathVx = 0;
+    private double bestPathVy = 0;
+    private double dampeningFactor = 0.5; // Introducing a dampening factor
 
     public BasicBot() {}
 
-    public CoordinatesPath calculatePath(GolfBall golfBall,double targetX, double targetY) {
+    public CoordinatesPath calculatePath(GolfBall golfBall, double targetX, double targetY) {
         long startTime = System.nanoTime();
         CoordinatesPath path = null;
-        //System.err.println(targetX + " " + targetY);
-        //this.targetX = targetX;
-        //this.targetY = targetY;
-        double pointX = 2.0;     // X coordinate of the node
-        double pointY = -2.0;    // Y coordinate of the node
 
-        double velocityX = pointX - golfBall.getX();
-        double velocityY = pointY - golfBall.getY();
+        double pointX = targetX; // X coordinate of the hole
+        double pointY = targetY; // Y coordinate of the hole
 
-        double buffX = velocityX;
-        double buffY = velocityY;
-        double change = 0.25;          // Velocities are changed by substracting this value;
-        // It affects the running time;
-        // If you want the code to run faster, increase the value;
-        // the value of this variable affects the accuracy of the bot;
-        for(int i = 0; i <= (int)(Math.abs(buffX) / change); i++){
-            if(buffX > 0){
-                velocityX = buffX - (change * i);
+        double ballX = golfBall.getX(); // X coordinate of the ball
+        double ballY = golfBall.getY(); // Y coordinate of the ball
+
+        double velocityScalar = 1.0;
+
+        // Calculate the difference vector from ball to hole
+        double diffX = pointX - ballX;
+        double diffY = pointY - ballY;
+
+        // Calculate the distance between the ball and the hole
+        double distance = Math.sqrt(diffX * diffX + diffY * diffY);
+
+        // Normalize the difference vector to get the unit direction vector
+        double directionX = diffX / distance;
+        double directionY = diffY / distance;
+
+        // Scale the direction vector to the maximum velocity
+        double velocityX = directionX * velocityScalar;
+        double velocityY = directionY * velocityScalar;
+
+        // Check if it's not exceeding max speed 5m/s
+        while (Math.abs(velocityX) > 5 || Math.abs(velocityY) > 5) {
+            velocityScalar -= 0.01;
+            velocityX = directionX * velocityScalar;
+            velocityY = directionY * velocityScalar;
+        }
+
+        // Loop for finding the best path
+        int maxIteration = 50;
+        double bestDistance = Double.POSITIVE_INFINITY;
+
+        while (true) {
+            path = physicsEngine.calculateCoordinatePath(golfBall, velocityX, velocityY, 0.02, 1);
+
+            // Returns path if hole scored
+            if (path.getStoppingCondition().equals("ball_in_the_hole")) {
+                break;
+            } else if (path.getStoppingCondition().equals("obstacle_hit")) {
+                // Handle obstacle hit condition
             }
-            if(buffX < 0){
-                velocityX = buffX + (change * i);
+
+            double[][] arr = path.getPath();
+            double lastX = arr[0][arr[0].length - 2];
+            double lastY = arr[1][arr[0].length - 2];
+            double distanceNew = Math.sqrt(Math.pow(lastX - pointX, 2) + Math.pow(lastY - pointY, 2));
+
+            if (Math.abs(distanceNew) < .01) {
+                break;
+            } else {
+                if (bestDistance > Math.abs(distanceNew)) {
+                    bestPathVx = velocityX;
+                    bestPathVy = velocityY;
+                }
+
+                // Scales the vectors to make them lead the ball closer to the target
+                double startTargetDistance = Math.sqrt(Math.pow(pointX - ballX, 2) + Math.pow(pointY - ballY, 2));
+                double startBallDistance = Math.sqrt(Math.pow(lastX - ballX, 2) + Math.pow(lastY - ballY, 2));
+
+                if (startBallDistance > startTargetDistance) {
+                    System.out.println("ball after the target");
+                    velocityScalar -= dampeningFactor * (startBallDistance - startTargetDistance) / startBallDistance;
+                } else {
+                    System.out.println("ball before the target");
+                    velocityScalar += dampeningFactor * (startTargetDistance - startBallDistance) / startTargetDistance;
+                }
+
+                System.err.println("Scalar : " + velocityScalar);
+
+                velocityX = directionX * velocityScalar;
+                velocityY = directionY * velocityScalar;
+
+                System.out.println("Velocity X scaled: " + velocityX);
+                System.out.println("Velocity Y scaled: " + velocityY);
+
+                while (Math.abs(velocityX) > 5 || Math.abs(velocityY) > 5) {
+                    double scaleChange = 0.01;
+                    velocityX -= velocityX * scaleChange;
+                    velocityY -= velocityY * scaleChange;
+                }
+
+                System.out.println("Velocity X adjusted: " + velocityX);
+                System.out.println("Velocity Y adjusted: " + velocityY);
             }
-            for(int j = 0; j <= (int)(Math.abs(buffY) / change); j++){
-                if(buffY > 0){
-                    velocityY = buffY - (change * j);
-                }
-                if(buffY < 0){
-                    velocityY = buffY + (change * j);
-                }
-                path = physicsEngine.calculateCoordinatePath(golfBall, velocityX, velocityY);
-                double[][] coordinates = path.getPath();
-                double lastX = Math.round(coordinates[0][coordinates[0].length - 1]);
-                double lastY = Math.round(coordinates[1][coordinates[0].length - 1]);
-                if(lastX == pointX && lastY == pointY){
-                    j = (int)(Math.abs(buffY) / change) + 1;
-                    i = (int)(Math.abs(buffX) / change) + 1;
-                }
+
+            maxIteration--;
+            if (maxIteration < 0) {
+                velocityX = bestPathVx;
+                velocityY = bestPathVy;
+                System.err.println("Using best path due to iteration limit " + velocityX + " " + velocityY);
+                break;
             }
         }
 
+        path = physicsEngine.calculateCoordinatePath(golfBall, velocityX, velocityY, 0.01, 1);
+
         long endTime = System.nanoTime();
         computationTime = endTime - startTime;
-        double[][] arrOfCoordinates =path.getPath();
-        System.err.println(Arrays.deepToString(arrOfCoordinates));
-        System.err.println("expected last coordinates: " +pointX +" " + pointY);
-        System.err.println("last coordinates: "+arrOfCoordinates[0][arrOfCoordinates[0].length-1] +" "+ arrOfCoordinates[1][arrOfCoordinates[1].length-1]);
+
+        double[][] arrOfCoordinates = path.getPath();
+        System.err.println("Expected last coordinates: " + pointX + " " + pointY);
+        System.err.println("Last coordinates: " + arrOfCoordinates[0][arrOfCoordinates[0].length - 1] + " " + arrOfCoordinates[1][arrOfCoordinates[1].length - 1]);
+
         return path;
     }
+
     @Override
     public long getComputationTime() {
         return computationTime;
@@ -80,6 +140,7 @@ public class BasicBot implements BotPlayer {
     public String getName() {
         return "BasicBot";
     }
+
     @Override
     public int getNumberOfTurns() {
         return numberOfTurns;

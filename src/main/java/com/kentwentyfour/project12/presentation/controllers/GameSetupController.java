@@ -160,7 +160,8 @@ public class GameSetupController extends BaseController {
             Hole hole = new Hole(targetX,targetY,targetRadius);
             referenceStore.setHoleReference(hole);
             mapManager.addMovableObjectToMap(hole);
-            Flag flag = new Flag(hole.getX(),hole.getY(),hole.getRadius());
+            // Flag flag = new Flag(hole.getX(),hole.getY(),hole.getRadius());
+            Flag flag = new Flag(-3.5,4.1,hole.getRadius());
             mapManager.addToTopLayerObjects(flag);
             mapManager.addMovableObjectToMap(flag);
             mapManager.addMovableObjectToMap(balls.getFirst());

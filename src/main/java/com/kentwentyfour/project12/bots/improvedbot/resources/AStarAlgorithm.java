@@ -15,7 +15,7 @@ public class AStarAlgorithm {
             {0.1, 0.1}, {0.1, -0.1}, {-0.1, 0.1}, {-0.1, -0.1}
     };
     private final double epsilon = 0.2; // Minimum change requirement
-    private final double buffer = 0.2;  // Buffer around water obstacles
+    private final double buffer = 3.4;  // Buffer around water obstacles
 
     public AStarAlgorithm() {
         this.mapManager = referenceStore.getMapManager();
