@@ -6,7 +6,10 @@ import com.kentwentyfour.project12.physicsengine.CoordinatesPath;
 import com.kentwentyfour.project12.physicsengine.PhysicsEngine;
 import com.kentwentyfour.project12.ReferenceStore;
 
-
+/**
+ * BasicBot is a class that implements BotPlayer interface for controlling a golf ball in a simulation game.
+ * It calculates the path of the golf ball towards a target hole using a physics engine.
+ */
 public class BasicBot implements BotPlayer {
     private static final double thresholdDistance = 0.1;
     private ReferenceStore referenceStore = ReferenceStore.getInstance();
@@ -18,7 +21,14 @@ public class BasicBot implements BotPlayer {
     private double dampeningFactor = 0.5; // Introducing a dampening factor
 
     public BasicBot() {}
-
+    /**
+     * Calculates the path of the golf ball towards the target hole.
+     *
+     * @param golfBall The golf ball object representing the current position and state.
+     * @param targetX  The X coordinate of the target hole.
+     * @param targetY  The Y coordinate of the target hole.
+     * @return A CoordinatesPath object representing the calculated path of the golf ball.
+     */
     public CoordinatesPath calculatePath(GolfBall golfBall, double targetX, double targetY) {
         long startTime = System.nanoTime();
         CoordinatesPath path = null;
@@ -130,17 +140,29 @@ public class BasicBot implements BotPlayer {
 
         return path;
     }
-
+    /**
+     * Retrieves the computation time taken for the last path calculation.
+     *
+     * @return The computation time in nanoseconds.
+     */
     @Override
     public long getComputationTime() {
         return computationTime;
     }
-
+    /**
+     * Retrieves the name of the bot.
+     *
+     * @return The name of the bot.
+     */
     @Override
     public String getName() {
         return "BasicBot";
     }
-
+    /**
+     * Retrieves the number of turns or iterations this bot will play.
+     *
+     * @return The number of turns or iterations.
+     */
     @Override
     public int getNumberOfTurns() {
         return numberOfTurns;
