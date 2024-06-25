@@ -7,7 +7,12 @@ import com.kentwentyfour.project12.physicsengine.CoordinatesPath;
 import com.kentwentyfour.project12.physicsengine.PhysicsEngine;
 import com.kentwentyfour.project12.ReferenceStore;
 
+/**
+ * The BotHillClimbing class implements a bot player for a golf game simulation using the hill climbing algorithm.
+ * It calculates the path and velocity needed for a GolfBall object to reach a target.
+ */
 public class BotHillClimbing implements BotPlayer {
+
     private MapManager mapGenerator;
     private PhysicsEngine physicsEngine;
     private ReferenceStore referenceStore = ReferenceStore.getInstance();
@@ -16,11 +21,23 @@ public class BotHillClimbing implements BotPlayer {
     private long computationTime;
     private int numberOfTurns = 1;
 
+    /**
+     * Default constructor for BotHillClimbing.
+     */
     public BotHillClimbing() {
         this.physicsEngine = referenceStore.getPhysicsEngine();
         this.mapGenerator = referenceStore.getMapManager();
     }
-    public CoordinatesPath calculatePath(GolfBall golfBall,double targetX, double targetY) {
+
+    /**
+     * Calculates the path for the GolfBall to reach the target coordinates using the hill climbing algorithm.
+     *
+     * @param golfBall the GolfBall object.
+     * @param targetX the X coordinate of the target.
+     * @param targetY the Y coordinate of the target.
+     * @return the calculated path as a CoordinatesPath object.
+     */
+    public CoordinatesPath calculatePath(GolfBall golfBall, double targetX, double targetY) {
         long startTime = System.nanoTime();
         this.targetX = targetX;
         this.targetY = targetY;
@@ -35,9 +52,15 @@ public class BotHillClimbing implements BotPlayer {
         computationTime = endTime - startTime;
         return path;
     }
+
+    /**
+     * Checks the minimum distance from the calculated path to the target coordinates.
+     *
+     * @param coordinatesPath the calculated path.
+     * @return the minimum distance to the target.
+     */
     public double checkDistanceFromHole(CoordinatesPath coordinatesPath) {
         double[][] path = coordinatesPath.getPath();
-
         double minDistanceSquared = Double.POSITIVE_INFINITY;
 
         for (int i = 0; i < path[0].length; i++) {
@@ -49,8 +72,14 @@ public class BotHillClimbing implements BotPlayer {
         }
         return Math.sqrt(minDistanceSquared);
     }
-    private CoordinatesPath hillClimbing(GolfBall golfBall){
 
+    /**
+     * Implements the hill climbing algorithm to find the optimal path for the GolfBall.
+     *
+     * @param golfBall the GolfBall object.
+     * @return the calculated path as a CoordinatesPath object, or null if no valid path is found.
+     */
+    private CoordinatesPath hillClimbing(GolfBall golfBall) {
         double bestDistance = Double.POSITIVE_INFINITY;
         CoordinatesPath bestPath = null;
         int max = 100;
@@ -59,10 +88,10 @@ public class BotHillClimbing implements BotPlayer {
         double stepDecay = 0.99;
         double acceptableDistance = 0.15;
 
-        double BorderX =targetX - golfBall.getX();
-        double BorderY =targetY - golfBall.getY();
+        double BorderX = targetX - golfBall.getX();
+        double BorderY = targetY - golfBall.getY();
 
-        for (int restart = 0; restart< restartLimit;restart++) {
+        for (int restart = 0; restart < restartLimit; restart++) {
             double[] veloc = {(Math.random() * BorderX), (Math.random() * BorderY)};
             for (int i = 0; i < max; i++) {
                 double stepSize = initialStepSize * Math.pow(stepDecay, i);
@@ -72,19 +101,15 @@ public class BotHillClimbing implements BotPlayer {
                 };
                 CoordinatesPath newPath = physicsEngine.calculateCoordinatePath(golfBall, newVeloc[0], newVeloc[1]);
                 if (newPath == null) {
-                    //  System.err.println("Iteration " + i + ": New path is null.");
                     continue;
                 }
                 double newDis = checkDistanceFromHole(newPath);
-                // System.out.println("Iteration " + i + ": New path calculated. Distance: " + newDis);
 
                 if (newDis < bestDistance) {
                     veloc = newVeloc;
                     bestPath = newPath;
                     bestDistance = newDis;
-                    // System.out.println("Iteration " + i + ": Best path updated. Best Distance: " + bestDistance);
-                    if (bestDistance<acceptableDistance){
-                        //    System.out.print("Acceptable distance reached.");
+                    if (bestDistance < acceptableDistance) {
                         return bestPath;
                     }
                 }
@@ -93,25 +118,37 @@ public class BotHillClimbing implements BotPlayer {
                 break;
             }
         }
-        if (bestPath ==null){
+        if (bestPath == null) {
             System.err.println("Hill climbing did not find a valid path.");
         }
-
-
-
-
         return bestPath;
     }
 
+    /**
+     * Gets the computation time for the last path calculation.
+     *
+     * @return the computation time in nanoseconds.
+     */
     @Override
     public long getComputationTime() {
         return computationTime;
     }
 
+    /**
+     * Gets the name of the bot.
+     *
+     * @return the name of the bot.
+     */
     @Override
     public String getName() {
         return "BotHillClimbing";
     }
+
+    /**
+     * Gets the number of turns taken by the bot.
+     *
+     * @return the number of turns.
+     */
     @Override
     public int getNumberOfTurns() {
         return numberOfTurns;

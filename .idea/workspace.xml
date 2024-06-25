@@ -4,15 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e80e0ac-204d-49c9-baf6-18865c982760" name="Changes" comment="small gui improvements">
-      <change afterPath="$PROJECT_DIR$/UML_Class_diagram.drawio" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UML_Class_diagram.png" afterDir="false" />
+    <list default="true" id="9e80e0ac-204d-49c9-baf6-18865c982760" name="Changes" comment="JavaDoc">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_06_2024_11_52__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_06_2024_11_52__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_06_2024_11_52__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_06_2024_11_52__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_05_2024_19_47__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_05_2024_19_47__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/_ExperimentsData/experiment_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/_ExperimentsData/experiment_data.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/bots/BasicBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/bots/BasicBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/bots/BotHillClimbing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/bots/BotHillClimbing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/bots/improvedbot/MazeBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/bots/improvedbot/MazeBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/mathpackage/ODESolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/mathpackage/ODESolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/physicsengine/PhysicsEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/physicsengine/PhysicsEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/maps/GameSetupLevels.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/maps/GameSetupLevels.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +31,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitLabMergeRequestFiltersHistory">{
   &quot;lastFilter&quot;: {
@@ -89,8 +92,6 @@
       <recent name="C:\Users\kordi\IdeaProjects\GolfGameClone\src\main\java\com\kentwentyfour\project12" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\kordi\IdeaProjects\GolfGameClone" />
-      <recent name="C:\Users\kordi\IdeaProjects\GolfGameClone\target\classes\com\kentwentyfour\project12\views" />
       <recent name="C:\Users\kordi\IdeaProjects\GolfGameClone\src\main\java\com\kentwentyfour\project12\gameobjects\textures" />
       <recent name="C:\Users\kordi\Desktop\Uni\Project12\src\main\java\com\kentwentyfour\project12\Bots" />
     </key>
@@ -167,9 +168,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainApplication" />
-        <item itemvalue="Application.ODESolver" />
         <item itemvalue="Application.PhysicsEngine" />
         <item itemvalue="Application.FormulaCalculator" />
+        <item itemvalue="Application.ODESolver" />
         <item itemvalue="Application.BotNewtonRaphson" />
       </list>
     </recent_temporary>
@@ -209,9 +210,7 @@
       <workItem from="1718374614417" duration="11215000" />
       <workItem from="1719002933193" duration="419000" />
       <workItem from="1719067558497" duration="19751000" />
-      <workItem from="1719139335716" duration="32813000" />
-      <workItem from="1719220069252" duration="1233000" />
-      <workItem from="1719222302715" duration="453000" />
+      <workItem from="1719139335716" duration="18884000" />
     </task>
     <task id="LOCAL-00001" summary="Changing timeStep and initial time in PhysicEngine to improve calculation and animation. Adding  Stopping conditions support in game.">
       <option name="closed" value="true" />
@@ -301,23 +300,7 @@
       <option name="project" value="LOCAL" />
       <updated>1719163657051</updated>
     </task>
-    <task id="LOCAL-00012" summary="small bug fix">
-      <option name="closed" value="true" />
-      <created>1719164022750</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1719164022750</updated>
-    </task>
-    <task id="LOCAL-00013" summary="small gui improvements">
-      <option name="closed" value="true" />
-      <created>1719178387577</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1719178387577</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,9 +329,8 @@
     <MESSAGE value="small map look changes" />
     <MESSAGE value="lot of small changes, Path generation for improved bot" />
     <MESSAGE value="adding flag, adding support for multiple turns" />
-    <MESSAGE value="small bug fix" />
-    <MESSAGE value="small gui improvements" />
-    <option name="LAST_COMMIT_MESSAGE" value="small gui improvements" />
+    <MESSAGE value="JavaDoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="JavaDoc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -363,9 +345,14 @@
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/mathpackage/ODESolver.java</url>
-          <line>202</line>
-          <option name="timeStamp" value="65" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/SettingsController.java</url>
+          <line>172</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/SettingsController.java</url>
+          <line>248</line>
+          <option name="timeStamp" value="56" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
