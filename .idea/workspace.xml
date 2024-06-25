@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e80e0ac-204d-49c9-baf6-18865c982760" name="Changes" comment="new" />
+    <list default="true" id="9e80e0ac-204d-49c9-baf6-18865c982760" name="Changes" comment="JavaDoc">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/bots/BasicBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/bots/BasicBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/bots/BotHillClimbing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/bots/BotHillClimbing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/bots/improvedbot/MazeBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/bots/improvedbot/MazeBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/bots/improvedbot/resources/AStarAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/bots/improvedbot/resources/AStarAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/bots/improvedbot/resources/SecondAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/bots/improvedbot/resources/SecondAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/bots/improvedbot/resources/Waypoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/bots/improvedbot/resources/Waypoint.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -25,6 +33,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitLabMergeRequestFiltersHistory">{
   &quot;lastFilter&quot;: {
@@ -64,7 +73,7 @@
     "Application.SuperClass.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "finalGame",
+    "git-widget-placeholder": "finalGame__version2",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/kordi/IdeaProjects/GolfGameClone/src/main/java/com/kentwentyfour/project12/Bots/ImprovedBot/Algorithms",
     "node.js.detected.package.eslint": "true",
@@ -86,8 +95,6 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kordi\IdeaProjects\GolfGameClone\src\main\java\com\kentwentyfour\project12\gameobjects\textures" />
-      <recent name="C:\Users\kordi\IdeaProjects\GolfGameClone" />
-      <recent name="C:\Users\kordi\IdeaProjects\GolfGameClone\target\classes\com\kentwentyfour\project12\views" />
       <recent name="C:\Users\kordi\Desktop\Uni\Project12\src\main\java\com\kentwentyfour\project12\Bots" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -163,9 +170,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainApplication" />
-        <item itemvalue="Application.ODESolver" />
         <item itemvalue="Application.PhysicsEngine" />
         <item itemvalue="Application.FormulaCalculator" />
+        <item itemvalue="Application.ODESolver" />
         <item itemvalue="Application.BotNewtonRaphson" />
       </list>
     </recent_temporary>
@@ -205,13 +212,7 @@
       <workItem from="1718374614417" duration="11215000" />
       <workItem from="1719002933193" duration="419000" />
       <workItem from="1719067558497" duration="19751000" />
-      <workItem from="1719139335716" duration="32813000" />
-      <workItem from="1719220069252" duration="1233000" />
-      <workItem from="1719222302715" duration="28778000" />
-      <workItem from="1719252971352" duration="11807000" />
-      <workItem from="1719321260471" duration="8981000" />
-      <workItem from="1719341458874" duration="804000" />
-      <workItem from="1719342561134" duration="4253000" />
+      <workItem from="1719139335716" duration="18884000" />
     </task>
     <task id="LOCAL-00001" summary="Changing timeStep and initial time in PhysicEngine to improve calculation and animation. Adding  Stopping conditions support in game.">
       <option name="closed" value="true" />
@@ -301,63 +302,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719163657051</updated>
     </task>
-    <task id="LOCAL-00012" summary="small bug fix">
+    <task id="LOCAL-00012" summary="JavaDoc">
       <option name="closed" value="true" />
-      <created>1719164022750</created>
+      <created>1719347104029</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1719164022750</updated>
+      <updated>1719347104029</updated>
     </task>
-    <task id="LOCAL-00013" summary="small gui improvements">
-      <option name="closed" value="true" />
-      <created>1719178387577</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1719178387577</updated>
-    </task>
-    <task id="LOCAL-00014" summary="adding uml diagram, adding new BasicBot">
-      <option name="closed" value="true" />
-      <created>1719223061457</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1719223061457</updated>
-    </task>
-    <task id="LOCAL-00015" summary="fix">
-      <option name="closed" value="true" />
-      <created>1719331729563</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1719331729563</updated>
-    </task>
-    <task id="LOCAL-00016" summary="fix">
-      <option name="closed" value="true" />
-      <created>1719331966174</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1719331966174</updated>
-    </task>
-    <task id="LOCAL-00017" summary="fix v.2">
-      <option name="closed" value="true" />
-      <created>1719338869289</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1719338869289</updated>
-    </task>
-    <task id="LOCAL-00018" summary="new">
-      <option name="closed" value="true" />
-      <created>1719348077284</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1719348077284</updated>
-    </task>
-    <option name="localTasksCounter" value="19" />
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -386,13 +339,8 @@
     <MESSAGE value="small map look changes" />
     <MESSAGE value="lot of small changes, Path generation for improved bot" />
     <MESSAGE value="adding flag, adding support for multiple turns" />
-    <MESSAGE value="small bug fix" />
-    <MESSAGE value="small gui improvements" />
-    <MESSAGE value="adding uml diagram, adding new BasicBot" />
-    <MESSAGE value="fix" />
-    <MESSAGE value="fix v.2" />
-    <MESSAGE value="new" />
-    <option name="LAST_COMMIT_MESSAGE" value="new" />
+    <MESSAGE value="JavaDoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="JavaDoc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -403,43 +351,18 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/physicsengine/PhysicsEngine.java</url>
-          <line>330</line>
+          <line>327</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/mathpackage/ODESolver.java</url>
-          <line>202</line>
-          <option name="timeStamp" value="65" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/SettingsController.java</url>
+          <line>188</line>
+          <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/SettingsController.java</url>
-          <line>126</line>
-          <option name="timeStamp" value="90" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/SettingsController.java</url>
-          <line>143</line>
-          <option name="timeStamp" value="91" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/SettingsController.java</url>
-          <line>165</line>
-          <option name="timeStamp" value="92" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/SettingsController.java</url>
-          <line>176</line>
-          <option name="timeStamp" value="93" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/SettingsController.java</url>
-          <line>183</line>
-          <option name="timeStamp" value="99" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/bots/BasicBot.java</url>
-          <line>69</line>
-          <option name="timeStamp" value="100" />
+          <line>241</line>
+          <option name="timeStamp" value="56" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

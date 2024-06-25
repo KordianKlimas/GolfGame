@@ -17,8 +17,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-
-
 public class MazeBot implements BotPlayer, MultipleTurnBot {
     private MapManager mapManager;
     private PhysicsEngine physicsEngine;
