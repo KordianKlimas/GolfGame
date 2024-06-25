@@ -8,7 +8,7 @@ import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 
-public class Flag implements MovableObjects {
+public class TreeTop implements MovableObjects {
     private double coordinate_X;
     private double coordinate_Y;
 
@@ -21,17 +21,20 @@ public class Flag implements MovableObjects {
      *
      * @param coordinate_X
      * @param coordinate_Y
-     * @param holeRadius - based hole radius,  height of flag will be set
+     * @param treeRadius - based hole radius,  height of flag will be set
      */
-    public Flag(double coordinate_X, double coordinate_Y, double holeRadius){
-        this.height = 2 * holeRadius*2;
-        this.width = height*0.6;
-        this.coordinate_X = coordinate_X + width/2 - 0.03;
-        this.coordinate_Y = coordinate_Y + height/2;
+    public TreeTop(double coordinate_X, double coordinate_Y, double treeRadius){
+        this.width = treeRadius*2 + treeRadius/0.5;
+        this.height = width/0.7;
+        this.coordinate_X = coordinate_X + width/2 - 0.5*width;
+        this.coordinate_Y = coordinate_Y + height/2  - treeRadius;
 
-        this.nodeImage = new Image("file:src/main/java/com/kentwentyfour/project12/gameobjects/textures/flag_new2.png");
+        this.nodeImage = new Image("file:src/main/java/com/kentwentyfour/project12/gameobjects/textures/restOfTree.png");
         this.visualRepresentation = createVisualRepresentation();
     }
+
+
+
     public double getDistanceFromOrigin(){
         return     Math.sqrt(height*height + width*width)/2;
     }

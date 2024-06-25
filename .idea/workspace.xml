@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e80e0ac-204d-49c9-baf6-18865c982760" name="Changes" comment="fix">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/bots/improvedbot/resources/SecondAlgorithm.java" afterDir="false" />
+    <list default="true" id="9e80e0ac-204d-49c9-baf6-18865c982760" name="Changes" comment="fix v.2">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/movableobjects/TreeTop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/textures/restOfTree.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/bots/improvedbot/MazeBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/bots/improvedbot/MazeBot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/MapManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/MapManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/movableobjects/Flag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/movableobjects/Flag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/textures/tree_1.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/GameSetupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/GameSetupController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/maps/GameSetupLevels.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/maps/GameSetupLevels.java" afterDir="false" />
     </list>
@@ -93,9 +95,9 @@
       <recent name="C:\Users\kordi\IdeaProjects\GolfGameClone\src\main\java\com\kentwentyfour\project12" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kordi\IdeaProjects\GolfGameClone\src\main\java\com\kentwentyfour\project12\gameobjects\textures" />
       <recent name="C:\Users\kordi\IdeaProjects\GolfGameClone" />
       <recent name="C:\Users\kordi\IdeaProjects\GolfGameClone\target\classes\com\kentwentyfour\project12\views" />
-      <recent name="C:\Users\kordi\IdeaProjects\GolfGameClone\src\main\java\com\kentwentyfour\project12\gameobjects\textures" />
       <recent name="C:\Users\kordi\Desktop\Uni\Project12\src\main\java\com\kentwentyfour\project12\Bots" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -217,7 +219,9 @@
       <workItem from="1719220069252" duration="1233000" />
       <workItem from="1719222302715" duration="28778000" />
       <workItem from="1719252971352" duration="11807000" />
-      <workItem from="1719321260471" duration="8423000" />
+      <workItem from="1719321260471" duration="8981000" />
+      <workItem from="1719341458874" duration="804000" />
+      <workItem from="1719342561134" duration="3832000" />
     </task>
     <task id="LOCAL-00001" summary="Changing timeStep and initial time in PhysicEngine to improve calculation and animation. Adding  Stopping conditions support in game.">
       <option name="closed" value="true" />
@@ -347,7 +351,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719331966174</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="fix v.2">
+      <option name="closed" value="true" />
+      <created>1719338869289</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1719338869289</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,7 +392,8 @@
     <MESSAGE value="small gui improvements" />
     <MESSAGE value="adding uml diagram, adding new BasicBot" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="fix v.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix v.2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -428,36 +441,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/bots/BasicBot.java</url>
           <line>69</line>
           <option name="timeStamp" value="100" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/GameSetupController.java</url>
-          <line>152</line>
-          <option name="timeStamp" value="102" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/maps/GameSetupLevels.java</url>
-          <line>83</line>
-          <option name="timeStamp" value="103" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/presentation/controllers/maps/GameSetupVariables.java</url>
-          <line>145</line>
-          <option name="timeStamp" value="104" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/MapManager.java</url>
-          <line>222</line>
-          <option name="timeStamp" value="105" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/MapManager.java</url>
-          <line>323</line>
-          <option name="timeStamp" value="107" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kentwentyfour/project12/gameobjects/MapManager.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="108" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

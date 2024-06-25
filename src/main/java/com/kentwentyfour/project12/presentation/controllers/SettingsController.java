@@ -218,6 +218,8 @@ public class SettingsController implements Initializable {
         this.startX = startX;
         this.startY = startY;
 
+        multipleBotTurns=false;
+
         this.targetX = targetX;
         this.targetY = targetY;
 

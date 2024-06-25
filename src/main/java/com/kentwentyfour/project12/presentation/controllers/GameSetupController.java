@@ -1,11 +1,8 @@
 package com.kentwentyfour.project12.presentation.controllers;
 
 import com.kentwentyfour.project12.gameobjects.matrixmapobjects.obstacles.ObstacleArea;
-import com.kentwentyfour.project12.gameobjects.movableobjects.Flag;
-import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
-import com.kentwentyfour.project12.gameobjects.movableobjects.Hole;
+import com.kentwentyfour.project12.gameobjects.movableobjects.*;
 import com.kentwentyfour.project12.gameobjects.MapManager;
-import com.kentwentyfour.project12.gameobjects.movableobjects.ReboundingObstacle;
 import com.kentwentyfour.project12.physicsengine.PhysicsEngine;
 import com.kentwentyfour.project12.ReferenceStore;
 import com.kentwentyfour.project12.presentation.controllers.maps.GameSetupLevels;
@@ -150,6 +147,9 @@ public class GameSetupController extends BaseController {
                     }
                     mapManager.createMap();
                     for(ReboundingObstacle reboundingObstacles: variables.getReboundingObstacles()){
+                        TreeTop treeTop = new TreeTop(reboundingObstacles.getX(), reboundingObstacles.getY(),reboundingObstacles.getDistanceFromOrigin());
+                        mapManager.addToTopLayerObjects(treeTop);
+                        mapManager.addMovableObjectToMap(treeTop);
                         mapManager.addObstacle(reboundingObstacles);
                     }
                 }

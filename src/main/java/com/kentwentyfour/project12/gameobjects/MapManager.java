@@ -29,7 +29,7 @@ import javafx.util.Duration;
 public class MapManager {
     public final int WIDTH = 800;
     public final int HEIGHT = 800;
-    private final int matrixSize = 101;//101
+    private final int matrixSize = 100;//101
     private double mapWidth = 10; // in meters ex. 10 means coordinates from -5 to 5
     double scaleFactor = WIDTH / mapWidth; // scalar  to  match [m]  with the pixel size
     private MatrixMapArea[][] terrainData;
@@ -357,11 +357,16 @@ public class MapManager {
         }
 
         for (int i = cellX1; i <= cellX2; i++) {
-            for (int d = cellY1; d <= cellY2; d++) {
-                if (d >= 0 && d < terrainData[i].length) {
-                    terrainData[i][d] = area;
+            if(i<0){
+                i++;
+            }else{
+                for (int d = cellY1; d <= cellY2; d++) {
+                    if (d >= 0 && d < terrainData[i].length) {
+                        terrainData[i][d] = area;
+                    }
                 }
             }
+
         }
     }
 
