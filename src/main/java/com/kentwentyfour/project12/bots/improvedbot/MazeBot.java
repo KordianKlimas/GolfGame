@@ -5,6 +5,7 @@ import com.kentwentyfour.project12.bots.BasicBot;
 import com.kentwentyfour.project12.bots.BotPlayer;
 import com.kentwentyfour.project12.bots.MultipleTurnBot;
 import com.kentwentyfour.project12.bots.improvedbot.resources.AStarAlgorithm;
+import com.kentwentyfour.project12.bots.improvedbot.resources.SecondAlgorithm;
 import com.kentwentyfour.project12.bots.improvedbot.resources.Waypoint;
 import com.kentwentyfour.project12.gameobjects.*;
 import com.kentwentyfour.project12.gameobjects.movableobjects.GolfBall;
@@ -52,7 +53,7 @@ public class MazeBot implements BotPlayer, MultipleTurnBot {
         // decrease range for more midpoints 1=max 100=min
         this.targetX = targetX;
         this.targetY = targetY;
-        AStarAlgorithm astarAlgorithm = new AStarAlgorithm();
+        SecondAlgorithm astarAlgorithm = new SecondAlgorithm();
         this.aStarPath = astarAlgorithm.generateWaypoints(ball.getX(), ball.getY(), this.targetX, this.targetY);
         if(this.aStarPath == null || this.aStarPath.isEmpty()){
             System.err.println("No waypoints created");
@@ -65,8 +66,6 @@ public class MazeBot implements BotPlayer, MultipleTurnBot {
     public List<Waypoint> getCurrentWaypointPath(){
         return this.aStarPath;
     }
-
-
 
     @Override
     public long getComputationTime() {

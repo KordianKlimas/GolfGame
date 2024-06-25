@@ -148,6 +148,7 @@ public class GameSetupController extends BaseController {
                     for(ObstacleArea areaObstacles: variables.getAreaObstacles()){
                         mapManager.addArea(areaObstacles,areaObstacles.getCoordinateX1(),areaObstacles.getCoordinateY1(),areaObstacles.getShapeWidth(),areaObstacles.getShapeHeight());
                     }
+                    mapManager.createMap();
                     for(ReboundingObstacle reboundingObstacles: variables.getReboundingObstacles()){
                         mapManager.addObstacle(reboundingObstacles);
                     }

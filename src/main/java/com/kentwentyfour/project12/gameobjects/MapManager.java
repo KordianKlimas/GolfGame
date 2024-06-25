@@ -81,7 +81,7 @@ public class MapManager {
      * Generates basic map for the game
      * @return Pane - the map with  MappableObjects
      */
-    private void createMap() {
+    public void createMap() {
 
         double cellWidth = (double) (WIDTH / (double) matrixSize);
         double cellHeight = (double) (HEIGHT / (double) matrixSize);
