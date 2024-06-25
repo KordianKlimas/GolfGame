@@ -1,0 +1,14 @@
+module:com.kentwentyfour.project12
+com.kentwentyfour.project12
+com.kentwentyfour.project12.bots
+com.kentwentyfour.project12.bots.improvedbot
+com.kentwentyfour.project12.bots.improvedbot.resources
+com.kentwentyfour.project12.gameobjects
+com.kentwentyfour.project12.gameobjects.matrixmapobjects
+com.kentwentyfour.project12.gameobjects.matrixmapobjects.areatypes
+com.kentwentyfour.project12.gameobjects.matrixmapobjects.obstacles
+com.kentwentyfour.project12.gameobjects.movableobjects
+com.kentwentyfour.project12.mathpackage
+com.kentwentyfour.project12.physicsengine
+com.kentwentyfour.project12.presentation.controllers
+com.kentwentyfour.project12.presentation.controllers.maps
